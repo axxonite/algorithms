@@ -8,6 +8,7 @@ class CMaxHeap
 {
 public:
 
+	// O(lg n)
 	explicit CMaxHeap(vector<int> values)
 	{
 		mSize = values.size();
@@ -18,7 +19,7 @@ public:
 			HeapifyNode(i);
 	}
 
-	// O(n log n)
+	// O(n lg n)
 	static void HeapSort(vector <int>& values)
 	{
 		CMaxHeap heap(values);
@@ -34,7 +35,46 @@ public:
 		values = heap.mStorage;
 	}
 
+	// O(1)
 	int Max() const { return mStorage[0]; }
+
+	// O(lg n)
+	void Pop()
+	{
+		mStorage[0] = mStorage[mSize - 1];
+		mSize--;
+		HeapifyNode(0);
+	}
+
+	// O(lg n)
+	int ExtractMax()
+	{
+		assert(mSize >= 0);
+		auto max = Max();
+		Pop();
+		return max;
+	}
+
+	// O(lg n)
+	void IncreaseKey(int i, int value)
+	{
+		assert(value >= mStorage[i]);
+		mStorage[i] = value;
+		auto parent = Parent(i);
+		// if parent is now smaller than the current node, then we need to swap parent and child.
+		while ( i > 0 && mStorage[parent] < mStorage[i])
+		{
+			swap(mStorage[i], mStorage[parent]);
+			i = parent;
+		}
+	}
+
+	// O(lg n)
+	void Insert(int value)
+	{
+		mStorage[mSize++] = numeric_limits<int>::min();
+		IncreaseKey(mSize - 1, value);
+	}
 
 private:
 
