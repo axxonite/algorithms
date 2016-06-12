@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Arrays.h" />
     <ClInclude Include="PrimitiveTypes.h" />
     <ClInclude Include="Sorting.h" />
     <ClInclude Include="stdafx.h" />
@@ -145,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms.cpp" />
+    <ClCompile Include="Arrays.cpp" />
     <ClCompile Include="PrimitiveTypes.cpp" />
     <ClCompile Include="Sorting.cpp" />
     <ClCompile Include="stdafx.cpp">
