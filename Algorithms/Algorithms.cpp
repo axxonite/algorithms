@@ -7,7 +7,7 @@
 
 int main()
 {
-	//PrimitiveTypeTests();
-	TestSorting();
+	PrimitiveTypeTests();
+	//TestSorting();
     return 0;
 }

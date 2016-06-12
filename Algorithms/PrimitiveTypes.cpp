@@ -13,24 +13,42 @@ int ComputeParity(long in)
 
 void ComputeParity(int count, uint64_t* input, int* output)
 {
-	for ( auto i = 0; i < 0xFFFF; i++)
+	for (auto i = 0; i < 0xFFFF; i++)
 		parityLookupTable[i] = ComputeParity(i);
-	for ( auto i = 0; i < count; i++)
+	for (auto i = 0; i < count; i++)
 		output[i] = ComputeParity(parityLookupTable[input[i] & 0xFFFF] ^ parityLookupTable[(input[i] >> 16) & 0xFFFF]);
 }
 
 double ComputePower(double x, int y)
 {
-	// I don't have a very clear idea of what to do here. I would need to study this problem further. I need to study the math proof and its properties.
-	auto val = x; 
-	while ( y  > 0)
+	// So the basic equation that we are basing this on is pow(x,y1+y2)=pow(x,y1)*pow(x,y2)
+	// Each bit in the number corresponds to a doubled power.
+	auto bitvalue = x;
+	auto result = 1.0;
+	while (y > 0)
 	{
-		auto result = val * val;
 		if (y & 1)
-			result *= x;
+			result *= bitvalue;
+		bitvalue *= bitvalue;
+		y >>= 1;
 	}
+	return result;
+}
 
-	return 0;
+void TestComputePower()
+{
+	auto result = ComputePower(10, 0);
+	assert(result == 1);
+	result = ComputePower(10, 1);
+	assert(result == 10);
+	result = ComputePower(10, 2);
+	assert(result == 100);
+	result = ComputePower(10, 4);
+	assert(result == 10000);
+	result = ComputePower(10, 5);
+	assert(result == 100000);
+	result = ComputePower(11, 17);
+	assert(result == 505447028499293771);
 }
 
 int ReverseDigits(int x)
@@ -38,7 +56,7 @@ int ReverseDigits(int x)
 	auto result = 0;
 	auto neg = x < 0;
 	x = abs(x);
-	while ( x > 0)
+	while (x > 0)
 	{
 		result = result * 10 + x % 10;
 		x = x / 10;
@@ -46,7 +64,7 @@ int ReverseDigits(int x)
 	return result * (neg ? -1 : 1);
 }
 
-void PrimitiveTypeTests()
+void TestParity()
 {
 	auto parity = ComputeParity(0b1011);
 	assert(parity == 1);
@@ -73,9 +91,19 @@ void PrimitiveTypeTests()
 		auto referenceParity = count % 2 == 0 ? 0 : 1;
 		assert(referenceParity == output[i]);
 	}
+}
 
+void TestReverseDigits()
+{
 	auto reversed = ReverseDigits(42);
 	assert(reversed == 24);
 	reversed = ReverseDigits(-314);
 	assert(reversed == -413);
+}
+
+void PrimitiveTypeTests()
+{
+	TestComputePower();
+	TestParity();
+	TestReverseDigits();
 }
