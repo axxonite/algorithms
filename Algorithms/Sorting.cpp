@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Sorting.h"
+#include "MaxHeap.h"
 
 using namespace std;
 
@@ -117,6 +118,9 @@ void TestSorting()
 	ValidateSort(input);
 	input = GenerateDistribution();
 	MergeSort(input);
+	ValidateSort(input);
+	input = GenerateDistribution();
+	Heapsort(input);
 	ValidateSort(input);
 	input = GenerateDistribution();
 	Quicksort(input);
