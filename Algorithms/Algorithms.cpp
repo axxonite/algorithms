@@ -8,8 +8,8 @@
 
 int main()
 {
-	TestArrays();
-	PrimitiveTypeTests();
-	//TestSorting();
+	//TestArrays();
+	//PrimitiveTypeTests();
+	TestSorting();
     return 0;
 }
