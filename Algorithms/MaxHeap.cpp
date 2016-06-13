@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// MaxHeap. The value of a node is at most that of its parent.
+// MaxHeap. The value of a node is at most that of its parent. The root node thus always contains the highest value.
 class CMaxHeap
 {
 public:
@@ -20,10 +20,10 @@ public:
 	}
 
 	// O(n lg n)
+	// A heap has the max value, so grab the max element in the heap, put it at the end of the sort order, then pop the value from the heap.
 	static void HeapSort(vector <int>& values)
 	{
 		CMaxHeap heap(values);
-		// The heap has the max value, so grab the max element in the heap, put it at the end of the sort order, then pop the value from the heap.
 		for (auto i = heap.mSize - 1; i >= 1; i--)
 		{
 			// The max is at the top of the heap, so put it at the end of the sorted array.
