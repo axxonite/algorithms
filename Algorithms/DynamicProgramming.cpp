@@ -50,4 +50,3 @@ void TestBottomUpCutUpRod()
 	assert(solution[0] == 2);
 	assert(solution[1] == 2);
 }
-
