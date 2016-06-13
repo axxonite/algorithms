@@ -4,7 +4,7 @@
 void IncrementIntegerArray(std::vector<int>& in)
 {
 	auto i = 0;
-	for (i = in.size() - 1; i >= 0; i--)
+	for (i = static_cast<int>(in.size()) - 1; i >= 0; i--)
 	{
 		if (in[i] == 9)
 			in[i] = 0;
@@ -83,7 +83,7 @@ bool SudokuCheckerProblem(std::vector<std::vector<int>> a)
 		for (auto x = 0; x < 9; x++)
 		{
 			auto valueFlag = 1 << a[y][x];
-			if (rowMask & valueFlag != 0 || columnMask[x] & valueFlag != 0 || subgridMask[x / 3] & valueFlag != 0)
+			if ((rowMask & valueFlag) != 0 || (columnMask[x] & valueFlag) != 0 || (subgridMask[x / 3] & valueFlag) != 0)
 				return false;
 			rowMask |= valueFlag;
 			columnMask[x] |= valueFlag;
