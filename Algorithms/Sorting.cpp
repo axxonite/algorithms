@@ -160,6 +160,26 @@ vector<int> RadixSort(vector<int> values, int maxDigits)
 }
 
 // --------------------------------------------------
+// Select the kth smallest value. k starts from zero. O(n ^ 2) worst case, O(n) expected. The run time analysis for this one is complex.
+int SelectOrderStatistic(vector<int> values, int first, int last, int order)
+{
+	if (first == last)
+		return values[first];
+	auto pivot = Partition(values, first, last);
+	auto k = pivot - first;
+	if (order == k)
+		return values[pivot]; // The pivot value is the answer.
+	else if (order < k)
+		return SelectOrderStatistic(values, first, pivot - 1, order);
+	return SelectOrderStatistic(values, pivot + 1, last, order - k - 1); // - 1 on k since the pivot has +1
+}
+
+int SelectOrderStatistic(vector<int> values, int order)
+{
+	return SelectOrderStatistic(values, 0, values.size() - 1, order);
+}
+
+// --------------------------------------------------
 // Tests
 vector<int> GenerateDistribution(int max = numeric_limits<int>::max())
 {
@@ -175,6 +195,17 @@ void ValidateSort(vector<int> input)
 {
 	for (auto i = 1; i < 1000; i++)
 		assert(input[i] >= input[i - 1]);
+}
+
+void TestOrderStatistic()
+{
+	auto input = GenerateDistribution();
+	auto result = SelectOrderStatistic(input, 500);
+	auto lessThan = 0;
+	for (auto i = 0; i < 1000; i++)
+		if (input[i] < result)
+			lessThan++;
+	assert(lessThan == 500);
 }
 
 void TestSorting()
@@ -200,4 +231,5 @@ void TestSorting()
 	input = GenerateDistribution(10000);
 	input = RadixSort(input, 5);
 	ValidateSort(input);
+	TestOrderStatistic();
 }
