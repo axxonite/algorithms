@@ -5,11 +5,13 @@
 #include "PrimitiveTypes.h"
 #include "Sorting.h"
 #include "Arrays.h"
+#include "DynamicProgramming.h"
 
 int main()
 {
+	TestBottomUpCutUpRod();
 	//TestArrays();
 	//PrimitiveTypeTests();
-	TestSorting();
+	//TestSorting();
     return 0;
 }

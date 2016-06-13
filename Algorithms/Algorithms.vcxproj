@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="Arrays.h" />
     <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="DynamicProgramming.h" />
     <ClInclude Include="MaxHeap.h" />
     <ClInclude Include="PrimitiveTypes.h" />
     <ClInclude Include="Sorting.h" />
@@ -150,6 +151,7 @@
     <ClCompile Include="Algorithms.cpp" />
     <ClCompile Include="Arrays.cpp" />
     <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="DynamicProgramming.cpp" />
     <ClCompile Include="MaxHeap.cpp" />
     <ClCompile Include="PrimitiveTypes.cpp" />
     <ClCompile Include="Sorting.cpp" />
