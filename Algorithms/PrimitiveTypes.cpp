@@ -1,22 +1,49 @@
 #include "stdafx.h"
 #include "PrimitiveTypes.h"
 
-int parityLookupTable[0xFFFF];
+using namespace std;
 
-int ComputeParity(long in)
-{
-	auto parity = ((in >> 8) & 0xFF) ^ (in & 0xFF);
-	parity = ((parity >> 4) & 0xF) ^ (parity & 0xF);
-	parity = ((parity >> 2) & 0x3) ^ (parity & 0x3);
-	return ((parity >> 1) & 0x1) ^ (parity & 0x1);
-}
+short parityLookupTable[0xFFFF];
 
+// 5.1 COMPUTING THE PARITY OF A WORD
+// Compute the parity of a very large number of 64-bit words.
 void ComputeParity(int count, uint64_t* input, int* output)
 {
+	// The major insight here is that the parity of a binary value is equal to the XOR of the parity of each of its halves. Using a simple form of divide and conquer will return the parity of the whole from the parity of its smaller parts.
 	for (auto i = 0; i < 0xFFFF; i++)
-		parityLookupTable[i] = ComputeParity(i);
+	{
+		auto parity = i;
+		parity = parity ^ parity >> 8;
+		parity = parity ^ parity >> 4;
+		parity = parity ^ parity >> 2;
+		parity = parity ^ parity >> 1;
+		parityLookupTable[i] = parity & 0x01;
+	}
 	for (auto i = 0; i < count; i++)
-		output[i] = ComputeParity(parityLookupTable[input[i] & 0xFFFF] ^ parityLookupTable[(input[i] >> 16) & 0xFFFF]);
+		output[i] = parityLookupTable[input[i] & 0xFFFF] ^ parityLookupTable[input[i] >> 16 & 0xFFFF] ^ parityLookupTable[(input[i] >> 32 & 0xFFFF)] ^ parityLookupTable[input[i] >> 48 & 0xFFFF];
+}
+
+void TestParity()
+{
+	default_random_engine rnd;
+	uniform_int_distribution<uint64_t> dis(0, std::numeric_limits<uint64_t>::max());
+	uint64_t input[1000];
+	int output[1000];
+	for (auto i = 0; i < 1000; i++)
+		input[i] = dis(rnd);
+	ComputeParity(1000, input, output);
+	for (auto i = 0; i < 1000; i++)
+	{
+		auto count = 0;
+		for (auto j = 0; j < 64; j++)
+		{
+			auto value = static_cast<uint64_t>(1) << j;
+			if (input[i] & value)
+				count++;
+		}
+		auto referenceParity = count % 2 == 0 ? 0 : 1;
+		assert(referenceParity == output[i]);
+	}
 }
 
 double ComputePower(double x, int y)
@@ -62,35 +89,6 @@ int ReverseDigits(int x)
 		x = x / 10;
 	}
 	return result * (neg ? -1 : 1);
-}
-
-void TestParity()
-{
-	auto parity = ComputeParity(0b1011);
-	assert(parity == 1);
-	parity = ComputeParity(0b10001000);
-	assert(parity == 0);
-	// todo do I need all this stuff here??? I'm going to mess it up during an interview.
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int<uint64_t> dis(0, std::numeric_limits<long>::max());
-	uint64_t input[1000];
-	int output[1000];
-	for (auto i = 0; i < 1000; i++)
-		input[i] = dis(gen);
-	ComputeParity(1000, input, output);
-	for (auto i = 0; i < 1000; i++)
-	{
-		auto count = 0;
-		for (auto j = 0; j < 64; j++)
-		{
-			auto value = static_cast<uint64_t>(1) << j;
-			if (input[i] & value)
-				count++;
-		}
-		auto referenceParity = count % 2 == 0 ? 0 : 1;
-		assert(referenceParity == output[i]);
-	}
 }
 
 void TestReverseDigits()
