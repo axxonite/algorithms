@@ -26,7 +26,7 @@ void ComputeParity(int count, uint64_t* input, int* output)
 void TestParity()
 {
 	default_random_engine rnd;
-	uniform_int_distribution<uint64_t> dis(0, std::numeric_limits<uint64_t>::max());
+	uniform_int_distribution<uint64_t> dis(0, numeric_limits<uint64_t>::max());
 	uint64_t input[1000];
 	int output[1000];
 	for (auto i = 0; i < 1000; i++)
@@ -44,6 +44,24 @@ void TestParity()
 		auto referenceParity = count % 2 == 0 ? 0 : 1;
 		assert(referenceParity == output[i]);
 	}
+}
+
+// 5.2 SWAP BITS
+// Implement code that takes an input a 64-bit integer and swaps the bits at indices i and j.
+uint64_t SwapBits(uint64_t value, int i, int j)
+{
+	// The main takeaway is that the XOR of a value with a mask will flip the value bits where the mask bits are 1.
+	// To be noted however, using a conditional statement is probably slower than simply extracting the bit values and swapping them without checking if they are the same. I think this is a case of them being too clever for their own good.
+	if ((value >> i & 0x01) != (value >> j & 0x01))
+		value ^= 1ull  << i | 1ull << j;
+	return value;
+}
+
+void TestSwapBits()
+{
+	auto value = 0b1010101010101010101010101010101010101010101010101010101010101010ull;
+	auto result = SwapBits(value, 0, 63);
+	assert(result == 0b0010101010101010101010101010101010101010101010101010101010101011ull);
 }
 
 double ComputePower(double x, int y)
@@ -101,7 +119,8 @@ void TestReverseDigits()
 
 void PrimitiveTypeTests()
 {
-	TestComputePower();
 	TestParity();
+	TestSwapBits();
+	TestComputePower();
 	TestReverseDigits();
 }
