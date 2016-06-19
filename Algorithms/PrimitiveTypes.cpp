@@ -3,13 +3,13 @@
 
 using namespace std;
 
-short parityLookupTable[0xFFFF];
-
+// ----------------------------------------------------------
 // 5.1 COMPUTING THE PARITY OF A WORD
 // Compute the parity of a very large number of 64-bit words.
 void ComputeParity(int count, uint64_t* input, int* output)
 {
 	// The major insight here is that the parity of a binary value is equal to the XOR of the parity of each of its halves. Using a simple form of divide and conquer will return the parity of the whole from the parity of its smaller parts.
+	short parityLookupTable[0xFFFF];
 	for (auto i = 0; i < 0xFFFF; i++)
 	{
 		auto parity = i;
@@ -46,6 +46,7 @@ void TestParity()
 	}
 }
 
+// ----------------------------------------------------------
 // 5.2 SWAP BITS
 // Implement code that takes an input a 64-bit integer and swaps the bits at indices i and j.
 uint64_t SwapBits(uint64_t value, int i, int j)
@@ -62,6 +63,28 @@ void TestSwapBits()
 	auto value = 0b1010101010101010101010101010101010101010101010101010101010101010ull;
 	auto result = SwapBits(value, 0, 63);
 	assert(result == 0b0010101010101010101010101010101010101010101010101010101010101011ull);
+}
+
+// ----------------------------------------------------------
+// 5.3 REVERSE BITS
+// Write a program that takes a 64-bit word and returns the 64-bit word consisting of the bits of the input in reverse order.
+uint64_t ReverseBits(uint64_t value)
+{
+	short table[0xFFFF];
+	for ( auto i = 0; i < 0xFFFF; i++)
+	{
+		table[i] = 0;
+		for (auto j = 0; j < 16; j++)
+			table[i] |= (i >> j & 0x01) << (15 - j);
+	}
+	return static_cast<uint64_t>(table[value & 0xFFFF]) << 48 | static_cast<uint64_t>(table[value >> 16 & 0xFFFF]) << 32 |
+		static_cast<uint64_t>(table[value >> 32 & 0xFFFF]) << 16 | static_cast<uint64_t>(table[value >> 48 & 0xFFFF]);
+}
+
+void TestReverseBits()
+{
+	auto result = ReverseBits(0b1111111100000000111111110000000011111111000000001111111100000000ull);
+	assert(result == 0b0000000011111111000000001111111100000000111111110000000011111111ull);
 }
 
 double ComputePower(double x, int y)
@@ -121,6 +144,7 @@ void PrimitiveTypeTests()
 {
 	TestParity();
 	TestSwapBits();
+	TestReverseBits();
 	TestComputePower();
 	TestReverseDigits();
 }
