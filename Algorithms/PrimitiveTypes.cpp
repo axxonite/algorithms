@@ -8,7 +8,8 @@ using namespace std;
 // Compute the parity of a very large number of 64-bit words.
 void ComputeParity(int count, uint64_t* input, int* output)
 {
-	// The major insight here is that the parity of a binary value is equal to the XOR of the parity of each of its halves. Using a simple form of divide and conquer will return the parity of the whole from the parity of its smaller parts.
+	// The major insight here is that the parity of a binary value is equal to the XOR of the parity of each of its halves. 
+	// Using a simple form of divide and conquer will return the parity of the whole from the parity of its smaller parts.
 	short parityLookupTable[0xFFFF];
 	for (auto i = 0; i < 0xFFFF; i++)
 	{
@@ -52,7 +53,8 @@ void TestParity()
 uint64_t SwapBits(uint64_t value, int i, int j)
 {
 	// The main takeaway is that the XOR of a value with a mask will flip the value bits where the mask bits are 1.
-	// To be noted however, using a conditional statement is probably slower than simply extracting the bit values and swapping them without checking if they are the same. I think this is a case of them being too clever for their own good.
+	// To be noted however, using a conditional statement is probably slower than simply extracting the bit values and swapping them without checking if they are the same.
+	// I think this is a case of them being too clever for their own good.
 	if ((value >> i & 0x01) != (value >> j & 0x01))
 		value ^= 1ull  << i | 1ull << j;
 	return value;
@@ -75,6 +77,7 @@ uint64_t ReverseBits(uint64_t value)
 	{
 		table[i] = 0;
 		for (auto j = 0; j < 16; j++)
+			// ReSharper disable once CppRedundantParentheses
 			table[i] |= (i >> j & 0x01) << (15 - j);
 	}
 	return static_cast<uint64_t>(table[value & 0xFFFF]) << 48 | static_cast<uint64_t>(table[value >> 16 & 0xFFFF]) << 32 |
@@ -85,6 +88,31 @@ void TestReverseBits()
 {
 	auto result = ReverseBits(0b1111111100000000111111110000000011111111000000001111111100000000ull);
 	assert(result == 0b0000000011111111000000001111111100000000111111110000000011111111ull);
+}
+
+// ----------------------------------------------------------
+// 5.4 FIND CLOSEST INTEGER WITH SAME WEIGHT
+// Write a program which takes as input a nonnegative integer x, and returns a number y which is not equal to x, but has the same weight and their difference |y - x| is as small as possible.
+int FindClosestIntegerWithSameWeight(int x)
+{
+	// If we flip the bit at index k1 and the bit at index k2 where k1 > k2, then the absolute value of the difference between the original integer and the new one is 2^k1 - 2^k2.
+	// To minimize this, we should make k1 as small as possible and keep k2 as close to k1 as possible. Since we must preserve the weight, the index bit at index k1 must be different from the bit at index k2. 
+	// Thus, the smallest possible k1 can be is the rightmost bit that's different from the LSB, and k2 must be the very next bit.
+	// In summary, look for the rightmost consecutive bits that differ, and flip those bits.
+	for ( auto i = 0; i < 31; i++)
+	{
+		auto maskK2 = 1 << i;
+		auto maskK1 = maskK2 << 1;
+		if (((x & maskK1) >> 1) != (x & maskK2)) // Find first two consecutive bits that differ.
+			return x ^ (maskK2 | maskK1); // Flip them.
+	}
+	throw invalid_argument("All bits are 0 or 1.");
+}
+
+void TestFindClosestInteferWithSameWeight()
+{
+	auto result = FindClosestIntegerWithSameWeight(6);
+	assert(result == 5);
 }
 
 double ComputePower(double x, int y)
@@ -145,6 +173,7 @@ void PrimitiveTypeTests()
 	TestParity();
 	TestSwapBits();
 	TestReverseBits();
+	TestFindClosestInteferWithSameWeight();
 	TestComputePower();
 	TestReverseDigits();
 }
