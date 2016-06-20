@@ -77,8 +77,9 @@ uint64_t ReverseBits(uint64_t value)
 	{
 		table[i] = 0;
 		for (auto j = 0; j < 16; j++)
-			// ReSharper disable once CppRedundantParentheses
+			// ReSharper disable CppRedundantParentheses
 			table[i] |= (i >> j & 0x01) << (15 - j);
+			// ReSharper restore CppRedundantParentheses
 	}
 	return static_cast<uint64_t>(table[value & 0xFFFF]) << 48 | static_cast<uint64_t>(table[value >> 16 & 0xFFFF]) << 32 |
 		static_cast<uint64_t>(table[value >> 32 & 0xFFFF]) << 16 | static_cast<uint64_t>(table[value >> 48 & 0xFFFF]);
@@ -93,7 +94,7 @@ void TestReverseBits()
 // ----------------------------------------------------------
 // 5.4 FIND CLOSEST INTEGER WITH SAME WEIGHT
 // Write a program which takes as input a nonnegative integer x, and returns a number y which is not equal to x, but has the same weight and their difference |y - x| is as small as possible.
-int FindClosestIntegerWithSameWeight(int x)
+unsigned FindClosestIntegerWithSameWeight(unsigned int x)
 {
 	// If we flip the bit at index k1 and the bit at index k2 where k1 > k2, then the absolute value of the difference between the original integer and the new one is 2^k1 - 2^k2.
 	// To minimize this, we should make k1 as small as possible and keep k2 as close to k1 as possible. Since we must preserve the weight, the index bit at index k1 must be different from the bit at index k2. 
@@ -103,7 +104,7 @@ int FindClosestIntegerWithSameWeight(int x)
 	{
 		auto maskK2 = 1 << i;
 		auto maskK1 = maskK2 << 1;
-		if (((x & maskK1) >> 1) != (x & maskK2)) // Find first two consecutive bits that differ.
+		if ((x & maskK1) >> 1 != (x & maskK2)) // Find first two consecutive bits that differ.
 			return x ^ (maskK2 | maskK1); // Flip them.
 	}
 	throw invalid_argument("All bits are 0 or 1.");
