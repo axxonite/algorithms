@@ -116,6 +116,53 @@ void TestFindClosestInteferWithSameWeight()
 	assert(result == 5);
 }
 
+// ----------------------------------------------------------
+// 5.5 COMPUTE X * Y WITHOUT ARITHMETICAL OPERATORS
+// Write a program that multiplies two non negative integers using only bitwise operations.
+uint64_t Add(uint64_t x, uint64_t y)
+{
+	auto result = 0ull;
+	auto c = 0ull;
+	for ( auto i = 0; x > 0 || y > 0 || c > 0; i++, x >>= 1, y >>= 1)
+	{
+		auto bx = (x & 1ull) << i;
+		auto by = (y & 1ull) << i;
+		result |= bx ^ by ^ c;
+		c = (bx & by | bx & c | by & c) << 1;
+	}
+	return result;
+}
+
+uint64_t MultiplyIntegers(unsigned int x, unsigned int y)
+{
+	auto result = 0ull;
+	auto mask = 1ull;
+	auto multiplier = static_cast<uint64_t>(y);
+	for ( auto i = 0; i < 32; i++, mask <<= 1, multiplier <<= 1)
+	{
+		if ( (y & mask) != 0)
+			result = Add(result, static_cast<uint64_t>(x) << i);
+	}
+	return result;
+}
+
+void TestMultiplyIntegers()
+{
+	default_random_engine rnd;
+	uniform_int_distribution<uint64_t> dis(0, numeric_limits<int>::max());
+	for (auto i = 0; i < 1000; i++)
+	{
+		auto x = dis(rnd);
+		auto y = dis(rnd);
+		auto addResult = Add(x, y);
+		auto addRef = x + y;
+		auto result = MultiplyIntegers(static_cast<int>(x), static_cast<int>(y));
+		auto ref = x * y;
+		assert(addResult == addRef);
+		assert(result == ref);
+	}	
+}
+
 double ComputePower(double x, int y)
 {
 	// So the basic equation that we are basing this on is pow(x,y1+y2)=pow(x,y1)*pow(x,y2)
@@ -175,6 +222,7 @@ void PrimitiveTypeTests()
 	TestSwapBits();
 	TestReverseBits();
 	TestFindClosestInteferWithSameWeight();
+	TestMultiplyIntegers();
 	TestComputePower();
 	TestReverseDigits();
 }
