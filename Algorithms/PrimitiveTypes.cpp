@@ -122,11 +122,9 @@ void TestFindClosestInteferWithSameWeight()
 uint64_t Add(uint64_t x, uint64_t y)
 {
 	auto result = 0ull;
-	auto c = 0ull;
-	for ( auto i = 0; x > 0 || y > 0 || c > 0; i++, x >>= 1, y >>= 1)
+	for ( auto c = 0ull, x2 = x, y2 = y, mask = 1ull; x2 || y2 || c; mask <<= 1, x2 >>= 1, y2 >>= 1)
 	{
-		auto bx = (x & 1ull) << i;
-		auto by = (y & 1ull) << i;
+		auto bx = x & mask, by = y & mask;
 		result |= bx ^ by ^ c;
 		c = (bx & by | bx & c | by & c) << 1;
 	}
@@ -136,13 +134,9 @@ uint64_t Add(uint64_t x, uint64_t y)
 uint64_t MultiplyIntegers(unsigned int x, unsigned int y)
 {
 	auto result = 0ull;
-	auto mask = 1ull;
-	auto multiplier = static_cast<uint64_t>(y);
-	for ( auto i = 0; i < 32; i++, mask <<= 1, multiplier <<= 1)
-	{
-		if ( (y & mask) != 0)
-			result = Add(result, static_cast<uint64_t>(x) << i);
-	}
+	for (auto x64 = static_cast<uint64_t>(x), y64 = static_cast<uint64_t>(y); y; y >>= 1, y64 <<= 1, x64 <<= 1)
+		if (y & 1)
+			result = Add(result, x64);
 	return result;
 }
 
