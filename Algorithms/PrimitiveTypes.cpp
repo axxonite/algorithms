@@ -38,7 +38,7 @@ void TestParity()
 		auto count = 0;
 		for (auto j = 0; j < 64; j++)
 		{
-			auto value = static_cast<uint64_t>(1) << j;
+			auto value = uint64_t(1) << j;
 			if (input[i] & value)
 				count++;
 		}
@@ -56,7 +56,7 @@ uint64_t SwapBits(uint64_t value, int i, int j)
 	// To be noted however, using a conditional statement is probably slower than simply extracting the bit values and swapping them without checking if they are the same.
 	// I think this is a case of them being too clever for their own good.
 	if ((value >> i & 0x01) != (value >> j & 0x01))
-		value ^= 1ull  << i | 1ull << j;
+		value ^= 1ull << i | 1ull << j;
 	return value;
 }
 
@@ -73,16 +73,16 @@ void TestSwapBits()
 uint64_t ReverseBits(uint64_t value)
 {
 	short table[0xFFFF];
-	for ( auto i = 0; i < 0xFFFF; i++)
+	for (auto i = 0; i < 0xFFFF; i++)
 	{
 		table[i] = 0;
 		for (auto j = 0; j < 16; j++)
-			// ReSharper disable CppRedundantParentheses
+		// ReSharper disable CppRedundantParentheses
 			table[i] |= (i >> j & 0x01) << (15 - j);
-			// ReSharper restore CppRedundantParentheses
+		// ReSharper restore CppRedundantParentheses
 	}
-	return static_cast<uint64_t>(table[value & 0xFFFF]) << 48 | static_cast<uint64_t>(table[value >> 16 & 0xFFFF]) << 32 |
-		static_cast<uint64_t>(table[value >> 32 & 0xFFFF]) << 16 | static_cast<uint64_t>(table[value >> 48 & 0xFFFF]);
+	return uint64_t(table[value & 0xFFFF]) << 48 | uint64_t(table[value >> 16 & 0xFFFF]) << 32 |
+		uint64_t(table[value >> 32 & 0xFFFF]) << 16 | uint64_t(table[value >> 48 & 0xFFFF]);
 }
 
 void TestReverseBits()
@@ -100,7 +100,7 @@ unsigned FindClosestIntegerWithSameWeight(unsigned int x)
 	// To minimize this, we should make k1 as small as possible and keep k2 as close to k1 as possible. Since we must preserve the weight, the index bit at index k1 must be different from the bit at index k2. 
 	// Thus, the smallest possible k1 can be is the rightmost bit that's different from the LSB, and k2 must be the very next bit.
 	// In summary, look for the rightmost consecutive bits that differ, and flip those bits.
-	for ( auto i = 0; i < 31; i++)
+	for (auto i = 0; i < 31; i++)
 	{
 		auto maskK2 = 1 << i;
 		auto maskK1 = maskK2 << 1;
@@ -122,7 +122,7 @@ void TestFindClosestInteferWithSameWeight()
 uint64_t Add(uint64_t x, uint64_t y)
 {
 	auto result = 0ull;
-	for ( auto c = 0ull, x2 = x, y2 = y, mask = 1ull; x2 || y2 || c; mask <<= 1, x2 >>= 1, y2 >>= 1)
+	for (auto c = 0ull, x2 = x, y2 = y, mask = 1ull; x2 || y2 || c; mask <<= 1 , x2 >>= 1 , y2 >>= 1)
 	{
 		auto bx = x & mask, by = y & mask;
 		result |= bx ^ by ^ c;
@@ -134,7 +134,7 @@ uint64_t Add(uint64_t x, uint64_t y)
 uint64_t MultiplyIntegers(unsigned int x, unsigned int y)
 {
 	auto result = 0ull;
-	for (auto x64 = static_cast<uint64_t>(x), y64 = static_cast<uint64_t>(y); y; y >>= 1, y64 <<= 1, x64 <<= 1)
+	for (auto x64 = uint64_t(x), y64 = uint64_t(y); y; y >>= 1 , y64 <<= 1 , x64 <<= 1)
 		if (y & 1)
 			result = Add(result, x64);
 	return result;
@@ -150,13 +150,51 @@ void TestMultiplyIntegers()
 		auto y = dis(rnd);
 		auto addResult = Add(x, y);
 		auto addRef = x + y;
-		auto result = MultiplyIntegers(static_cast<int>(x), static_cast<int>(y));
+		auto result = MultiplyIntegers(int(x), int(y));
 		auto ref = x * y;
 		assert(addResult == addRef);
 		assert(result == ref);
-	}	
+	}
 }
 
+// ----------------------------------------------------------
+// 5.6 COMPUTE X / Y
+// GIven two positive integers, compute their quotient, using only the addition, subtraction and shifting operators.
+int Divide(unsigned int x, unsigned int y)
+{
+	auto result = 0;
+	while (y < x)
+	{
+		auto z = uint64_t(y) << 31;
+		auto q = 1u << 31;
+		while (z > x)
+		{
+			z >>= 1;
+			q >>= 1;
+		}
+		result += q;
+		x -= unsigned int(z);
+	}
+	return result;
+}
+
+void TestDivide()
+{
+	default_random_engine rnd;
+	uniform_int_distribution<int> dis(0, numeric_limits<int>::max());
+	for (auto i = 0; i < 1000; i++)
+	{
+		auto x = dis(rnd);
+		auto y = dis(rnd);
+		auto result = Divide(x, y);
+		auto ref = x / y;
+		assert(result == ref);
+	}
+}
+
+// ----------------------------------------------------------
+// 5.7 COMPUTE X ^ Y
+// Write a program that takes a double x and an integer y and return x^y. You can ignore overflow and underflow.
 double ComputePower(double x, int y)
 {
 	// So the basic equation that we are basing this on is pow(x,y1+y2)=pow(x,y1)*pow(x,y2)
@@ -175,20 +213,22 @@ double ComputePower(double x, int y)
 
 void TestComputePower()
 {
-	auto result = ComputePower(10, 0);
-	assert(result == 1);
-	result = ComputePower(10, 1);
-	assert(result == 10);
-	result = ComputePower(10, 2);
-	assert(result == 100);
-	result = ComputePower(10, 4);
-	assert(result == 10000);
-	result = ComputePower(10, 5);
-	assert(result == 100000);
-	result = ComputePower(11, 17);
-	assert(result == 505447028499293771);
+	default_random_engine rnd;
+	uniform_int_distribution<int> disx(0, 100);
+	uniform_int_distribution<int> disy(1, 8);
+	for (auto i = 0; i < 1000; i++)
+	{
+		auto x = disx(rnd);
+		auto y = disy(rnd);
+		auto result = ComputePower(x, y);
+		auto ref = pow(x, y);
+		assert(fabs(result - ref) <= 0.001);
+	}
 }
 
+// ----------------------------------------------------------
+// 5.8 REVERSE DIGITS
+// Write a program which takes an integer and returns the integer corresponding to the digits of the input written in reverse order.
 int ReverseDigits(int x)
 {
 	auto result = 0;
@@ -210,6 +250,7 @@ void TestReverseDigits()
 	assert(reversed == -413);
 }
 
+// ----------------------------------------------------------
 void PrimitiveTypeTests()
 {
 	TestParity();
@@ -217,6 +258,7 @@ void PrimitiveTypeTests()
 	TestReverseBits();
 	TestFindClosestInteferWithSameWeight();
 	TestMultiplyIntegers();
+	TestDivide();
 	TestComputePower();
 	TestReverseDigits();
 }
