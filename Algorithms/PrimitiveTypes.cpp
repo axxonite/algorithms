@@ -251,6 +251,46 @@ void TestReverseDigits()
 }
 
 // ----------------------------------------------------------
+// 5.9 CHECK IF A DECIMAL INTEGER IS A PALINDROME
+// Write a program that takes an integer and determines if that integer's representation as a decimal string is a palindrome.
+bool IsPalindrome(int x)
+{
+	if (x < 0)
+		return false;
+	//auto p = 1;
+	//while (p * 10 < x)
+	//	p *= 10;
+	// We can use a log10. Remember log10 means thew power to which 10 must be raised to reach x. Technically, I wonder if the simple loop iteration above wouldn't be faster.
+	auto p = int(pow(10, floor(log10(x))));
+	while (x >= 10)
+	{
+		if (x % 10 != x / p)
+			return false;
+		x = (x % p)  / 10;
+		p /= 100;
+	}
+	return true;
+}
+
+void TestIsPalindrome()
+{
+	auto result = IsPalindrome(0);
+	assert(result);
+	result = IsPalindrome(10);
+	assert(!result);
+	result = IsPalindrome(121);
+	assert(result);
+	result = IsPalindrome(333);
+	assert(result);
+	result = IsPalindrome(1234554321);
+	assert(result);
+	result = IsPalindrome(12344321);
+	assert(result);
+	result = IsPalindrome(12343421);
+	assert(!result);
+}
+
+// ----------------------------------------------------------
 void PrimitiveTypeTests()
 {
 	TestParity();
@@ -261,4 +301,5 @@ void PrimitiveTypeTests()
 	TestDivide();
 	TestComputePower();
 	TestReverseDigits();
+	TestIsPalindrome();
 }
