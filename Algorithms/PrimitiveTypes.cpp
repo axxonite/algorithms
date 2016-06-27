@@ -290,6 +290,56 @@ void TestIsPalindrome()
 	assert(!result);
 }
 
+
+// 5.10 GENERATE A UNIFORM RANDOM NUMBER
+// Implement a random number generator that generates a random integer between a and b, inclusive given a random number generator that produces 0 or 1 with equal
+// probability.
+int GenerateUniformRandomNumber(int a, int b)
+{
+    default_random_engine rnd;
+    uniform_int_distribution<int> dis(0, 1);
+    // Test case 1: say this is a=1, b=2, then range=1, so valid values are 0 and 1.
+    // Test case 2: say this is a=1, b=3, then range=2, so valid values are 0, 1, and 2.
+    // Assume b > a, b and a could be swapped if they're not. The difference of b and a could overflow a signed int.
+    auto range = uint32_t(int64_t(b) - int64_t(a)); 
+    uint32_t result;
+    do
+    {
+        auto curRange = 1ull; // Need at least 33 bits here to avoid a potential infinite loop.
+        result = 0;
+        // Test case 1: curRange will be 2 on 2nd iteration, so skip, and possible values are 0 and 1
+        // Test case 2: curRange will be 2 on 2nd iteration, so pass, and possible values are 0, 1, 2 and 3; 3 will rejected by the while condition.         
+        while ( curRange <= range ) // curRange will be 2 on 2nd iteration, so pass, and possible values are 0-3
+        {
+            result |= dis(rnd) * curRange;
+            curRange <<= 1;
+        }
+    }
+    while ( result > range );
+    return a + result;
+}
+
+void TestGenerateUniformNumber()
+{
+	default_random_engine rnd;
+	uniform_int_distribution<int> dis(numeric_limits<int>::min(), numeric_limits<int>::max());
+	uniform_int_distribution<int> dis2(0, 100);
+	for (auto i = 0; i < 1000; i++)
+	{
+		auto a = dis(rnd);
+		auto b = a + dis2(rnd);
+		auto result = GenerateUniformRandomNumber(a, b);
+		assert(result >= a);
+		assert(result <= b);
+		b = dis(rnd);
+		if (b < a)
+			swap(a, b);
+		result = GenerateUniformRandomNumber(a, b);
+		assert(result >= a);
+		assert(result <= b);
+	}
+}
+
 // ----------------------------------------------------------
 void PrimitiveTypeTests()
 {
@@ -302,4 +352,5 @@ void PrimitiveTypeTests()
 	TestComputePower();
 	TestReverseDigits();
 	TestIsPalindrome();
+	TestGenerateUniformNumber();
 }
