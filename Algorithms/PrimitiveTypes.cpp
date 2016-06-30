@@ -290,10 +290,11 @@ void TestIsPalindrome()
 	assert(!result);
 }
 
-
+// ----------------------------------------------------------
 // 5.10 GENERATE A UNIFORM RANDOM NUMBER
 // Implement a random number generator that generates a random integer between a and b, inclusive given a random number generator that produces 0 or 1 with equal
 // probability.
+// Time complexity is O(lg(b - a + 1)
 int GenerateUniformRandomNumber(int a, int b)
 {
     default_random_engine rnd;
@@ -339,6 +340,34 @@ void TestGenerateUniformNumber()
 		assert(result <= b);
 	}
 }
+
+// ----------------------------------------------------------
+// 5.11 RECTANGLE INTERSECTION
+// Write a program that tests if two rectangles have a nonempty intersection. If the intersection is nonempty, return the rectangle formed by their intersection.
+struct Rect
+{
+	int x1, y1, x2, y2;
+};
+
+Rect RectangleIntersection(Rect a, Rect b)
+{
+	// The problem is unspecified, but the boundary is considered a part of the rectangle.
+	// Focus on the conditions under which the rectangles are guaranteed to not intersect, which is when a rectangle's right edge is before the left edge of the other, or the rectangle's left edge is after the right edge 
+	// of the other.
+	// Thus, there is an intersection along an axis if a A.Min <= B.Max && A.Max >= B.Min. 
+	// If the set of x-values for the rectangles intersect and the set of y-values for the rectangles intersect, then all points with those x- and y-values are common to both rectangles, and there is a non-empty intersection.
+	// The intersection along an axis is Max(A.min, B.min), Min(A.max, B.max)
+	Rect result;
+	result.x1 = result.y1 = result.x2 = result.y2 = 0;
+	return result;
+}
+
+// ----------------------------------------------------------
+// 25.1 COMPUTE THE GREATEST COMMON DIVISOR
+// The greatest common divisor  of positive integers x and y is the largest integer d such that d divides x evenly, and d divides y evenly, i.e. x mod d = 0 and y mod d = 0.
+// Design an efficient algorithm for computing the GCD of two numbers without using multiplication, division or the modulus operators.
+
+// If x=y, GDC(x,y) = x, otherwise assume x > y, in which case GCD(x,y) = GCD(x-y,y).
 
 // ----------------------------------------------------------
 void PrimitiveTypeTests()
