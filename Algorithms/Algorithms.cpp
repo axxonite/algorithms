@@ -11,7 +11,7 @@ int main()
 {
 	TestBottomUpCutUpRod();
 	//TestArrays();
-	//PrimitiveTypeTests();
+	PrimitiveTypeTests();
 	//TestSorting();
     return 0;
 }
