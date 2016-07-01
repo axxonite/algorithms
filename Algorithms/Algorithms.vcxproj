@@ -142,10 +142,12 @@
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="DynamicProgramming.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="Lists.h" />
     <ClInclude Include="MaxHeap.h" />
     <ClInclude Include="PrimitiveTypes.h" />
     <ClInclude Include="Sorting.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Strings.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +156,7 @@
     <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="DynamicProgramming.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="Lists.cpp" />
     <ClCompile Include="MaxHeap.cpp" />
     <ClCompile Include="PrimitiveTypes.cpp" />
     <ClCompile Include="Sorting.cpp" />
@@ -163,6 +166,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Strings.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
