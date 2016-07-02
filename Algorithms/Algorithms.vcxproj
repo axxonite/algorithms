@@ -146,6 +146,7 @@
     <ClInclude Include="MaxHeap.h" />
     <ClInclude Include="PrimitiveTypes.h" />
     <ClInclude Include="Sorting.h" />
+    <ClInclude Include="StacksAndQueues.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Strings.h" />
     <ClInclude Include="targetver.h" />
@@ -160,6 +161,7 @@
     <ClCompile Include="MaxHeap.cpp" />
     <ClCompile Include="PrimitiveTypes.cpp" />
     <ClCompile Include="Sorting.cpp" />
+    <ClCompile Include="StacksAndQueues.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
