@@ -143,10 +143,12 @@
     <ClInclude Include="BinaryTrees.h" />
     <ClInclude Include="DynamicProgramming.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="HashTables.h" />
     <ClInclude Include="Heaps.h" />
     <ClInclude Include="Lists.h" />
     <ClInclude Include="MaxHeap.h" />
     <ClInclude Include="PrimitiveTypes.h" />
+    <ClInclude Include="Search.h" />
     <ClInclude Include="Sorting.h" />
     <ClInclude Include="StacksAndQueues.h" />
     <ClInclude Include="stdafx.h" />
@@ -160,10 +162,12 @@
     <ClCompile Include="BinaryTrees.cpp" />
     <ClCompile Include="DynamicProgramming.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="HashTables.cpp" />
     <ClCompile Include="Heaps.cpp" />
     <ClCompile Include="Lists.cpp" />
     <ClCompile Include="MaxHeap.cpp" />
     <ClCompile Include="PrimitiveTypes.cpp" />
+    <ClCompile Include="Search.cpp" />
     <ClCompile Include="Sorting.cpp" />
     <ClCompile Include="StacksAndQueues.cpp" />
     <ClCompile Include="stdafx.cpp">
