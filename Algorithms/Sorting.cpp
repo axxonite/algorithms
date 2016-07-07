@@ -1,235 +1,110 @@
 #include "stdafx.h"
 #include "Sorting.h"
-#include "MaxHeap.h"
+#include "Lists.h"
 
 using namespace std;
 
-// --------------------------------------------------
-// Insertion sort.
-// O(n^2), but fast for small input sizes. Go through each value and insert in its appropriate location in the array.
-void InsertionSort(vector<int>& values)
+// ----------------------------------------------------------
+// 14.1 COMPUTE THE INTERSECTION OF TWO SORTED ARRAYS
+vector<int> ComputeIntersectionOfTwoSortedArrays(const vector<int>& a, const vector<int>& b)
 {
-	// Skip first value.
-	for (auto i = 1; i < values.size(); i++)
-	{
-		auto value = values[i];
-		// Insert into sorted sequence. We have to insert somewhere before j.
-		auto insertionPoint = i - 1;
-		while (insertionPoint >= 0 && values[insertionPoint] > value)
-		{
-			values[insertionPoint + 1] = values[insertionPoint]; // Push values forward until the insertion point is <= key
-			insertionPoint--;
-		}
-		values[insertionPoint + 1] = value;
-	}
+	// Compare the arrays with each other. Track an iterator for each array and advance the smaller one. Stop when the smaller array has been fully processed. If the arrays are
+	// very uneven in length then a a binary search will be faster, as it will skip all the unavailable entries in the larger array.
+	return vector<int>();
 }
 
-// --------------------------------------------------
-// Merge sort. Subdivide int two subarrays recursively which will create hierarchy of smaller, sorted subarrays down to size 1, then compare the entries of each sub array to merge them. 
-// O(n log n)
-void Merge(vector<int>& values, int first, int pivot, int last)
+// ----------------------------------------------------------
+// 14.2 MERGE TWO SORTED ARRAYS
+void MergeTwoSortedArrays(int A[], int m, int B[], int n)
 {
-	// Initialize the left and right arrays
-	vector<int> left(values.begin() + first, values.begin() + pivot + 1); // Need iterator one past to include the element we want at the end.
-	vector<int> right(values.begin() + pivot + 1, values.begin() + last + 1); // Same here.
-	left.push_back(numeric_limits<int>::max());
-	right.push_back(numeric_limits<int>::max());
-
-	// Insert into destination array based on comparison based left and right sub-arrays.
-	auto l = 0, r = 0;
-	for (auto k = first; k <= last; k++)
-		values[k] = left[l] < right[r] ? left[l++] : right[r++];
+	// Go backwards from longer array. Compare with other array, and insert larger values at the end.
 }
 
-void MergeSort(vector<int>& values, int first, int last)
+// ----------------------------------------------------------
+// 14.3 REMOVE FIRST NAME DUPLICATES
+struct Name
 {
-	if (first < last)
-	{
-		auto pivot = (first + last) / 2; // Choose pivot in the middle.
-		// Divide and conquer.
-		MergeSort(values, first, pivot);
-		MergeSort(values, pivot + 1, last);
-		// Merge the two sorted subarrays.
-		Merge(values, first, pivot, last);
-	}
+	string first, last;
+};
+
+void RemoveFirstNameDuplicates(vector<Name>& names)
+{
+	// Sort the names. Skip first names when they are they same as the previous first name.
 }
 
-void MergeSort(vector<int>& values)
+// ----------------------------------------------------------
+// 14.4 RENDER A CALENDAR
+struct Event
 {
-	MergeSort(values, 0, values.size() - 1);
+	int start, finish;
+};
+
+int FindMaxSimultaneousEvents(const vector<Event>& events)
+{
+	// Sort endpoints. Increase and decrease count as we enter and leave events, and keep the max.
+	return 0;
 }
 
-// --------------------------------------------------
-// Quicksort - pick a key value, classify with respect to the key values as < or >, then run again on each < and > classication.
-// O(n lg n)
-int Partition(vector<int>& values, int first, int last)
+// ----------------------------------------------------------
+// 14.5 MERGING INTERVALS
+struct Interval
 {
-	auto keyValue  = values[last];
-	auto insertionPoint = first - 1;
-	for (auto i = first; i < last; i++)
-	{
-		if (values[i] <= keyValue)
-		{
-			// Swap i with insertion point so i is in the left section
-			insertionPoint++;
-			swap(values[i], values[insertionPoint]);
-		}
-	}
-	swap(values[last], values[insertionPoint + 1]);
-	return insertionPoint + 1; // This is where the key value ended up at.
+	int left, right;
+};
+
+vector<Interval> MergingInterval(const vector<Interval>& disjointIntervals, Interval newInterval)
+{
+	// Sort the intervals. First iterate through intervals which are completely before the interval to be added and add them directly. Then, for each interval that intersects the interval to be added, compute the union with 
+	// new interval. This union is itsef an interval; iterate through subsequent intervals as long as they intersect with the union we are forming. Then iterate through the remaining intervals and add them to the result.
+	return vector<Interval>();
 }
 
-void Quicksort(vector<int>& values, int start, int end)
+// ----------------------------------------------------------
+// 14.6 COMPUTE THE UNION OF INTERVALS
+struct OpenClosedInterval
 {
-	if ( start < end )
-	{
-		auto pivotIndex = Partition(values, start, end);
-		Quicksort(values, start, pivotIndex - 1);
-		Quicksort(values, pivotIndex, end);
-	}
+	int start, end;
+	bool open;
+};
+
+vector<OpenClosedInterval> ComputeTheUnionOfIntervals(vector<OpenClosedInterval> intervals)
+{
+	// Sort the intervals. There are a few cases. Let r be the most recently added interval and c be the current interval. If r does not overlap c, add c to the result. If r and c intersect, update r to 
+	// include c. If the right endpoint of r is equal to the left endpoint of c, and at least one of the two is closed, updated r to include c.
+	return vector<OpenClosedInterval>();
 }
 
-void BalancedQuicksort(vector<int>& values, int start, int end)
+// ----------------------------------------------------------
+// 14.7 PARTITIONING AND SORTING AN ARRAY WITH MANY REPEATED ENTRIES
+struct Person
 {
-	if (start < end)
-	{
-		// Swap the last entry with a random pivot so that we may get a balanced distribution regardless of input data.
-		default_random_engine rnd;
-		uniform_int_distribution<int> dis(start, end + 1);
-		auto randomPivot = dis(rnd);
-		swap(values[end], values[randomPivot]);
-		auto pivotIndex = Partition(values, start, end);
-		Quicksort(values, start, pivotIndex - 1);
-		Quicksort(values, pivotIndex, end);
-	}
+	int age;
+	string name;
+};
+
+void PatitioningAndSortingAnArrayWithManyRepeatedEntries(vector<Person>& persons)
+{
+	// Compute frequency of each age, then compute position of each age in the array. Then move through the array, swapping students with their final position. This is a variation on counting sort.
 }
 
-void Quicksort(vector<int>& values)
+// ----------------------------------------------------------
+// 14.8 TEAM PHOTO DAY
+//
+// Sort both teams. Then the photo can be taken if there is one team is < than the other team for every sorted element.
+
+// ----------------------------------------------------------
+// 14.9 IMPLEMENT A FAST SORTING ALGORITHM FOR LISTS*
+NodePtr FastSortingAlgorithmForLists(NodePtr l)
 {
-	Quicksort(values, 0, values.size() - 1);
+	// Implement a merge sort on lists. Find the middle of the list through a fast and slow iterator, and recurse on the sublists.
+	return NodePtr();
 }
 
-void BalancedQuicksort(vector<int>& values)
+// ----------------------------------------------------------
+// 14.10 COMPUTE A SALARY THRESHOLD
+double FindSalaryCap(double targetPayrol, vector<double> salaries)
 {
-	Quicksort(values, 0, values.size() - 1);
-}
-
-// --------------------------------------------------
-// Counting sort. O(n). Stable. Count the number of occurrences of each possible value, then add up a sum of the number of occurrences less than i for every i. Then build the destination array by running though
-// from the highest to the lowest values, and inserting as many occurrences as there were in the input array.
-vector<int> CountingSort(vector<int> values, int maxValue)
-{
-	vector<int> counts(maxValue + 1);
-	vector<int> result(values.size());
-	for (auto i = 0; i < values.size(); i++)
-		counts[values[i]]++;
-	for (auto i = 1; i < counts.size(); i++)
-		counts[i] = counts[i] + counts[i - 1];
-	// counts now contains the number of elements less than or equal to i for each possible value.
-	for (int i = values.size() - 1; i >= 0; i--)
-	{
-		result[counts[values[i]] - 1] = values[i]; // SUbtract one, because when there is only one occurrence of the lowest value left, it must be inserted at position 0.
-		counts[values[i]]--;
-	}
-	return result;
-}
-
-// Radix sort. O(n). Do a counting sort on each successive digit, starting from the lowest digit. This effectively categories the numbers in a hierarchy of digits from highest value to lowest value digits.
-vector<int> RadixSort(vector<int> values, int maxDigits)
-{
-	vector<int> result(values.size());
-	auto divider = 1;
-	for ( auto d = 0; d < maxDigits; d++)
-	{
-		vector<int> counts(11);
-		for (auto i = 0; i < values.size(); i++)
-			counts[(values[i] / divider) % 10]++;
-		for (auto i = 1; i < counts.size(); i++)
-			counts[i] = counts[i] + counts[i - 1];
-		// counts now contains the number of elements less than or equal to i for each possible value.
-		for (int i = values.size() - 1; i >= 0; i--)
-		{
-			auto digit = (values[i] / divider) % 10;
-			result[counts[digit] - 1] = values[i]; // Subtract one, because when there is only one occurrence of the lowest value left, it must be inserted at position 0.
-			counts[digit]--;
-		}
-		values = result;
-		divider *= 10;
-	}
-	return result;
-}
-
-// --------------------------------------------------
-// Select the kth smallest value. k starts from zero. O(n ^ 2) worst case, O(n) expected. The run time analysis for this one is complex.
-int SelectOrderStatistic(vector<int> values, int first, int last, int order)
-{
-	if (first == last)
-		return values[first];
-	auto pivot = Partition(values, first, last);
-	auto k = pivot - first;
-	if (order == k)
-		return values[pivot]; // The pivot value is the answer.
-	else if (order < k)
-		return SelectOrderStatistic(values, first, pivot - 1, order);
-	return SelectOrderStatistic(values, pivot + 1, last, order - k - 1); // - 1 on k since the pivot has +1
-}
-
-int SelectOrderStatistic(vector<int> values, int order)
-{
-	return SelectOrderStatistic(values, 0, values.size() - 1, order);
-}
-
-// --------------------------------------------------
-// Tests
-vector<int> GenerateDistribution(int max = numeric_limits<int>::max())
-{
-	vector<int> result;
-	default_random_engine rnd;
-	uniform_int_distribution<int> dis(0, max);
-	for (auto i = 0; i < 1000; i++)
-		result.push_back(dis(rnd));
-	return result;
-}
-
-void ValidateSort(vector<int> input)
-{
-	for (auto i = 1; i < 1000; i++)
-		assert(input[i] >= input[i - 1]);
-}
-
-void TestOrderStatistic()
-{
-	auto input = GenerateDistribution();
-	auto result = SelectOrderStatistic(input, 500);
-	auto lessThan = 0;
-	for (auto i = 0; i < 1000; i++)
-		if (input[i] < result)
-			lessThan++;
-	assert(lessThan == 500);
-}
-
-void TestSorting()
-{
-	auto input = GenerateDistribution();
-	InsertionSort(input);
-	ValidateSort(input);
-	input = GenerateDistribution();
-	MergeSort(input);
-	ValidateSort(input);
-	input = GenerateDistribution();
-	Heapsort(input);
-	ValidateSort(input);
-	input = GenerateDistribution();
-	Quicksort(input);
-	ValidateSort(input);
-	input = GenerateDistribution();
-	BalancedQuicksort(input);
-	ValidateSort(input);
-	input = GenerateDistribution(100);
-	input = CountingSort(input, 100);
-	ValidateSort(input);
-	input = GenerateDistribution(10000);
-	input = RadixSort(input, 5);
-	ValidateSort(input);
-	TestOrderStatistic();
+	// Sort by distinct salary levels and compute payrolls for each salary level in an array P[]. Find the index in P[] that bounds the target payroll than do P[i] + (target - P[i]) / (n - i) to distribute the remainder of the
+	// payroll.
+	return 0;
 }

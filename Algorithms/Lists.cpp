@@ -4,15 +4,6 @@
 
 using namespace std;
 
-template <class T>
-struct Node
-{
-	T value;
-	Node* next;
-};
-
-typedef shared_ptr<Node<int>> NodePtr;
-
 // ----------------------------------------------------------
 // 8.1 MERGE TWO SORTED LISTS
 NodePtr MergeTwoSortedLists(NodePtr l1, NodePtr l2)

@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "PrimitiveTypes.h"
-#include "Sorting.h"
+#include "SortingAlgorithms.h"
 #include "Arrays.h"
 #include "DynamicProgramming.h"
 

@@ -150,6 +150,7 @@
     <ClInclude Include="PrimitiveTypes.h" />
     <ClInclude Include="Search.h" />
     <ClInclude Include="Sorting.h" />
+    <ClInclude Include="SortingAlgorithms.h" />
     <ClInclude Include="StacksAndQueues.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Strings.h" />
@@ -169,6 +170,7 @@
     <ClCompile Include="PrimitiveTypes.cpp" />
     <ClCompile Include="Search.cpp" />
     <ClCompile Include="Sorting.cpp" />
+    <ClCompile Include="SortingAlgorithms.cpp" />
     <ClCompile Include="StacksAndQueues.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
