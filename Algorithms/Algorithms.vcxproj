@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="Arrays.h" />
     <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="BinarySearchTrees.h" />
     <ClInclude Include="BinaryTrees.h" />
     <ClInclude Include="DynamicProgramming.h" />
     <ClInclude Include="Graph.h" />
@@ -160,6 +161,7 @@
     <ClCompile Include="Algorithms.cpp" />
     <ClCompile Include="Arrays.cpp" />
     <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="BinarySearchTrees.cpp" />
     <ClCompile Include="BinaryTrees.cpp" />
     <ClCompile Include="DynamicProgramming.cpp" />
     <ClCompile Include="Graph.cpp" />
