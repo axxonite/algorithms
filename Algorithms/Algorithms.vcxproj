@@ -149,6 +149,7 @@
     <ClInclude Include="Lists.h" />
     <ClInclude Include="MaxHeap.h" />
     <ClInclude Include="PrimitiveTypes.h" />
+    <ClInclude Include="Recursion.h" />
     <ClInclude Include="Search.h" />
     <ClInclude Include="Sorting.h" />
     <ClInclude Include="SortingAlgorithms.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="Lists.cpp" />
     <ClCompile Include="MaxHeap.cpp" />
     <ClCompile Include="PrimitiveTypes.cpp" />
+    <ClCompile Include="Recursion.cpp" />
     <ClCompile Include="Search.cpp" />
     <ClCompile Include="Sorting.cpp" />
     <ClCompile Include="SortingAlgorithms.cpp" />

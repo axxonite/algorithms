@@ -150,6 +150,7 @@ public :
 
 	int Lookup(const string& client)
 	{
+		return 0;
 	}
 
 	void AddToAll(int c)
