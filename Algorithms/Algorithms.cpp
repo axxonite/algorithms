@@ -5,7 +5,7 @@
 #include "PrimitiveTypes.h"
 #include "SortingAlgorithms.h"
 #include "Arrays.h"
-#include "DynamicProgramming.h"
+#include "DPExamples.h"
 
 int main()
 {

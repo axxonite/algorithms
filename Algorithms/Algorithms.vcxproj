@@ -142,6 +142,7 @@
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="BinarySearchTrees.h" />
     <ClInclude Include="BinaryTrees.h" />
+    <ClInclude Include="DPExamples.h" />
     <ClInclude Include="DynamicProgramming.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="HashTables.h" />
@@ -164,6 +165,7 @@
     <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="BinarySearchTrees.cpp" />
     <ClCompile Include="BinaryTrees.cpp" />
+    <ClCompile Include="DPExamples.cpp" />
     <ClCompile Include="DynamicProgramming.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="HashTables.cpp" />
