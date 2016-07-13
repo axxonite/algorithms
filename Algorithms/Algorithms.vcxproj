@@ -145,6 +145,7 @@
     <ClInclude Include="DPExamples.h" />
     <ClInclude Include="DynamicProgramming.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="GreedyAlgorithms.h" />
     <ClInclude Include="HashTables.h" />
     <ClInclude Include="Heaps.h" />
     <ClInclude Include="Lists.h" />
@@ -168,6 +169,7 @@
     <ClCompile Include="DPExamples.cpp" />
     <ClCompile Include="DynamicProgramming.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="GreedyAlgorithms.cpp" />
     <ClCompile Include="HashTables.cpp" />
     <ClCompile Include="Heaps.cpp" />
     <ClCompile Include="Lists.cpp" />

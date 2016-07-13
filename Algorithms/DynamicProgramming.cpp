@@ -14,7 +14,7 @@ int CountNumberOfScoreCombinations(int target, const vector<int> plays)
 	// This maps to A[i][j - p[i]]. 
 	//
 	// The set that does not include new the play i for the score j is simply A[i-1][j]. The union of both these sets gives us the total combination count for a given target score
-	// and set of plays up to i, eg.  A[i][j] = A[i-1][j] + A[i][j - p[i]]. 
+	// and set of plays up to i, eg. A[i][j] = A[i-1][j] + A[i][j - p[i]]. 
 	//
 	// Thus loop, over plays over i and score ranges over j, and add these two combinations, caching the results for lower elements in the cache array. 
 	return 0;
@@ -57,7 +57,7 @@ int ComputeBinomalCoefficients(int n, int k)
 
 // ----------------------------------------------------------
 // 17.5 SEARCH FOR A SEQUENCE IN A 2D ARRAY*
-bool IsPatternContainedInGrid(const vector<vector<int>>& grid, const vector<int&> pattern)
+bool IsPatternContainedInGrid(const vector<vector<int>>& grid, const vector<int>& pattern)
 {
 	// Search over each grid square, matching the pattern as we go. The one twist is that if we've already searched a specific s, y and pattern offset, we can use a cached result
 	// and not compute that again.
