@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "PrimitiveTypes.h"
+#include <algorithm>
 
 using namespace std;
 
@@ -8,8 +9,7 @@ using namespace std;
 // Compute the parity of a very large number of 64-bit words.
 void ComputeParity(int count, uint64_t* input, int* output)
 {
-	// The major insight here is that the parity of a binary value is equal to the XOR of the parity of each of its halves. 
-	// Using a simple form of divide and conquer will return the parity of the whole from the parity of its smaller parts.
+	// INSIGHT: the parity of a binary value is equal to the XOR of the parity of each of its halves; use divide and conquer to yield the parity of the whole from the parity of its smaller parts.
 	short parityLookupTable[0xFFFF];
 	for (auto i = 0; i < 0xFFFF; i++)
 	{
@@ -92,7 +92,7 @@ void TestReverseBits()
 }
 
 // ----------------------------------------------------------
-// 5.4 FIND CLOSEST INTEGER WITH SAME WEIGHT
+// 5.4 FIND CLOSEST INTEGER WITH SAME WEIGHT**
 // Write a program which takes as input a nonnegative integer x, and returns a number y which is not equal to x, but has the same weight and their difference |y - x| is as small as possible.
 unsigned FindClosestIntegerWithSameWeight(unsigned int x)
 {
@@ -158,8 +158,8 @@ void TestMultiplyIntegers()
 }
 
 // ----------------------------------------------------------
-// 5.6 COMPUTE X / Y
-// GIven two positive integers, compute their quotient, using only the addition, subtraction and shifting operators.
+// 5.6 COMPUTE X / Y*
+// Given two positive integers, compute their quotient, using only the addition, subtraction and shifting operators.
 int Divide(unsigned int x, unsigned int y)
 {
 	auto result = 0;
@@ -193,7 +193,7 @@ void TestDivide()
 }
 
 // ----------------------------------------------------------
-// 5.7 COMPUTE X ^ Y
+// 5.7 COMPUTE X ^ Y*
 // Write a program that takes a double x and an integer y and return x^y. You can ignore overflow and underflow.
 double ComputePower(double x, int y)
 {
@@ -266,7 +266,9 @@ bool IsPalindrome(int x)
 	{
 		if (x % 10 != x / p)
 			return false;
+		// ReSharper disable CppRedundantParentheses
 		x = (x % p)  / 10;
+		// ReSharper restore CppRedundantParentheses
 		p /= 100;
 	}
 	return true;
@@ -291,7 +293,7 @@ void TestIsPalindrome()
 }
 
 // ----------------------------------------------------------
-// 5.10 GENERATE A UNIFORM RANDOM NUMBER
+// 5.10 GENERATE A UNIFORM RANDOM NUMBER*
 // Implement a random number generator that generates a random integer between a and b, inclusive given a random number generator that produces 0 or 1 with equal
 // probability.
 // Time complexity is O(lg(b - a + 1)
@@ -342,24 +344,43 @@ void TestGenerateUniformNumber()
 }
 
 // ----------------------------------------------------------
-// 5.11 RECTANGLE INTERSECTION
+// 5.11 RECTANGLE INTERSECTION*
 // Write a program that tests if two rectangles have a nonempty intersection. If the intersection is nonempty, return the rectangle formed by their intersection.
 struct Rect
 {
 	int x1, y1, x2, y2;
+
+	Rect( int _x1, int _y1, int _x2, int _y2)
+	{
+		x1 = _x1;
+		x2 = _x2;
+		y1 = _y1;
+		y2 = _y2;
+	}
+
+	bool operator == (const Rect& a) const
+	{
+		return x1 == a.x1 && x2 == a.x2 && y1 == a.y1 && a.y1;
+	}
 };
 
 Rect RectangleIntersection(Rect a, Rect b)
 {
-	// The problem is unspecified, but the boundary is considered a part of the rectangle.
-	// Focus on the conditions under which the rectangles are guaranteed to not intersect, which is when a rectangle's right edge is before the left edge of the other, or the rectangle's left edge is after the right edge 
-	// of the other.
-	// Thus, there is an intersection along an axis if a A.Min <= B.Max && A.Max >= B.Min. 
-	// If the set of x-values for the rectangles intersect and the set of y-values for the rectangles intersect, then all points with those x- and y-values are common to both rectangles, and there is a non-empty intersection.
-	// The intersection along an axis is Max(A.min, B.min), Min(A.max, B.max)
-	Rect result;
-	result.x1 = result.y1 = result.x2 = result.y2 = 0;
-	return result;
+	// The problem is unspecified, but the boundary is considered a part of the rectangle. Focus on the conditions under which the rectangles are guaranteed to not intersect, which is when a rectangle's right edge is before the 
+	// left edge of the other, or the rectangle's left edge is after the right edge  of the other. Thus, there is an intersection along an axis if a A.Min <= B.Max && A.Max >= B.Min. If the set of x-values for the rectangles
+	// intersect and the set of y-values for the rectangles intersect, then all points with those x- and y-values are common to both rectangles, and there is a non-empty intersection. The intersection along an axis is 
+	// Max(A.min, B.min), Min(A.max, B.max)
+    if (a.x1 <= b.x2 && a.x2 >= b.x1 && a.y1 <= b.y2 && a.y2 >= b.y1)
+        return { max(a.x1, b.x1), max(a.y1, b.y1), min(a.x2, b.x2), min(a.y2, b.y2) };
+    return { 0, 0, -1, -1 };
+}
+
+void TestRectangleIntersection()
+{
+	auto res = RectangleIntersection({0, 0, 100, 100}, {10, 10, 20, 20});
+	assert(res == Rect(10, 10, 20, 20));
+	res = RectangleIntersection({0, 0, 100, 100}, {50, 50, 200, 100});
+	assert(res == Rect(50, 50, 100, 100));
 }
 
 // ----------------------------------------------------------
@@ -382,4 +403,5 @@ void PrimitiveTypeTests()
 	TestReverseDigits();
 	TestIsPalindrome();
 	TestGenerateUniformNumber();
+	TestRectangleIntersection();
 }

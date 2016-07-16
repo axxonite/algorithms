@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Algorithms.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Arrays.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTree.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTrees.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="DPExamples.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTrees.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicProgramming.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="GreedyAlgorithms.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="HashTables.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Heaps.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Honors.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Lists.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxHeap.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimitiveTypes.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Recursion.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Search.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Sorting.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="StacksAndQueues.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Strings.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="SortingAlgorithms.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Arrays.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTrees.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="DPExamples.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTrees.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicProgramming.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="GreedyAlgorithms.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTables.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Heaps.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Honors.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Lists.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxHeap.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimitiveTypes.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Recursion.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Search.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorting.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="StacksAndQueues.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="Strings.h">
+      <Filter>Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="SortingAlgorithms.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Problems">
+      <UniqueIdentifier>{2150110d-f956-4ffc-9fb2-87594fa9fd14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data Structures">
+      <UniqueIdentifier>{1c4c4d0b-ab97-48be-a835-8795902be985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{824ee02f-d932-4b68-a750-ca480b64a727}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -48,12 +48,12 @@ int ReplaceAndRemove(int size, char s[])
 // 7.5 TEST PALINDROMICITY
 bool TestPalindromicity(const string& s)
 {
-	// Iterate through string, comparing first character with last character, until the two indices cross or are equal.Make sure to skip non-alphanumeric characters and to perform a case insensitive comparison.
+	// Iterate through string, comparing first character with last character, until the two indices cross or are equal. Make sure to skip non-alphanumeric characters and to perform a case insensitive comparison.
 	return false;
 }
 
 // ----------------------------------------------------------
-// 7.6 REVERSE ALL WORDS IN A SENTENCE
+// 7.6 REVERSE ALL WORDS IN A SENTENCE*
 string ReverseWordsInSentence(const string& s)
 {
 	// Reverse the entire string, then reverse individual words. 
@@ -71,7 +71,7 @@ vector<string> ComputeAllMnenomics(const string& s)
 }
 
 // ----------------------------------------------------------
-// 7.8 THE LOOK AND SAY PROBLEM
+// 7.8 THE LOOK AND SAY PROBLEM*
 string LookAndSaySequence(int n)
 {
 	// Parse string from right to left, compare with previous entry; if its the same, increase running count, if it's different, insert count and value, and reset count. Process until entire string has been consumed.
@@ -81,7 +81,7 @@ string LookAndSaySequence(int n)
 }
 
 // ----------------------------------------------------------
-// 7.9 CONVERT FROM ROMAN TO DECIMAL
+// 7.9 CONVERT FROM ROMAN TO DECIMAL*
 int ConvertRomanDecimal(const string& s)
 {
 	// Start from the right, if symbol after current one is greater than it, subtract the current symbol, otherwise add it. This is exploiting the idea that by adding the symbol to the right, we have already done the work
@@ -91,7 +91,7 @@ int ConvertRomanDecimal(const string& s)
 }
 
 // ----------------------------------------------------------
-// 7.10 COMPUTE ALL VALID IP ADDRESSES
+// 7.10 COMPUTE ALL VALID IP ADDRESSES*
 vector<string> ComputeValidIpAddresses(const string& s)
 {
 	// Use three nested loops to iteration over the possible positions of each of the 3 dots. Take note of the fact a valid integer cannot start with 0 unless it is just 0. Dots cannot be less than 2 positions apart.
@@ -125,7 +125,7 @@ string EncodeRLE(const string& s)
 }
 
 // ----------------------------------------------------------
-// 7.13 FIND THE FIRST OCCURENCE OF A SUBSTRING
+// 7.13 FIND THE FIRST OCCURENCE OF A SUBSTRING**
 int FindSubstring(const string& text, const string& search)
 {
 	// This requires prior knowledge of string search algorithms. Rabin-Karp would be one, and ideally, I should study another one,
