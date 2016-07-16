@@ -3,11 +3,13 @@
 #include <deque>
 #include <iostream>
 #include <sstream>
+#include <numeric>
+#include <unordered_map>
 
 using namespace std;
 
 // ----------------------------------------------------------
-// 6.1 THE DUTCH NATIONAL FLAG PROBLEM
+// 6.1 THE DUTCH NATIONAL FLAG PROBLEM*
 // Write a program that takes an array A and an index i into A, and rearranges the elements such that all elements less than A[i], the pivot, appear first, followed by elements equal to the pivot, followed by elements
 // greater than the pivot.
 void DutchFlagProblem(vector<int>& a, int i)
@@ -15,6 +17,55 @@ void DutchFlagProblem(vector<int>& a, int i)
 	// This is the quicksort partitioning step.
 	// Enforce loop invariant where array is separated into bottom, middle, unclassified and top parts at the start of each loop. Keep tracking indices to each of the sections in the array and update where they begin
 	// as you go along.
+    int less = 0, equal = 0;
+    int more = a.size() - 1;
+    int value = a[i];
+    while ( equal < more )
+    {
+        if ( a[equal] < value )
+        {
+            swap(a[less], a[equal]);
+            less++;
+            equal++;
+        }
+        else if ( a[equal ] > value )
+        {
+            swap(a[more], a[equal]);
+            more--;
+        }
+        else
+            equal++;
+    }
+}
+
+void TestDutchFlagProblem()
+{
+	default_random_engine rnd;
+	uniform_int_distribution<int> dis(0, 1000);
+	vector<int> a;
+	for (int i = 0; i < 100; i++)
+		a.emplace_back(dis(rnd));
+	auto index = uniform_int_distribution<int>{ 0, 99 }(rnd);
+	auto value = a[index];
+	DutchFlagProblem(a, index);
+
+	int state = 0;
+	for (int i = 0; i < 100; i++)
+	{
+		if ( a[i] < value )
+		{
+			assert(state == 0);
+		}
+		else if ( a[i] == value )
+		{
+			assert(state <= 1);
+			state = 1;
+		}
+		else if ( a[i] > value )
+		{
+			state = 2;
+		}
+	}
 }
 
 // ----------------------------------------------------------
@@ -243,12 +294,12 @@ vector<int> SampleOnlineData(istringstream& values, int k)
 	for (int i = 0; i < k && (values >> x); i++)
 		result.emplace_back(x);
 
-	default_random_engine seed((random_device())());
+	default_random_engine rnd;
 	int n = k;
 	while (values >> x)
 	{
 		// Probability of k / n.
-		int index = uniform_int_distribution<int>{0, n}(seed);
+		int index = uniform_int_distribution<int>{0, n}(rnd);
 		if (index < k)
 			result[index] = x;
 		n++;
@@ -258,21 +309,75 @@ vector<int> SampleOnlineData(istringstream& values, int k)
 
 // ----------------------------------------------------------
 // 6.13 COMPUTE A RANDOM PERMUTATION**
-vector<int> ComputeRandomPermutation()
+vector<int> ComputeRandomPermutation(int n)
 {
 	// Initialize an array with a default increasing sequence of n permutation values, than use solution 6.11 to sample from it, return a subsample of size n.
 	// This seems incorrectly specified however. The problem specifically states we are given a random number generator that returns integers in the set [0,1,...,n-1]. Solution 6.11 uses a random number generator that returns
 	// numbers in the range [0..n-i], where i is the loop index.
-	return vector<int>();
+    vector<int> seq(n);
+    iota(seq.begin(), seq.end(), 0); // Good way to initialize with an increasing sequence.
+    default_random_engine rnd;
+    int left = n - 1;
+    for ( int i = 0; i < n; i++)
+    {
+        int random = uniform_int_distribution<int>{0, left}(rnd);
+        swap(seq[left], seq[random]);
+        left--;
+    }
+
+    return seq;	
+}
+
+void TestRandomPermutation()
+{
+	auto result = ComputeRandomPermutation(100);
+	vector<int> hash(100, 0);
+	for (int i = 0; i < 100; i++)
+	{
+		hash[result[i]]++;
+		assert(hash[result[i]] == 1);
+	}
 }
 
 // ----------------------------------------------------------
 // 6.14 COMPUTE A RANDOM SUBSET*
-vector<int> ComputeRandomSubset(int n)
+vector<int> ComputeRandomSubset(int n, int k)
 {
 	// Again, use solution 6.11. Recall that solution 6.11 swaps elements in the set so that the chosen elements are at the start of the array. Thus, we can use a hash table to keep track of which elements are traded
 	// places. If the element is not in the hash table than s[i] = i, otherwise it is the value in the hash table. The hash table is a changeset over the original array.
-	return vector<int>();
+    default_random_engine rnd;
+    unordered_map<int, int> valuesChanged;
+    vector<int> result;
+    for ( int i = 0; i < k; i++ )
+    {
+        int rndIndex = uniform_int_distribution<int>{i, n - 1}(rnd);
+        auto pickedIt = valuesChanged.find(rndIndex);
+        auto swappedIt = valuesChanged.find(i);
+        int pickedValue = pickedIt != valuesChanged.end() ? pickedIt->second : rndIndex;
+        int swappedValue = swappedIt != valuesChanged.end() ? swappedIt->second : i; 
+        valuesChanged[rndIndex] = swappedValue;
+        valuesChanged[i] = pickedValue;
+        result.emplace_back(pickedValue);
+    }
+    return result;
+}
+
+void TestRandomSubset()
+{
+	auto result = ComputeRandomSubset(100, 99);
+	vector<int> hash(100, 0);
+	for (int i = 0; i < 99; i++)
+	{
+		hash[result[i]]++;
+		assert(hash[result[i]] == 1);
+	}
+	result = ComputeRandomSubset(1000000, 50);
+	vector<int> hash2(1000000, 0);
+	for (int i = 0; i < 50; i++)
+	{
+		hash2[result[i]]++;
+		assert(hash2[result[i]] == 1);
+	}
 }
 
 // ----------------------------------------------------------
@@ -354,13 +459,25 @@ void TestSpiralOrder()
 }
 
 // ----------------------------------------------------------
-// 6.18 ROTATE A 2D ARRAY*
+// 6.18 ROTATE A 2D ARRAY**
 void RotateMatrix(vector<vector<int>>& m)
 {
+	// I'M GOING TO BE FUCKING PISSED IF THEY ASK THIS STUPID FUCKING PROBLEM.
 	// Notice we do not want to use additional storage. We can start from a corner, move it to the next corner, take the value that used to be at that corner and move that, and so forth, applying this operation four times.
 	// Since there are always four operations for this, we can use an unrolled loop for this step.
 	// We can similarly process the cell to the right of the corner in a loop, and cells on inner layer of the array in another loop, to process the entire matrix.
 	// Another contrived hack would be to rotate the values on read. The problem specifically states we should rotate the array however, so this is more trivia than an actual solution.
+	int n = m.size();
+	for (int i = 0; i < n / 2; i++)
+	{
+		for (int j = 0; j < n - 1; j++)
+		{
+			m[i][j] = m[n - j][i];
+			m[n - j][i] = m[n - i][n - j];
+			m[n - i][n - j] = m[j][n - i];
+			m[j][n - i] = m[i][j];
+		}
+	}
 }
 
 // ----------------------------------------------------------
@@ -368,13 +485,34 @@ void RotateMatrix(vector<vector<int>>& m)
 vector<vector<int>> ComputePascalTriangleRows(int n)
 {
 	// The hint threw me off, and I was looking for a more complicated answer than what I needed. The answer is simply to rotate the triangle by 45 degrees. Then it neatly maps to an array, and the sum of one cell in the triangle
-	// is the of the value to the left and above it.
-	return vector<vector<int>>();
+	// is the sum of the value to the left and above it.
+	vector<vector<int>> result;
+	result.emplace_back(vector<int>(1, 1));
+	for (int i = 1; i < n; i++)
+	{
+		vector<int> row;
+		for ( int j = 0; j <= i; j++)
+		{
+			auto value = 0;
+			if ( j > 0 && j < i )
+				value = result.back()[j - 1] + result.back()[j];
+			else value = 1;
+			row.emplace_back(value);
+		}
+		result.emplace_back(row);
+	}
+	return result;
+}
+
+void TestPascalTriangle()
+{
+	auto result = ComputePascalTriangleRows(5);
 }
 
 // ----------------------------------------------------------
 void TestArrays()
 {
+	TestDutchFlagProblem();
 	TestSpiralOrder();
 	TestSudokuCheckerProblem();
 	TestSampleOnlineData();
@@ -383,4 +521,7 @@ void TestArrays()
 	TestGeneratePrimes();
 	TestPermuteArray();
 	TestNextPermutation();
+	TestRandomPermutation();
+	TestRandomSubset();
+	TestPascalTriangle();
 }
