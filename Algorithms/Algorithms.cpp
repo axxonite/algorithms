@@ -8,6 +8,7 @@
 #include "DPExamples.h"
 #include "Strings.h"
 #include "Lists.h"
+#include "StacksAndQueues.h"
 
 int main()
 {
@@ -15,6 +16,7 @@ int main()
 	TestArrays();
 	PrimitiveTypeTests();
 	TestStringProblems();
+	TestStacksAndQueues();
 	//TestSorting();
 	TestLists();
     return 0;

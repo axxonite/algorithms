@@ -5,6 +5,20 @@
 
 using namespace std;
 
+TreeNodePtr BuildBinaryTree(int maxLevel)
+{
+	int n = (int)pow(2, maxLevel);
+	vector<TreeNodePtr> nodes(n + 1, nullptr);
+	for ( int i = 1; i <= n; i++)
+		nodes[i] = make_shared<TreeNode<int>>(TreeNode<int>{ i, nullptr, nullptr });
+	for ( int i = 1; i < n / 2; i++)
+	{
+		nodes[i]->left = nodes[i * 2];
+		nodes[i]->right = nodes[i * 2 + 1];
+	}
+	return nodes[1];
+}
+
 // ----------------------------------------------------------
 // 10.1 TEST IF A BINARY TREE IS HEIGHT BALANCED
 bool TestIsHeightBalanced(TreeNodePtr root)

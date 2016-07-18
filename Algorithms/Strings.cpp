@@ -70,7 +70,7 @@ string ReverseWordsInSentence(string s)
     return s;
 }
 // ----------------------------------------------------------
-// 7.7 COMPUTE ALL MNEMONICS FOR A PHONE NUMBER*
+// 7.7 COMPUTE ALL MNEMONICS FOR A PHONE NUMBER* - add to anki
 void ParseDigit(const string& s, int i, string& patialResult, vector<string>& results)
 {
 	const array<string, 10> charsPerDigit = { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" }; // Use array from stl when applicable
@@ -108,7 +108,7 @@ void TestComputeAllMnemonics()
 string GenerateNextNumber(string& s)
 {
 	string result;
-    for ( int i = 0; i < s.size(); i++)
+    for ( size_t i = 0; i < s.size(); i++)
     {
         int runningCount = 1;
         while ( i + 1 < s.size() && s[i + 1] == s[i] )
@@ -179,17 +179,17 @@ vector<string> ComputeValidIpAddresses(const string& s)
 	// Pay more attention to the constraints on the string.
 	// Surprising, thit is O(1) because the algorithm always takes the same amount of time.
     vector<string> results;
-    for ( int i = 1; i < s.size() - 2; i++ )
+    for ( size_t i = 1; i < s.size() - 2; i++ )
     {
         string value1 = s.substr(0, i);
         if ( !ValidateIPSubString(value1))
             continue;
-        for ( int j = 1; i + j < s.size() - 1 && j < 4; j++ )
+        for ( size_t j = 1; i + j < s.size() - 1 && j < 4; j++ )
         {
             string value2 = s.substr(i, j);
             if ( !ValidateIPSubString(value2))
                 continue;
-            for ( int k = 1; i + j + k < s.size() && k < 4; k++ )
+            for ( size_t k = 1; i + j + k < s.size() && k < 4; k++ )
             {
                 string value3 = s.substr(i + j, k);
                 if ( !ValidateIPSubString(value3))

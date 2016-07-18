@@ -12,3 +12,5 @@ struct TreeNode
 };
 
 typedef shared_ptr<TreeNode<int>> TreeNodePtr;
+
+TreeNodePtr BuildBinaryTree(int maxLevel);
