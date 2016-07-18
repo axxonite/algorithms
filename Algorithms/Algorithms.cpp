@@ -6,12 +6,16 @@
 #include "SortingAlgorithms.h"
 #include "Arrays.h"
 #include "DPExamples.h"
+#include "Strings.h"
+#include "Lists.h"
 
 int main()
 {
 	TestBottomUpCutUpRod();
 	TestArrays();
 	PrimitiveTypeTests();
+	TestStringProblems();
 	//TestSorting();
+	TestLists();
     return 0;
 }

@@ -1,11 +1,15 @@
 #pragma once
 #include <memory>
 
+using namespace std;
+
 template <class T>
 struct Node
 {
 	T value;
-	Node* next;
+	shared_ptr<Node<int>> next;
 };
 
-typedef std::shared_ptr<Node<int>> NodePtr;
+typedef shared_ptr<Node<int>> NodePtr;
+
+void TestLists();

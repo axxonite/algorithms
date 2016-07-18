@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Strings.h"
+#include <array>
+#include <string>
+#include <unordered_map>
 
 using namespace std;
 
@@ -54,30 +57,84 @@ bool TestPalindromicity(const string& s)
 
 // ----------------------------------------------------------
 // 7.6 REVERSE ALL WORDS IN A SENTENCE*
-string ReverseWordsInSentence(const string& s)
+string ReverseWordsInSentence(string s)
 {
-	// Reverse the entire string, then reverse individual words. 
-	return string();
+    reverse(s.begin(), s.end());
+    size_t start = 0, end;
+    while ( (end = s.find(" ", start)) != string::npos ) // Notice the use of string find here.
+    {
+        reverse(s.begin() + start, s.begin() + end); // Notice the use of reverse and adding to iterators.
+        start = end + 1;
+    }
+    reverse(s.begin() + start, s.begin() + end); // Reverse the last word.
+    return s;
+}
+// ----------------------------------------------------------
+// 7.7 COMPUTE ALL MNEMONICS FOR A PHONE NUMBER*
+void ParseDigit(const string& s, int i, string& patialResult, vector<string>& results)
+{
+	const array<string, 10> charsPerDigit = { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" }; // Use array from stl when applicable
+	if (i == s.size())
+		results.emplace_back(patialResult); // Use a condition in the recursion to simplify boundary conditions.
+	else
+	{
+		for (char c : charsPerDigit[s[i] - '0']) // We can now iterate using this form.
+		{
+			patialResult[i] = c; // Avoid reallocation.
+			ParseDigit(s, i + 1, patialResult, results);
+		}
+	}
 }
 
-// ----------------------------------------------------------
-// 7.7 COMPUTE ALL MNEMONICS FOR A PHONE NUMBER
 vector<string> ComputeAllMnenomics(const string& s)
 {
 	// Start with last number in the string and loop n times (n being how many characters map to this digit), in each iteration add the character to the string. Then recursively call itself, passing in partial result and
 	// number divided by 10. When the number is <10 we have a complete result that we can add to the list.
 	// O(4^n*n) - tricky.
-	return vector<string>();
+    vector<string> results;
+	string patialResult(s.size(), 0); // Preallocate the string instead of adding to it.
+    ParseDigit(s, 0, patialResult, results);
+    return results;
+}
+
+void TestComputeAllMnemonics()
+{
+	auto result = ComputeAllMnenomics("1340");
+	assert(result.size() == 9);
 }
 
 // ----------------------------------------------------------
 // 7.8 THE LOOK AND SAY PROBLEM*
+string GenerateNextNumber(string& s)
+{
+	string result;
+    for ( int i = 0; i < s.size(); i++)
+    {
+        int runningCount = 1;
+        while ( i + 1 < s.size() && s[i + 1] == s[i] )
+        {
+            runningCount++;
+            i++;
+        }         
+        result += to_string(runningCount) + s[i]; // Notice how we can use to_string to convert an int to a string.
+    }
+	return result;
+}
+
 string LookAndSaySequence(int n)
 {
 	// Parse string from right to left, compare with previous entry; if its the same, increase running count, if it's different, insert count and value, and reset count. Process until entire string has been consumed.
 	// Do this n times, processing the result from the previous iteration.
 	// O(n*2^n).
-	return string();
+    string s = "1";
+    for ( int i = 1; i < n; i++ )
+		s = GenerateNextNumber(s); // We don't need to pass in i here.
+    return s;}
+
+void TestLookAndSaySequence()
+{
+	auto result = LookAndSaySequence(8);
+	assert(result == "1113213211");
 }
 
 // ----------------------------------------------------------
@@ -87,18 +144,71 @@ int ConvertRomanDecimal(const string& s)
 	// Start from the right, if symbol after current one is greater than it, subtract the current symbol, otherwise add it. This is exploiting the idea that by adding the symbol to the right, we have already done the work
 	// to add the difference of the larger symbol with the smaller one: we simply subtract the difference.
 	// The code given doesn't even test most of the edge cases... and I would never write the code this way. It's quite confusing.
-	return 0;
+    unordered_map<char, int> values = { {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000}};
+    // Start from the right, if symbol after current one is greater than it, subtract the current symbol, otherwise add it. This is exploiting the idea that by adding the symbol to the right, we have already done the work
+    // to add the difference of the larger symbol with the smaller one: we simply subtract the difference.
+    int total = values[s.back()]; // Add first number to avoid checking for i > 0 in the inner loop. Notice the use of back.
+    for ( int i = s.size() - 2; i >= 0; i-- ) // Pay attention to the boundary conditions in the indexing.
+    {
+        int value = values[s[i]];
+        if ( value < values[s[i + 1]] )
+            total -= value;
+        else total += value;
+    }
+    return total;
+}
+
+void TestRomanDecimal()
+{
+	auto result = ConvertRomanDecimal("LIX");
+	assert(result == 59);
 }
 
 // ----------------------------------------------------------
 // 7.10 COMPUTE ALL VALID IP ADDRESSES*
+bool ValidateIPSubString(const string& s)
+{
+    int value = stoi(s);
+    return (value <= 255) && (value != 0 || s.size() != 1);
+}
+
 vector<string> ComputeValidIpAddresses(const string& s)
 {
 	// Use three nested loops to iteration over the possible positions of each of the 3 dots. Take note of the fact a valid integer cannot start with 0 unless it is just 0. Dots cannot be less than 2 positions apart.
 	// And don't forget the number should be <= 255. Also take note of the fact a dot cannot be more than 3 spaces from another dot, and stop any loop as soon as we hit a bad number.
 	// Pay more attention to the constraints on the string.
 	// Surprising, thit is O(1) because the algorithm always takes the same amount of time.
-	return vector<string>();
+    vector<string> results;
+    for ( int i = 1; i < s.size() - 2; i++ )
+    {
+        string value1 = s.substr(0, i);
+        if ( !ValidateIPSubString(value1))
+            continue;
+        for ( int j = 1; i + j < s.size() - 1 && j < 4; j++ )
+        {
+            string value2 = s.substr(i, j);
+            if ( !ValidateIPSubString(value2))
+                continue;
+            for ( int k = 1; i + j + k < s.size() && k < 4; k++ )
+            {
+                string value3 = s.substr(i + j, k);
+                if ( !ValidateIPSubString(value3))
+                    continue;
+                string value4 = s.substr(i + j + k, s.size()); // Dont forget the 4th term here.
+                if ( !ValidateIPSubString(value4))
+                    continue;
+                string result = value1 + "." + value2 + "." + value3 + "." + value4; // splice string.
+                results.emplace_back(result);
+            }
+        }
+    }
+    return results;
+}
+
+void TestComputeValidIpAddresses()
+{
+	auto result = ComputeValidIpAddresses("19216811");
+	assert(result.size() == 9);
 }
 
 // ----------------------------------------------------------
@@ -133,5 +243,16 @@ int FindSubstring(const string& text, const string& search)
 	// an explicit compare of the text with the pattern still needs to be done if the hashes match. The key is in using a rolling hash - such a hash makes it more efficient to update the hash by effectively moving the 
 	// window of substrings included in the hash, effectively subtracting the value of the first letter in the match and adding the value of a new letter at the end. By using a modulus q with a suitable large number such that
 	// q*26 is just less than the size of an integer, we minimize collisions.
+	
+
+	// This requires special study of Robin-Karp.
 	return -1;
+}
+
+void TestStringProblems()
+{
+	TestComputeAllMnemonics();
+	TestLookAndSaySequence();
+	TestRomanDecimal();
+	TestComputeValidIpAddresses();
 }
