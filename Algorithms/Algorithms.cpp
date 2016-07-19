@@ -9,6 +9,7 @@
 #include "Strings.h"
 #include "Lists.h"
 #include "StacksAndQueues.h"
+#include "BinaryTrees.h"
 
 int main()
 {
@@ -17,7 +18,8 @@ int main()
 	PrimitiveTypeTests();
 	TestStringProblems();
 	TestStacksAndQueues();
+	TestBinaryTrees();
 	//TestSorting();
 	TestLists();
-    return 0;
+	return 0;
 }

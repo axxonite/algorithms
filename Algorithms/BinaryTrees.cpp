@@ -19,6 +19,21 @@ TreeNodePtr BuildBinaryTree(int maxLevel)
 	return nodes[1];
 }
 
+TreeNodePtr GetNode(TreeNodePtr n, int i)
+{
+	if (n == nullptr)
+		return nullptr;
+	if (n->value == i)
+		return n;
+	auto l = GetNode(n->left, i);
+	if (l)
+		return l;
+	auto r = GetNode(n->right, i);
+	if (r)
+		return r;
+	return nullptr;
+}
+
 // ----------------------------------------------------------
 // 10.1 TEST IF A BINARY TREE IS HEIGHT BALANCED
 bool TestIsHeightBalanced(TreeNodePtr root)
@@ -38,11 +53,36 @@ bool TestIsSymmetric(TreeNodePtr root)
 
 // ----------------------------------------------------------
 // 10.3 COMPUTE THE LOWEST COMMON ANCESTOR IN A BINARY TREE*
+int ComputeLCARecursive(TreeNodePtr n, TreeNodePtr a, TreeNodePtr b, TreeNodePtr& lca)
+{
+	if ( n == nullptr )
+		return 0;
+	int foundL = ComputeLCARecursive(n->left, a, b, lca);
+	if ( foundL == 2 )
+		return foundL;
+	int foundR = ComputeLCARecursive(n->right, a, b, lca);
+	if ( foundR == 2 )
+		return foundR;
+	int total = foundL + foundR + ( n == a ) +( n == b );
+	if ( total == 2 )
+		lca = n;
+	return total; 
+}
+
 TreeNodePtr ComputeLCA(TreeNodePtr root, TreeNodePtr a, TreeNodePtr b)
 {
 	// It helps to relate the problem to a sought status of the subtree we are searching. In this case, the status we are looking for is a subtree with both nodes present. Do a pre-order traversal, returning how many of the
 	// nodes were found within the subtree. When that number is two, we have found the LCA and can terminate early, storing the LCA in the status structure.
-	return nullptr;
+	TreeNodePtr result = nullptr;
+	ComputeLCARecursive(root, a, b, result);
+	return result;
+}
+
+void TestComputeLCA()
+{
+	auto tree = BuildBinaryTree(3);
+	auto lca = ComputeLCA(tree, GetNode(tree, 4), GetNode(tree, 5));
+	assert(lca->value == 2);
 }
 
 // ----------------------------------------------------------
@@ -162,7 +202,7 @@ list<TreeNodePtr> ComputeBinaryTreeExterior(TreeNodePtr root)
 }
 
 // ----------------------------------------------------------
-// 10.16 COMPUTE THR RIGTH SIBLING TREE *
+// 10.16 COMPUTE THR RIGHT SIBLING TREE *
 template <class T>
 struct TreeNodeWithSibling : TreeNode<T>
 {
@@ -184,3 +224,8 @@ TreeNodeWithSiblingPtr ComputeRightSiblingTree(TreeNodeWithSiblingPtr root)
 //
 // Keep a count of the number of locked nodes for each subtree. Checking if any descendants are locked is then simply a matter of locking at the count; checking if any ancestors are locked is done by examining the counts
 // up the tree. Locking and unlocking nodes must increment and decrement lock counts up the tree.
+
+void TestBinaryTrees()
+{
+	TestComputeLCA();
+}
