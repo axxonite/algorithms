@@ -37,7 +37,7 @@ bool TestIsSymmetric(TreeNodePtr root)
 }
 
 // ----------------------------------------------------------
-// 10.3 COMPUTE THE LOWEST COMMON ANCESTOR IN A BINARY TREE *
+// 10.3 COMPUTE THE LOWEST COMMON ANCESTOR IN A BINARY TREE*
 TreeNodePtr ComputeLCA(TreeNodePtr root, TreeNodePtr a, TreeNodePtr b)
 {
 	// It helps to relate the problem to a sought status of the subtree we are searching. In this case, the status we are looking for is a subtree with both nodes present. Do a pre-order traversal, returning how many of the
@@ -98,7 +98,7 @@ TreeNodePtr ComputeKthNodeInTraversal(int k)
 }
 
 // ----------------------------------------------------------
-// 10.10 COMPUTE THE SUCCESSOR **
+// 10.10 COMPUTE THE SUCCESSOR**
 TreeNodePtr FindSuccessor(TreeNodePtr root, TreeNodePtr node)
 {
 	// When a node has a nonempty right subtree, the successor must lie within that subtree; furthermore, when a node has a nonempty right subtree, its successor is the first node visited when performing an in-order traversal
@@ -124,7 +124,7 @@ vector<int> InOrderTraversalO1(TreeNodePtr root)
 }
 
 // ----------------------------------------------------------
-// 10.12 RECONSTRUCT A BINARY TREE FROM TRAVERSAL DATA *
+// 10.12 RECONSTRUCT A BINARY TREE FROM TRAVERSAL DATA*
 TreeNodePtr ReconstructBinaryTreeFromTraversalData(const vector<int>& preorder, const vector<int>& inorder)
 {
 	// We know the root since it's the first element in the pre-order list. We can lookup the node in the in-order list; its left children are on the left in that list, and its right children are on its right, so we know how many
@@ -135,7 +135,7 @@ TreeNodePtr ReconstructBinaryTreeFromTraversalData(const vector<int>& preorder, 
 }
 
 // ----------------------------------------------------------
-// 10.13 RECONSTRUCT A BINARY TREE FROM A PRE-ORDER TRAVERSAL WITH MARKERS *
+// 10.13 RECONSTRUCT A BINARY TREE FROM A PRE-ORDER TRAVERSAL WITH MARKERS*
 TreeNodePtr ReconstructBinaryTreeFromPreOrderWithMarkers(const vector<int>* preorder)
 {
 	// The pre-order list starts with the root node, and the left and right subtrees follow. We can't tell directly how many nodes are in the left subtree.
