@@ -80,7 +80,7 @@ string NormalizePathName(const string& p)
 	// Special care must be taken to handle edge cases. If the string begins with / then it's an absolute path and we cannot go up from it. If the string begins with .., we need to record it in the stack. O(n).
 	if (p.empty())
 		throw invalid_argument("Not a valid path"); // Notice the use of empty and invalid_argument.
-	vector<string> components; // why use a vector as a stack?
+	vector<string> components; // why use a vector as a stack? todo
 	if (p.front() == '/')
 		components.emplace_back("/"); // Special case if we start with /.
 

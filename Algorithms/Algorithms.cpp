@@ -10,6 +10,7 @@
 #include "Lists.h"
 #include "StacksAndQueues.h"
 #include "BinaryTrees.h"
+#include "Heaps.h"
 
 int main()
 {
@@ -19,6 +20,7 @@ int main()
 	TestStringProblems();
 	TestStacksAndQueues();
 	TestBinaryTrees();
+	TestHeaps();
 	//TestSorting();
 	TestLists();
 	return 0;
