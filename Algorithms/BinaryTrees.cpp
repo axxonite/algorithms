@@ -233,49 +233,49 @@ bool ComputeBinaryTreeExteriorLeft(TreeNodePtr n, list<TreeNodePtr>& result, boo
 {
 	if (n == nullptr)
 		return boundary;
-    if (boundary && (n->left || (n->right && !n->left)))
-        result.emplace_back(n);
-    else if (!n->left && !n->right)
-    {
-        result.emplace_back(n);
-        boundary = false;
-    }
-    boundary &= ComputeBinaryTreeExteriorLeft(n->left, result, boundary);
-    boundary &= ComputeBinaryTreeExteriorLeft(n->right, result, boundary);
-    return boundary;
+	if (boundary && (n->left || (n->right && !n->left)))
+		result.emplace_back(n);
+	else if (!n->left && !n->right)
+	{
+		result.emplace_back(n);
+		boundary = false;
+	}
+	boundary &= ComputeBinaryTreeExteriorLeft(n->left, result, boundary);
+	boundary &= ComputeBinaryTreeExteriorLeft(n->right, result, boundary);
+	return boundary;
 }
 
 bool ComputeBinaryTreeExteriorRight(TreeNodePtr n, list<TreeNodePtr>& right, list<TreeNodePtr>& bottom, bool boundary )
 {
 	if (n == nullptr)
 		return boundary;
-    if (boundary && (n->right || (n->left&& !n->right)))
-        right.emplace_front(n);
-    else if (!n->left && !n->right)
-    {
-        bottom.emplace_front(n);
-        boundary = false;
-    }
-    boundary &= ComputeBinaryTreeExteriorRight(n->right, right, bottom, boundary);
-    boundary &= ComputeBinaryTreeExteriorRight(n->left, right, bottom, boundary);
+	if (boundary && (n->right || (n->left&& !n->right)))
+		right.emplace_front(n);
+	else if (!n->left && !n->right)
+	{
+		bottom.emplace_front(n);
+		boundary = false;
+	}
+	boundary &= ComputeBinaryTreeExteriorRight(n->right, right, bottom, boundary);
+	boundary &= ComputeBinaryTreeExteriorRight(n->left, right, bottom, boundary);
 	return boundary;
 }
 
 list<TreeNodePtr> ComputeBinaryTreeExterior(TreeNodePtr root)
 {
-    // This is trickier than it looks to get right. Walk the left subtree, collecting all left children, and right children when a left child is not present (these count as a boundary as well). Wherever there are two children to 
-    // a node is where the boundary ends. Do the mirror process on the right side of the tree, calling all right children and right children when no left child is present. The results have to be spliced in the right order.
-    list<TreeNodePtr> result;
-    list<TreeNodePtr> right;
-    list<TreeNodePtr> bottomRight;
+	// This is trickier than it looks to get right. Walk the left subtree, collecting all left children, and right children when a left child is not present (these count as a boundary as well). Wherever there are two children to 
+	// a node is where the boundary ends. Do the mirror process on the right side of the tree, calling all right children and right children when no left child is present. The results have to be spliced in the right order.
+	list<TreeNodePtr> result;
+	list<TreeNodePtr> right;
+	list<TreeNodePtr> bottomRight;
 	result.emplace_back(root);
-    if (root->left)
-        ComputeBinaryTreeExteriorLeft(root->left, result, true);
-    if (root->right)
-        ComputeBinaryTreeExteriorRight(root->right, right, bottomRight, true);        
-    result.splice(result.end(), bottomRight);
-    result.splice(result.end(), right);
-    return result;
+	if (root->left)
+		ComputeBinaryTreeExteriorLeft(root->left, result, true);
+	if (root->right)
+		ComputeBinaryTreeExteriorRight(root->right, right, bottomRight, true);        
+	result.splice(result.end(), bottomRight);
+	result.splice(result.end(), right);
+	return result;
 }
 
 void TestComputeBinaryTreeExterior()

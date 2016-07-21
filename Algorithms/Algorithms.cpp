@@ -11,6 +11,7 @@
 #include "StacksAndQueues.h"
 #include "BinaryTrees.h"
 #include "Heaps.h"
+#include "Search.h"
 
 int main()
 {
@@ -21,6 +22,7 @@ int main()
 	TestStacksAndQueues();
 	TestBinaryTrees();
 	TestHeaps();
+	TestSearching();
 	//TestSorting();
 	TestLists();
 	return 0;
