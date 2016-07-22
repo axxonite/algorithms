@@ -3,12 +3,13 @@
 #include "BinaryTrees.h"
 #include <unordered_set>
 #include <unordered_map>
+#include <algorithm>
 
 using namespace std;
 
 // ----------------------------------------------------------
 // 13.1 TEST FOR PALINDROMIC PERMUTATIONS
-bool TestForPalindromicPermutations(const string& s )
+bool TestForPalindromicPermutations(const string& s)
 {
 	// Map characters to their frequencies in a hash table (or just an array, really). For an even-length word, we need two of each character. For an odd-length word, we need
 	// two of each character, and one of a single character.
@@ -60,27 +61,27 @@ struct SubArray
 	int end;
 };
 
-SubArray FindSmallestSubArrayCoveringSet( const vector<string>& paragraph, const unordered_set<string>& keywords)
+SubArray FindSmallestSubArrayCoveringSet(const vector<string>& paragraph, const unordered_set<string>& keywords)
 {
 	// Consider the set of all sub-arrays. There are n^2. Start a set at i, increasing length, Record which strings were covered in a hash table. But we can do better.
 	// Note that, when moving from i to i+1, there is no way for [i+1..j to cover the set since [i..j] already barely covers the set. We thus need to advance j until it 
 	// covers the set. When j matches, we can advance i again, switching back and forth between advancing i and j.
-	
+
 	unordered_map<string, int> keywordsToCover;
-	for ( auto k : keywords )
+	for (auto k : keywords)
 		keywordsToCover[k]++;
-	
-	SubArray result {-1, -1};
+
+	SubArray result{-1, -1};
 	int remainingToCover = keywordsToCover.size();
-	for ( int left = 0, right = 0; right < paragraph.size(); right++)
+	for (int left = 0, right = 0; right < static_cast<int>(paragraph.size()); right++)
 	{
-		if ( keywordsToCover.count(paragraph[right]) > 0 && --keywordsToCover[paragraph[right]] >= 0 )
+		if (keywordsToCover.count(paragraph[right]) > 0 && --keywordsToCover[paragraph[right]] >= 0)
 			remainingToCover--;
-		while ( remainingToCover == 0 )
+		while (remainingToCover == 0)
 		{
-			if ( (result.start == -1 && result.end == -1 ) || ( right - left < result.end - result.start )) 
-				result = { left, right };
-			if (keywords.count(paragraph[left]) && ++keywordsToCover[paragraph[left]] > 0 ) // Note the use of count() to check if the key exists in the unordered map.
+			if ((result.start == -1 && result.end == -1) || (right - left < result.end - result.start))
+				result = {left, right};
+			if (keywords.count(paragraph[left]) && ++keywordsToCover[paragraph[left]] > 0) // Note the use of count() to check if the key exists in the unordered map.
 				remainingToCover++;
 			left++;
 		}
@@ -90,8 +91,8 @@ SubArray FindSmallestSubArrayCoveringSet( const vector<string>& paragraph, const
 
 void TestFindSmallestSubArrayCoveringSet()
 {
-	vector<string> p = { "save", "my", "paramount", "object", "in", "this", "struggle", "is", "to", "save", "the", "Union", "Union"};
-	unordered_set<string> k = { "Union", "save" };
+	vector<string> p = {"save", "my", "paramount", "object", "in", "this", "struggle", "is", "to", "save", "the", "Union", "Union"};
+	unordered_set<string> k = {"Union", "save"};
 	auto r = FindSmallestSubArrayCoveringSet(p, k);
 	assert(r.start == 9 && r.end == 11);
 }
@@ -108,28 +109,28 @@ SubArray FindSmallestSubArraySequentiallyCoveringAllValues(const vector<string>&
 	// at that keyword. When look for a match for keyword j, then M[j] = (p[j-1]-l[j-1], p[j]). We are building solution j from the solution for j-1.
 	// Note that we don't really need two hash tables. We can use one hash table that contains both values.
 	unordered_map<string, int> keywordToIndex;
-	for ( int i = 0; i < keywords.size(); i++ )
+	for (size_t i = 0; i < keywords.size(); i++)
 		keywordToIndex[keywords[i]] = i;
-		
+
 	vector<int> pos(keywords.size(), -1);
 	vector<int> length(keywords.size(), -1);
-	
+
 	int bestDistance = numeric_limits<int>::max();
 	SubArray result{-1, -1};
-	for ( auto i = 0; i < paragraph.size(); i++ )
+	for (int i = 0; i < static_cast<int>(paragraph.size()); i++)
 	{
-		if ( keywordToIndex.count(paragraph[i]) > 0 )
+		if (keywordToIndex.count(paragraph[i]) > 0)
 		{
 			int index = keywordToIndex.find(paragraph[i])->second; // Do I need to use find or at? Why second?
 			pos[index] = i;
-			if (index == 0 )
+			if (index == 0)
 				length[0] = 1;
-			else if ( length[index - 1] != -1 )
+			else if (length[index - 1] != -1)
 				length[index] = length[index - 1] + i - pos[index - 1];
-			if ( index == keywords.size() - 1 && length.back() != -1 && length.back() < bestDistance)
+			if (index == keywords.size() - 1 && length.back() != -1 && length.back() < bestDistance)
 			{
 				result = {i - length.back() + 1, i}; // Note the +1
-				bestDistance  = result.end - result.start;
+				bestDistance = result.end - result.start;
 			}
 		}
 	}
@@ -138,11 +139,11 @@ SubArray FindSmallestSubArraySequentiallyCoveringAllValues(const vector<string>&
 
 void FindSmallestSubArraySequentiallyCoveringAllValues()
 {
-	vector<string> p = { "save", "my", "paramount", "object", "in", "this", "struggle", "is", "to", "save", "the", "Union", "Union"};
-	vector<string> k = { "Union", "save" };
+	vector<string> p = {"save", "my", "paramount", "object", "in", "this", "struggle", "is", "to", "save", "the", "Union", "Union"};
+	vector<string> k = {"Union", "save"};
 	auto r = FindSmallestSubArraySequentiallyCoveringAllValues(p, k);
-	assert(r.start == -1 && r.end == -1);	
-	vector<string> k2 = { "save", "Union" };
+	assert(r.start == -1 && r.end == -1);
+	vector<string> k2 = {"save", "Union"};
 	auto r2 = FindSmallestSubArraySequentiallyCoveringAllValues(p, k2);
 	assert(r2.start == 9 && r2.end == 11);
 }
@@ -154,7 +155,23 @@ int LonguestSubArrayWithDistinctEntries(const vector<int>& a)
 	// Start at i = 1, which gives us a starting matching set of size one. The next character c can either be a new distinct character, which extends the current matching set. Or
 	// a character that is already in the sequence we've matched; in this case, we need to advance to the start of the match to the last occurrence of c, plus one. We can then try
 	// to extend the matching set on the right again.
-	return 0;
+	int longuest = 0, left = 0;
+	unordered_map<int, int> lastOccurence;
+	for (int i = 0; i < static_cast<int>(a.size()); i++)
+	{
+		if (lastOccurence.count(a[i]) > 0)
+			left = lastOccurence.at(a[i]) + 1;
+		lastOccurence[a[i]] = i;
+		longuest = max(longuest, i - left);
+	}
+	return longuest;
+}
+
+void TestLonguestSubArrayWithDistinctEntries()
+{
+	vector<int> a = {0, 1, 0, 2, 3, 4, 2, 5, 4, 2};
+	auto r = LonguestSubArrayWithDistinctEntries(a);
+	assert(r == 4);
 }
 
 // ----------------------------------------------------------
@@ -164,7 +181,27 @@ int FindLengthLonguestContainingInterval(const vector<int>& a)
 	// Store the values in an unordered set. Then start from the first item in the array and look for a chain of subsequents, and a chain of antecedents. Remove
 	// then entries from the set as they are found. This gives us the length of that chain. Move to the next item, and walk the chain on both sides there too, and so forth.
 	// Removing the entries from the hash table ensure we don't walk the same chain twice.
-	return 0;
+	int result = 0;
+	unordered_set<int> s(a.begin(), a.end()); // Note the use of iterators.
+	while (!s.empty()) // Note that using the set as the outer loop is better than iterating the array.
+	{
+		int value = *s.begin(); // Pay attention to the dereferencing of the iterator to get the value on begin().
+		s.erase(value); // Note the use of erase to remove entries from the set.
+		auto length = 1;
+		for (int v = value + 1; s.count(v); v++ , length++)
+			s.erase(v);
+		for (int v = value - 1; s.count(v); v-- , length++)
+			s.erase(v);
+		result = max(result, length);
+	}
+	return result;
+}
+
+void TestFindLengthLonguestContainingInterval()
+{
+	vector<int> a = {10, 5, 3, 11, 6, 100, 4};
+	auto r = FindLengthLonguestContainingInterval(a);
+	assert(r == 4);
 }
 
 // ----------------------------------------------------------
@@ -177,23 +214,90 @@ string FindStudentWithhighestBothOfThreeScores(ifstream* ifs)
 
 // ----------------------------------------------------------
 // 13.12 COMPUTE ALL STRING DECOMPOSITIONS*
+bool MatchWords(const unordered_map<string, int>& freq, const vector<string>& words, int i, const string& s)
+{
+	unordered_map<string, int> found;
+	int wordSize = words.front().size();
+	for (size_t j = i; j + wordSize < s.size(); j += wordSize)
+	{
+		auto sub = s.substr(j, wordSize); // Note that substr takes a length, not the position of the last character.
+		auto it = freq.find(sub); // Note the use of find.
+		if (it != freq.end())
+		{
+			found[sub]++;
+			if (found[sub] > it->second)
+				return false;
+		}
+		else return false;
+	}
+	return true;
+}
+
 vector<int> ComputeAllStringDecompositions(const string& s, const vector<string>& words)
 {
 	// Add the words to a set. Consume the string, attempting to match with each word in the set. If matched, remove from the candidate set. Do this at each index in the string.
 	// Of note, if the keywords had not been distinct, and a keyword may have been a prefix of another. In this case, we would have had to do recursive test, testing for multiple
 	// potential candidates at each level.
-	return vector<int>();
+	vector<int> result;
+	if (words.empty())
+		return result;
+	unordered_map<string, int> freq;
+	for (auto& word : words)
+		freq[word]++;
+	int wordSize = words[0].size();
+	for (int i = 0; i + words.size() * wordSize < s.size(); i++) // Careful to not run off the end of the sentence. 
+	{
+		if (MatchWords(freq, words, i, s))
+			result.emplace_back(i);
+	}
+	return result;
+}
+
+void TestComputeAllStringDecompositions()
+{
+	vector<string> words = {"can", "apl", "ana"};
+	auto r = ComputeAllStringDecompositions("amanaplanacanal", words);
+	assert(r == vector<int> { 4});
 }
 
 // ----------------------------------------------------------
 // 13.3 TEST THE COLLATZ CONJECTURE*
-bool TestColltzConjectur(int n)
+bool TestCollatzConjecture(int n)
 {
 	// This is an open-ended problem whose solution entails checking multiple aspects of the series. A hash table should be used to cache values previously visited. If all integers
 	// below some n have been visited, there is no need to store them in the hash table, they can be removed and we can simply test if our candidate is >= n. x/2 does not need
 	// to be tested since all numbers below x will have been tested. Check for overflows for the 3x+1 value. Use parallelism to compute multiple segments of the interval 
 	// simultaneously.
-	return false;
+	unordered_set<int> proven;
+	for (int i = 3; i <= n; i += 2) // Dont test even numbers since they lead to n / 2.
+	{
+		unordered_set<int> visited;
+		long x = i;
+		while (x > i);
+		{
+			visited.emplace(x);
+			if (x % 1)
+			{
+				if (!proven.emplace(x).second)
+					break;
+				long temp = x * 3 + 1;
+				if (temp < x)
+					throw overflow_error("Overflowed while testing.");
+				x = temp;
+			}
+			else x /= 2;
+			if (!visited.emplace(x).second)
+				return false;
+		}
+		proven.erase(i);
+	}
+	return true;
+}
+
+void TestTestCollatzConjecture()
+{
+	auto r = TestCollatzConjecture(1000);
+	assert(r);
 }
 
 // ----------------------------------------------------------
@@ -207,4 +311,8 @@ void TestHashTables()
 {
 	TestFindSmallestSubArrayCoveringSet();
 	FindSmallestSubArraySequentiallyCoveringAllValues();
+	TestLonguestSubArrayWithDistinctEntries();
+	TestFindLengthLonguestContainingInterval();
+	TestComputeAllStringDecompositions();
+	TestTestCollatzConjecture();
 }
