@@ -2,6 +2,7 @@
 #include "HashTables.h"
 #include "BinaryTrees.h"
 #include <unordered_set>
+#include <unordered_map>
 
 using namespace std;
 
@@ -64,7 +65,35 @@ SubArray FindSmallestSubArrayCoveringSet( const vector<string>& paragraph, const
 	// Consider the set of all sub-arrays. There are n^2. Start a set at i, increasing length, Record which strings were covered in a hash table. But we can do better.
 	// Note that, when moving from i to i+1, there is no way for [i+1..j to cover the set since [i..j] already barely covers the set. We thus need to advance j until it 
 	// covers the set. When j matches, we can advance i again, switching back and forth between advancing i and j.
-	return SubArray();
+	
+	unordered_map<string, int> keywordsToCover;
+	for ( auto k : keywords )
+		keywordsToCover[k]++;
+	
+	SubArray result {-1, -1};
+	int remainingToCover = keywordsToCover.size();
+	for ( int left = 0, right = 0; right < paragraph.size(); right++)
+	{
+		if ( keywordsToCover.count(paragraph[right]) > 0 && --keywordsToCover[paragraph[right]] >= 0 )
+			remainingToCover--;
+		while ( remainingToCover == 0 )
+		{
+			if ( (result.start == -1 && result.end == -1 ) || ( right - left < result.end - result.start )) 
+				result = { left, right };
+			if (keywords.count(paragraph[left]) && ++keywordsToCover[paragraph[left]] > 0 ) // Note the use of count() to check if the key exists in the unordered map.
+				remainingToCover++;
+			left++;
+		}
+	}
+	return result;
+}
+
+void TestFindSmallestSubArrayCoveringSet()
+{
+	vector<string> p = { "save", "my", "paramount", "object", "in", "this", "struggle", "is", "to", "save", "the", "Union", "Union"};
+	unordered_set<string> k = { "Union", "save" };
+	auto r = FindSmallestSubArrayCoveringSet(p, k);
+	assert(r.start == 9 && r.end == 11);
 }
 
 // ----------------------------------------------------------
@@ -78,7 +107,44 @@ SubArray FindSmallestSubArraySequentiallyCoveringAllValues(const vector<string>&
 	// The book's solution: keep a hash table p of the position of the most recent occurrence of a keyword, and a hash table l of the length of the shortest sub-array that ends
 	// at that keyword. When look for a match for keyword j, then M[j] = (p[j-1]-l[j-1], p[j]). We are building solution j from the solution for j-1.
 	// Note that we don't really need two hash tables. We can use one hash table that contains both values.
-	return SubArray();
+	unordered_map<string, int> keywordToIndex;
+	for ( int i = 0; i < keywords.size(); i++ )
+		keywordToIndex[keywords[i]] = i;
+		
+	vector<int> pos(keywords.size(), -1);
+	vector<int> length(keywords.size(), -1);
+	
+	int bestDistance = numeric_limits<int>::max();
+	SubArray result{-1, -1};
+	for ( auto i = 0; i < paragraph.size(); i++ )
+	{
+		if ( keywordToIndex.count(paragraph[i]) > 0 )
+		{
+			int index = keywordToIndex.find(paragraph[i])->second; // Do I need to use find or at? Why second?
+			pos[index] = i;
+			if (index == 0 )
+				length[0] = 1;
+			else if ( length[index - 1] != -1 )
+				length[index] = length[index - 1] + i - pos[index - 1];
+			if ( index == keywords.size() - 1 && length.back() != -1 && length.back() < bestDistance)
+			{
+				result = {i - length.back() + 1, i}; // Note the +1
+				bestDistance  = result.end - result.start;
+			}
+		}
+	}
+	return result;
+}
+
+void FindSmallestSubArraySequentiallyCoveringAllValues()
+{
+	vector<string> p = { "save", "my", "paramount", "object", "in", "this", "struggle", "is", "to", "save", "the", "Union", "Union"};
+	vector<string> k = { "Union", "save" };
+	auto r = FindSmallestSubArraySequentiallyCoveringAllValues(p, k);
+	assert(r.start == -1 && r.end == -1);	
+	vector<string> k2 = { "save", "Union" };
+	auto r2 = FindSmallestSubArraySequentiallyCoveringAllValues(p, k2);
+	assert(r2.start == 9 && r2.end == 11);
 }
 
 // ----------------------------------------------------------
@@ -136,3 +202,9 @@ bool TestColltzConjectur(int n)
 // Generate 64-bit random bit integers for each of the 13 states and the 64 positions on the board, which gives 832 different codes. The hash of a chess position is then the XOR
 // of all codes. To update with a move, erase the state of the starting square, add the new state of the starting square, erase the state of the destination square, and add the
 // new state of the destination square, through 4 XOR operations.
+
+void TestHashTables()
+{
+	TestFindSmallestSubArrayCoveringSet();
+	FindSmallestSubArraySequentiallyCoveringAllValues();
+}

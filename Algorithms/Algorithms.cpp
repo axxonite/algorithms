@@ -12,6 +12,7 @@
 #include "BinaryTrees.h"
 #include "Heaps.h"
 #include "Search.h"
+#include "HashTables.h"
 
 int main()
 {
@@ -23,6 +24,7 @@ int main()
 	TestBinaryTrees();
 	TestHeaps();
 	TestSearching();
+	TestHashTables();
 	//TestSorting();
 	TestLists();
 	return 0;

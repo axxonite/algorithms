@@ -38,7 +38,7 @@ int ComputeIntegerSquareRoot(int x)
 }
 
 // ----------------------------------------------------------
-// 12.5 COMPUTE THE REAL SQUARE ROOT
+// 12.5 COMPUTE THE REAL SQUARE ROOT*
 double ComputeRealSquareRoot(double x)
 {
 	// Similar to 12.4 above, but pay attention to overflow, especially for where x < 1. If x = 1, then the answer is in [1,x]. If x < 1, then the answer is in [x,1].
@@ -111,30 +111,30 @@ void TestFindMinMax()
 // 12.8 FIND THE KTH LARGEST ELEMENT**
 int FindKthLargestElement(vector<int>& a, int k)
 {
-    // Pick a random pivot and categorize values with respect to the pivot, as in quicksort. This gives us the k-order p of the random pivot. If k > p, eliminate candidates on the right, otherwise eliminate candidates on the left.
-    // Keep going until we find pivot p=k. We are effectively sampling the solution space, and most importantly, rejecting half the candidates for each sample, on average.
-    int s = 0, f = a.size() - 1;
-    default_random_engine rnd;
-    while ( s <= f )
-    {
-        int p = uniform_int_distribution<int>{s, f}(rnd);
-        
-        swap( a[p], a[f] );
-        int j = s;
-        for ( int i = s; i < f; i++ )
-        {
-            if (a[i] > a[f]) // Largest means we have to order the larger elements first.
-                swap(a[i], a[j++]);
-        }
-        swap(a[f], a[j]);
-        
-        if ( j < k - 1 ) // Note that k starts at 1.
-            s = j + 1;
-        else if ( j > k - 1 )
-            f = j - 1;
-        else return a[j];
-    }
-    return -1;
+	// Pick a random pivot and categorize values with respect to the pivot, as in quicksort. This gives us the k-order p of the random pivot. If k > p, eliminate candidates on the right, otherwise eliminate candidates on the left.
+	// Keep going until we find pivot p=k. We are effectively sampling the solution space, and most importantly, rejecting half the candidates for each sample, on average.
+	int s = 0, f = a.size() - 1;
+	default_random_engine rnd;
+	while ( s <= f )
+	{
+		int p = uniform_int_distribution<int>{s, f}(rnd);
+		
+		swap( a[p], a[f] );
+		int j = s;
+		for ( int i = s; i < f; i++ )
+		{
+			if (a[i] > a[f]) // Largest means we have to order the larger elements first.
+				swap(a[i], a[j++]);
+		}
+		swap(a[f], a[j]);
+		
+		if ( j < k - 1 ) // Note that k starts at 1.
+			s = j + 1;
+		else if ( j > k - 1 )
+			f = j - 1;
+		else return a[j];
+	}
+	return -1;
 }
 
 void TestFindKthLargestElement()
@@ -157,39 +157,39 @@ int FindMissingAddress(ifstream* ifs)
 // 12.10 FIND THE DUPLICATE AND MISSING ELEMENTS***
 struct DuplicateAndMissing
 {
-    int duplicate;
-    int missing;
+	int duplicate;
+	int missing;
 };
 
 DuplicateAndMissing FindDuplicateAndMissing(const vector<int>& a)
 {
-    // This relies heavily on XOR cancellation. The sequence has an extra m, and a missing t. XORing the array with the sequence 0+1+...+n - 1 will leave out m XOR t, so we still don't know the solution. m XOR t does tell us
-    // by which bits m and t differ however (m and t are guaranteed to differ by the problem statement), which gives us a way to focus on the elements which can only have m or t, but not both. If m and t differ in the kth bit,
-    // XOR all numbers in the sequencer 0+1+...+n-1 that have bit k set, with all numbers in the array that have that bit set, yields a XOR that can be m or t but not both. To find out if we have m or t, see if the given XOR
-    // is missing from the subsequence, then it is m otherwise it is t. XORing this result with the (m XOR t) result given before, will yield the other value.
-    
-    int xor = 0;
-    for ( int i = 1; i < a.size(); i++)
-        xor ^= i ^ a[i];
-    // Now xor is m xor t.
-    int bit = xor & (~(xor-1)); // Lowest bit set. Review this....
+	// This relies heavily on XOR cancellation. The sequence has an extra m, and a missing t. XORing the array with the sequence 0+1+...+n - 1 will leave out m XOR t, so we still don't know the solution. m XOR t does tell us
+	// by which bits m and t differ however (m and t are guaranteed to differ by the problem statement), which gives us a way to focus on the elements which can only have m or t, but not both. If m and t differ in the kth bit,
+	// XOR all numbers in the sequencer 0+1+...+n-1 that have bit k set, with all numbers in the array that have that bit set, yields a XOR that can be m or t but not both. To find out if we have m or t, see if the given XOR
+	// is missing from the subsequence, then it is m otherwise it is t. XORing this result with the (m XOR t) result given before, will yield the other value.
+	
+	int xor = 0;
+	for ( int i = 1; i < a.size(); i++)
+		xor ^= i ^ a[i];
+	// Now xor is m xor t.
+	int bit = xor & (~(xor-1)); // Lowest bit set. Review this....
 
-    int xor2 = 0;
-    for ( int i = 1; i < a.size(); i++)
-    {
-        if ( i & bit )
-            xor2 ^= i;
-        if ( a[i] & bit )
-            xor2 ^= a[i];
-    }
-    
-    DuplicateAndMissing dm {-1, -1};
-    for ( int v : a )
-    {
-        if ( v == xor2 )
-            return DuplicateAndMissing { xor2, xor2 ^ xor };
-    }
-    return DuplicateAndMissing{xor2 ^ xor, xor};
+	int xor2 = 0;
+	for ( int i = 1; i < a.size(); i++)
+	{
+		if ( i & bit )
+			xor2 ^= i;
+		if ( a[i] & bit )
+			xor2 ^= a[i];
+	}
+	
+	DuplicateAndMissing dm {-1, -1};
+	for ( int v : a )
+	{
+		if ( v == xor2 )
+			return DuplicateAndMissing { xor2, xor2 ^ xor };
+	}
+	return DuplicateAndMissing{xor2 ^ xor, xor};
 }
 
 void TestFindDuplicateAndMissing()
