@@ -13,3 +13,4 @@ struct Node
 typedef shared_ptr<Node<int>> NodePtr;
 
 void TestLists();
+NodePtr BuildList(vector<int> values);

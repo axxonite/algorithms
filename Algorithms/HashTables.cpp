@@ -72,7 +72,7 @@ SubArray FindSmallestSubArrayCoveringSet(const vector<string>& paragraph, const 
 		keywordsToCover[k]++;
 
 	SubArray result{-1, -1};
-	int remainingToCover = keywordsToCover.size();
+	int remainingToCover = static_cast<int>(keywordsToCover.size());
 	for (int left = 0, right = 0; right < static_cast<int>(paragraph.size()); right++)
 	{
 		if (keywordsToCover.count(paragraph[right]) > 0 && --keywordsToCover[paragraph[right]] >= 0)
@@ -109,7 +109,7 @@ SubArray FindSmallestSubArraySequentiallyCoveringAllValues(const vector<string>&
 	// at that keyword. When look for a match for keyword j, then M[j] = (p[j-1]-l[j-1], p[j]). We are building solution j from the solution for j-1.
 	// Note that we don't really need two hash tables. We can use one hash table that contains both values.
 	unordered_map<string, int> keywordToIndex;
-	for (size_t i = 0; i < keywords.size(); i++)
+	for (int i = 0; i < static_cast<int>(keywords.size()); i++)
 		keywordToIndex[keywords[i]] = i;
 
 	vector<int> pos(keywords.size(), -1);
@@ -217,7 +217,7 @@ string FindStudentWithhighestBothOfThreeScores(ifstream* ifs)
 bool MatchWords(const unordered_map<string, int>& freq, const vector<string>& words, int i, const string& s)
 {
 	unordered_map<string, int> found;
-	int wordSize = words.front().size();
+	int wordSize = static_cast<int>(words.front().size());
 	for (size_t j = i; j + wordSize < s.size(); j += wordSize)
 	{
 		auto sub = s.substr(j, wordSize); // Note that substr takes a length, not the position of the last character.
@@ -244,7 +244,7 @@ vector<int> ComputeAllStringDecompositions(const string& s, const vector<string>
 	unordered_map<string, int> freq;
 	for (auto& word : words)
 		freq[word]++;
-	int wordSize = words[0].size();
+	int wordSize = static_cast<int>(words[0].size());
 	for (int i = 0; i + words.size() * wordSize < s.size(); i++) // Careful to not run off the end of the sentence. 
 	{
 		if (MatchWords(freq, words, i, s))

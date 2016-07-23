@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include "PrimitiveTypes.h"
-#include "SortingAlgorithms.h"
 #include "Arrays.h"
 #include "DPExamples.h"
 #include "Strings.h"
@@ -13,6 +12,7 @@
 #include "Heaps.h"
 #include "Search.h"
 #include "HashTables.h"
+#include "Sorting.h"
 
 int main()
 {
@@ -25,7 +25,7 @@ int main()
 	TestHeaps();
 	TestSearching();
 	TestHashTables();
-	//TestSorting();
+	TestSorting();
 	TestLists();
 	return 0;
 }
