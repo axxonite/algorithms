@@ -269,19 +269,19 @@ bool TestCollatzConjecture(int n)
 	// to be tested since all numbers below x will have been tested. Check for overflows for the 3x+1 value. Use parallelism to compute multiple segments of the interval 
 	// simultaneously.
 	unordered_set<int> proven;
-	for (int i = 3; i <= n; i += 2) // Dont test even numbers since they lead to n / 2.
+	for (int i = 3; i <= n; i += 2) // Don't test even numbers since they lead to n / 2.
 	{
 		unordered_set<int> visited;
 		long x = i;
-		while (x > i);
+		while (x > i)
 		{
 			visited.emplace(x);
 			if (x % 1)
 			{
-				if (!proven.emplace(x).second)
+				if (!proven.emplace(x).second) // Note how we emplace and use the second member to test if the set already contains that element.
 					break;
 				long temp = x * 3 + 1;
-				if (temp < x)
+				if (temp < x) // Note how we test for overflow.
 					throw overflow_error("Overflowed while testing.");
 				x = temp;
 			}

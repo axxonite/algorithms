@@ -5,7 +5,7 @@
 using namespace std;
 
 // ----------------------------------------------------------
-// 14.1 COMPUTE THE INTERSECTION OF TWO SORTED ARRAYS
+// 14.1 COMPUTE THE INTERSECTION OF TWO SORTED ARRAYS *
 vector<int> ComputeIntersectionOfTwoSortedArrays(const vector<int>& a, const vector<int>& b)
 {
 	// Compare the arrays with each other. Track an iterator for each array and advance the smaller one. Stop when the smaller array has been fully processed. If the arrays are
@@ -46,7 +46,7 @@ int FindMaxSimultaneousEvents(const vector<Event>& events)
 }
 
 // ----------------------------------------------------------
-// 14.5 MERGING INTERVALS
+// 14.5 MERGING INTERVALS *
 struct Interval
 {
 	int left, right;
@@ -60,7 +60,7 @@ vector<Interval> MergingInterval(const vector<Interval>& disjointIntervals, Inte
 }
 
 // ----------------------------------------------------------
-// 14.6 COMPUTE THE UNION OF INTERVALS
+// 14.6 COMPUTE THE UNION OF INTERVALS *
 struct OpenClosedInterval
 {
 	int start, end;
@@ -101,7 +101,7 @@ NodePtr FastSortingAlgorithmForLists(NodePtr l)
 }
 
 // ----------------------------------------------------------
-// 14.10 COMPUTE A SALARY THRESHOLD
+// 14.10 COMPUTE A SALARY THRESHOLD *
 double FindSalaryCap(double targetPayrol, vector<double> salaries)
 {
 	// Sort by distinct salary levels and compute payrolls for each salary level in an array P[]. Find the index in P[] that bounds the target payroll than do P[i] + (target - P[i]) / (n - i) to distribute the remainder of the
