@@ -4,12 +4,45 @@
 
 using namespace std;
 
+class BSTree
+{
+public :
+
+	bool Insert(int key);
+	bool Delete(int key);
+	TreeNodePtr root;
+	vector<int> PreOrderTraversal() const;
+
+private :
+
+	TreeNode<int>* FindNode(int key, TreeNode<int>*& prev) const;
+	void PreOrderTraversal(TreeNode<int>* n, vector<int>& result) const;
+};
+
+BSTree BuildBST(vector<int> values);
+
 // ----------------------------------------------------------
-// 15.1* TEST IF A BINARY TREE SATISFIES THE BST PROPERTY
+// 15.1 TEST IF A BINARY TREE SATISFIES THE BST PROPERTY*
+bool IsBinaryTreeBST(TreeNodePtr node, int min, int max)
+{
+	if (!node)
+		return true;
+	if (node->value < min || node->value > max)
+		return false;
+	return IsBinaryTreeBST(node->left, min, node->value) && IsBinaryTreeBST(node->right, node->value, max);
+}
+
 bool IsBinaryTreeBST(TreeNodePtr node)
 {
-	// There are several approaches: recursively pass a valid bound and check the tree against it, do an in-order traversal and check that all nodes are in order, or do a BFS with a queue and store the constraint in the queue.
-	return false;
+	// There are several approaches: recursively pass a valid bound and check the tree against it, do an in-order traversal and check that all nodes are in order, or do a BFS with a queue and store the constraint in the queue.    
+	return IsBinaryTreeBST(node, numeric_limits<int>::min(), numeric_limits<int>::max()); // Note the use of the numeric limits constants.
+}
+
+void TestIsBinaryTreeBST()
+{
+	auto tree = BuildBST({5, 6, 4, 7, 3, 8, 2, 9, 1, 10, 0});
+	auto r = IsBinaryTreeBST(tree.root);
+	assert(r);
 }
 
 // ----------------------------------------------------------
@@ -22,10 +55,32 @@ TreeNodePtr FindFirstKeyGreaterThanValue(TreeNodePtr tree, int k)
 
 // ----------------------------------------------------------
 // 15.3 FIND THE LARGEST ELEMENTS IN A BST*
-vector<int> FindKLargestElements(TreeNodePtr tree)
+void FindKLargestElements(TreeNodePtr n, int k, vector<int>& result)
+{
+	if (n == nullptr)
+		return;
+	FindKLargestElements(n->right, k, result);
+	if ( result.size() < k )
+		result.emplace_back(n->value);
+	if ( result.size() < k )
+		FindKLargestElements(n->left, k, result);
+}
+
+vector<int> FindKLargestElements(TreeNodePtr tree, int k)
 {
 	// Do a reversed in-order traversal, visiting right children before left children, stopping once we have k elements.
-	return vector<int>();
+	vector<int> result;
+	FindKLargestElements(tree, k, result);
+	return result;
+}
+
+void TestFindKLargestElements()
+{
+	auto tree = BuildBST({5, 6, 4, 7, 3, 8, 2, 9, 1, 10, 0});
+	vector<int> result;
+	auto r = FindKLargestElements(tree.root, 3);
+	assert(r == vector<int>({ 10, 9, 8 }));
+	
 }
 
 // ----------------------------------------------------------
@@ -39,10 +94,32 @@ TreeNodePtr FindLCA(TreeNodePtr tree, TreeNodePtr s, TreeNodePtr b)
 
 // ----------------------------------------------------------
 // 15.5 RECONSTRUCT A BST FROM TRAVERSAL DATA*
+TreeNodePtr ReconstructBST(const vector<int> preorder, int s, int f)
+{
+	if ( s > f )
+		return nullptr;
+	// Find first value > root
+	int i = s + 1;
+	while ( i <= f && preorder[i] < preorder[s])
+		i++;
+	auto n = make_shared<TreeNode<int>>(TreeNode<int>{preorder[s]});
+	n->left = ReconstructBST(preorder, s + 1, i - 1);
+	n->right = ReconstructBST(preorder, i, f);
+	return n;
+}
+
 TreeNodePtr ReconstructBST(const vector<int> preorder)
 {
 	// Root is first in the pre-order, then left entries are all < root and right entries are all > right. Left entries and right entries are subtrees which form the basis for another root recursively.
-	return TreeNodePtr();
+	return ReconstructBST(preorder, 0, preorder.size() - 1);
+}
+
+void TestReconstructBST()
+{
+	auto tree = BuildBST({5, 6, 4, 7, 3, 8, 2, 9, 1, 10, 0});
+	auto preorder = tree.PreOrderTraversal();
+	auto treeB = ReconstructBST(preorder);
+	assert(IsBinaryTreeBST(treeB));
 }
 
 // ----------------------------------------------------------
@@ -85,27 +162,92 @@ TreeNodePtr BuildMinHeightBSTFromSortedArray(const vector<int>& a)
 // ----------------------------------------------------------
 // 15.10 INSERTION AND DELETION IN A BST*
 //
-class BinarySearchTree
+bool BSTree::Insert(int key)
 {
-public :
-
-	bool Insert(int key)
-	{
-		// Search for input key, if it exists, return false, otherwise add a node where the search ended.
+	// Search for input key, if it exists, return false, otherwise add a node where the search ended.
+	TreeNode<int>* prev;
+	auto n = FindNode(key, prev);
+	if (n)
 		return false;
-	}
+	auto newNode = make_shared<TreeNode<int>>(TreeNode<int>{key}); // Note tha some fields may be omited.
+	if (!prev)
+		root = newNode;
+	else if (key < prev->value)
+		prev->left = newNode;
+	else prev->right = newNode;
+	return true;
+}
 
-	bool Delete(int key)
-	{
-		// If zero children, delete the leaf. If one child, delete the node and replace with its child. If two children, replace contents with successor node's contents and delete successor node. The successor node has to be
-		// a right child of its parent and has no left child, so it is easy to delete it by removing it and replacing it with its right child, if any.
+bool BSTree::Delete(int key)
+{
+	// If zero children, delete the leaf. If one child, delete the node and replace with its child. If two children, replace contents with successor node's contents and delete successor node. The successor node has to be
+	// a right child of its parent and has no left child, so it is easy to delete it by removing it and replacing it with its right child, if any. Don't forget to update the root.
+	TreeNode<int>* prev;
+	auto n = FindNode(key, prev);
+	if (!n)
 		return false;
+	if (!n->left || !n->right)
+	{
+		auto child = n->left ? n->left : n->right;
+		if (!prev)
+			root = child;
+		if (n == prev->left.get())
+			prev->left = child;
+		else prev->right = child;
 	}
+	else
+	{
+		auto prevS = n;
+		auto s = n->right.get();
+		while (s->left) // Find successor.
+			prevS = s , s = s->left.get();
+		n->value = s->value;
+		if (s == prevS->left.get())
+			prevS->left = s->right;
+		else prevS->right = s->right;
+	}
+	return true;
+}
 
-private :
+TreeNodePtr root;
 
-	TreeNodePtr root;
-};
+
+TreeNode<int>* BSTree::FindNode(int key, TreeNode<int>*& prev) const
+{
+	prev = nullptr;
+	auto n = root.get(); // Note the use of get().
+	while (n)
+	{
+		if (key == n->value)
+			return n;
+		prev = n , n = key < n->value ? n->left.get() : n->right.get();
+	}
+	return nullptr;
+}
+
+void BSTree::PreOrderTraversal(TreeNode<int>* n, vector<int>& result) const
+{
+	if (n == nullptr)
+		return;
+	PreOrderTraversal(n->left.get(), result);
+	PreOrderTraversal(n->right.get(), result);
+	result.emplace_back(n->value);
+}
+
+vector<int> BSTree::PreOrderTraversal() const
+{
+	vector<int> result;
+	PreOrderTraversal(root.get(), result);
+	return result;
+}
+
+BSTree BuildBST(vector<int> values)
+{
+	BSTree tree;
+	for (auto v : values)
+		tree.Insert(v);
+	return tree;
+}
 
 // ----------------------------------------------------------
 // 15.11 TEST IF THREE BST NODES ARE TOTALLY ORDERED
@@ -157,3 +299,10 @@ public :
 	{
 	}
 };
+
+void TestBinarySearchTrees()
+{
+	TestIsBinaryTreeBST();
+	TestFindKLargestElements();
+	TestReconstructBST();
+}

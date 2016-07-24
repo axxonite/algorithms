@@ -13,6 +13,7 @@
 #include "Search.h"
 #include "HashTables.h"
 #include "Sorting.h"
+#include "BinarySearchTrees.h"
 
 int main()
 {
@@ -27,5 +28,6 @@ int main()
 	TestHashTables();
 	TestSorting();
 	TestLists();
+	TestBinarySearchTrees();
 	return 0;
 }
