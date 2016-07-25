@@ -14,6 +14,7 @@
 #include "HashTables.h"
 #include "Sorting.h"
 #include "BinarySearchTrees.h"
+#include "Recursion.h"
 
 int main()
 {
@@ -29,5 +30,6 @@ int main()
 	TestSorting();
 	TestLists();
 	TestBinarySearchTrees();
+	TestRecursion();
 	return 0;
 }

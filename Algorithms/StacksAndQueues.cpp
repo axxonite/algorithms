@@ -13,8 +13,7 @@ using namespace std;
 // ----------------------------------------------------------
 // 9.1 IMPLEMENT A STACK WITH MAX API*
 //
-// Store the max value whenever a value is pushed unto the stack. Keep another stack structure inside the stack class to track the max value for each entry in the stack. If the max doesn't change after pushing a new value, 
-// i.e. there are duplicate values in the max stack, reduce storage for them by storing over how many values the max remains the same.
+// Internally, keep a parallel stack that tracks the max of the value stack at the moment each value is pushed. To minimize storage, include, for each entry in the max stack, over how many values the same max is valid.
 class StackWithMax
 {
 	struct ElementWithMax
@@ -59,7 +58,7 @@ private :
 // 9.2 EVALUATE RPN EXPRESSIONS
 int EvaluateRPNexpression(const string& rpn)
 {
-	// Push the values unto the stack. When an operator is encountered, pop two values from stack, evaluate them, then pop the result in the stack. The stack contains the answer at the end. O(n).
+	// Push values on the stack. When an operator is encountered, pop two values, evaluate them, then push the result. The top of the stack contains the final answer. O(n).
 	return 0;
 }
 
@@ -67,7 +66,7 @@ int EvaluateRPNexpression(const string& rpn)
 // 9.3 TEST A STRING OVER "{,},(,),[,]," FOR WELL-FORMEDNESS
 bool TestForWellFormedness(const string& s)
 {
-	// Iterate through the string, and push opening enclosures on a stack. When encountering a closing enclosure, check that the last value on the stack matches. O(n).
+	// Iterate through the string, and push opening enclosures on a stack. When encountering a closing enclosure, check that the top of the stack has the corresponding opening enclosure. O(n).
 	return false;
 }
 
@@ -76,8 +75,9 @@ bool TestForWellFormedness(const string& s)
 // 9.4 NORMALIZE PATHNAMES* TRICKY
 string NormalizePathName(const string& p)
 {
-	// Split the string over /, and examine each component. If it's ., ignore it. If it's .., pop a component from the stack. Otherwise, record the component in the stack. The final state of the stack is the normalized path.
-	// Special care must be taken to handle edge cases. If the string begins with / then it's an absolute path and we cannot go up from it. If the string begins with .., we need to record it in the stack. O(n).
+	// If the string starts with /, record it on a stack. Split the string over /. If the token is .., there are three cases. If it's the first token or the previous token was .., then push ".."
+	// If the last token was /, error out. Otherwise, pop the stack. 
+	// If the token is not .., ignore . or empty tokens, otherwise push them on the stack. Finally, assembly the final answer from the stack, making sure to not interject a / if the token is /.
 	if (p.empty())
 		throw invalid_argument("Not a valid path"); // Notice the use of empty and invalid_argument.
 	vector<string> components; // why use a vector as a stack? todo
@@ -92,9 +92,12 @@ string NormalizePathName(const string& p)
 		{
 			if (components.empty() || components.back() == "..") // Keep the .. tokens if they occur during the prefix of the string.
 				components.emplace_back(token);
-			else if (components.back() == "/") // Can't have "/.." at the start of the string.
-				throw invalid_argument("Invalid path.");
-			components.pop_back(); // Perform with .. by popping the stack.
+			else
+			{
+				if (components.back() == "/") // Can't have "/.." at the start of the string.
+					throw invalid_argument("Invalid path.");
+				components.pop_back(); // Perform with .. by popping the stack.
+			}
 		}
 		else if (token != "." && token != "") // Need a name to add it to the path.
 			components.emplace_back(token);
@@ -134,8 +137,7 @@ struct PostingListNode
 
 void SearchPostingsList(const shared_ptr<PostingListNode>& l)
 {
-	// In the trivial case, we would simply iterate through the nodes, and recursively process their jump node. This can be mimicked with a stack, pushing the next node and the jump node on the stack, then popping the next node
-	// to process from the stack.
+	// Iterate the nodes, pushing the next node and the jump node, then pop the next to process from the stack.
 }
 
 // ----------------------------------------------------------
@@ -189,9 +191,8 @@ struct BinaryTreeNode
 
 vector<vector<int>> ComputeBinaryTreeDepthOrder(TreeNodePtr tree)
 {
-	// Use a processing queue to direct the order of processing. Start with the root node, add it to the result list, then add both children to the queue. The queue now contains the solution for the next level. Now process
-	// queue, adding immediate children. The queue now contains the children at the deeper level, which can be added to the solution. Keep track of the current depth, and when we we've processed 2^k (k being the depth),
-	// the queue now contains the solution for the current depth. O(n).
+	// Initialize queue with root node. Process queue by popping node, storing it in a vector v and adding both children to the queue. When we have processed 2^d (d being the current depth), v contains a whole level and 
+	// can be copied to the result. O(n).
 	queue<TreeNodePtr> nodes;
 	nodes.emplace(tree);
 	vector<vector<int>> result;
@@ -237,20 +238,17 @@ void ComputeBinaryTreeDepthOrder()
 // ----------------------------------------------------------
 // 9.8 IMPLEMENT A CIRCULAR QUEUE*
 //
-// Use a circular array and keep track of both the head and the tail. An empty queue cannot be differentiated from a full one, so make sure to keep a separate count of the number of elements. Pay special attention to the
-// resizing operation so that elements are still in a proper position after the resize operation.
+// Use a circular array and keep track of both the head and tail. Keep a count of the number of elements because an empty queue cannot be differentiated from a full one . Pay special attention to the
+// resizing operation so that elements are still in their proper position after the resize operation.
 
 // ----------------------------------------------------------
 // 9.9 IMPLEMENT A QUEUE USING STACKS*
 //
-// Keep two stacks. The first is normal stack for enqueue. When we need to dequeue, use push and pop to created an inverted version of the first stack on the second stack. Then we can dequeue those elements until the
-// dequeuing stack is empty, at which point we can create an inverted version of the first stack again.
+// Maintain a stack to enqueue to and a dequeue stacks. When we dequeue and the dequeue stack is empty, move the enqueue stack to an inverted version on the dequeue stack with push & pop.
 
 // ----------------------------------------------------------
 // 9.10 IMPLEMENT A QUEUE WITH MAX API*
-// If there is a max value at i0 and the next max value is at i1, then all values between i0 and i1 are irrelevant and will not change the max. We use a deque to store these descending max values.
-// When then current max value is dequeued, it is also dequeued from the deque. When a new value is enqueued, it is compared with the back of the dequeue. If the new value is greater than the back of the deque,
-// then the deque is dequeued from the back; further values that are smaller than the new value are dequeued as well. The max value is then enqueued from the back.
+// Maintain a deque m of max values in decreasing order. When dequeing a value x, pop m from the front if the front matches x. For enqueuing a value x, pop from m any values from the back that are < x, and push x at the back of m.
 
 void TestStacksAndQueues()
 {

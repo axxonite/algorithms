@@ -39,7 +39,7 @@ TreeNodePtr GetNode(TreeNodePtr n, int i)
 // 10.1 TEST IF A BINARY TREE IS HEIGHT BALANCED
 bool TestIsHeightBalanced(TreeNodePtr root)
 {
-	// Do a post-order traversal. From the traversal, return the height of the subtree, and where the subtree is height balanced. Terminate early if a subtree is not height balanced. Pay attention to the base case.
+	// Do a post-order traversal, and return the height of the subtree, and whether the subtree is height balanced.
 	return false;
 }
 
@@ -47,8 +47,8 @@ bool TestIsHeightBalanced(TreeNodePtr root)
 // 10.2 TEST IF A BINARY TREE IS SYMMETRIC
 bool TestIsSymmetric(TreeNodePtr root)
 {
-	// Do a pre-order traversal, passing in both sides of the tree. At each node, check that the nodes have the same values, then walk down the tree, passing in the left side of subtree A and the right side of side of subtree
-	// B, then the right side of subtree A with the left side of subtree B.
+	// Do a pre-order traversal, passing in both trees A and B's root nodes. For each node, check that the nodes have the same values, and walk down the tree, passing in the left side of subtree A and the right side of side
+	// of subtree B, then the right side of subtree A with the left side of subtree B.
 	return false;
 }
 
@@ -72,8 +72,7 @@ int ComputeLCARecursive(TreeNodePtr n, TreeNodePtr a, TreeNodePtr b, TreeNodePtr
 
 TreeNodePtr ComputeLCA(TreeNodePtr root, TreeNodePtr a, TreeNodePtr b)
 {
-	// It helps to relate the problem to a sought status of the subtree we are searching. In this case, the status we are looking for is a subtree with both nodes present. Do a pre-order traversal, returning how many of the
-	// nodes were found within the subtree. When that number is two, we have found the LCA and can terminate early, storing the LCA in the status structure.
+	// We are looking for a subtree with both nodes present. Do a pre-order traversal, returning how many of the nodes were found within the subtree. When that number is two, we can terminate and return the LCA.
 	TreeNodePtr result = nullptr;
 	ComputeLCARecursive(root, a, b, result);
 	return result;
@@ -90,8 +89,8 @@ void TestComputeLCA()
 // 10.4 COMPUTE THE LCA WHEN NODES HAVE PARENT POINTERS
 TreeNodePtr ComputeLCAWithParentPointers(TreeNodePtr root, TreeNodePtr a, TreeNodePtr b)
 {
-	// The parent chains of both nodes are effectively linked lists, so this is the same as finding common nodes between linked list. Find the height of each node, then walk up from the longer chain until we are at the same
-	// height as the shorter chain, then walk up both chains in tandem until we find the common node.
+	// The parent chains of both nodes are effectively linked lists, so this is the same as finding common nodes between linked list.
+	// Find the height of each node, then walk up from the longer chain until we are at the same height as the shorter chain, then walk up both chains in tandem until we find the common node.
 	return nullptr;
 }
 
