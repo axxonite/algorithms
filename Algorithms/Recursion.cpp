@@ -41,7 +41,7 @@ void TestComputeTowerOfHanoi()
 // 16.2 GENERATE ALL NONATTACKING PLACEMENTS OF N-QUEENS*
 bool IsPlacementValid(vector<int>& p)
 {
-	auto r = p.size() - 1;
+	auto r = (int)p.size() - 1;
 	for (int i = 0; i < r; i++)
 	{
 		int t = abs(p[i] - p[r]);
@@ -154,7 +154,7 @@ void FindPalindromicDecomp(const string& s, int offset, vector<string>& partialD
 		result.emplace_back(partialDecomp);
 		return;
 	}
-	for (int i = offset + 1; i <= s.size(); i++)
+	for (int i = offset + 1; i <= static_cast<int>(s.size()); i++)
 	{
 		string prefix = s.substr(offset, i - offset);
 		if (IsPalindrome(prefix))
