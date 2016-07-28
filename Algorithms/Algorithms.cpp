@@ -16,6 +16,7 @@
 #include "BinarySearchTrees.h"
 #include "Recursion.h"
 #include "GreedyAlgorithms.h"
+#include "Graphs.h"
 
 int main()
 {
@@ -33,5 +34,6 @@ int main()
 	TestBinarySearchTrees();
 	TestRecursion();
 	TestGreedyAlgorithms();
+	TestGraphs();
 	return 0;
 }
