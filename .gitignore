@@ -11,3 +11,5 @@ Algorithms.VC.opendb
 Algorithms.sdf
 .vs/Algorithms/Algorithms.scgdat
 .vs/Algorithms/v15/Browse.VC.db
+Problems/x64/Debug/
+*.db

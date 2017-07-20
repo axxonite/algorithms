@@ -19,9 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CB2D087E-72D7-4583-899B-88327AA2434A}</ProjectGuid>
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{A29DA275-7589-4032-BD5A-7A0BF54F981B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Algorithms</RootNamespace>
+    <RootNamespace>Problems</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,10 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -81,18 +82,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -102,7 +91,17 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -118,7 +117,6 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,63 +132,25 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Arrays.h" />
-    <ClInclude Include="BinarySearchTree.h" />
-    <ClInclude Include="BinarySearchTrees.h" />
-    <ClInclude Include="BinaryTrees.h" />
-    <ClInclude Include="DPExamples.h" />
-    <ClInclude Include="DynamicProgramming.h" />
-    <ClInclude Include="Graph.h" />
-    <ClInclude Include="Graphs.h" />
-    <ClInclude Include="GreedyAlgorithms.h" />
-    <ClInclude Include="HashTables.h" />
-    <ClInclude Include="Heaps.h" />
-    <ClInclude Include="Honors.h" />
-    <ClInclude Include="Lists.h" />
-    <ClInclude Include="MaxHeap.h" />
-    <ClInclude Include="PrimitiveTypes.h" />
-    <ClInclude Include="Recursion.h" />
-    <ClInclude Include="Search.h" />
-    <ClInclude Include="Sorting.h" />
-    <ClInclude Include="SortingAlgorithms.h" />
-    <ClInclude Include="StacksAndQueues.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Strings.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Algorithms.cpp" />
-    <ClCompile Include="Arrays.cpp" />
-    <ClCompile Include="BinarySearchTree.cpp" />
-    <ClCompile Include="BinarySearchTrees.cpp" />
-    <ClCompile Include="BinaryTrees.cpp" />
-    <ClCompile Include="DPExamples.cpp" />
-    <ClCompile Include="DynamicProgramming.cpp" />
-    <ClCompile Include="Graph.cpp" />
-    <ClCompile Include="Graphs.cpp" />
-    <ClCompile Include="GreedyAlgorithms.cpp" />
-    <ClCompile Include="HashTables.cpp" />
-    <ClCompile Include="Heaps.cpp" />
-    <ClCompile Include="Honors.cpp" />
-    <ClCompile Include="Lists.cpp" />
-    <ClCompile Include="MaxHeap.cpp" />
-    <ClCompile Include="PrimitiveTypes.cpp" />
-    <ClCompile Include="Recursion.cpp" />
-    <ClCompile Include="Search.cpp" />
-    <ClCompile Include="Sorting.cpp" />
-    <ClCompile Include="SortingAlgorithms.cpp" />
-    <ClCompile Include="StacksAndQueues.cpp" />
+    <ClCompile Include="Declarations.cpp" />
+    <ClCompile Include="Problems.cpp" />
+    <ClCompile Include="Questions\5.11_intersect_rectangle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Solutions\5.11_intersect_rectangle_solution.cc" />
     <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Strings.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

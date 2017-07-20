@@ -1,8 +1,17 @@
 #include "stdafx.h"
 #include "DPExamples.h"
 #include <algorithm>
+#include <math.h>
 
 using namespace std;
+
+int C[1];
+
+int R(int a, int b)
+{
+	return min(C[a] + min(R(a + 1, b - 1), R(a + 2, b)), C[b] + min(R(a, b - 2),R(a + 1, b - 1)));
+}
+
 
 // O(n^2)
 int BottomUpCutUpRod(vector<int> prices, int n, vector<int>& solution)

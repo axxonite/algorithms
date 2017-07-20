@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Problems.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Questions\5.11_intersect_rectangle.cpp">
+      <Filter>Questions</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5.11_intersect_rectangle_solution.cc">
+      <Filter>Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Declarations.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Solutions">
+      <UniqueIdentifier>{43ebc4dc-1a68-4f79-818b-0e4a23cb58d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Questions">
+      <UniqueIdentifier>{89d363d1-11a7-409f-8bf7-f66a72438d57}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
