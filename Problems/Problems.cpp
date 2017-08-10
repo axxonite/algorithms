@@ -1,7 +1,8 @@
 #include "stdafx.h"
-#include "Questions\5.11_intersect_rectangle.cpp"
+#include "Problems/Problems.h"
 
 int main()
 {
-    Questions::RectangleIntersectionTest();
+    //Problems::RectangleIntersectionTest();
+	Problems::TestBubbleSort();
 }
