@@ -7,6 +7,7 @@
 #include <sstream>
 #include <unordered_map>
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -20,5 +21,4 @@ struct Foo
 
 void function()
 {
-	shared_ptr<Foo> ptr = make_shared<Foo>(Foo{ 0, 1 });
-}
+} 

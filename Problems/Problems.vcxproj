@@ -140,12 +140,12 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BubbleSort_solution.cpp" />
     <ClCompile Include="Declarations.cpp" />
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="Problems\5.11_intersect_rectangle.cpp" />
     <ClCompile Include="Problems\BubbleSort.cpp" />
     <ClCompile Include="Solutions\5.11_intersect_rectangle_solution.cc" />
+    <ClCompile Include="Solutions\BubbleSort_solution.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <cassert>
+#include <future>
 
 namespace Problems
 {
