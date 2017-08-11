@@ -2,11 +2,7 @@
 
 #include "stdafx.h"
 #include <algorithm>
-#include <array>
-#include <cassert>
-#include <iostream>
 #include <limits>
-#include <random>
 #include <vector>
 
 namespace Solutions
@@ -15,9 +11,12 @@ namespace Solutions
 
 	double BuyAndSellStockTwice(const vector<double>& prices) 
 	{
+		// We need to keep track of four variables here.
+		// Keep track of best solution.
 		double max_total_profit = 0;
-		// first_buy_sell_profits is the maximum amount of profit we can make if we buy and sell using the subarray of prices from 0 to i.
+		// Keep track of the best solution for a range of prices from 0 to i.
 		vector<double> first_buy_sell_profits(prices.size(), 0);
+		// Keep track of the lowest price seen so we can compute the best profit possible.
 		double min_price_so_far = numeric_limits<double>::max();
 
 		// Forward phase. For each day, we record maximum profit if we sell on that day.
@@ -29,7 +28,9 @@ namespace Solutions
 		}
 
 		// Backward phase. For each day, find the maximum profit if we make the second buy on that day.
+		// Keep track of the highest prices seen so we can compute the best possible profit.
 		double max_price_so_far = numeric_limits<double>::min();
+		// Note that we do not go down to zero here, because we need to use the first price for the first buy, at minimum.
 		for (int i = (int)prices.size() - 1; i > 0; --i) 
 		{
 			max_price_so_far = max(max_price_so_far, prices[i]); // Keep track of the highest price, which caps the max profit we can make on the second sale.

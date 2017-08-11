@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <array>
 #include <cassert>
-#include <iostream>
 #include <limits>
 #include <random>
 #include <vector>
@@ -34,7 +33,7 @@ namespace Problems
 		return max_profits[1];
 	}
 
-	int BuyAndSellStockTwiceTest()
+	void BuyAndSellStockTwiceTest()
 	{
 		default_random_engine gen((random_device())());
 		for (int times = 0; times < 1000; ++times) {
@@ -50,7 +49,6 @@ namespace Problems
 			assert(fabs(BuyAndSellStockTwiceConstantSpace(A) -
 				BuyAndSellStockTwice(A)) < 1.0e-8);
 		}
-		return 0;
 	}
 
 #pragma endregion

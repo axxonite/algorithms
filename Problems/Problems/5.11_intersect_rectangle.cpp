@@ -58,7 +58,7 @@ namespace Problems
 		assert(result.x == 0 && result.y == 0 && result.width == -1 &&
 			result.height == -1);
 	}
-	int RectangleIntersectionTest()
+	void RectangleIntersectionTest()
 	{
 		SmallTest();
 		for (int times = 0; times < 10000; ++times) {
@@ -85,7 +85,6 @@ namespace Problems
 			ans.print("ans: ");
 			assert(res == false || (ans.width >= 0 && ans.height >= 0));
 		}
-		return 0;
 	}
 
 #pragma endregion
