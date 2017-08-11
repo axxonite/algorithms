@@ -3,7 +3,8 @@
 namespace Problems
 {
 
-	void TestBubbleSort();
+	void BubbleSortTest();
 
+	void MultiplyShiftAddTest();
 	int RectangleIntersectionTest();
 }

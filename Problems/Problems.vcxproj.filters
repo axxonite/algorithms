@@ -10,9 +10,6 @@
   <ItemGroup>
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Solutions\5.11_intersect_rectangle_solution.cc">
-      <Filter>Solutions</Filter>
-    </ClCompile>
     <ClCompile Include="Declarations.cpp" />
     <ClCompile Include="Problems\5.11_intersect_rectangle.cpp">
       <Filter>Problems</Filter>
@@ -22,6 +19,15 @@
     </ClCompile>
     <ClCompile Include="Solutions\BubbleSort_solution.cpp">
       <Filter>Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5.11_intersect_rectangle_solution.cpp">
+      <Filter>Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5.5_multiply_shift_add_solution.cpp">
+      <Filter>Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="5.5_multiply_shift_add.cpp">
+      <Filter>Problems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

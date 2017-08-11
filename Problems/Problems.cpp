@@ -4,5 +4,6 @@
 int main()
 {
     //Problems::RectangleIntersectionTest();
-	Problems::TestBubbleSort();
+	//Problems::BubbleSortTest();
+	//Problems::MultiplyShiftAddTest();
 }

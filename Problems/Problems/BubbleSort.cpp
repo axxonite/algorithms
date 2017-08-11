@@ -8,7 +8,7 @@ namespace Problems
 	{
 	}
 
-	void TestBubbleSort()
+	void BubbleSortTest()
 	{
 		int a[] = {3, 5, 6, 2, 4, 5, 0};
 		BubbleSort(a, 7);
