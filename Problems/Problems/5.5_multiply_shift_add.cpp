@@ -20,6 +20,8 @@ namespace Problems
 		return 0;
 	}
 
+
+#pragma region Test
 	void MultiplyShiftAddTest() {
 		default_random_engine gen((random_device())());
 		// Random test, only works if the product is not greater than 2^32 - 1.
@@ -32,5 +34,5 @@ namespace Problems
 				<< endl;
 		}
 	}
-
+#pragma endregion Test
 }

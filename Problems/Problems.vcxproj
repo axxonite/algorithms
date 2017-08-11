@@ -140,13 +140,15 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="5.5_multiply_shift_add.cpp" />
     <ClCompile Include="Declarations.cpp" />
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="Problems\5.11_intersect_rectangle.cpp" />
+    <ClCompile Include="Problems\5.5_multiply_shift_add.cpp" />
+    <ClCompile Include="Problems\5.7_buy_and_sell_stock_twice.cpp" />
     <ClCompile Include="Problems\BubbleSort.cpp" />
     <ClCompile Include="Solutions\5.11_intersect_rectangle_solution.cpp" />
     <ClCompile Include="Solutions\5.5_multiply_shift_add_solution.cpp" />
+    <ClCompile Include="Solutions\5.7_buy_and_sell_stock_twice_solution.cpp" />
     <ClCompile Include="Solutions\BubbleSort_solution.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

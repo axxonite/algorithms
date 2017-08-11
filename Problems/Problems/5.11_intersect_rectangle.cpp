@@ -41,7 +41,7 @@ namespace Problems
 		return Rectangle(-1, -1, -1, -1);
 	}
 
-#pragma region Tests
+#pragma region Test
 
 	void SmallTest()
 	{

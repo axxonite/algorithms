@@ -59,7 +59,7 @@ namespace Solutions
 			result.height == -1);
 	}
 
-	int RectangleIntersectionTest() 
+	void RectangleIntersectionTest() 
 	{
 		SmallTest();
 		for (int times = 0; times < 10000; ++times) {
@@ -86,8 +86,5 @@ namespace Solutions
 			ans.print("ans: ");
 			assert(res == false || (ans.width >= 0 && ans.height >= 0));
 		}
-		return 0;
 	}
-
-
 }

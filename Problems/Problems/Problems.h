@@ -2,9 +2,11 @@
 
 namespace Problems
 {
-
+	// Standard algorithms.
 	void BubbleSortTest();
 
+	// Chapter 5: Primitives.
 	void MultiplyShiftAddTest();
-	int RectangleIntersectionTest();
+	void BuyAndSellStockTwiceTest();
+	void RectangleIntersectionTest();
 }
