@@ -20,3 +20,6 @@ void CombinationsTest();
 // Chapter 17: Dynamic Programming.
 void ComputeMaximumRevenueForRangeTest();
 void LongestNondecreasingSubsequenceLengthTest();
+
+// Chapter 18: Greedy Algorithms
+void OptimumTaskAssignmentTest();

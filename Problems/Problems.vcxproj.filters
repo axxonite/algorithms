@@ -69,6 +69,12 @@
     <ClCompile Include="C++Constructs.cpp">
       <Filter>Problems</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -112,6 +118,12 @@
     </Filter>
     <Filter Include="Solutions\Sorting Algorithms">
       <UniqueIdentifier>{cb114960-961f-4820-a52c-e2c140a77194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\18. Greedy Algorithms">
+      <UniqueIdentifier>{f2ff0223-5e54-48db-ab57-fac43624e063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\18. Greedy Algorithms">
+      <UniqueIdentifier>{39b76806-1d88-4bd7-9f95-317b9989e214}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

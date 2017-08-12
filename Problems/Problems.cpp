@@ -22,4 +22,7 @@ int main()
 	// 17. Dynamic Progamming
 	ComputeMaximumRevenueForRangeTest();
 	LongestNondecreasingSubsequenceLengthTest();
+
+	// 18. Greedy Algorithms
+	OptimumTaskAssignmentTest();
 }
