@@ -3,8 +3,15 @@
 
 int main()
 {
-    //Problems::RectangleIntersectionTest();
-	//Problems::BubbleSortTest();
-	//Problems::MultiplyShiftAddTest();
-	//Problems::BuyAndSellStockTwiceTest();
+	//BubbleSortTest();
+	//
+	//MultiplyShiftAddTest();
+	//BuyAndSellStockTwiceTest();
+	//RectangleIntersectionTest();
+	//
+	//SpreadsheetEncodingTest();
+	
+	//AddCreditsTest();
+
+	// CombinationsTest();
 }
