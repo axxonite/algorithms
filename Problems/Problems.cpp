@@ -3,18 +3,23 @@
 
 int main()
 {
-	//BubbleSortTest();
-	//
-	//MultiplyShiftAddTest();
-	//BuyAndSellStockTwiceTest();
-	//RectangleIntersectionTest();
-	//
-	//SpreadsheetEncodingTest();
+	BubbleSortTest();
 	
-	//AddCreditsTest();
+	// 5. Primitives
+	MultiplyShiftAddTest();
+	BuyAndSellStockTwiceTest();
+	RectangleIntersectionTest();
+	
+	// 7. Strings
+	SpreadsheetEncodingTest();
+	
+	// 15. Binary Search Trees
+	AddCreditsTest();
 
-	// CombinationsTest();
+	// 16. Recursion
+	CombinationsTest();
 
-	//ComputeMaximumRevenueForRangeTest();
-	//LongestNondecreasingSubsequenceLengthTest();
+	// 17. Dynamic Progamming
+	ComputeMaximumRevenueForRangeTest();
+	LongestNondecreasingSubsequenceLengthTest();
 }

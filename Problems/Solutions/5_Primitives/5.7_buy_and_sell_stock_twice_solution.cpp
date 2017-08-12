@@ -1,14 +1,9 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <algorithm>
-#include <limits>
-#include <vector>
 
 namespace Solutions
 {
-	using namespace std;
-
 	double BuyAndSellStockTwice(const vector<double>& prices) 
 	{
 		// We need to keep track of four variables here.

@@ -1,13 +1,6 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <cassert>
-#include <map>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-
-using namespace std;
 
 class ClientsCreditsInfo
 {

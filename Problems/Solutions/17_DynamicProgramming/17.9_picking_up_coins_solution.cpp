@@ -1,11 +1,6 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <algorithm>
-#include <cassert>
-#include <vector>
-
-using namespace std;
 
 namespace Solutions
 {

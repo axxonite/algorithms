@@ -1,15 +1,6 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <algorithm>
-#include <cassert>
-#include <iostream>
-#include <memory>
-#include <random>
-#include <string>
-#include <vector>
-
-using namespace std;
 
 namespace Solutions
 {
@@ -36,7 +27,7 @@ namespace Solutions
 		}
 
 		// Generate remaining combinations over {offset, ..., n - 1} of size num_remaining.
-		const int num_remaining = k - partial_combination->size();
+		const int num_remaining = k - int(partial_combination->size());
 		// test i <= n in case k is greater than n.
 		// TRICKY: test num_remaining + i - 1 <= n to check that the sum of the count of numbers we need to add (num_remaining), 
 		// plus the numbers we've already used up (i), minus one since the first number starts at 1.

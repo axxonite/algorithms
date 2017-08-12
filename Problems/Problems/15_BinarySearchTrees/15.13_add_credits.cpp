@@ -1,31 +1,31 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <cassert>
-#include <string>
 
-using namespace std;
+#define TEST 0
 
-class ClientsCreditsInfo 
+class ClientsCreditsInfo
 {
 public:
-	void Insert(const string& client_id, int c) 
+	void Insert(const string& client_id, int c)
 	{
 	}
 
-	bool Remove(const string& client_id) 
+	bool Remove(const string& client_id)
 	{
 		return false;
 	}
 
-	int Lookup(const string& client_id) const 
+	int Lookup(const string& client_id) const
 	{
 		return 0;
 	}
 
-	void AddAll(int C) {}
+	void AddAll(int C)
+	{
+	}
 
-	string Max() const 
+	string Max() const
 	{
 		return "";
 	}
@@ -35,8 +35,9 @@ private:
 
 #pragma region Test
 
-void AddCreditsTest() 
+void AddCreditsTest()
 {
+#if TEST
 	ClientsCreditsInfo a;
 	assert(a.Max() == "");
 	assert(!a.Remove("foo"));
@@ -58,6 +59,7 @@ void AddCreditsTest()
 	assert(a.Max().compare("xyz") == 0);
 	a.Insert("dd", 15);
 	assert(a.Max().compare("dd") == 0);
+#endif
 }
 
 #pragma endregion Test

@@ -1,6 +1,6 @@
 #pragma once
 
-// Standard algorithms.
+// Sorting algorithms.
 void BubbleSortTest();
 
 // Chapter 5: Primitives.

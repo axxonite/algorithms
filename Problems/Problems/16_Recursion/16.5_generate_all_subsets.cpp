@@ -1,15 +1,8 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <algorithm>
-#include <cassert>
-#include <iostream>
-#include <memory>
-#include <random>
-#include <string>
-#include <vector>
 
-using namespace std;
+#define TEST 0
 
 vector<vector<int>> Combinations(int n, int k)
 {
@@ -19,17 +12,18 @@ vector<vector<int>> Combinations(int n, int k)
 
 #pragma region Test
 
-void SmallTestCombinations() 
+void SmallTestCombinations()
 {
 	auto result = Combinations(4, 2);
-	vector<vector<int>> golden_result = { { 1, 2 },{ 1, 3 },{ 1, 4 },
-	{ 2, 3 },{ 2, 4 },{ 3, 4 } };
+	vector<vector<int>> golden_result = {{1, 2},{1, 3},{1, 4},
+		{2, 3},{2, 4},{3, 4}};
 	assert(equal(result.begin(), result.end(), golden_result.begin(),
 		golden_result.end()));
 }
 
-void CombinationsTest() 
+void CombinationsTest()
 {
+#if TEST
 	SmallTestCombinations();
 	default_random_engine gen((random_device())());
 	int n, k;
@@ -45,6 +39,7 @@ void CombinationsTest()
 		}
 		cout << endl;
 	}
+#endif
 }
 
 #pragma endregion Test

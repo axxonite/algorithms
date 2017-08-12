@@ -2,6 +2,8 @@
 
 #include "stdafx.h"
 
+#define TEST 0
+
 int SSDecodeColID(const string& col) 
 {
 	return 0;
@@ -29,11 +31,13 @@ void SimpleTest() {
 
 void SpreadsheetEncodingTest() 
 {
+#if TEST
 	SimpleTest();
 	default_random_engine gen((random_device())());
 	uniform_int_distribution<int> len_dis(1, 5);
 	string s(RandString(len_dis(gen)));
 	cout << s << " " << SSDecodeColID(s) << endl;
+#endif
 }
 
 #pragma endregion

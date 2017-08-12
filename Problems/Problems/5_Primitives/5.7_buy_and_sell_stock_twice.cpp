@@ -2,6 +2,8 @@
 
 #include "stdafx.h"
 
+#define TEST 0
+
 double BuyAndSellStockTwice(const vector<double>& prices)
 {
 	return 0;
@@ -9,8 +11,9 @@ double BuyAndSellStockTwice(const vector<double>& prices)
 
 #pragma region Test
 
-double BuyAndSellStockTwiceConstantSpace(const vector<double>& prices) {
-	array<double, 2> min_prices = { numeric_limits<double>::max(), numeric_limits<double>::max() }, max_profits = { 0.0, 0.0 };
+double BuyAndSellStockTwiceConstantSpace(const vector<double>& prices)
+{
+	array<double, 2> min_prices = {numeric_limits<double>::max(), numeric_limits<double>::max()}, max_profits = {0.0, 0.0};
 	for (const double& price : prices)
 	{
 		for (int i = 1; i >= 0; --i)
@@ -25,6 +28,7 @@ double BuyAndSellStockTwiceConstantSpace(const vector<double>& prices) {
 
 void BuyAndSellStockTwiceTest()
 {
+#if TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times) {
 		int n;
@@ -39,6 +43,7 @@ void BuyAndSellStockTwiceTest()
 		assert(fabs(BuyAndSellStockTwiceConstantSpace(A) -
 			BuyAndSellStockTwice(A)) < 1.0e-8);
 	}
+#endif
 }
 
 #pragma endregion
