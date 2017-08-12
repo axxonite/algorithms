@@ -14,4 +14,7 @@ int main()
 	//AddCreditsTest();
 
 	// CombinationsTest();
+
+	ComputeMaximumRevenueForRangeTest();
+	//LongestNondecreasingSubsequenceLengthTest();
 }

@@ -21,6 +21,4 @@ struct Foo
 
 void function()
 {
-	string s;
-	s.find("test", 0);
 } 

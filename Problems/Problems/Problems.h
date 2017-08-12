@@ -16,3 +16,7 @@ void AddCreditsTest();
 
 // Chapter 16: Recursion
 void CombinationsTest();
+
+// Chapter 17: Dynamic Programming.
+void ComputeMaximumRevenueForRangeTest();
+void LongestNondecreasingSubsequenceLengthTest();

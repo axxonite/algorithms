@@ -53,6 +53,18 @@
     <ClCompile Include="Solutions\16.5_generate_all_subsets_solution.cpp">
       <Filter>Solutions</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\17.12_longest_non_decreasing_sequence.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17.12_longest_non_decreasing_sequence_solution.cpp">
+      <Filter>Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\17.9_picking_up_coins.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17.9_picking_up_coins_solution.cpp">
+      <Filter>Solutions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
