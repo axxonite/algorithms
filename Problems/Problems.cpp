@@ -25,4 +25,5 @@ int main()
 
 	// 18. Greedy Algorithms
 	OptimumTaskAssignmentTest();
+	MajoritySearchTest();
 }

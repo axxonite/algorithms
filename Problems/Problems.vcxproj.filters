@@ -75,6 +75,12 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

@@ -23,3 +23,4 @@ void LongestNondecreasingSubsequenceLengthTest();
 
 // Chapter 18: Greedy Algorithms
 void OptimumTaskAssignmentTest();
+void MajoritySearchTest();

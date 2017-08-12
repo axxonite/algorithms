@@ -148,6 +148,7 @@
     <ClCompile Include="Problems\17_DynamicProgramming\17.12_longest_non_decreasing_sequence.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.9_picking_up_coins.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp" />
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.11_intersect_rectangle.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.5_multiply_shift_add.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.7_buy_and_sell_stock_twice.cpp" />
@@ -158,6 +159,7 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.12_longest_non_decreasing_sequence_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.9_picking_up_coins_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp" />
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.11_intersect_rectangle_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.5_multiply_shift_add_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.7_buy_and_sell_stock_twice_solution.cpp" />
