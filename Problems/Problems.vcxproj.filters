@@ -87,6 +87,12 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\25.26_regular_expression.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\25.26_regular_expression_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

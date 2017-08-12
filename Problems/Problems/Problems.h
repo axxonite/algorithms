@@ -16,6 +16,7 @@ void AddCreditsTest();
 
 // Chapter 16: Recursion
 void CombinationsTest();
+void IsMatchTest();
 
 // Chapter 17: Dynamic Programming.
 void ComputeMaximumRevenueForRangeTest();

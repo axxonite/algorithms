@@ -18,6 +18,7 @@ int main()
 
 	// 16. Recursion
 	CombinationsTest();
+	IsMatchTest();
 
 	// 17. Dynamic Progamming
 	ComputeMaximumRevenueForRangeTest();
