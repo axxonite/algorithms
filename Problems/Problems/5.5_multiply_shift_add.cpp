@@ -1,12 +1,6 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <cassert>
-#include <iostream>
-#include <random>
-#include <string>
-
-using namespace std;
 
 unsigned Add(unsigned a, unsigned b)
 {
@@ -17,7 +11,6 @@ unsigned Multiply(unsigned x, unsigned y)
 {
 	return 0;
 }
-
 
 #pragma region Test
 void MultiplyShiftAddTest() {

@@ -1,14 +1,6 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <algorithm>
-#include <array>
-#include <cassert>
-#include <limits>
-#include <random>
-#include <vector>
-
-using namespace std;
 
 double BuyAndSellStockTwice(const vector<double>& prices)
 {

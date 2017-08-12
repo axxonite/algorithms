@@ -1,10 +1,6 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include <cassert>
-#include <iostream>
-#include <random>
-#include <string>
 
 namespace Solutions
 {
@@ -28,6 +24,7 @@ namespace Solutions
 		// note that we do not support negative numbers in this example.
 		unsigned sum = 0;
 		// examine each bit in x. y represents (2^i)y.
+		// Note that y is shifted to the left while x is shifted to the right.
 		for (; x; x >>= 1, y <<= 1)
 		{
 			if (x & 1)

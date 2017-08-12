@@ -6,10 +6,21 @@
 #pragma once
 
 #include "targetver.h"
-
 #include <stdio.h>
 #include <tchar.h>
+#include <random>
+#include <cassert>
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <array>
+#include <limits>
+#include <vector>
+#include <queue>
+#include <functional> // for greater<>
+#include <memory>
+#include <sstream>
+#include <unordered_map>
+#include <map>
 
-
-
-// TODO: reference additional headers your program requires here
+using namespace std;
