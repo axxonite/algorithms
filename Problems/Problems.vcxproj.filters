@@ -81,6 +81,12 @@
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp">
       <Filter>Problems\18. Greedy Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
