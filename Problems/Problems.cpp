@@ -4,6 +4,7 @@
 int main()
 {
 	BubbleSortTest();
+	QuicksortTest();
 	
 	// 5. Primitives
 	MultiplyShiftAddTest();
@@ -18,7 +19,6 @@ int main()
 
 	// 16. Recursion
 	CombinationsTest();
-	IsMatchTest();
 
 	// 17. Dynamic Progamming
 	ComputeMaximumRevenueForRangeTest();
@@ -27,4 +27,8 @@ int main()
 	// 18. Greedy Algorithms
 	OptimumTaskAssignmentTest();
 	MajoritySearchTest();
+
+	// 25. Honor Roll
+	GetHeightTest();
+	IsMatchTest();
 }

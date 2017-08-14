@@ -6,7 +6,7 @@
 
 unsigned Add(unsigned a, unsigned b)
 {
-	return 0;
+	return a + b;
 }
 
 unsigned Multiply(unsigned x, unsigned y)
@@ -25,8 +25,8 @@ void MultiplyShiftAddTest()
 		unsigned int x = dis(gen), y = dis(gen);
 		unsigned int prod = Multiply(x, y);
 		assert(prod == x * y);
-		cout << "PASS: x = " << x << ", y = " << y << "; prod = " << prod
-			<< endl;
+		//cout << "PASS: x = " << x << ", y = " << y << "; prod = " << prod
+		//	<< endl;
 	}
 #endif
 }

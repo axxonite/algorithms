@@ -15,6 +15,7 @@ namespace Solutions
 		{
 			// We assume, given whichever coin we pick, the opponent will work to minimize our revenue.
 			// Fist case: pick coin a, then assume we make the minimal revenue, with the opponent either taking another a, or taking b.
+			// MIN not MAX
 			int max_revenue_a = coins[a] + min(ComputeMaximumRevenueForRange(coins, a + 2, b, maximum_revenue_for_range_ptr), ComputeMaximumRevenueForRange(coins, a + 1, b - 1, maximum_revenue_for_range_ptr));
 			// Second case: pick coin b, then assume we make the minimal revenue, with the opponent either taking a, or another b.
 			int max_revenue_b = coins[b] + min(ComputeMaximumRevenueForRange(coins, a + 1, b - 1, maximum_revenue_for_range_ptr), ComputeMaximumRevenueForRange(coins, a, b - 2, maximum_revenue_for_range_ptr));

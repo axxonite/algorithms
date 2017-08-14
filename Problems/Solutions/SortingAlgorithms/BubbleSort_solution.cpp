@@ -2,13 +2,13 @@
 
 namespace Solutions
 {
-	void BubbleSort(int* a, int count)
+	void BubbleSort(vector<int>& a)
 	{
 		// Outer loop: iterate every element.
-		for (auto i = 0; i < count; i++)
+		for (auto i = 0; i < a.size(); i++)
 		{
 			// Inner loop: iterate elements from n-1 down to i+1
-			for (auto j = count - 1; j > i; j--)
+			for (auto j = a.size() - 1; j > i; j--)
 			{
 				if (a[j] < a[j - 1])
 				{

@@ -21,7 +21,7 @@ public:
 		return 0;
 	}
 
-	void AddAll(int C)
+	void AddAll(int c)
 	{
 	}
 
@@ -31,6 +31,9 @@ public:
 	}
 
 private:
+	int globalOffset = 0;
+	unordered_map<string, int> clientToCredits;
+	map<int, unordered_set<string>> creditsToClients;
 };
 
 #pragma region Test

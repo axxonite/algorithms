@@ -25,6 +25,7 @@ public:
 				credit_to_clients_.erase(credit_iter->second);
 			// Remove entry from client to credit map.
 			client_to_credit_.erase(credit_iter);
+			// don't forget to return true here!
 			return true;
 		}
 		return false;
@@ -34,6 +35,7 @@ public:
 	{
 		auto credit_iter = client_to_credit_.find(client_id);
 		// Remember to check if the client actually exists, and to add the offset.
+		// Note the use of cend() instead of end.
 		return credit_iter == client_to_credit_.cend() ? -1 : credit_iter->second + offset_;
 	}
 

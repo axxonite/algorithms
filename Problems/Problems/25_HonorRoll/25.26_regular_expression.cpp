@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-bool IsMatch(const string& regex, const string& s)
+bool IsMatch(const string& r, const string& s)
 {
 	return false;
 }

@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int LongestNondecreasingSubsequenceLength(const vector<int>& A)
+int LongestNondecreasingSubsequenceLength(const vector<int>& a)
 {
 	return 0;
 }

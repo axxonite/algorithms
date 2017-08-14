@@ -7,6 +7,7 @@ namespace Solutions
 	int LongestNondecreasingSubsequenceLength(const vector<int>& A)
 	{
 		// max_length[i] holds the length of the longest nondecreasing subsequence of A[0, i].
+		// Note that we initialize the max length array to 1, NOT zero.
 		vector<int> max_length(A.size(), 1);
 		// Find the longest non-decreasing sequence for the subarray [0..i].
 		for (int i = 1; i < A.size(); ++i)

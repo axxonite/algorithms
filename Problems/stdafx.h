@@ -24,5 +24,6 @@
 #include <map>
 #include <unordered_set>
 #include <stack>
+#include <numeric>
 
 using namespace std;

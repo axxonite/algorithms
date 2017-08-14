@@ -2,13 +2,13 @@
 
 #define TEST 0
 
-void BubbleSort(vector<int>& a)
+void Quicksort(vector<int>& values)
 {
 }
 
 #pragma region Test
 
-void BubbleSortTest()
+void QuicksortTest()
 {
 #if TEST
 	vector<int> a;
@@ -16,7 +16,7 @@ void BubbleSortTest()
 	uniform_int_distribution<int> dis(0, 100000);
 	for (int i = 0; i < 1000; ++i)
 		a.emplace_back(dis(rnd));
-	BubbleSort(a);
+	Quicksort(a);
 	for (int i = 1; i < 1000; i++)
 		assert(a[i] >= a[i - 1]);
 #endif

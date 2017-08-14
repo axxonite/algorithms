@@ -145,30 +145,34 @@
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.13_add_credits.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.5_generate_all_subsets.cpp" />
-    <ClCompile Include="Problems\16_Recursion\25.26_regular_expression.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.12_longest_non_decreasing_sequence.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.9_picking_up_coins.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.32_height_determination.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.11_intersect_rectangle.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.5_multiply_shift_add.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.7_buy_and_sell_stock_twice.cpp" />
     <ClCompile Include="Problems\7_Strings\7.3_spreadsheet_encoding.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
+    <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.5_generate_all_subsets_solution.cpp" />
-    <ClCompile Include="Solutions\16_Recursion\25.26_regular_expression_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.12_longest_non_decreasing_sequence_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.9_picking_up_coins_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.32_height_determination_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.11_intersect_rectangle_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.5_multiply_shift_add_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.7_buy_and_sell_stock_twice_solution.cpp" />
     <ClCompile Include="Solutions\7_Strings\7.3_spreadsheet_encoding_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />
+    <ClCompile Include="Solutions\SortingAlgorithms\Quicksort_solution.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

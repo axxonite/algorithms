@@ -2,6 +2,7 @@
 
 // Sorting algorithms.
 void BubbleSortTest();
+void QuicksortTest();
 
 // Chapter 5: Primitives.
 void MultiplyShiftAddTest();
@@ -16,7 +17,6 @@ void AddCreditsTest();
 
 // Chapter 16: Recursion
 void CombinationsTest();
-void IsMatchTest();
 
 // Chapter 17: Dynamic Programming.
 void ComputeMaximumRevenueForRangeTest();
@@ -25,3 +25,7 @@ void LongestNondecreasingSubsequenceLengthTest();
 // Chapter 18: Greedy Algorithms
 void OptimumTaskAssignmentTest();
 void MajoritySearchTest();
+
+// Chapter 25: Honor roll
+void GetHeightTest();
+void IsMatchTest();

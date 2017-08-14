@@ -4,17 +4,6 @@
 
 namespace Solutions
 {
-	void DirectedCombinations(int, int, int, vector<int>*, vector<vector<int>>*);
-
-	vector<vector<int>> Combinations(int n, int k)
-	{
-		vector<vector<int>> result;
-		// Numbers in the set start at 1 so start offset at 1.
-		// Note the use of make_unique here. Not sure that this is necessary? why not just put it on the stack?
-		DirectedCombinations(n, k, 1, make_unique<vector<int>>().get(), &result);
-		return result;
-	}
-
 	void DirectedCombinations(int n, int k, int offset, vector<int>* partial_combination, vector<vector<int>>* result)
 	{
 		// Tricky: offset is the lowest number in the sequence that we about to add to the partial combination, because the partial combination
@@ -41,4 +30,15 @@ namespace Solutions
 			partial_combination->pop_back();
 		}
 	}
+	
+		vector<vector<int>> Combinations(int n, int k)
+	{
+		vector<vector<int>> result;
+		// Numbers in the set start at 1 so start offset at 1.
+		// Note the use of make_unique here. Not sure that this is necessary? why not just put it on the stack?
+		DirectedCombinations(n, k, 1, make_unique<vector<int>>().get(), &result);
+		return result;
+	}
+
+
 }

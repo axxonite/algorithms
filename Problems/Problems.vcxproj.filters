@@ -87,11 +87,23 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\16_Recursion\25.26_regular_expression.cpp">
-      <Filter>Problems\16. Recursion</Filter>
+    <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\16_Recursion\25.26_regular_expression_solution.cpp">
-      <Filter>Solutions\16. Recursion</Filter>
+    <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\SortingAlgorithms\Quicksort_solution.cpp">
+      <Filter>Solutions\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.32_height_determination.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.32_height_determination_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +154,12 @@
     </Filter>
     <Filter Include="Solutions\18. Greedy Algorithms">
       <UniqueIdentifier>{39b76806-1d88-4bd7-9f95-317b9989e214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\25. Honor Roll">
+      <UniqueIdentifier>{8cadf2c3-3695-489c-9c50-df15c518bb55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\25. Honor Roll">
+      <UniqueIdentifier>{de25054c-2622-454a-863d-e0037e4d230d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
