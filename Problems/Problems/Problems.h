@@ -29,3 +29,4 @@ void MajoritySearchTest();
 // Chapter 25: Honor roll
 void GetHeightTest();
 void IsMatchTest();
+void SearchFrequentItemsTest();

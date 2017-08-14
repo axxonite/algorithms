@@ -31,4 +31,5 @@ int main()
 	// 25. Honor Roll
 	GetHeightTest();
 	IsMatchTest();
+	SearchFrequentItemsTest();
 }
