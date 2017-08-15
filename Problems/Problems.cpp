@@ -14,6 +14,10 @@ int main()
 	
 	// 7. Strings
 	SpreadsheetEncodingTest();
+
+	// 9. Stacks & Queues
+	StackTest();
+	SimpleTestQueueWithMax();
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();

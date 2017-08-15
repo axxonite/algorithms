@@ -6,6 +6,12 @@
     <ClInclude Include="Problems\Problems.h">
       <Filter>Problems</Filter>
     </ClInclude>
+    <ClInclude Include="Problems\9_StacksQueues\9.1_stack_with_max.h">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.h">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -129,6 +135,18 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.38_longest_subarray_k_improved_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\9_StacksQueues\9.10_queue_with_max.cpp">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.10_queue_with_max_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\9_StacksQueues\9.1_stack_with_max.cpp">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -184,6 +202,12 @@
     </Filter>
     <Filter Include="Solutions\25. Honor Roll">
       <UniqueIdentifier>{de25054c-2622-454a-863d-e0037e4d230d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\9. Stacks and Queues">
+      <UniqueIdentifier>{53c667a5-37fc-4ec2-9be8-b85916bbb61c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\9. Stacks and Queues">
+      <UniqueIdentifier>{3d84c266-f527-49c7-a146-1aa5ea27fd74}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

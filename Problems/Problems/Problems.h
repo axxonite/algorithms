@@ -13,6 +13,10 @@ void RectangleIntersectionTest();
 // Chapter 7 : Strings.
 void SpreadsheetEncodingTest();
 
+// Chapter 9 : Stacks & Queues
+void StackTest();
+void SimpleTestQueueWithMax();
+
 // Chapter 15: Hash tables.
 void AddCreditsTest();
 
