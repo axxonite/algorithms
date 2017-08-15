@@ -154,10 +154,10 @@
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.32_height_determination.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.37_search_frequent_items.cpp" />
-    <ClCompile Include="Problems\5.9_palindrome_number.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.11_intersect_rectangle.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.5_multiply_shift_add.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.7_buy_and_sell_stock_twice.cpp" />
+    <ClCompile Include="Problems\5_Primitives\5.9_palindrome_number.cpp" />
     <ClCompile Include="Problems\7_Strings\7.3_spreadsheet_encoding.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
