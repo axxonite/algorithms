@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 1
+#define TEST 0
 
 // Finds the candidates which may occur > n / k times.
 vector<string> SearchFrequentItems(int k, istringstream* stream) 

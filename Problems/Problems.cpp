@@ -26,6 +26,7 @@ int main()
 
 	// 18. Greedy Algorithms
 	OptimumTaskAssignmentTest();
+	MinimumTotalWaitingTimeTest();
 	MajoritySearchTest();
 
 	// 25. Honor Roll

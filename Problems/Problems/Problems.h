@@ -24,6 +24,7 @@ void LongestNondecreasingSubsequenceLengthTest();
 
 // Chapter 18: Greedy Algorithms
 void OptimumTaskAssignmentTest();
+void MinimumTotalWaitingTimeTest();
 void MajoritySearchTest();
 
 // Chapter 25: Honor roll

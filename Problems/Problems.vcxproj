@@ -148,6 +148,7 @@
     <ClCompile Include="Problems\17_DynamicProgramming\17.12_longest_non_decreasing_sequence.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.9_picking_up_coins.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp" />
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.2_minimum_waiting_time.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.12_longest_non_decreasing_sequence_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.9_picking_up_coins_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp" />
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.2_minimum_waiting_time_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />

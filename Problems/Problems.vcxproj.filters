@@ -111,6 +111,12 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.37_search_frequent_items_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.2_minimum_waiting_time.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.2_minimum_waiting_time_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

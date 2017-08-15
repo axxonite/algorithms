@@ -6,7 +6,10 @@
 
 int SSDecodeColID(const string& col) 
 {
-	return 0;
+	int result = 0;
+	for (auto c : col)
+		result = result * 26 + c - 'A' + 1;
+	return result;
 }
 
 #pragma region Test

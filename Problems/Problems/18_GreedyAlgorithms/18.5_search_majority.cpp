@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-string MajoritySearch(istringstream* input_stream)
+string MajoritySearch(istringstream& input_stream)
 {
 	return "";
 }
@@ -79,7 +79,7 @@ void MajoritySearchTest()
 			s += ' ';
 		}
 		istringstream input_stream(s);
-		string ret(MajoritySearch(&input_stream));
+		string ret(MajoritySearch(input_stream));
 		//cout << ret << endl;
 		CheckAns(stream, ret);
 	}

@@ -39,7 +39,7 @@ namespace Solutions
 			return IsMatchHere(regex, 1, s, 0);
 
 		// Look for a match at any position within the string.
-		// Note the <= operator here, to allow testing for the $ operator.
+		// NOTE the <= operator here, to allow testing for the $ operator.
 		for (int i = 0; i <= s.size(); ++i)
 		{
 			if (IsMatchHere(regex, 0, s, i))
