@@ -9,6 +9,7 @@ int main()
 	// 5. Primitives
 	MultiplyShiftAddTest();
 	BuyAndSellStockTwiceTest();
+	IsPalindromeNumberTest();
 	RectangleIntersectionTest();
 	
 	// 7. Strings

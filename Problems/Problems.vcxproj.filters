@@ -117,6 +117,12 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.2_minimum_waiting_time_solution.cpp">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\5.9_palindrome_number.cpp">
+      <Filter>Problems\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5_Primitives\5.9_palindrome_number_solution.cpp">
+      <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

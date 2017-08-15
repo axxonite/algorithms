@@ -7,6 +7,7 @@ void QuicksortTest();
 // Chapter 5: Primitives.
 void MultiplyShiftAddTest();
 void BuyAndSellStockTwiceTest();
+void IsPalindromeNumberTest();
 void RectangleIntersectionTest();
 
 // Chapter 7 : Strings.
