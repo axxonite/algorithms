@@ -32,3 +32,4 @@ void MajoritySearchTest();
 void GetHeightTest();
 void IsMatchTest();
 void SearchFrequentItemsTest();
+void FindLongestSubarrayLessEqualKTest();

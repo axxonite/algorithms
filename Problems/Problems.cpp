@@ -34,4 +34,5 @@ int main()
 	GetHeightTest();
 	IsMatchTest();
 	SearchFrequentItemsTest();
+	FindLongestSubarrayLessEqualKTest();
 }

@@ -15,3 +15,5 @@ Problems/x64/Debug/
 *.db
 .vs/
 Problems/Debug/
+Problems/x64/Release/
+x64/Release/
