@@ -17,7 +17,7 @@ int main()
 
 	// 9. Stacks & Queues
 	StackTest();
-	SimpleTestQueueWithMax();
+	TestQueueWithMax();
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();

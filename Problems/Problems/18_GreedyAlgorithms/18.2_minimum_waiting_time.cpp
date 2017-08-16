@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int MinimumTotalWaitingTime(vector<int> service_times)
+int MinimumTotalWaitingTime(vector<int> t)
 {
 	return 0;
 }

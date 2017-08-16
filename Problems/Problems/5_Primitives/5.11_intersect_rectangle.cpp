@@ -26,14 +26,9 @@ struct Rectangle
 	void print(string s) const { cout << s << this->x << ' ' << this->y << ' ' << this->width << ' ' << this->height << endl; }
 };
 
-bool IsIntersect(const Rectangle& R1, const Rectangle& R2)
-{
-	return false;
-}
-
 Rectangle IntersectRectangle(const Rectangle& R1, const Rectangle& R2)
 {
-	return Rectangle(-1, -1, -1, -1);
+	return Rectangle();
 }
 
 #pragma region Test
@@ -77,9 +72,9 @@ void RectangleIntersectionTest()
 		}
 	// Intersect rectangle.
 		bool res = IsIntersect(R1, R2);
-		cout << boolalpha << IsIntersect(R1, R2) << endl;
+		//cout << boolalpha << IsIntersect(R1, R2) << endl;
 		Rectangle ans = IntersectRectangle(R1, R2);
-		ans.print("ans: ");
+		//ans.print("ans: ");
 		assert(res == false || (ans.width >= 0 && ans.height >= 0));
 	}
 #endif

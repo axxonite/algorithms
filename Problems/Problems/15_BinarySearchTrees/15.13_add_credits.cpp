@@ -27,13 +27,10 @@ public:
 
 	string Max() const
 	{
-		return "";
+		return 0;
 	}
 
 private:
-	int globalOffset = 0;
-	unordered_map<string, int> clientToCredits;
-	map<int, unordered_set<string>> creditsToClients;
 };
 
 #pragma region Test

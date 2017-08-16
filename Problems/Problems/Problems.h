@@ -15,7 +15,7 @@ void SpreadsheetEncodingTest();
 
 // Chapter 9 : Stacks & Queues
 void StackTest();
-void SimpleTestQueueWithMax();
+void TestQueueWithMax();
 
 // Chapter 15: Hash tables.
 void AddCreditsTest();
