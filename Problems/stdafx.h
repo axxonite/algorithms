@@ -25,5 +25,6 @@
 #include <unordered_set>
 #include <stack>
 #include <numeric>
+#include "BSTPrototype.h"
 
 using namespace std;

@@ -1,7 +1,7 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include "9.1_stack_with_max.h"
+#include "Solutions/9_StacksQueues/9.1_stack_with_max_solution.h"
 
 #define TEST 0
 
@@ -23,7 +23,7 @@ public:
 	}
 
 private:
-	Stack enqueue_, dequeue_;
+	Solutions::Stack enqueue, dequeue;
 };
 
 #pragma region Test

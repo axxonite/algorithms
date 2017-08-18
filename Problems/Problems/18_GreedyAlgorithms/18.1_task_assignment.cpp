@@ -5,7 +5,7 @@
 
 struct PairedTasks
 {
-	int task1, task2;
+	int taskDuration1, taskDuration2;
 };
 
 vector<PairedTasks> OptimumTaskAssignment(vector<int> taskDurations) 
@@ -14,6 +14,7 @@ vector<PairedTasks> OptimumTaskAssignment(vector<int> taskDurations)
 	return solution;
 }
 
+// This isn't a real test.
 #pragma region Test
 
 void OptimumTaskAssignmentTest() 
@@ -31,8 +32,8 @@ void OptimumTaskAssignmentTest()
 	vector<PairedTasks> P(OptimumTaskAssignment(A));
 	int max = numeric_limits<int>::min();
 	for (size_t i = 0; i < P.size(); ++i) {
-		if (P[i].task1 + P[i].task2 > max) {
-			max = P[i].task1 + P[i].task2;
+		if (P[i].taskDuration1 + P[i].taskDuration2 > max) {
+			max = P[i].taskDuration1 + P[i].taskDuration2;
 		}
 	}
 	cout << max << endl;

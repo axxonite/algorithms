@@ -1,6 +1,7 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
+#include "shared.h"
 
 #define TEST 0
 
@@ -14,16 +15,6 @@ int SSDecodeColID(const string& col)
 
 #pragma region Test
 
-string RandString(int len)
-{
-	default_random_engine gen((random_device())());
-	string result;
-	uniform_int_distribution<int> dis('A', 'Z');
-	while (len--) {
-		result.push_back(dis(gen));
-	}
-	return result;
-}
 
 void SimpleTest() {
 	assert(1 == SSDecodeColID("A"));

@@ -15,12 +15,10 @@ public:
 	void Push(int x);
 
 private:
-
-	stack<int> element_;
-
+	stack<int> elements;
 	struct MaxWithCount
 	{
 		int max, count;
 	};
-	stack<MaxWithCount> cached_max_with_count_;
+	stack<MaxWithCount> maxes;
 }; 

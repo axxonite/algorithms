@@ -1,6 +1,7 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
+#include "shared.h"
 
 #define TEST 0
 
@@ -12,18 +13,6 @@ vector<string> SearchFrequentItems(int k, istringstream* stream)
 }
 
 #pragma region Test
-
-string RandStringFreqItems(int len)
-{
-	string ret;
-	default_random_engine gen((random_device())());
-	while (len--) 
-	{
-		uniform_int_distribution<int> dis('a', 'z');
-		ret += dis(gen);
-	}
-	return ret;
-}
 
 void CheckAns(vector<string>* stream, int k, vector<string>* items) {
 	sort(items->begin(), items->end());

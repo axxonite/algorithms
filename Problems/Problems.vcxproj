@@ -136,8 +136,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BSTPrototype.h" />
     <ClInclude Include="Problems\9_StacksQueues\9.1_stack_with_max.h" />
     <ClInclude Include="Problems\Problems.h" />
+    <ClInclude Include="Shared.h" />
     <ClInclude Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -145,15 +147,21 @@
   <ItemGroup>
     <ClCompile Include="C++Constructs.cpp" />
     <ClCompile Include="Problems.cpp" />
+    <ClCompile Include="Problems\10_BinaryTrees\10.7_bst_sorted_order.cpp" />
+    <ClCompile Include="Problems\12_Searching\12.10_find_missing_and_duplicate.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.13_add_credits.cpp" />
+    <ClCompile Include="Problems\16_Recursion\16.3_permutations.cpp" />
+    <ClCompile Include="Problems\16_Recursion\16.3_permutations_solution.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.5_generate_all_subsets.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.12_longest_non_decreasing_sequence.cpp" />
+    <ClCompile Include="Problems\17_DynamicProgramming\17.1_pretty_printing.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.9_picking_up_coins.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.2_minimum_waiting_time.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.31_maximum_subarray_sum_in_circular_array.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.32_height_determination.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.37_search_frequent_items.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.38_longest_subarray_k_improved.cpp" />
@@ -166,8 +174,12 @@
     <ClCompile Include="Problems\9_StacksQueues\9.1_stack_with_max.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
+    <ClCompile Include="Shared.cpp" />
+    <ClCompile Include="Solutions\10_BinaryTrees\10.7_bst_sorted_order_solution.cpp" />
+    <ClCompile Include="Solutions\12_Searching\12.10_find_missing_and_duplicate_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.5_generate_all_subsets_solution.cpp" />
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.11_pretty_printing_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.12_longest_non_decreasing_sequence_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.9_picking_up_coins_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp" />
@@ -175,6 +187,7 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.31_maximum_subarray_sum_in_circular_array_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.32_height_determination_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.37_search_frequent_items_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.38_longest_subarray_k_improved_solution.cpp" />

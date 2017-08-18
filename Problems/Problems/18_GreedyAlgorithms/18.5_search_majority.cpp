@@ -1,6 +1,7 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
+#include "shared.h"
 
 #define TEST 0
 
@@ -10,18 +11,6 @@ string MajoritySearch(istringstream& input_stream)
 }
 
 #pragma region Test
-
-string RandString2(int len)
-{
-	default_random_engine gen((random_device())());
-	string ret;
-	while (len--)
-	{
-		uniform_int_distribution<int> dis('a', 'z');
-		ret += dis(gen);
-	}
-	return ret;
-}
 
 void CheckAns(vector<string>& stream, const string& ans)
 {
