@@ -15,6 +15,9 @@ int main()
 	// 7. Strings
 	SpreadsheetEncodingTest();
 
+	// 8. Lists
+	CyclicallyRightShiftListTest();
+
 	// 9. Stacks & Queues
 	StackTest();
 	TestQueueWithMax();

@@ -137,6 +137,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BSTPrototype.h" />
+    <ClInclude Include="LinkedListPrototype.h" />
     <ClInclude Include="Problems\9_StacksQueues\9.1_stack_with_max.h" />
     <ClInclude Include="Problems\Problems.h" />
     <ClInclude Include="Shared.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="Problems\5_Primitives\5.7_buy_and_sell_stock_twice.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.9_palindrome_number.cpp" />
     <ClCompile Include="Problems\7_Strings\7.3_spreadsheet_encoding.cpp" />
+    <ClCompile Include="Problems\8_LinkedLists\8.9_cyclic_right_shift.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.10_queue_with_max.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.1_stack_with_max.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
@@ -196,6 +198,7 @@
     <ClCompile Include="Solutions\5_Primitives\5.7_buy_and_sell_stock_twice_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.9_palindrome_number_solution.cpp" />
     <ClCompile Include="Solutions\7_Strings\7.3_spreadsheet_encoding_solution.cpp" />
+    <ClCompile Include="Solutions\8_LinkedLists\8.9_cyclic_right_shift_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.10_queue_with_max_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />

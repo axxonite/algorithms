@@ -13,6 +13,9 @@ void RectangleIntersectionTest();
 // Chapter 7 : Strings.
 void SpreadsheetEncodingTest();
 
+// Chapter 8 : Linked lists.
+void CyclicallyRightShiftListTest();
+
 // Chapter 9 : Stacks & Queues
 void StackTest();
 void TestQueueWithMax();

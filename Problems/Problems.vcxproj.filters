@@ -14,6 +14,7 @@
     </ClInclude>
     <ClInclude Include="Shared.h" />
     <ClInclude Include="BSTPrototype.h" />
+    <ClInclude Include="LinkedListPrototype.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -180,6 +181,12 @@
     <ClCompile Include="Solutions\12_Searching\12.10_find_missing_and_duplicate_solution.cpp">
       <Filter>Solutions\12. Searching</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.9_cyclic_right_shift.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.9_cyclic_right_shift_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -253,6 +260,12 @@
     </Filter>
     <Filter Include="Solutions\12. Searching">
       <UniqueIdentifier>{beb28d00-1ee8-475b-85e5-03cf1ec93b36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\8. Linked Lists">
+      <UniqueIdentifier>{118532f2-c12d-4157-9ed0-559154371396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\8. Linked Lists">
+      <UniqueIdentifier>{cef3f000-5aa2-4c1f-b0e3-9501a0350321}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
