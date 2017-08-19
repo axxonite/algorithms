@@ -42,6 +42,7 @@ int main()
 	MinimumMessinessTest();
 
 	// 18. Greedy Algorithms
+	HasThreeSumTest();
 	OptimumTaskAssignmentTest();
 	MinimumTotalWaitingTimeTest();
 	MajoritySearchTest();

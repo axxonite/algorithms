@@ -40,6 +40,7 @@ void LongestNondecreasingSubsequenceLengthTest();
 void MinimumMessinessTest();
 
 // Chapter 18: Greedy Algorithms
+void HasThreeSumTest();
 void OptimumTaskAssignmentTest();
 void MinimumTotalWaitingTimeTest();
 void MajoritySearchTest();

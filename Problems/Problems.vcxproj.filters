@@ -15,6 +15,12 @@
     <ClInclude Include="Shared.h" />
     <ClInclude Include="BSTPrototype.h" />
     <ClInclude Include="LinkedListPrototype.h" />
+    <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -192,6 +198,12 @@
     </ClCompile>
     <ClCompile Include="Solutions\5_Primitives\5.6_division_solution.cpp">
       <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.4_3_sum.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.4_3_sum_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

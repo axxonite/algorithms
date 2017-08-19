@@ -138,9 +138,11 @@
   <ItemGroup>
     <ClInclude Include="BSTPrototype.h" />
     <ClInclude Include="LinkedListPrototype.h" />
+    <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h" />
     <ClInclude Include="Problems\9_StacksQueues\9.1_stack_with_max.h" />
     <ClInclude Include="Problems\Problems.h" />
     <ClInclude Include="Shared.h" />
+    <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h" />
     <ClInclude Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -159,6 +161,7 @@
     <ClCompile Include="Problems\17_DynamicProgramming\17.9_picking_up_coins.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.2_minimum_waiting_time.cpp" />
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.4_3_sum.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
@@ -187,6 +190,7 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.9_picking_up_coins_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.2_minimum_waiting_time_solution.cpp" />
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.4_3_sum_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
