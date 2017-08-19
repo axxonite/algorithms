@@ -11,7 +11,7 @@ unsigned Add(unsigned a, unsigned b)
 
 unsigned Multiply(unsigned x, unsigned y)
 {
-	return 0;
+	return x * y;
 }
 
 #pragma region Test
@@ -24,7 +24,9 @@ void MultiplyShiftAddTest()
 		uniform_int_distribution<int> dis(0, 65534);
 		unsigned int x = dis(gen), y = dis(gen);
 		unsigned int prod = Multiply(x, y);
+		unsigned int add = Add(x, y);
 		assert(prod == x * y);
+		assert(add == x + y);
 		//cout << "PASS: x = " << x << ", y = " << y << "; prod = " << prod
 		//	<< endl;
 	}

@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-int MinimumMessiness(const vector<string>& words, int lineLength) 
+int MinimumMessiness(const vector<string>& words, int lineLength)
 {
 	return 0;
 }

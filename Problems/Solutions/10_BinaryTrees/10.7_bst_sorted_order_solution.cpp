@@ -6,6 +6,7 @@ namespace Solutions
 {
 	vector<int> BSTInSortedOrder(const unique_ptr<BSTNode<int>>& tree)
 	{
+		// This stack keeps track of all the nodes we've visited on the left side thus far.
 		stack<const BSTNode<int>*> s;
 		const auto* curr = tree.get();
 		vector<int> result;

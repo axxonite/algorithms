@@ -8,4 +8,5 @@ struct Foo
 
 void function()
 {
+	auto lambda = [](int a) -> int { return a; };
 } 

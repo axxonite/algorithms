@@ -15,8 +15,9 @@ namespace Solutions
 		{
 			// The base case here starts with only one word on the last line.
 			remainingBlanks = lineLength - words[i].size();
+			// Note that the messiness for one line always starts from the messiness for the text before it.
 			minMessiness[i] = minMessiness[i - 1] + remainingBlanks * remainingBlanks;
-			// Try a last line with the two last words, the three last words, and so forth.
+			// Try a last line with the two last words from the subText, the three last words, and so forth.
 			for (int j = i - 1; j >= 0; --j)
 			{
 				// j indicates the first word on the last line.

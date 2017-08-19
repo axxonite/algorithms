@@ -6,17 +6,18 @@ namespace Solutions
 {
 	unsigned Add(unsigned a, unsigned b)
 	{
-		unsigned sum = 0, carryin = 0, mask = 1, shifted_a = a, shifted_b = b;
+		unsigned sum = 0, c = 0, mask = 1, shifted_a = a, shifted_b = b;
 		// shifted_a and shifted_b are used to check when have run out of set bits to add.
 		while (shifted_a || shifted_b)
 		{
 			unsigned am = a & mask, bm = b & mask; // Mask a and b so we are left only with the bit we are interested in for each of a and b.
-			unsigned carryout = (am & bm) | (am & carryin) | (bm & carryin); // Compute carry. OR of AND of each pair.
-			sum |= (am ^ bm ^ carryin);  // Compute sum. XOR of all three.
+			sum |= (am ^ bm ^ c);  // Compute sum. XOR of all three.
+			c = (am & bm) | (am & c) | (bm & c); // Compute carry. OR of AND of each pair.
 										 // Do shifts so masks, carry and shifted values all coincide with the next bit of interest.
-			carryin = carryout << 1, mask <<= 1, shifted_a >>= 1, shifted_b >>= 1;
+			c = c << 1, mask <<= 1, shifted_a >>= 1, shifted_b >>= 1;
 		}
-		return sum | carryin;
+		// Notice that we OR the carry into the final sum.
+		return sum | c;
 	}
 
 	unsigned Multiply(unsigned x, unsigned y)
