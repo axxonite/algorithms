@@ -6,6 +6,7 @@ void QuicksortTest();
 
 // Chapter 5: Primitives.
 void MultiplyShiftAddTest();
+void DivideTest();
 void BuyAndSellStockTwiceTest();
 void IsPalindromeNumberTest();
 void RectangleIntersectionTest();

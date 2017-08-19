@@ -187,6 +187,12 @@
     <ClCompile Include="Solutions\8_LinkedLists\8.9_cyclic_right_shift_solution.cpp">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\5_Primitives\5.6_division.cpp">
+      <Filter>Problems\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5_Primitives\5.6_division_solution.cpp">
+      <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
