@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int FindLongestSubarrayLessEqualK(const vector<int> &A, int k) 
+int FindLongestSubarrayLessEqualK(const vector<int> &A, int k)
 {
 	return 0;
 }
@@ -53,9 +53,9 @@ void FindLongestSubarrayLessEqualKTest() {
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 2; ++times) {
 		int n, k;
-		uniform_int_distribution<int> n_dis(1, 10000);
+		uniform_int_distribution<int> n_dis(1, 1000);
 		n = n_dis(gen);
-		uniform_int_distribution<int> k_dis(0, 9999);
+		uniform_int_distribution<int> k_dis(0, 999);
 		k = k_dis(gen);
 		vector<int> A;
 		for (size_t i = 0; i < n; ++i) {

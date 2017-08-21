@@ -6,7 +6,6 @@
 
 bool IsMatch(const string& r, const string& s)
 {
-
 	return false;
 }
 
