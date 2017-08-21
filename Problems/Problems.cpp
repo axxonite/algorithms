@@ -17,17 +17,22 @@ int main()
 	SpreadsheetEncodingTest();
 
 	// 8. Lists
+	OverlappingListsTest();
 	CyclicallyRightShiftListTest();
 
 	// 9. Stacks & Queues
 	StackTest();
 	TestQueueWithMax();
+	ExamineBuildingsWithSunsetTest();
 
 	// 10. Binary Trees
 	BSTInSortedOrderTest();
 
 	// 12. Searching
 	FindDuplicateMissingTest();
+
+	// 14. Sorting
+	UnionOfIntervalsTest();
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();
@@ -37,6 +42,7 @@ int main()
 	PermutationsTest();
 
 	// 17. Dynamic Progamming
+	NumCombinationsForFinalScoreTest();
 	ComputeMaximumRevenueForRangeTest();
 	LongestNondecreasingSubsequenceLengthTest();
 	MinimumMessinessTest();

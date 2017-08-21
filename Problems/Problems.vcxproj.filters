@@ -21,6 +21,18 @@
     <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\8_LinkedLists\8.4_overlapping_lists_no_cycle_solution.h">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="Problems\8_LinkedLists\8.4_overlapping_lists_no_cycle.h">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\8.3_checking_cycle_solution.h">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -205,6 +217,30 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.4_3_sum_solution.cpp">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.1_score_combination.cpp">
+      <Filter>Problems\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.1_score_combination_solution.cpp">
+      <Filter>Solutions\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.6_union_intervals.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\14_Sorting\14.6_union_intervals_solution.cpp">
+      <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\9_StacksQueues\9.6_view_sunset.cpp">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.6_sunset_view_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.5_overlapping_lists.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8.5_overlapping_lists_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -284,6 +320,12 @@
     </Filter>
     <Filter Include="Solutions\8. Linked Lists">
       <UniqueIdentifier>{cef3f000-5aa2-4c1f-b0e3-9501a0350321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\14. Sorting">
+      <UniqueIdentifier>{d4a1f722-cb46-4774-a45b-1f5046c7460f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\14. Sorting">
+      <UniqueIdentifier>{dfcecae7-cb02-4923-8060-8ffd31d1d6ee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

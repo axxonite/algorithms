@@ -15,17 +15,22 @@ void RectangleIntersectionTest();
 void SpreadsheetEncodingTest();
 
 // Chapter 8 : Linked lists.
+void OverlappingListsTest();
 void CyclicallyRightShiftListTest();
 
 // Chapter 9 : Stacks & Queues
 void StackTest();
 void TestQueueWithMax();
+void ExamineBuildingsWithSunsetTest();
 
 // Chapter 10: Binary Trees
 void BSTInSortedOrderTest();
 
 // Chapter 12 : Searching
 void FindDuplicateMissingTest();
+
+// Chapter 14: Sorting
+void UnionOfIntervalsTest();
 
 // Chapter 15: Hash tables.
 void AddCreditsTest();
@@ -35,6 +40,7 @@ void CombinationsTest();
 void PermutationsTest();
 
 // Chapter 17: Dynamic Programming.
+void NumCombinationsForFinalScoreTest();
 void ComputeMaximumRevenueForRangeTest();
 void LongestNondecreasingSubsequenceLengthTest();
 void MinimumMessinessTest();
