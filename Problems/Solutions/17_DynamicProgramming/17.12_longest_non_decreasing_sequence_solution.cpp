@@ -10,6 +10,7 @@ namespace Solutions
 		// Note that we initialize the max length array to 1, NOT zero.
 		vector<int> max_length(A.size(), 1);
 		// Find the longest non-decreasing sequence for the subarray [0..i].
+		// Start at one. The zeroth entry will always be one.
 		for (int i = 1; i < A.size(); ++i)
 		{
 			for (int j = 0; j < i; ++j)

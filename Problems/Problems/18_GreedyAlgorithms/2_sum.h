@@ -5,7 +5,7 @@
 #include <vector>
 #include "Solutions/18_GreedyAlgorithms/2_sum_solution.h"
 
-inline bool HasTwoSum(const vector<int>& A, int t)
+inline bool HasTwoSum(const vector<int>& a, int t)
 {
-	return Solutions::HasTwoSum(A, t);
+	return Solutions::HasTwoSum(a, t);
 }

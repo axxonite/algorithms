@@ -20,6 +20,7 @@ public:
 	int Max() const 
 	{
 		return 0;
+
 	}
 
 private:

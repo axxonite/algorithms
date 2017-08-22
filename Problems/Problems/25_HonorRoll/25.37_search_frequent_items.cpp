@@ -55,7 +55,7 @@ void SearchFrequentItemsTest()
 		for (int i = 0; i < n; ++i) 
 		{
 			uniform_int_distribution<int> dis(1, 5);
-			stream.emplace_back(RandStringFreqItems(dis(gen)));
+			stream.emplace_back(RandString(dis(gen)));
 		}
 		string s;
 		for (int i = 0; i < stream.size(); ++i) 

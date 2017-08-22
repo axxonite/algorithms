@@ -15,7 +15,7 @@ private:
 
 public:
 
-	Endpoint left, right;
+	Endpoint l, r;
 };
 
 vector<Interval> UnionOfIntervals(vector<Interval> intervals)
@@ -30,7 +30,7 @@ void CheckIntervals(const vector<Interval>& A)
 {
 	// Only check the intervals do not overlap with each other.
 	for (size_t i = 1; i < A.size(); ++i)
-		assert(A[i - 1].right.val < A[i].left.val || (A[i - 1].right.val == A[i].left.val && !A[i - 1].right.isClosed && !A[i].left.isClosed));
+		assert(A[i - 1].r.val < A[i].l.val || (A[i - 1].r.val == A[i].l.val && !A[i - 1].r.isClosed && !A[i].l.isClosed));
 }
 
 void UnionOfIntervalsTest()
@@ -47,9 +47,9 @@ void UnionOfIntervalsTest()
 			Interval temp;
 			uniform_int_distribution<int> zero_or_one(0, 1);
 			uniform_int_distribution<int> dis1(0, 9999);
-			temp.left.isClosed = zero_or_one(gen) , temp.left.val = dis1(gen);
-			uniform_int_distribution<int> dis2(temp.left.val + 1, temp.left.val + 100);
-			temp.right.isClosed = zero_or_one(gen) , temp.right.val = dis2(gen);
+			temp.l.isClosed = zero_or_one(gen) , temp.l.val = dis1(gen);
+			uniform_int_distribution<int> dis2(temp.l.val + 1, temp.l.val + 100);
+			temp.r.isClosed = zero_or_one(gen) , temp.r.val = dis2(gen);
 			A.emplace_back(temp);
 		}
 		vector<Interval> ret = UnionOfIntervals(A);

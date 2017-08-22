@@ -14,7 +14,7 @@ namespace Solutions
 		stack<BuildingWithHeight> candidates;
 		while (*sin >> height)
 		{
-			// remove any candidates with a height < than the new building. This way we always have the tallest building at the top.
+			// remove any candidates with a height < than the new building, as they are blocked by the new building.
 			while (!candidates.empty() && height >= candidates.top().height)
 				candidates.pop();
 			candidates.emplace(BuildingWithHeight{ index++, height });

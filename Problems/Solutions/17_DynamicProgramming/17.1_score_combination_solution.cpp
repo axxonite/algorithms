@@ -10,6 +10,7 @@ namespace Solutions
 		for (int i = 0; i < scores.size(); ++i)
 		{
 			combinationsForScore[i][0] = 1; // Only one way to reach 0.
+			// Very important to start j at one here, not zero, otherwise we will overwrite the value we just calculated above.
 			for (int j = 1; j <= finalScore; ++j)
 			{
 				int withoutThisPlay = i > 0 ? combinationsForScore[i - 1][j] : 0; // number of combinations that lead to j using the last i - 1 score combinations.

@@ -27,7 +27,7 @@ public:
 
 	string Max() const
 	{
-		return 0;
+		return "";
 	}
 
 private:

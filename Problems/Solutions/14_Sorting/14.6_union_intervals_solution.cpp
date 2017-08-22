@@ -44,7 +44,7 @@ namespace Solutions
 			// in which case extend the last interval by i's right end point. If the right endpoints coincide then the right endpoint will be closed, if it wasn't already.
 			if (!result.empty() && (i.left.val < result.back().right.val || (i.left.val == result.back().right.val && (i.left.isClosed || result.back().right.isClosed))))
 			{
-				if (i.right.val > result.back().right.val || i.right.val == result.back().right.val && i.right.isClosed)
+				if (i.right.val > result.back().right.val || (i.right.val == result.back().right.val && i.right.isClosed))
 					result.back().right = i.right;
 			}
 			else
