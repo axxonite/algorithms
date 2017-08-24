@@ -54,7 +54,7 @@ void MajoritySearchTest()
 		for (int i = 0; i < n; ++i)
 		{
 			uniform_int_distribution<int> dis(1, 5);
-			stream.emplace_back(RandString2(dis(gen)));
+			stream.emplace_back(RandString(dis(gen)));
 		}
 		// generate the majority
 		for (int i = 0; i < n; ++i)

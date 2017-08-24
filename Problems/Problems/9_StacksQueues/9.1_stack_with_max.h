@@ -15,10 +15,4 @@ public:
 	void Push(int x);
 
 private:
-	stack<int> elements;
-	struct MaxWithCount
-	{
-		int max, count;
-	};
-	stack<MaxWithCount> maxes;
 }; 

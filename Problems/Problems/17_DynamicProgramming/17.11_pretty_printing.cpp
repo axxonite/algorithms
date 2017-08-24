@@ -13,14 +13,14 @@ int MinimumMessiness(const vector<string>& words, int lineLength)
 #pragma region Test
 void SmallTestMinimumMessiness()
 {
-	assert(MinimumMessiness({ "aaa", "bbb", "c", "d", "ee", "ff", "gggggg" },11) == 45);
+	assert(MinimumMessiness({ "aaa", "bbb", "c", "d", "ee", "ff", "gggggg" }, 11) == 45);
 	assert(MinimumMessiness({ "a", "b", "c", "d" }, 5) == 8);
 }
 
 void MinimumMessinessTest()
 {
 #if TEST
-  	SmallTestMinimumMessiness();
+	SmallTestMinimumMessiness();
 	default_random_engine gen((random_device())());
 	int n, L;
 	uniform_int_distribution<int> n_dis(1, 30);

@@ -8,8 +8,8 @@
 // Finds the candidates which may occur > n / k times.
 vector<string> SearchFrequentItems(int k, istringstream* stream) 
 {
-	vector<string> ret;
-	return ret;
+	vector<string> result;
+	return result;
 }
 
 #pragma region Test

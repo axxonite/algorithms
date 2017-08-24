@@ -136,14 +136,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="binary_tree_prototype.h" />
     <ClInclude Include="BSTPrototype.h" />
     <ClInclude Include="LinkedListPrototype.h" />
+    <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h" />
     <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h" />
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h" />
     <ClInclude Include="Problems\8_LinkedLists\8.4_overlapping_lists_no_cycle.h" />
     <ClInclude Include="Problems\9_StacksQueues\9.1_stack_with_max.h" />
     <ClInclude Include="Problems\Problems.h" />
     <ClInclude Include="Shared.h" />
+    <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h" />
     <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h" />
     <ClInclude Include="Solutions\8.3_checking_cycle_solution.h" />
     <ClInclude Include="Solutions\8_LinkedLists\8.4_overlapping_lists_no_cycle_solution.h" />
@@ -154,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="C++Constructs.cpp" />
     <ClCompile Include="Problems.cpp" />
+    <ClCompile Include="Problems\10_BinaryTrees\10.15_exterior_binary_tree.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.7_bst_sorted_order.cpp" />
     <ClCompile Include="Problems\12_Searching\12.10_find_missing_and_duplicate.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.6_union_intervals.cpp" />
@@ -161,8 +165,9 @@
     <ClCompile Include="Problems\16_Recursion\16.3_permutations.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.3_permutations_solution.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.5_generate_all_subsets.cpp" />
+    <ClCompile Include="Problems\17_DynamicProgramming\17.12_levenshtein_distance.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.12_longest_non_decreasing_sequence.cpp" />
-    <ClCompile Include="Problems\17_DynamicProgramming\17.1_pretty_printing.cpp" />
+    <ClCompile Include="Problems\17_DynamicProgramming\17.11_pretty_printing.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.1_score_combination.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.9_picking_up_coins.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp" />
@@ -171,6 +176,7 @@
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.29_drawing_skyline.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.31_maximum_subarray_sum_in_circular_array.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.32_height_determination.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.37_search_frequent_items.cpp" />
@@ -189,12 +195,14 @@
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
     <ClCompile Include="Shared.cpp" />
+    <ClCompile Include="Solutions\10_BinaryTrees\10.15_exterior_binary_tree_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.7_bst_sorted_order_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.10_find_missing_and_duplicate_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.6_union_intervals_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.5_generate_all_subsets_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.11_pretty_printing_solution.cpp" />
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.12_levenshtein_distance_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.12_longest_non_decreasing_sequence_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.1_score_combination_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.9_picking_up_coins_solution.cpp" />
@@ -204,6 +212,7 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.29_drawing_skyline_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.31_maximum_subarray_sum_in_circular_array_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.32_height_determination_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.37_search_frequent_items_solution.cpp" />

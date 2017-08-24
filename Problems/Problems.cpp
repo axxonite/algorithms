@@ -27,6 +27,7 @@ int main()
 
 	// 10. Binary Trees
 	BSTInSortedOrderTest();
+	ExteriorBinaryTreeTest();
 
 	// 12. Searching
 	FindDuplicateMissingTest();
@@ -43,6 +44,7 @@ int main()
 
 	// 17. Dynamic Progamming
 	NumCombinationsForFinalScoreTest();
+	LevenshteinDistanceTest();
 	ComputeMaximumRevenueForRangeTest();
 	LongestNondecreasingSubsequenceLengthTest();
 	MinimumMessinessTest();
@@ -52,8 +54,10 @@ int main()
 	OptimumTaskAssignmentTest();
 	MinimumTotalWaitingTimeTest();
 	MajoritySearchTest();
+	CalculateLargestRectangleTest();
 
 	// 25. Honor Roll
+	ComputeSkylineTest();
 	GetHeightTest();
 	IsMatchTest();
 	SearchFrequentItemsTest();

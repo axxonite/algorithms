@@ -15,6 +15,13 @@ private:
 
 public:
 
+	bool operator < ( const Interval& b) const
+	{
+		if (l.val != b.l.val)
+			return l.val < b.l.val;
+		return l.isClosed && !b.l.isClosed;
+	}
+
 	Endpoint l, r;
 };
 

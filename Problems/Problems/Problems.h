@@ -25,6 +25,7 @@ void ExamineBuildingsWithSunsetTest();
 
 // Chapter 10: Binary Trees
 void BSTInSortedOrderTest();
+void ExteriorBinaryTreeTest();
 
 // Chapter 12 : Searching
 void FindDuplicateMissingTest();
@@ -41,6 +42,7 @@ void PermutationsTest();
 
 // Chapter 17: Dynamic Programming.
 void NumCombinationsForFinalScoreTest();
+void LevenshteinDistanceTest();
 void ComputeMaximumRevenueForRangeTest();
 void LongestNondecreasingSubsequenceLengthTest();
 void MinimumMessinessTest();
@@ -50,8 +52,10 @@ void HasThreeSumTest();
 void OptimumTaskAssignmentTest();
 void MinimumTotalWaitingTimeTest();
 void MajoritySearchTest();
+void CalculateLargestRectangleTest();
 
 // Chapter 25: Honor roll
+void ComputeSkylineTest();
 void GetHeightTest();
 void IsMatchTest();
 void SearchFrequentItemsTest();

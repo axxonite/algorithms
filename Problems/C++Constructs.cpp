@@ -8,5 +8,4 @@ struct Foo
 
 void function()
 {
-	
 } 
