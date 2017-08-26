@@ -2,14 +2,14 @@
 
 #include "stdafx.h"
 #include "../../binary_tree_prototype.h"
-#include "10.13_reconstruct_preorder_with_null.h"
+#include "Solutions/10_BinaryTrees/10.13_reconstruct_preorder_with_null_solution.h"
 
 #define TEST 0
 
-list<const unique_ptr<BinaryTreeNode<int>>*> ExteriorBinaryTree(const unique_ptr<BinaryTreeNode<int>>& tree)
+list<const unique_ptr<BinaryTreeNode<int>>*> ExteriorBinaryTree(const unique_ptr<BinaryTreeNode<int>>& t)
 {
-	list<const unique_ptr<BinaryTreeNode<int>>*> exterior;
-	return exterior;
+	list<const unique_ptr<BinaryTreeNode<int>>*> result;
+	return result;
 }
 
 #pragma region Test
@@ -27,7 +27,7 @@ void ExteriorBinaryTreeSimpleTest()
 	// The example in the book.
 	vector<int> A = {314, 6, 271, 28, 0, 561, 3, 17,
 		6, 2, 1, 401, 641, 257, 271, 28};
-	unique_ptr<BinaryTreeNode<int>> tree = ReconstructPreorder(
+	unique_ptr<BinaryTreeNode<int>> tree = Solutions::ReconstructPreorder(
 		{&A[0], &A[1], &A[2], &A[3], nullptr, nullptr, &A[4],
 			nullptr, nullptr, &A[5], nullptr, &A[6], &A[7], nullptr,
 			nullptr, nullptr, &A[8], &A[9], nullptr, &A[10], &A[11],

@@ -16,31 +16,34 @@ namespace Solutions
 
 	Skyline ComputeSkyline(const vector<Rectangle>& buildings)
 	{
-		int min_left = numeric_limits<int>::max(), max_right = numeric_limits<int>::min();
-		for (const Rectangle& building : buildings)
+		// Find the extents on the left and the right so we can create an array of the appropriate size.
+		int minLeft = numeric_limits<int>::max(), maxRight = numeric_limits<int>::min();
+		for (const Rectangle& b : buildings)
+			minLeft = min(minLeft, b.left), maxRight = max(maxRight, b.right);
+
+		// Digitize the problem into an array.
+		vector<int> heights(maxRight - minLeft + 1, 0);
+		for (const Rectangle& b : buildings)
 		{
-			min_left = min(min_left, building.left);
-			max_right = max(max_right, building.right);
+			for (int i = b.left; i <= b.right; ++i)
+				heights[i - minLeft] = max(heights[i - minLeft], b.height);
 		}
 
-		vector<int> heights(max_right - min_left + 1, 0);
-		for (const Rectangle& building : buildings)
-		{
-			for (int i = building.left; i <= building.right; ++i)
-				heights[i - min_left] = max(heights[i - min_left], building.height);
-		}
-
+		// Walk the array to discover the skylne.
 		Skyline result;
 		int left = 0;
+		// Note that we are starting from one.
 		for (int i = 1; i < heights.size(); ++i)
 		{
 			if (heights[i] != heights[i - 1])
 			{
-				result.emplace_back(Rectangle{ left + min_left, i - 1 + min_left, heights[i - 1] });
+				// Fill in the point in the skyline for the building we just finished at i - 1.
+				result.emplace_back(Rectangle{ minLeft + left, minLeft + i - 1, heights[i - 1] });
 				left = i;
 			}
 		}
-		result.emplace_back(Rectangle{ left + min_left, max_right, heights.back() });
+		// Fill in the last building.
+		result.emplace_back(Rectangle{ minLeft + left, maxRight, heights.back() });
 		return result;
 	}
 }

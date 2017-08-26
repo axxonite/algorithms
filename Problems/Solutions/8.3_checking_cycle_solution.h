@@ -18,13 +18,10 @@ namespace Solutions
 			if (slow == fast)
 			{
 				// There is a cycle, so now let's calculate the cycle length.
-				int cycle_len = 0;
-				do
-				{
-					++cycle_len;
-					fast = fast->next;
-				}
-				while (slow != fast);
+				int cycle_len = 1;
+				fast = fast->next;
+				while (slow != fast)
+					++cycle_len , fast = fast->next;
 
 				// Setup a cycle iterator set to forward by the length of the cycle, from the head.
 				auto cycleIter = head;
@@ -34,10 +31,7 @@ namespace Solutions
 				auto iter = head;
 				// Advance both iterators in tandem. Once they match, we have found the cycle start.
 				while (iter != cycleIter)
-				{
-					iter = iter->next;
-					cycleIter = cycleIter->next;
-				}
+					iter = iter->next , cycleIter = cycleIter->next;
 				return iter;
 			}
 		}

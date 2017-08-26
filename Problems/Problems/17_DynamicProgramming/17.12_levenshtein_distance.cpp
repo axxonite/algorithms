@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-int LevenshteinDistance(const string& A, const string& B)
+int LevenshteinDistance(const string& a, const string& b)
 {
 	return 0;
 }

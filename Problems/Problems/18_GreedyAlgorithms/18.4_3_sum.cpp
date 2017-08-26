@@ -1,12 +1,14 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include "2_sum.h"
+#include "Solutions/18_GreedyAlgorithms/2_sum_solution.h"
 
-#define TEST 0
+#define TEST 1
 
 bool HasThreeSum(vector<int> A, int t)
 {
+	sort(A.begin(), A.end());
+	return any_of(begin(A), end(A), [&](int a) { return Solutions::HasTwoSum(A, t - a); });
 	return false;
 }
 

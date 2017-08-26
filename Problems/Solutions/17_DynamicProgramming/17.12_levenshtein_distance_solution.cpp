@@ -4,31 +4,30 @@
 
 namespace Solutions
 {
-	int ComputeDistanceBetweenPrefixes(const string& A, int A_idx, const string& B, int B_idx, vector<vector<int>>* distance_between_prefixes_ptr)
+	int ComputeDistanceBetweenPrefixes(const string& a, int indexA, const string& b, int indexB, vector<vector<int>>& distance)
 	{
-		vector<vector<int>>& distance_between_prefixes = *distance_between_prefixes_ptr;
-		if (A_idx < 0)
-			return B_idx + 1; // A is empty so add all of B's characters.
-		if (B_idx < 0)
-			return A_idx + 1; // B is empty so delete all of A's characters.
-		if (distance_between_prefixes[A_idx][B_idx] == -1)
+		if (indexA < 0)
+			return indexB + 1; // a is empty so add all of b's characters.
+		if (indexB < 0)
+			return indexA + 1; // b is empty so delete all of a's characters.
+		if (distance[indexA][indexB] == -1)
 		{
-			if (A[A_idx] == B[B_idx])
-				distance_between_prefixes[A_idx][B_idx] = ComputeDistanceBetweenPrefixes(A, A_idx - 1, B, B_idx - 1, distance_between_prefixes_ptr);
+			if (a[indexA] == b[indexB])
+				distance[indexA][indexB] = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB - 1, distance);
 			else
 			{
-				int substitute_last = ComputeDistanceBetweenPrefixes(A, A_idx - 1, B, B_idx - 1, distance_between_prefixes_ptr);
-				int add_last = ComputeDistanceBetweenPrefixes(A, A_idx - 1, B, B_idx, distance_between_prefixes_ptr);
-				int delete_last = ComputeDistanceBetweenPrefixes(A, A_idx, B, B_idx - 1, distance_between_prefixes_ptr);
-				distance_between_prefixes[A_idx][B_idx] = 1 + min({ substitute_last, add_last, delete_last });
+				int substituteLast = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB - 1, distance);
+				int addLast = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB, distance);
+				int deleteLast = ComputeDistanceBetweenPrefixes(a, indexA, b, indexB - 1, distance);
+				distance[indexA][indexB] = 1 + min({substituteLast, addLast, deleteLast});
 			}
 		}
-		return distance_between_prefixes[A_idx][B_idx];
+		return distance[indexA][indexB];
 	}
 
-	int LevenshteinDistance(const string& A, const string& B)
+	int LevenshteinDistance(const string& a, const string& b)
 	{
-		vector<vector<int>> distance_between_prefixes(A.size(), vector<int>(B.size(), -1));
-		return ComputeDistanceBetweenPrefixes(A, A.size() - 1, B, B.size() - 1, &distance_between_prefixes);
+		vector<vector<int>> distanceBetweenPrefixes(a.size(), vector<int>(b.size(), -1));
+		return ComputeDistanceBetweenPrefixes(a, a.size() - 1, b, b.size() - 1, distanceBetweenPrefixes);
 	}
 }
