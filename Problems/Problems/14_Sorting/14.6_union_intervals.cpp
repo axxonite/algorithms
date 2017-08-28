@@ -2,25 +2,18 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+#define TEST 1
 
 struct Interval
 {
 private:
 	struct Endpoint
 	{
-		bool isClosed;
+		bool isClosed; // Closed means that it includes the boundary.
 		int val;
 	};
 
 public:
-
-	bool operator < ( const Interval& b) const
-	{
-		if (l.val != b.l.val)
-			return l.val < b.l.val;
-		return l.isClosed && !b.l.isClosed;
-	}
 
 	Endpoint l, r;
 };

@@ -4,9 +4,8 @@
 
 #include <memory>
 #include "LinkedListPrototype.h"
-#include "Solutions/8.3_checking_cycle_solution.h"
 
 inline shared_ptr<ListNode<int>> HasCycle(const shared_ptr<ListNode<int>>& head)
 {
-	return Solutions::HasCycle(head);
+	return nullptr;
 }

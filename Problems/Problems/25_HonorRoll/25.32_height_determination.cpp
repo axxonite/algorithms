@@ -4,20 +4,24 @@
 
 #define TEST 0
 
-int GetHeight(int cases, int drops) 
+int GetHeight(int cases, int drops)
 {
 	return 0;
 }
 
 #pragma region Test
 
-int CheckAnswer(int cases, int drops) {
-	if (cases <= 0 || drops <= 0) {
+int CheckAnswer(int cases, int drops)
+{
+	if (cases <= 0 || drops <= 0)
+	{
 		return 0;
 	}
 	vector<int> row(cases, 0);
-	for (int d = 0; d < drops; ++d) {
-		for (int c = cases - 1; c >= 0; --c) {
+	for (int d = 0; d < drops; ++d)
+	{
+		for (int c = cases - 1; c >= 0; --c)
+		{
 			row[c] += (c == 0 ? 0 : row[c - 1]) + 1;
 		}
 	}

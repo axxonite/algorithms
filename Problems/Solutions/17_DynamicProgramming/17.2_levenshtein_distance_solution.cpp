@@ -17,8 +17,8 @@ namespace Solutions
 			else
 			{
 				int substituteLast = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB - 1, distance);
-				int addLast = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB, distance);
-				int deleteLast = ComputeDistanceBetweenPrefixes(a, indexA, b, indexB - 1, distance);
+				int addLast = ComputeDistanceBetweenPrefixes(a, indexA, b, indexB - 1, distance); // Transform a to b - 1, add b's last character
+				int deleteLast = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB, distance); // Trasnform a - 1 to b, and delete a's last character
 				distance[indexA][indexB] = 1 + min({substituteLast, addLast, deleteLast});
 			}
 		}

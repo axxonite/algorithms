@@ -5,9 +5,15 @@
 
 #define TEST 0
 
-int LevenshteinDistance(const string& a, const string& b)
+int LevenshteinDistance(const string& A, const string& B, int a, int b, vector<vector<int>>& table)
 {
 	return 0;
+}
+
+int LevenshteinDistance(const string& a, const string& b)
+{
+	vector<vector<int>> table(a.size(), vector<int>(b.size(), -1));
+	return LevenshteinDistance(a, b, a.size() - 1, b.size() - 1, table);
 }
 
 #pragma region Test

@@ -3,12 +3,10 @@
 #include "stdafx.h"
 #include "Solutions/18_GreedyAlgorithms/2_sum_solution.h"
 
-#define TEST 1
+#define TEST 0
 
 bool HasThreeSum(vector<int> A, int t)
 {
-	sort(A.begin(), A.end());
-	return any_of(begin(A), end(A), [&](int a) { return Solutions::HasTwoSum(A, t - a); });
 	return false;
 }
 
