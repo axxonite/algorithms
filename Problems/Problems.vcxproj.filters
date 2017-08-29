@@ -272,6 +272,36 @@
     <ClCompile Include="Solutions\16_Recursion\16.2_n_queens_solution.cpp">
       <Filter>Solutions\16. Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\12.4_square_root_int.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\12_Searching\12.4_square_root_int_solution.cpp">
+      <Filter>Solutions\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.1_dutch_national_flag.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.1_dutch_national_flag_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.40_arbitrage.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25.40_arbitrage_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.18_matrix_rotation_constant.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.18_matrix_rotation_constant_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -357,6 +387,12 @@
     </Filter>
     <Filter Include="Solutions\14. Sorting">
       <UniqueIdentifier>{dfcecae7-cb02-4923-8060-8ffd31d1d6ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\6. Arrays">
+      <UniqueIdentifier>{ec090353-a2db-45a0-b4fa-e651e0436f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\6. Arrays">
+      <UniqueIdentifier>{48527be7-5a90-4251-af5e-ca1606584ca0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

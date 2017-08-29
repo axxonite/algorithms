@@ -11,6 +11,10 @@ void BuyAndSellStockTwiceTest();
 void IsPalindromeNumberTest();
 void RectangleIntersectionTest();
 
+// Chapter 6 : Arrays.
+void DutchFlagPartitionTest();
+void RotateMatrixTest();
+
 // Chapter 7 : Strings.
 void SpreadsheetEncodingTest();
 
@@ -28,13 +32,15 @@ void BSTInSortedOrderTest();
 void ExteriorBinaryTreeTest();
 
 // Chapter 12 : Searching
+void SquareRootTest();
 void FindDuplicateMissingTest();
 
 // Chapter 14: Sorting
 void UnionOfIntervalsTest();
 
-// Chapter 15: Hash tables.
+// Chapter 15: Binary Search Trees
 void AddCreditsTest();
+void FindClosestElementsInSortedArraysTest();
 
 // Chapter 16: Recursion
 void SolveNQueensTest();
@@ -61,3 +67,4 @@ void GetHeightTest();
 void IsMatchTest();
 void SearchFrequentItemsTest();
 void FindLongestSubarrayLessEqualKTest();
+void IsArbitrageExistTest();
