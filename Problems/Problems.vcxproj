@@ -144,6 +144,7 @@
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h" />
     <ClInclude Include="Problems\8_LinkedLists\8.4_overlapping_lists_no_cycle.h" />
     <ClInclude Include="Problems\9_StacksQueues\9.1_stack_with_max.h" />
+    <ClInclude Include="Problems\Math\VectorN.h" />
     <ClInclude Include="Problems\Problems.h" />
     <ClInclude Include="Shared.h" />
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h" />
@@ -198,6 +199,7 @@
     <ClCompile Include="Problems\9_StacksQueues\9.10_queue_with_max.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.1_stack_with_max.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.6_view_sunset.cpp" />
+    <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
     <ClCompile Include="Shared.cpp" />
@@ -240,6 +242,7 @@
     <ClCompile Include="Solutions\9_StacksQueues\9.10_queue_with_max_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.6_sunset_view_solution.cpp" />
+    <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\Quicksort_solution.cpp" />
     <ClCompile Include="stdafx.cpp">
