@@ -266,6 +266,12 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.2_levenshtein_distance_solution.cpp">
       <Filter>Solutions\17. Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\16.2_n_queens.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.2_n_queens_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

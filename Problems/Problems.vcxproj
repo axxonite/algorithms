@@ -162,6 +162,7 @@
     <ClCompile Include="Problems\12_Searching\12.10_find_missing_and_duplicate.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.6_union_intervals.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.13_add_credits.cpp" />
+    <ClCompile Include="Problems\16_Recursion\16.2_n_queens.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.3_permutations.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.3_permutations_solution.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.5_generate_all_subsets.cpp" />
@@ -200,6 +201,7 @@
     <ClCompile Include="Solutions\12_Searching\12.10_find_missing_and_duplicate_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.6_union_intervals_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />
+    <ClCompile Include="Solutions\16_Recursion\16.2_n_queens_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.5_generate_all_subsets_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.11_pretty_printing_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.2_levenshtein_distance_solution.cpp" />

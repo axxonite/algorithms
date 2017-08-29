@@ -39,6 +39,7 @@ int main()
 	AddCreditsTest();
 
 	// 16. Recursion
+	SolveNQueensTest();
 	CombinationsTest();
 	PermutationsTest();
 

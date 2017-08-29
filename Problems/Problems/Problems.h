@@ -37,6 +37,7 @@ void UnionOfIntervalsTest();
 void AddCreditsTest();
 
 // Chapter 16: Recursion
+void SolveNQueensTest();
 void CombinationsTest();
 void PermutationsTest();
 
