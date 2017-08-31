@@ -242,7 +242,7 @@
     <ClCompile Include="Solutions\9_StacksQueues\9.10_queue_with_max_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.6_sunset_view_solution.cpp" />
-    <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization.cpp" />
+    <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\Quicksort_solution.cpp" />
     <ClCompile Include="stdafx.cpp">

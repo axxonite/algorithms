@@ -305,11 +305,11 @@
     <ClCompile Include="Solutions\6_Arrays\6.18_matrix_rotation_constant_solution.cpp">
       <Filter>Solutions\6. Arrays</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization.cpp">
-      <Filter>Solutions\Math</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp">
       <Filter>Problems\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp">
+      <Filter>Solutions\Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

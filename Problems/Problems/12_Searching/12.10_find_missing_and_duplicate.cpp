@@ -11,7 +11,7 @@ struct DuplicateAndMissing
 
 DuplicateAndMissing FindDuplicateMissing(const vector<int>& A)
 {
-	return DuplicateAndMissing{0, 0};
+	return DuplicateAndMissing{};
 }
 
 #pragma region Test
