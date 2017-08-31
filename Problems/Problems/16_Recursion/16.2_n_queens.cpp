@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 1
+#define TEST 0
 
 // Test if a newly placed queen will conflict any earlier queens placed before.
 bool IsValid(const vector<int>& col_placement)
