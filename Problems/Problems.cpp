@@ -13,6 +13,10 @@ int main()
 	IsPalindromeNumberTest();
 	RectangleIntersectionTest();
 	
+	// 6. Arrays
+	DutchFlagPartitionTest();
+	RotateMatrixTest();
+
 	// 7. Strings
 	SpreadsheetEncodingTest();
 
@@ -30,6 +34,7 @@ int main()
 	ExteriorBinaryTreeTest();
 
 	// 12. Searching
+	SquareRootTest();
 	FindDuplicateMissingTest();
 
 	// 14. Sorting
@@ -37,6 +42,7 @@ int main()
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();
+	FindClosestElementsInSortedArraysTest();
 
 	// 16. Recursion
 	SolveNQueensTest();
@@ -63,4 +69,5 @@ int main()
 	IsMatchTest();
 	SearchFrequentItemsTest();
 	FindLongestSubarrayLessEqualKTest();
+	IsArbitrageExistTest();
 }

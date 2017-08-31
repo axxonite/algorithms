@@ -3,6 +3,7 @@
 #include "stdafx.h"
 
 #define TEST 0
+<<<<<<< HEAD
 
 // Test if a newly placed queen will conflict any earlier queens placed before.
 bool IsValid(const vector<int>& col_placement)
@@ -32,11 +33,12 @@ void SolveNQueens(int n, int row, vector<int>* col_placement, vector<vector<int>
 		}
 	}
 }
+=======
+>>>>>>> e40d391ce6e8dc847d7c9d731be1f914fb5b32c1
 
 vector<vector<int>> NQueens(int n)
 {
 	vector<vector<int>> result;
-	SolveNQueens(n, 0, make_unique<vector<int>>().get(), &result);
 	return result;
 }
 
