@@ -26,6 +26,11 @@ struct Rectangle
 	void print(string s) const { cout << s << this->x1 << ' ' << this->y1 << ' ' << this->width << ' ' << this->height << endl; }
 };
 
+bool IsIntersect(const Rectangle& a, const Rectangle& b)
+{
+	return false;
+}
+
 Rectangle IntersectRectangle(const Rectangle& a, const Rectangle& b)
 {
 	return Rectangle{ 0, 0, -1, -1 };
@@ -65,9 +70,9 @@ void RectangleIntersectionTest()
 		{
 			default_random_engine gen((random_device())());
 			uniform_int_distribution<int> dis(1, 100);
-			R1.x = dis(gen), R1.y = dis(gen), R1.width = dis(gen),
+			R1.x1 = dis(gen), R1.y1 = dis(gen), R1.width = dis(gen),
 				R1.height = dis(gen);
-			R2.x = dis(gen), R2.y = dis(gen), R2.width = dis(gen),
+			R2.x1 = dis(gen), R2.y1 = dis(gen), R2.width = dis(gen),
 				R2.height = dis(gen);
 		}
 	// Intersect rectangle.

@@ -20,11 +20,11 @@ public:
 	int Max() const 
 	{
 		return 0;
-
 	}
 
 private:
-	Solutions::Stack enqueue, dequeue;
+
+	// Don't forget to remove the private variables when re-initializing the problem.
 };
 
 #pragma region Test

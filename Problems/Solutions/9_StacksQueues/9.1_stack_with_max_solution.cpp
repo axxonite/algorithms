@@ -10,6 +10,7 @@ namespace Solutions
 	int Stack::Max() const
 	{
 		if (Empty())
+			// DO NOT put in a new here.
 			throw length_error("Max(): empty stack");
 		return cached_max_with_count_.top().max;
 	}
@@ -17,6 +18,7 @@ namespace Solutions
 	int Stack::Pop()
 	{
 		if (Empty())
+			// DO NOT put in a new here.
 			throw length_error("Pop(): empty stack");
 		int pop_element = element_.top();
 		element_.pop();
