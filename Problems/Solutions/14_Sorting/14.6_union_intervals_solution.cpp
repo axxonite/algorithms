@@ -28,7 +28,7 @@ namespace Solutions
 
 	vector<Interval> UnionOfIntervals(vector<Interval> intervals)
 	{
-		// Empty input.
+		// Empty input. Remember to check for it as an early out.
 		if (intervals.empty())
 			return {};
 

@@ -50,7 +50,7 @@ void SolveNQueensTest()
 	SolveNQueensSimpleTest();
 	default_random_engine gen((random_device())());
 	int n;
-	uniform_int_distribution<int> dis(1, 15);
+	uniform_int_distribution<int> dis(1, 7);
 	n = dis(gen);
 	//cout << "n = " << n << endl;
 	auto result = NQueens(n);

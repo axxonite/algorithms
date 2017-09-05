@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int FindClosestElementsInSortedArrays(const vector<vector<int>>& sorted_arrays)
+int FindClosestElementsInSortedArrays(const vector<vector<int>>& arrays)
 {
 	return 0;
 }

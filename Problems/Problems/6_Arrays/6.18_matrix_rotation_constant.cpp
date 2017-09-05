@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-void RotateMatrix(vector<vector<int>>* A_ptr)
+void RotateMatrix(vector<vector<int>>& a)
 {
 }
 
@@ -62,7 +62,7 @@ void RotateMatrixTest()
 			}
 		}
 		vector<vector<int>> B(A);
-		RotateMatrix(&B);
+		RotateMatrix(B);
 		CheckAnswer(A, B);
 	}
 #endif

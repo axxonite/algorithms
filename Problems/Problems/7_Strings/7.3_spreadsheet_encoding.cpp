@@ -12,7 +12,6 @@ int SSDecodeColID(const string& col)
 
 #pragma region Test
 
-
 void SimpleTest() {
 	assert(1 == SSDecodeColID("A"));
 	assert(2 == SSDecodeColID("B"));

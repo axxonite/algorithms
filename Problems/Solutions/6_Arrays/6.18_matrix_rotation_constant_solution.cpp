@@ -4,18 +4,21 @@
 
 namespace Solutions
 {
-	void RotateMatrix(vector<vector<int>>* A_ptr)
+	void RotateMatrix(vector<vector<int>>& a)
 	{
-		auto& A = *A_ptr;
-		for (int i = 0; i < (A.size() / 2); ++i)
+		int last = a.size() - 1;
+		// We go around the edge of the array as we complete one iteration of i. 
+		// Since there's there's two edges per dimension, we only need to iterate for the length of half the size of the array.
+		for (int i = 0; i < a.size() / 2; ++i)
 		{
-			for (int j = i; j < A.size() - i - 1; ++j)
+			for (int j = i; j < a.size() - i - 1; ++j)
 			{
-				int temp = A[i][j];
-				A[i][j] = A[A.size() - 1 - j][i];
-				A[A.size() - 1 - j][i] = A[A.size() - 1 - i][A.size() - 1 - j];
-				A[A.size() - 1 - i][A.size() - 1 - j] = A[j][A.size() - 1 - i];
-				A[j][A.size() - 1 - i] = temp;
+				int temp = a[i][j];
+				// Sequence is a[i][j] <- a[last-j][i] <- a[last - i][last - j] <- a[j][last - i] <- a[i][j]
+				a[i][j] = a[last - j][i]; // Assign top left
+				a[last - j][i] = a[last - i][last - j]; // Assign bottom left
+				a[last - i][last - j] = a[j][last - i]; // Assign bottom right
+				a[j][last - i] = temp; // Assign top right
 			}
 		}
 	}

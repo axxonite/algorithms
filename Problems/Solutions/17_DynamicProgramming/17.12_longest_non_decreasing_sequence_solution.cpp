@@ -16,6 +16,7 @@ namespace Solutions
 			for (int j = 0; j < i; ++j)
 			{
 				// A[j] is less than A[i], so A[j] can definitely form a nondecreasing sequence with A[i]. Whatever longest nondecreasing sequence was found ending at j, can then be extended by one by adding A[i] to it.
+				// Don't forget the equal sign here.
 				if (A[j] <= A[i])
 					max_length[i] = max(max_length[i], max_length[j] + 1);
 			}

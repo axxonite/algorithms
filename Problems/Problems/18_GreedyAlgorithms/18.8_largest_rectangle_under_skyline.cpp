@@ -9,7 +9,6 @@ int CalculateLargestRectangle(const vector<int>& heights)
 	return 0;
 }
 
-
 #pragma region Test
 
 void CalculateLargestRectangleTest()
