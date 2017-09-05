@@ -6,7 +6,7 @@
 
 bool IsPalindromeNumber(int x) 
 {
-	return true;
+	return false;
 }
 
 #pragma region Test

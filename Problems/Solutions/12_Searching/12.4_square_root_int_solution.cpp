@@ -8,15 +8,16 @@ namespace Solutions
 	{
 		int left = 0, right = k;
 		// Candidate interval [left, right] where everything before left has square <= k, and everything after right has square > k.
+		// we are looking for the lowest left that is strictly > k.
 		while (left <= right)
 		{
 			long long mid = left + ((right - left) / 2);
-			long long mid_squared = mid * mid;
-			if (mid_squared <= k)
-				left = mid + 1;
+			long long midSquared = mid * mid;
+			if (midSquared <= k)
+				left = mid + 1; // Mid is <= k, so left starts at mid + 1
 			else
-				right = mid - 1;
+				right = mid - 1; // Mid is > k, so continue search from right - 1.
 		}
-		return left - 1;
+		return left - 1; // Left is > k, so left - 1 wil be <= k.
 	}
 }

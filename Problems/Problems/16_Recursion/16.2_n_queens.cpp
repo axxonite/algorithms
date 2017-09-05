@@ -1,6 +1,7 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
+#include "Problems/Problems.h"
 
 #define TEST 0
 
@@ -51,7 +52,7 @@ void SolveNQueensTest()
 	int n;
 	uniform_int_distribution<int> dis(1, 15);
 	n = dis(gen);
-	cout << "n = " << n << endl;
+	//cout << "n = " << n << endl;
 	auto result = NQueens(n);
 	//for (const vector<int>& vec : result)
 	//{

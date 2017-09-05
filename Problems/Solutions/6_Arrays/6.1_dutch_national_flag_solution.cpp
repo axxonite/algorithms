@@ -11,10 +11,9 @@ namespace Solutions
 		BLUE
 	} Color;
 
-	void DutchFlagPartition(int pivot_index, vector<Color>* A_ptr)
+	void DutchFlagPartition(int pivot, vector<Color>& a)
 	{
-		vector<Color>& A = *A_ptr;
-		Color pivot = A[pivot_index];
+		Color pivotVal = a[pivot];
 		/**
 		* Keep the following invariants during partitioning:
 		* bottom group: A[0, smaller - 1].
@@ -22,17 +21,18 @@ namespace Solutions
 		* unclassified group: A[equal, larger - 1].
 		* top group: A[larger, A.size() - 1].
 		*/
-		int smaller = 0, equal = 0, larger = A.size();
+		int equalStart = 0, equalEnd = 0, largerStart = a.size();
 		// Keep iterating as long as there is an unclassified element.
-		while (equal < larger)
+		while (equalEnd < largerStart)
 		{
 			// A[equal] is the incoming unclassified element.
-			if (A[equal] < pivot)
-				swap(A[smaller++], A[equal++]);
-			else if (A[equal] == pivot)
-				++equal;
+			if (a[equalEnd] < pivotVal)
+				swap(a[equalStart++], a[equalEnd++]);
+			else if (a[equalEnd] == pivotVal)
+				++equalEnd;
 			else
-				swap(A[equal], A[--larger]); // A[equal] > pivot.
+				// Note how is the largerStart how is decrementing BEFORE we get the value at that index, otherwise we will access outside the vector's range.
+				swap(a[equalEnd], a[--largerStart]); // A[equal] > pivot.
 		}
 	}
 }

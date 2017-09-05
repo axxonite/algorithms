@@ -32,7 +32,7 @@ void SquareRootTest()
 	int x;
 	default_random_engine gen((random_device())());
 	uniform_int_distribution<int> dis(0, numeric_limits<int>::max());
-	for (int times = 0; times < 1000; ++times)
+	for (int times = 0; times < 100; ++times)
 	{
 		x = dis(gen);
 		int result[2];

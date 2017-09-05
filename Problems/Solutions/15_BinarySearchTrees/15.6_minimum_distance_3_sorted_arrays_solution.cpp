@@ -4,29 +4,34 @@
 
 namespace Solutions
 {
-	int FindClosestElementsInSortedArrays(const vector<vector<int>>& sorted_arrays)
+	int FindClosestElementsInSortedArrays(const vector<vector<int>>& arrays)
 	{
-		int min_distance_so_far = numeric_limits<int>::max();
+		int minSoFar = numeric_limits<int>::max();
 
 		struct IterTail
 		{
 			vector<int>::const_iterator iter, tail;
 		};
-		// Stores two iterators in each entry. One for traversing, and the other to check we reach the end.
-		multimap<int, IterTail> iter_and_tail;
-		for (const vector<int>& sorted_array : sorted_arrays)
-			iter_and_tail.emplace(sorted_array.front(), IterTail{ sorted_array.cbegin(), sorted_array.cend() });
+		// Stores two iterators in each entry. One for traversing, and the other to check if we reached the end. This stores iterators and tails from each array.
+		multimap<int, IterTail> iterAndTail;
+		// Initialize the iterators and tails for each array, with the key set as the first (minimum) value from each array.
+		for (const vector<int>& array : arrays)
+			iterAndTail.emplace(array.front(), IterTail{ array.cbegin(), array.cend() });
 
 		while (true)
 		{
-			int min_value = iter_and_tail.cbegin()->first, max_value = iter_and_tail.crbegin()->first;
-			min_distance_so_far = min(max_value - min_value, min_distance_so_far);
-			const auto next_min = next(iter_and_tail.cbegin()->second.iter), next_end = iter_and_tail.cbegin()->second.tail;
+			int minValue = iterAndTail.cbegin()->first, maxValue = iterAndTail.crbegin()->first;
+			minSoFar = min(maxValue - minValue, minSoFar);
+			// Advance the iterator for the array with the minimum value.
+			const auto nextMin = next(iterAndTail.cbegin()->second.iter), nextEnd = iterAndTail.cbegin()->second.tail;
 			// Return if some array has no remaining elements.
-			if (next_min == next_end)
-				return min_distance_so_far;
-			iter_and_tail.emplace(*next_min, IterTail{ next_min, next_end });
-			iter_and_tail.erase(iter_and_tail.cbegin());
+			if (nextMin == nextEnd)
+				return minSoFar;
+			// Add the updated iterator for the given array.
+			iterAndTail.emplace(*nextMin, IterTail{ nextMin, nextEnd });
+			// Remove the reference to the told iterator we just removed.
+			// What a weird, counter intuitive way to to do this.
+			iterAndTail.erase(iterAndTail.cbegin());
 		}
 	}
 }

@@ -11,7 +11,7 @@ typedef enum
 	BLUE
 } Color;
 
-void DutchFlagPartition(int pivot_index, vector<Color>* A_ptr)
+void DutchFlagPartition(int pivot, vector<Color>& a)
 {
 }
 
@@ -41,7 +41,7 @@ void DutchFlagPartitionTest()
 		uniform_int_distribution<int> dis2(0, A.size() - 1);
 		int pivot_index = dis2(gen);
 		Color pivot = A[pivot_index];
-		DutchFlagPartition(pivot_index, &A);
+		DutchFlagPartition(pivot_index, A);
 		int i = 0;
 		while (i < A.size() && A[i] < pivot)
 		{
