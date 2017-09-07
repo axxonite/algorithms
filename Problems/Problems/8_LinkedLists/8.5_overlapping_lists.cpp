@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "LinkedListPrototype.h"
 #include "Solutions/8_LinkedLists/8.4_overlapping_lists_no_cycle_solution.h"
-#include "Solutions/8.3_checking_cycle_solution.h"
+#include "Solutions/8_LinkedLists/8.3_checking_cycle_solution.h"
 
 #define TEST 0
 

@@ -31,7 +31,7 @@ void PermutationsTest()
 	PermutationsSmallTest();
 	default_random_engine gen((random_device())());
 	int n;
-	uniform_int_distribution<int> dis(1, 10);
+	uniform_int_distribution<int> dis(1, 7);
 	n = dis(gen);
 	vector<int> A(n);
 	iota(A.begin(), A.end(), 0);

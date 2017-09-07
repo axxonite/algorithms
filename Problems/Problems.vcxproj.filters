@@ -21,17 +21,11 @@
     <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="Solutions\8_LinkedLists\8.4_overlapping_lists_no_cycle_solution.h">
-      <Filter>Solutions\8. Linked Lists</Filter>
-    </ClInclude>
     <ClInclude Include="Problems\8_LinkedLists\8.4_overlapping_lists_no_cycle.h">
       <Filter>Problems\8. Linked Lists</Filter>
     </ClInclude>
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h">
       <Filter>Problems\8. Linked Lists</Filter>
-    </ClInclude>
-    <ClInclude Include="Solutions\8.3_checking_cycle_solution.h">
-      <Filter>Solutions\8. Linked Lists</Filter>
     </ClInclude>
     <ClInclude Include="binary_tree_prototype.h" />
     <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h">
@@ -42,6 +36,12 @@
     </ClInclude>
     <ClInclude Include="Problems\Math\VectorN.h">
       <Filter>Solutions\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\8_LinkedLists\8.3_checking_cycle_solution.h">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\8_LinkedLists\8.4_overlapping_lists_no_cycle_solution.h">
+      <Filter>Solutions\8. Linked Lists</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -209,9 +209,6 @@
     <ClCompile Include="Problems\8_LinkedLists\8.9_cyclic_right_shift.cpp">
       <Filter>Problems\8. Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\8_LinkedLists\8.9_cyclic_right_shift_solution.cpp">
-      <Filter>Solutions\8. Linked Lists</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\5_Primitives\5.6_division.cpp">
       <Filter>Problems\5. Primitives</Filter>
     </ClCompile>
@@ -244,9 +241,6 @@
     </ClCompile>
     <ClCompile Include="Problems\8_LinkedLists\8.5_overlapping_lists.cpp">
       <Filter>Problems\8. Linked Lists</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\8.5_overlapping_lists_solution.cpp">
-      <Filter>Solutions\8. Linked Lists</Filter>
     </ClCompile>
     <ClCompile Include="Problems\17_DynamicProgramming\17.11_pretty_printing.cpp">
       <Filter>Problems\17. Dynamic Programming</Filter>
@@ -290,17 +284,11 @@
     <ClCompile Include="Problems\25_HonorRoll\25.40_arbitrage.cpp">
       <Filter>Problems\25. Honor Roll</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\25.40_arbitrage_solution.cpp">
-      <Filter>Solutions\25. Honor Roll</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays.cpp">
       <Filter>Problems\15. Binary Search Trees</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\6_Arrays\6.18_matrix_rotation_constant.cpp">
-      <Filter>Problems\6. Arrays</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\6_Arrays\6.18_matrix_rotation_constant_solution.cpp">
       <Filter>Solutions\6. Arrays</Filter>
@@ -310,6 +298,33 @@
     </ClCompile>
     <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp">
       <Filter>Solutions\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.7_palindrome_partitioning_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.7_palindrome_partitioning.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.8_prime_sieve.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.10_next_permutation.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.18_matrix_rotation_constant.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.10_next_permutation_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.40_arbitrage_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.5_overlapping_lists_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.9_cyclic_right_shift_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

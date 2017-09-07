@@ -14,6 +14,8 @@ void RectangleIntersectionTest();
 // Chapter 6 : Arrays.
 void DutchFlagPartitionTest();
 void RotateMatrixTest();
+void TestGeneratePrimes();
+void NextPermutationTest();
 
 // Chapter 7 : Strings.
 void SpreadsheetEncodingTest();
@@ -46,6 +48,7 @@ void FindClosestElementsInSortedArraysTest();
 void SolveNQueensTest();
 void CombinationsTest();
 void PermutationsTest();
+void PalindromePartitioningTest();
 
 // Chapter 17: Dynamic Programming.
 void NumCombinationsForFinalScoreTest();

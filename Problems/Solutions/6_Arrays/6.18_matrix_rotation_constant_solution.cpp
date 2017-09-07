@@ -15,6 +15,7 @@ namespace Solutions
 			{
 				int temp = a[i][j];
 				// Sequence is a[i][j] <- a[last-j][i] <- a[last - i][last - j] <- a[j][last - i] <- a[i][j]
+				// The row is FIRST, the column second.
 				a[i][j] = a[last - j][i]; // Assign top left
 				a[last - j][i] = a[last - i][last - j]; // Assign bottom left
 				a[last - i][last - j] = a[j][last - i]; // Assign bottom right

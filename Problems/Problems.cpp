@@ -16,6 +16,8 @@ int main()
 	// 6. Arrays
 	DutchFlagPartitionTest();
 	RotateMatrixTest();
+	TestGeneratePrimes();
+	NextPermutationTest();
 
 	// 7. Strings
 	SpreadsheetEncodingTest();
@@ -48,6 +50,7 @@ int main()
 	SolveNQueensTest();
 	CombinationsTest();
 	PermutationsTest();
+	PalindromePartitioningTest();
 
 	// 17. Dynamic Progamming
 	NumCombinationsForFinalScoreTest();
