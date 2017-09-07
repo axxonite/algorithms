@@ -20,6 +20,7 @@ int main()
 	NextPermutationTest();
 
 	// 7. Strings
+	InterconvertStringIntTest();
 	SpreadsheetEncodingTest();
 
 	// 8. Lists
@@ -73,4 +74,5 @@ int main()
 	SearchFrequentItemsTest();
 	FindLongestSubarrayLessEqualKTest();
 	IsArbitrageExistTest();
+	CountInversionsTest();
 }

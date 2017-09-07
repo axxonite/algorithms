@@ -18,6 +18,7 @@ void TestGeneratePrimes();
 void NextPermutationTest();
 
 // Chapter 7 : Strings.
+void InterconvertStringIntTest();
 void SpreadsheetEncodingTest();
 
 // Chapter 8 : Linked lists.
@@ -71,3 +72,4 @@ void IsMatchTest();
 void SearchFrequentItemsTest();
 void FindLongestSubarrayLessEqualKTest();
 void IsArbitrageExistTest();
+void CountInversionsTest();
