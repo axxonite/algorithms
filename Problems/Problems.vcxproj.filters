@@ -338,6 +338,9 @@
     <ClCompile Include="Solutions\7_Strings\7.1_interconverting_string_integer_solution.cpp">
       <Filter>Solutions\7. Strings</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.8_prime_sieve_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

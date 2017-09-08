@@ -25,6 +25,7 @@ namespace Solutions
 	int StringToInt(const string& s)
 	{
 		int result = 0;
+		// Don't forget to handle the negative sign.
 		for (int i = s[0] == '-' ? 1 : 0; i < s.size(); ++i)
 		{
 			const int digit = s[i] - '0';

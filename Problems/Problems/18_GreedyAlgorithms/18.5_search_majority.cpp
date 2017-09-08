@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-string MajoritySearch(istringstream& input_stream)
+string MajoritySearch(istringstream& input)
 {
 	return "";
 }

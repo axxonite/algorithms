@@ -6,19 +6,24 @@ namespace Solutions
 {
 	vector<int> GeneratePrimes(int n)
 	{
+		// We start the sieve at 3.
 		const int size = floor(0.5 * (n - 3)) + 1;
 		vector<int> primes;
-		primes.emplace_back(2);
+		primes.emplace_back(2); // We know a priori that 2 is prime.
 		// is_prime[i] represents whether (2i + 3) is prime or not. Initially, set each to true. Then use sieving to eliminate nonprimes.
 		deque<bool> isPrime(size, true);
 		for (int i = 0; i < size; ++i)
 		{
 			if (isPrime[i])
 			{
-				int p = (i * 2) + 3;
+				int p = i * 2 + 3;
 				primes.emplace_back(p);
-				// Sieving from p^2, whose value is (4i^2 + 12i + 9). The index in is_prime is (2i^2 + 6i + 3) because is_prime[i] represents 2i + 3. Note that we need to use long for j because p^2 might overflow.
-				for (long j = ((static_cast<long>(i) * static_cast<long>(i)) * 2) + 6 * i + 3; j < size; j += p)
+				// IMPORTANT: All numbers of the form ki where k < i have already been sieved out, so start the sieve at i^2, hence
+				// Start sieve from p^2.
+				// The algebraic equation below is equivalent to taking the index, converting it to the corresponding prime with 2i + 3, squaring it
+				// then converting back to an index with (i-3)/2.
+				// Note that we need to use long for j because p^2 might overflow.
+				for (long j = long(i) * long(i) * 2 + 6 * i + 3; j < size; j += p)
 					isPrime[j] = false;
 			}
 		}
