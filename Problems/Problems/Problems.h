@@ -10,6 +10,7 @@ void DivideTest();
 void BuyAndSellStockTwiceTest();
 void IsPalindromeNumberTest();
 void RectangleIntersectionTest();
+void PowerTest();
 
 // Chapter 6 : Arrays.
 void DutchFlagPartitionTest();
@@ -33,6 +34,7 @@ void ExamineBuildingsWithSunsetTest();
 // Chapter 10: Binary Trees
 void BSTInSortedOrderTest();
 void ExteriorBinaryTreeTest();
+void BinaryTreeFromPreorderInorderTest();
 
 // Chapter 12 : Searching
 void SquareRootTest();
@@ -57,6 +59,8 @@ void LevenshteinDistanceTest();
 void ComputeMaximumRevenueForRangeTest();
 void LongestNondecreasingSubsequenceLengthTest();
 void MinimumMessinessTest();
+void MinimumPathWeightTest();
+void ComputeBinomialCoefficientTest();
 
 // Chapter 18: Greedy Algorithms
 void HasThreeSumTest();
@@ -64,6 +68,9 @@ void OptimumTaskAssignmentTest();
 void MinimumTotalWaitingTimeTest();
 void MajoritySearchTest();
 void CalculateLargestRectangleTest();
+
+// Chapter 19: Graphs
+void IsAnyPlacementFeasibleTest();
 
 // Chapter 25: Honor roll
 void ComputeSkylineTest();
@@ -73,3 +80,4 @@ void SearchFrequentItemsTest();
 void FindLongestSubarrayLessEqualKTest();
 void IsArbitrageExistTest();
 void CountInversionsTest();
+void FindPairSumKTest();

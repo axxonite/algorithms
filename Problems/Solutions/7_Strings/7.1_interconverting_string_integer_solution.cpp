@@ -6,18 +6,17 @@ namespace Solutions
 {
 	string IntToString(int x)
 	{
-		bool is_negative = false;
-		if (x < 0)
-			is_negative = true;
+		bool neg = x < 0;
 
 		string s;
 		do
 		{
 			s += '0' + abs(x % 10);
 			x /= 10;
-		} while (x);
+		} 
+		while (x);
 
-		if (is_negative)
+		if (neg)
 			s += '-'; // Adds the negative sign back.
 		return { s.rbegin(), s.rend() };
 	}

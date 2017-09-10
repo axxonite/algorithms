@@ -4,44 +4,46 @@
 
 namespace Solutions
 {
-	// Merge two sorted subarrays A[start, mid - 1] and A[mid, end - 1] into A[start, end - 1] and return the number of inversions across A[start, mid -1] and A[mid, end - 1].
-	int MergeSortAndCountInversionsAcrossSubarrays(int start, int mid, int end, vector<int>* A_ptr)
+	// Merge two sorted subarrays a[start, mid - 1] and a[mid, end - 1] into a[start, end - 1] and return the number of inversions across a[start, mid -1] and a[mid, end - 1].
+	int MergeSortAndCountInversionsAcrossSubarrays(int start, int mid, int end, vector<int>& a)
 	{
-		vector<int> sorted_A;
-		int left_start = start, right_start = mid, inversion_count = 0;
+		vector<int> sortedA;
+		int leftStart = start, rightstart = mid, inversionCount = 0;
 
-		vector<int>& A = *A_ptr;
-		while (left_start < mid && right_start < end)
+		while (leftStart < mid && rightstart < end)
 		{
-			if (A[left_start] <= A[right_start])
-				sorted_A.emplace_back(A[left_start++]);
+			if (a[leftStart] <= a[rightstart])
+				sortedA.emplace_back(a[leftStart++]); // left side is < right side, add to sorted A.
 			else
 			{
-				// A[left_start, mid - 1] are the inversions of A[right_start].
-				inversion_count += mid - left_start;
-				sorted_A.emplace_back(A[right_start++]);
+				// a[leftStart, mid - 1] are the inversions of a[right_start].
+				inversionCount += mid - leftStart; // left side is > right side, so everything after the left side is inverted with that value on the right side
+				sortedA.emplace_back(a[rightstart++]);
 			}
 		}
-		copy(A.begin() + left_start, A.begin() + mid, back_inserter(sorted_A));
-		copy(A.begin() + right_start, A.begin() + end, back_inserter(sorted_A));
 
-		// Updates A with sorted_A.
-		copy(sorted_A.begin(), sorted_A.end(), A.begin() + start);
-		return inversion_count;
+		// One of the sides is finished, copy the remaining elements for the other side.
+		copy(a.begin() + leftStart, a.begin() + mid, back_inserter(sortedA));
+		copy(a.begin() + rightstart, a.begin() + end, back_inserter(sortedA));
+
+		// Updates a with sortedA.
+		copy(sortedA.begin(), sortedA.end(), a.begin() + start);
+		return inversionCount;
 	}
 
-	// Return the number of inversions in (*A_ptr)[start, end - 1].
-	int CountSubarrayInversions(int start, int end, vector<int>* A_ptr)
+	// Return the number of inversions in a[start, end - 1].
+	int CountSubarrayInversions(int start, int end, vector<int>& a)
 	{
 		if (end - start <= 1)
 			return 0;
 
 		int mid = start + (end - start) / 2;
-		return CountSubarrayInversions(start, mid, A_ptr) + CountSubarrayInversions(mid, end, A_ptr) + MergeSortAndCountInversionsAcrossSubarrays(start, mid, end, A_ptr);
+		// Count the inversions within each half, and the inversions accross the halves.
+		return CountSubarrayInversions(start, mid, a) + CountSubarrayInversions(mid, end, a) + MergeSortAndCountInversionsAcrossSubarrays(start, mid, end, a);
 	}
 
-	int CountInversions(vector<int> A)
+	int CountInversions(vector<int> a)
 	{
-		return CountSubarrayInversions(0, A.size(), &A);
+		return CountSubarrayInversions(0, a.size(), a);
 	}
 }

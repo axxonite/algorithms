@@ -43,6 +43,7 @@
     <ClInclude Include="Solutions\8_LinkedLists\8.4_overlapping_lists_no_cycle_solution.h">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClInclude>
+    <ClInclude Include="binary_tree_utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -269,9 +270,6 @@
     <ClCompile Include="Solutions\16_Recursion\16.2_n_queens_solution.cpp">
       <Filter>Solutions\16. Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\12.4_square_root_int.cpp">
-      <Filter>Problems\12. Searching</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\12_Searching\12.4_square_root_int_solution.cpp">
       <Filter>Solutions\12. Searching</Filter>
     </ClCompile>
@@ -339,6 +337,51 @@
       <Filter>Solutions\7. Strings</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\6_Arrays\6.8_prime_sieve_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.8_triangle_solution.cpp">
+      <Filter>Solutions\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.6_wiring_circuit_board_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.6_wiring_circuit_board.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.8_triangle.cpp">
+      <Filter>Problems\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.4_computing_binomial_coefficients.cpp">
+      <Filter>Problems\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.4_computing_binomial_coefficients_solution.cpp">
+      <Filter>Solutions\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\5_Primitives\5.7_power_x_y.cpp">
+      <Filter>Problems\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5_Primitives\5.7_power_x_y_solution.cpp">
+      <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.36_search_a_pair_sorted_array.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.36_search_a_pair_sorted_array_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.9_permutation_array1.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.9_permutation_array1_solution.cpp">
       <Filter>Solutions\6. Arrays</Filter>
     </ClCompile>
   </ItemGroup>
@@ -438,6 +481,12 @@
     </Filter>
     <Filter Include="Problems\Math">
       <UniqueIdentifier>{cd11ba08-c43f-4e5c-b1e2-93ea72c71f5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\19. Graphs">
+      <UniqueIdentifier>{2e8555da-306f-48b2-9bf4-2f834c194eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\19. Graphs">
+      <UniqueIdentifier>{7900bb88-46a6-47bf-923c-757389a40144}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int CountInversions(vector<int> A)
+int CountInversions(vector<int> a)
 {
 	return 0;
 }

@@ -12,7 +12,8 @@ int main()
 	BuyAndSellStockTwiceTest();
 	IsPalindromeNumberTest();
 	RectangleIntersectionTest();
-	
+	PowerTest();
+
 	// 6. Arrays
 	DutchFlagPartitionTest();
 	RotateMatrixTest();
@@ -35,6 +36,7 @@ int main()
 	// 10. Binary Trees
 	BSTInSortedOrderTest();
 	ExteriorBinaryTreeTest();
+	BinaryTreeFromPreorderInorderTest();
 
 	// 12. Searching
 	SquareRootTest();
@@ -59,6 +61,8 @@ int main()
 	ComputeMaximumRevenueForRangeTest();
 	LongestNondecreasingSubsequenceLengthTest();
 	MinimumMessinessTest();
+	MinimumPathWeightTest();
+	ComputeBinomialCoefficientTest();
 
 	// 18. Greedy Algorithms
 	HasThreeSumTest();
@@ -66,6 +70,9 @@ int main()
 	MinimumTotalWaitingTimeTest();
 	MajoritySearchTest();
 	CalculateLargestRectangleTest();
+
+	// 19. Graphs
+	IsAnyPlacementFeasibleTest();
 
 	// 25. Honor Roll
 	ComputeSkylineTest();
@@ -75,4 +82,5 @@ int main()
 	FindLongestSubarrayLessEqualKTest();
 	IsArbitrageExistTest();
 	CountInversionsTest();
+	FindPairSumKTest();
 }

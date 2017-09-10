@@ -11,7 +11,7 @@ string IntToString(int x)
 
 int StringToInt(const string& s)
 {
-	return 0;
+	return stoi(s);
 }
 
 #pragma region Test
