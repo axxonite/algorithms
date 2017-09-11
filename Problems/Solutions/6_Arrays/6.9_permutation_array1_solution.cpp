@@ -8,8 +8,8 @@ namespace Solutions
 	{
 		for (int i = 0; i < a.size(); ++i)
 		{
-			// Check if the element at index i has not been moved by checking if perm[i] is nonnegative.
 			int next = i;
+			// Check if the element at index i has not been moved by checking if perm[i] is nonnegative.
 			while (perm[next] >= 0)
 			{
 				swap(a[i], a[perm[next]]);

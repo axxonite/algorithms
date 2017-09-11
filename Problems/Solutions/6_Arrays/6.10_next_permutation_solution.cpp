@@ -15,7 +15,7 @@ namespace Solutions
 		// 1.) Find the smallest entry after inversion_point that's greater than the entry referenced by inversion_point. Since perm must be sorted in decreasing order after inversion_point, we can use a fast algorithm to find this entry.
 		auto leastUpperBound = upper_bound(perm.rbegin(), inversionPoint, *inversionPoint);
 
-		// 2.) Perform the swap.
+		// 2.) Perform the swap. Note that this swaps the values but the iterators point to the same location in the vector.
 		iter_swap(inversionPoint, leastUpperBound);
 
 		// Reverse the subarray that follows inversion_point.

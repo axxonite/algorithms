@@ -42,7 +42,7 @@ void BinaryTreeFromPreorderInorderTest()
 	for (int times = 0; times < 20; ++times)
 	{
 		cout << times << endl;
-		uniform_int_distribution<int> dis(1, 1000);
+		uniform_int_distribution<int> dis(1, 100);
 		int n = dis(gen);
 		unique_ptr<BinaryTreeNode<int>> root =
 			GenerateRandBinaryTree<int>(n, true);

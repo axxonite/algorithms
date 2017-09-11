@@ -10,7 +10,7 @@ struct GraphVertex
 	vector<GraphVertex*> edges;
 };
 
-bool IsAnyPlacementFeasible(vector<GraphVertex>* G)
+bool IsAnyPlacementFeasible(vector<GraphVertex>& g)
 {
 	return true;
 }
@@ -87,7 +87,7 @@ void IsAnyPlacementFeasibleTest()
 		cout << endl;
 		}
 		*/
-		bool res = IsAnyPlacementFeasible(&G);
+		bool res = IsAnyPlacementFeasible(G);
 		//cout << boolalpha << res << endl;
 		assert(res == IsTwoColorable(&G));
 	}

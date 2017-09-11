@@ -33,12 +33,12 @@ namespace Solutions
 		return true;
 	}
 	
-	bool IsAnyPlacementFeasible(vector<GraphVertex>* G)
+	bool IsAnyPlacementFeasible(vector<GraphVertex>& g)
 	{
-		for (GraphVertex& v : *G)
+		for (GraphVertex& v : g)
 		{
 			if (v.d == -1 && !BFS(&v))
-				return false;  // Unvisited vertex.
+				return false;
 		}
 		return true;
 	}

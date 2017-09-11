@@ -9,7 +9,7 @@ struct DuplicateAndMissing
 	int duplicate, missing;
 };
 
-DuplicateAndMissing FindDuplicateMissing(const vector<int>& A)
+DuplicateAndMissing FindDuplicateMissing(const vector<int>& a)
 {
 	return DuplicateAndMissing{};
 }

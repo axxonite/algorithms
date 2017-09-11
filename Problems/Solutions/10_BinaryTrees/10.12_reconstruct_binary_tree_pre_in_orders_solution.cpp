@@ -5,22 +5,24 @@
 
 namespace Solutions
 {
-	// Builds the subtree with preorder[preorder_start, preorder_end - 1] and inorder[inorder_start, inorder_end - 1].
-	unique_ptr<BinaryTreeNode<int>> BinaryTreeFromPreorderInorderHelper(const vector<int>& preorder, size_t preorder_start, size_t preorder_end, size_t inorder_start, size_t inorder_end, const unordered_map<int, size_t>& node_to_inorder_idx)
+	// Builds the subtree with preorder[preorderStart, preorderEnd - 1] and inorder[inorderStart, inorderEnd - 1].
+	unique_ptr<BinaryTreeNode<int>> BinaryTreeFromPreorderInorderHelper(const vector<int>& preorder, size_t preorderStart, size_t preorderEnd, size_t inorderStart, size_t inorderEnd, const unordered_map<int, size_t>& node_to_inorder_idx)
 	{
-		if (preorder_end <= preorder_start || inorder_end <= inorder_start)
+		if (preorderEnd <= preorderStart || inorderEnd <= inorderStart)
 			return nullptr;
-		size_t root_inorder_idx = node_to_inorder_idx.at(preorder[preorder_start]);
-		size_t left_subtree_size = root_inorder_idx - inorder_start;
-		return make_unique<BinaryTreeNode<int>>(BinaryTreeNode<int>{preorder[preorder_start],
-			BinaryTreeFromPreorderInorderHelper(preorder, preorder_start + 1, preorder_start + 1 + left_subtree_size, inorder_start, root_inorder_idx, node_to_inorder_idx), // Recursively builds the left subtree.
-			BinaryTreeFromPreorderInorderHelper(preorder, preorder_start + 1 + left_subtree_size, preorder_end, root_inorder_idx + 1, inorder_end, node_to_inorder_idx) // Recursively builds the right subtree.
+		size_t rootInorderIndex = node_to_inorder_idx.at(preorder[preorderStart]); // Index of the root in the in the inorder array, queried from the hash table.
+		size_t leftSubtreeSize = rootInorderIndex - inorderStart; // From this we know how many nodes are on the left of this root. Note that we offset from inorderStart, which is where the current subtree starts.
+		return make_unique<BinaryTreeNode<int>>(BinaryTreeNode<int>{preorder[preorderStart],
+			// Left sub tree is [preStart+1..+leftSubTreeSize], [inorderStart..rootInOrderIndex]
+			BinaryTreeFromPreorderInorderHelper(preorder, preorderStart + 1, preorderStart + 1 + leftSubtreeSize, inorderStart, rootInorderIndex, node_to_inorder_idx), // Recursively builds the left subtree.
+			// Right subtree is [preStart+1+leftSubTreeSize, preOrderEnd], [rootInOrderIndex+1, inOrderEnd] - note the +1 on rootInOrderIndex, because we are skipping over the current root - tricky.
+			BinaryTreeFromPreorderInorderHelper(preorder, preorderStart + 1 + leftSubtreeSize, preorderEnd, rootInorderIndex + 1, inorderEnd, node_to_inorder_idx) // Recursively builds the right subtree.
 		});
 	}
 
 	unique_ptr<BinaryTreeNode<int>> BinaryTreeFromPreorderInorder(const vector<int>& preorder, const vector<int>& inorder)
 	{
-		unordered_map<int, size_t> node_to_inorder_idx;
+		unordered_map<int, size_t> node_to_inorder_idx; // Hash table for which, given a node's unique key, we can retrieve the index of the node in the in-order array.
 		for (size_t i = 0; i < inorder.size(); ++i)
 			node_to_inorder_idx.emplace(inorder[i], i);
 		return BinaryTreeFromPreorderInorderHelper(preorder, 0, preorder.size(), 0, inorder.size(), node_to_inorder_idx);

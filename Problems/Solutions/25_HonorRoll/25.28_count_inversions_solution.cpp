@@ -8,25 +8,26 @@ namespace Solutions
 	int MergeSortAndCountInversionsAcrossSubarrays(int start, int mid, int end, vector<int>& a)
 	{
 		vector<int> sortedA;
-		int leftStart = start, rightstart = mid, inversionCount = 0;
+		int leftStart = start, rightStart = mid, inversionCount = 0;
 
-		while (leftStart < mid && rightstart < end)
+		while (leftStart < mid && rightStart < end)
 		{
-			if (a[leftStart] <= a[rightstart])
-				sortedA.emplace_back(a[leftStart++]); // left side is < right side, add to sorted A.
+			if (a[leftStart] <= a[rightStart])
+				sortedA.emplace_back(a[leftStart++]); // left side is < right side, add to sorted A, no inversions.
 			else
 			{
 				// a[leftStart, mid - 1] are the inversions of a[right_start].
 				inversionCount += mid - leftStart; // left side is > right side, so everything after the left side is inverted with that value on the right side
-				sortedA.emplace_back(a[rightstart++]);
+				sortedA.emplace_back(a[rightStart++]);
 			}
 		}
 
 		// One of the sides is finished, copy the remaining elements for the other side.
 		copy(a.begin() + leftStart, a.begin() + mid, back_inserter(sortedA));
-		copy(a.begin() + rightstart, a.begin() + end, back_inserter(sortedA));
+		copy(a.begin() + rightStart, a.begin() + end, back_inserter(sortedA));
 
 		// Updates a with sortedA.
+		// Don't forget to copy the destination at the start offset.
 		copy(sortedA.begin(), sortedA.end(), a.begin() + start);
 		return inversionCount;
 	}

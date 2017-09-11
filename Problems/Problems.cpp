@@ -9,7 +9,6 @@ int main()
 	// 5. Primitives
 	MultiplyShiftAddTest();
 	DivideTest();
-	BuyAndSellStockTwiceTest();
 	IsPalindromeNumberTest();
 	RectangleIntersectionTest();
 	PowerTest();
@@ -19,6 +18,9 @@ int main()
 	RotateMatrixTest();
 	TestGeneratePrimes();
 	NextPermutationTest();
+	BuyAndSellStockTwiceTest();
+	ComputeRandomPermutationTest();
+	RandomSubsetTest();
 
 	// 7. Strings
 	InterconvertStringIntTest();
@@ -37,6 +39,7 @@ int main()
 	BSTInSortedOrderTest();
 	ExteriorBinaryTreeTest();
 	BinaryTreeFromPreorderInorderTest();
+	LCATest();
 
 	// 12. Searching
 	SquareRootTest();
@@ -54,6 +57,7 @@ int main()
 	CombinationsTest();
 	PermutationsTest();
 	PalindromePartitioningTest();
+	GenerateAllBinaryTreesTest();
 
 	// 17. Dynamic Progamming
 	NumCombinationsForFinalScoreTest();

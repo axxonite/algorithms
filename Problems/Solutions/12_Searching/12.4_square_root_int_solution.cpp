@@ -9,7 +9,7 @@ namespace Solutions
 		int left = 0, right = k;
 		// Candidate interval [left, right] where everything before left has square <= k, and everything after right has square > k.
 		// we are looking for the lowest left that is strictly > k.
-		// Note that we keep going till left is PAST right.
+		// Note that we keep going till left is PAST right. If we don't, we will not give the right answer when k is zero.
 		while (left <= right)
 		{
 			long long mid = left + ((right - left) / 2);

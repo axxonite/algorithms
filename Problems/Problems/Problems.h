@@ -7,7 +7,6 @@ void QuicksortTest();
 // Chapter 5: Primitives.
 void MultiplyShiftAddTest();
 void DivideTest();
-void BuyAndSellStockTwiceTest();
 void IsPalindromeNumberTest();
 void RectangleIntersectionTest();
 void PowerTest();
@@ -17,6 +16,9 @@ void DutchFlagPartitionTest();
 void RotateMatrixTest();
 void TestGeneratePrimes();
 void NextPermutationTest();
+void BuyAndSellStockTwiceTest();
+void ComputeRandomPermutationTest();
+void RandomSubsetTest();
 
 // Chapter 7 : Strings.
 void InterconvertStringIntTest();
@@ -35,6 +37,7 @@ void ExamineBuildingsWithSunsetTest();
 void BSTInSortedOrderTest();
 void ExteriorBinaryTreeTest();
 void BinaryTreeFromPreorderInorderTest();
+void LCATest();
 
 // Chapter 12 : Searching
 void SquareRootTest();
@@ -52,6 +55,7 @@ void SolveNQueensTest();
 void CombinationsTest();
 void PermutationsTest();
 void PalindromePartitioningTest();
+void GenerateAllBinaryTreesTest();
 
 // Chapter 17: Dynamic Programming.
 void NumCombinationsForFinalScoreTest();

@@ -44,13 +44,16 @@
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClInclude>
     <ClInclude Include="binary_tree_utils.h" />
+    <ClInclude Include="Solutions\6_Arrays\6.11_offline_sampling_solution.h">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="Problems\6_Arrays\6.11_offline_sampling.h">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.5_multiply_shift_add.cpp">
-      <Filter>Problems\5. Primitives</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\5_Primitives\5.7_buy_and_sell_stock_twice.cpp">
       <Filter>Problems\5. Primitives</Filter>
     </ClCompile>
     <ClCompile Include="Problems\5_Primitives\5.11_intersect_rectangle.cpp">
@@ -75,9 +78,6 @@
       <Filter>Problems\Sorting Algorithms</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\5_Primitives\5.5_multiply_shift_add_solution.cpp">
-      <Filter>Solutions\5. Primitives</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\5_Primitives\5.7_buy_and_sell_stock_twice_solution.cpp">
       <Filter>Solutions\5. Primitives</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\5_Primitives\5.11_intersect_rectangle_solution.cpp">
@@ -383,6 +383,36 @@
     </ClCompile>
     <ClCompile Include="Solutions\6_Arrays\6.9_permutation_array1_solution.cpp">
       <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.7_buy_and_sell_stock_twice_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.7_buy_and_sell_stock_twice.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.13_compute_random_permutation.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.13_compute_random_permutation_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6.14_online_sampling.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.14_online_sampling_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\16.8_unique_binary_trees_all.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.8_unique_binary_trees_all_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
