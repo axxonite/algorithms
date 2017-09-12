@@ -414,6 +414,30 @@
     <ClCompile Include="Solutions\16_Recursion\16.8_unique_binary_trees_all_solution.cpp">
       <Filter>Solutions\16. Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.7_container_with_most_water.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.7_container_with_most_water_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\16.11_tree_diameter.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.11_tree_diameter_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\5_Primitives\5.4_closest_int_same_bits.cpp">
+      <Filter>Problems\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5_Primitives\5.4_closest_int_same_bits_solution.cpp">
+      <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\11_Heaps\11.6_k_largest_elements_binary_heap.cpp">
+      <Filter>Problems\11. Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\11_Heaps\11.6_k_largest_elements_binary_heap_solution.cpp">
+      <Filter>Solutions\11, Heaps</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -517,6 +541,12 @@
     </Filter>
     <Filter Include="Solutions\19. Graphs">
       <UniqueIdentifier>{7900bb88-46a6-47bf-923c-757389a40144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\11. Heaps">
+      <UniqueIdentifier>{8118bfca-cb15-4264-9969-458b6d98b1f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\11, Heaps">
+      <UniqueIdentifier>{97645c64-f08a-4800-9cf2-afb1e216c91e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

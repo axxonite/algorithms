@@ -165,11 +165,13 @@
     <ClCompile Include="Problems\10_BinaryTrees\10.15_exterior_binary_tree.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.7_bst_sorted_order.cpp" />
+    <ClCompile Include="Problems\11_Heaps\11.6_k_largest_elements_binary_heap.cpp" />
     <ClCompile Include="Problems\12_Searching\12.10_find_missing_and_duplicate.cpp" />
     <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.6_union_intervals.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.13_add_credits.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays.cpp" />
+    <ClCompile Include="Problems\16_Recursion\16.11_tree_diameter.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.2_n_queens.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.3_permutations.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.3_permutations_solution.cpp" />
@@ -186,6 +188,7 @@
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.2_minimum_waiting_time.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.4_3_sum.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.7_container_with_most_water.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
     <ClCompile Include="Problems\19_Graphs\19.6_wiring_circuit_board.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
@@ -198,6 +201,7 @@
     <ClCompile Include="Problems\25_HonorRoll\25.38_longest_subarray_k_improved.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.40_arbitrage.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.11_intersect_rectangle.cpp" />
+    <ClCompile Include="Problems\5_Primitives\5.4_closest_int_same_bits.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.5_multiply_shift_add.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.6_division.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.7_power_x_y.cpp" />
@@ -225,11 +229,13 @@
     <ClCompile Include="Solutions\10_BinaryTrees\10.15_exterior_binary_tree_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.7_bst_sorted_order_solution.cpp" />
+    <ClCompile Include="Solutions\11_Heaps\11.6_k_largest_elements_binary_heap_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.10_find_missing_and_duplicate_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.4_square_root_int_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.6_union_intervals_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays_solution.cpp" />
+    <ClCompile Include="Solutions\16_Recursion\16.11_tree_diameter_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.2_n_queens_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.5_generate_all_subsets_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.7_palindrome_partitioning.cpp" />
@@ -246,6 +252,7 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.2_minimum_waiting_time_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.4_3_sum_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.7_container_with_most_water_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\19.6_wiring_circuit_board_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
@@ -258,6 +265,7 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.38_longest_subarray_k_improved_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.40_arbitrage_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.11_intersect_rectangle_solution.cpp" />
+    <ClCompile Include="Solutions\5_Primitives\5.4_closest_int_same_bits_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.5_multiply_shift_add_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.6_division_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.7_power_x_y_solution.cpp" />

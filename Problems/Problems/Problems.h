@@ -10,6 +10,7 @@ void DivideTest();
 void IsPalindromeNumberTest();
 void RectangleIntersectionTest();
 void PowerTest();
+void ClosestIntSameBitCountTest();
 
 // Chapter 6 : Arrays.
 void DutchFlagPartitionTest();
@@ -39,6 +40,9 @@ void ExteriorBinaryTreeTest();
 void BinaryTreeFromPreorderInorderTest();
 void LCATest();
 
+// Chapter 11: Heaps
+void KLargestInBinaryHeapTest();
+
 // Chapter 12 : Searching
 void SquareRootTest();
 void FindDuplicateMissingTest();
@@ -56,6 +60,7 @@ void CombinationsTest();
 void PermutationsTest();
 void PalindromePartitioningTest();
 void GenerateAllBinaryTreesTest();
+void ComputeDiameterTest();
 
 // Chapter 17: Dynamic Programming.
 void NumCombinationsForFinalScoreTest();
@@ -72,6 +77,7 @@ void OptimumTaskAssignmentTest();
 void MinimumTotalWaitingTimeTest();
 void MajoritySearchTest();
 void CalculateLargestRectangleTest();
+void GetMaxTrappedWaterTest();
 
 // Chapter 19: Graphs
 void IsAnyPlacementFeasibleTest();

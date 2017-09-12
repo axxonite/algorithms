@@ -12,6 +12,7 @@ int main()
 	IsPalindromeNumberTest();
 	RectangleIntersectionTest();
 	PowerTest();
+	ClosestIntSameBitCountTest();
 
 	// 6. Arrays
 	DutchFlagPartitionTest();
@@ -41,6 +42,9 @@ int main()
 	BinaryTreeFromPreorderInorderTest();
 	LCATest();
 
+	// 11. Heaps
+	KLargestInBinaryHeapTest();
+
 	// 12. Searching
 	SquareRootTest();
 	FindDuplicateMissingTest();
@@ -58,6 +62,7 @@ int main()
 	PermutationsTest();
 	PalindromePartitioningTest();
 	GenerateAllBinaryTreesTest();
+	ComputeDiameterTest();
 
 	// 17. Dynamic Progamming
 	NumCombinationsForFinalScoreTest();
@@ -74,6 +79,7 @@ int main()
 	MinimumTotalWaitingTimeTest();
 	MajoritySearchTest();
 	CalculateLargestRectangleTest();
+	GetMaxTrappedWaterTest();
 
 	// 19. Graphs
 	IsAnyPlacementFeasibleTest();
