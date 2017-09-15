@@ -13,26 +13,32 @@ namespace Solutions
 		{
 			// Generate a random index in [i, n - 1].
 			int randIndex = uniform_int_distribution<int>{ i, n - 1 }(seed);
-			auto ptr1 = changedElements.find(randIndex), ptr2 = changedElements.find(i);
-			if (ptr1 == changedElements.end() && ptr2 == changedElements.end())
+			auto iterRand = changedElements.find(randIndex), iterI = changedElements.find(i);
+			if (iterRand == changedElements.end() && iterI == changedElements.end())
 			{
+				// Neither element is in the hash table, perform the swap on both elements.
 				changedElements[randIndex] = i;
 				changedElements[i] = randIndex;
 			}
-			else if (ptr1 == changedElements.end() && ptr2 != changedElements.end())
+			else if (iterRand == changedElements.end() && iterI != changedElements.end())
 			{
-				changedElements[randIndex] = ptr2->second;
-				ptr2->second = randIndex;
+				// Note we are always adding the entry in the hash table that wasn't found. The other entry gets its iterator's value updated.
+				// We picked an element < i, so we have to get what used to be at i.
+				changedElements[randIndex] = iterI->second;
+				iterI->second = randIndex; // Update spot i to have the new random index.
 			}
-			else if (ptr1 != changedElements.end() && ptr2 == changedElements.end())
+			else if (iterRand != changedElements.end() && iterI == changedElements.end())
 			{
-				changedElements[i] = ptr1->second;
-				ptr1->second = i;
+				// We picked a specific random index > i that was picked before, so updated the i with the random index, and set the random index in the table to point to i.
+				changedElements[i] = iterRand->second;
+				iterRand->second = i;
 			}
 			else
 			{
-				int temp = ptr2->second;
-				changedElements[i] = ptr1->second;
+				// Both i and the random index are in the hash table. Swap the entries in the hash table.
+				// Could have used the iterators here, which seems like it would be faster and more consistent.
+				int temp = iterI->second;
+				changedElements[i] = iterRand->second;
 				changedElements[randIndex] = temp;
 			}
 		}

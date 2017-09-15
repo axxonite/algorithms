@@ -9,6 +9,7 @@ namespace Solutions
 		bool neg = x < 0;
 
 		string s;
+		// Note that MUST be a do..while otherwise zero will not be handled properly.
 		do
 		{
 			s += '0' + abs(x % 10);

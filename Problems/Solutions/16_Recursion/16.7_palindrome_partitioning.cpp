@@ -7,7 +7,7 @@
 
 bool IsPalindrome(const string& prefix)
 {
-	return true;
+	return false;
 }
 
 vector<vector<string>> PalindromePartitioning(const string& input)

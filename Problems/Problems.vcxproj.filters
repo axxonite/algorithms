@@ -438,6 +438,12 @@
     <ClCompile Include="Solutions\11_Heaps\11.6_k_largest_elements_binary_heap_solution.cpp">
       <Filter>Solutions\11, Heaps</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\16.4_power_set_alternative.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.4_power_set_alternative_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

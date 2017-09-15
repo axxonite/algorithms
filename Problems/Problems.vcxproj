@@ -175,6 +175,7 @@
     <ClCompile Include="Problems\16_Recursion\16.2_n_queens.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.3_permutations.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.3_permutations_solution.cpp" />
+    <ClCompile Include="Problems\16_Recursion\16.4_power_set_alternative.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.5_generate_all_subsets.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.8_unique_binary_trees_all.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.2_levenshtein_distance.cpp" />
@@ -237,6 +238,7 @@
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.11_tree_diameter_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.2_n_queens_solution.cpp" />
+    <ClCompile Include="Solutions\16_Recursion\16.4_power_set_alternative_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.5_generate_all_subsets_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.7_palindrome_partitioning.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.7_palindrome_partitioning_solution.cpp" />

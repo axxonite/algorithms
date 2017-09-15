@@ -58,6 +58,7 @@ void FindClosestElementsInSortedArraysTest();
 void SolveNQueensTest();
 void CombinationsTest();
 void PermutationsTest();
+void GeneratePowerSetTest();
 void PalindromePartitioningTest();
 void GenerateAllBinaryTreesTest();
 void ComputeDiameterTest();

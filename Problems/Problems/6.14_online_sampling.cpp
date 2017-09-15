@@ -27,7 +27,7 @@ void RandomSubsetTest()
 	{
 		vector<int> res = RandomSubset(n, k);
 		//cout << "result = ";
-		copy(res.begin(), res.end(), ostream_iterator<int>(cout, " "));
+		//copy(res.begin(), res.end(), ostream_iterator<int>(cout, " "));
 		//cout << endl;
 	}
 #endif

@@ -60,6 +60,7 @@ int main()
 	SolveNQueensTest();
 	CombinationsTest();
 	PermutationsTest();
+	GeneratePowerSetTest();
 	PalindromePartitioningTest();
 	GenerateAllBinaryTreesTest();
 	ComputeDiameterTest();

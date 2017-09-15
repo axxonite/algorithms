@@ -7,7 +7,8 @@
 
 vector<int> ComputeRandomPermutation(int n)
 {
-	return {};
+	vector<int> permutation(n);
+	return permutation;
 }
 
 #pragma region Test

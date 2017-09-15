@@ -45,6 +45,7 @@ namespace Solutions
 
 	int CountInversions(vector<int> a)
 	{
+		// We use a.size() as the right bound since the right bound is considered to be one past the last element that will be processed.
 		return CountSubarrayInversions(0, a.size(), a);
 	}
 }

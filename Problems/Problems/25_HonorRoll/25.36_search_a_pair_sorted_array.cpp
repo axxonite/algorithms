@@ -6,7 +6,7 @@
 
 struct IndexPair
 {
-	int index1, index2;
+	int it1, it2;
 };
 
 IndexPair FindPairSumK(const vector<int>& a, int k)
@@ -20,7 +20,7 @@ static void SimpleTest()
 {
 	vector<int> A = {0, 0, -1, 2, -3, -3};
 	IndexPair ans = FindPairSumK(A, 2);
-	assert(ans.index1 != -1);
+	assert(ans.it1 != -1);
 }
 
 void FindPairSumKTest()
@@ -39,15 +39,15 @@ void FindPairSumKTest()
 		sort(a.begin(), a.end(), [](int x, int y) { return abs(x) < abs(y); });
 		int k = dis2(gen);
 		IndexPair ans = FindPairSumK(a, k);
-		if (ans.index1 != -1 && ans.index2 != -1)
+		if (ans.it1 != -1 && ans.it2 != -1)
 		{
-			assert(a[ans.index1] + a[ans.index2] == k);
+			assert(a[ans.it1] + a[ans.it2] == k);
 			//cout << a[ans.index1] << "+" << a[ans.index2] << "=" << k << endl;
 		}
 		else
 		{
 			sort(a.begin(), a.end());
-			int l = 0, r = a.size() - 1;
+			int l = 0, r = int(a.size() - 1);
 			bool found = false;
 			while (l < r)
 			{

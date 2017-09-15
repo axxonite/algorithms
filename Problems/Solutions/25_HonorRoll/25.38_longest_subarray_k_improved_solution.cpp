@@ -25,6 +25,7 @@ namespace Solutions
 		while (a < A.size() && b < A.size())
 		{
 			// Note the exceptional case for when a is zero.
+			// The a - 1 is important here. We want to include a, so we need to subtract the prefix that ends at a -1.
 			int min_curr_sum = a > 0 ? min_prefix_sum[b] - prefix_sum[a - 1] : min_prefix_sum[b];
 			if (min_curr_sum <= k)
 			{

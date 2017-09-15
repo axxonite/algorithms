@@ -16,6 +16,8 @@ void MinimumPathWeightTest()
 #if TEST
 	vector<vector<int>> A = {{2},{3, 4},{6, 5, 7},{4, 1, 8, 3}};
 	assert(11 == MinimumPathWeight(A));
+	vector<vector<int>> B = {};
+	assert(0 == MinimumPathWeight(B));
 #endif
 }
 
