@@ -6,6 +6,7 @@ namespace Solutions
 {
 	void DirectedPermutations(int i, vector<int>& a, vector<vector<int>>& result)
 	{
+		// We need two elements to swap, so stop iterating once we've reached a.size() - 1, since there are no further elements to swap with beyond the current one.
 		if (i == a.size() - 1)
 		{
 			result.emplace_back(a);
@@ -13,6 +14,7 @@ namespace Solutions
 		}
 
 		// Try every possibility for a[i], and recursively call the function to generate all permutations from the remaining elements for the remaining suffix. The prefix a[0..i - 1] is constant during this iteration.
+		// We must start iterating from i, not i + 1, so that we include the permutation that doesn't do any swapping.
 		for (int j = i; j < a.size(); ++j)
 		{
 			swap(a[i], a[j]);

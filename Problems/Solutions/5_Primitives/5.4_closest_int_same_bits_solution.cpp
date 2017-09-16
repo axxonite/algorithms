@@ -6,15 +6,11 @@ namespace Solutions
 {
 	unsigned long ClosestIntSameBitCount(unsigned long x)
 	{
-		const static int kNumUnsignedBits = 64;
-		for (int i = 0; i < kNumUnsignedBits - 1; ++i)
-		{
+		for (int i = 0; i < 63; ++i)
+			// Find the two smallest consecutive bits that differ.
 			if (((x >> i) & 1) != ((x >> (i + 1)) & 1))
-			{
-				x ^= (1UL << i) | (1UL << (i + 1)); // Swaps bit-i and bit-(i + 1).
-				return x;
-			}
-		}
+				// Swap them.
+				return x ^ ((1UL << i) | (1UL << (i + 1))); // Swaps bit-i and bit-(i + 1).
 
 		// Throw error if all bits of x are 0 or 1.
 		throw invalid_argument("All bits are 0 or 1");

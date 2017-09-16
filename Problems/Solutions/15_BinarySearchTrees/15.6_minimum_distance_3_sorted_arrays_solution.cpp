@@ -23,6 +23,7 @@ namespace Solutions
 			int minValue = iterAndTail.cbegin()->first, maxValue = iterAndTail.crbegin()->first;
 			minSoFar = min(maxValue - minValue, minSoFar);
 			// Advance the iterator for the array with the minimum value.
+			
 			const auto nextMin = next(iterAndTail.cbegin()->second.iter), nextEnd = iterAndTail.cbegin()->second.tail;
 			// Return if some array has no remaining elements.
 			if (nextMin == nextEnd)

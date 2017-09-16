@@ -27,13 +27,16 @@ namespace Solutions
 		for (const auto& e : r->edges)
 		{
 			HeightAndDiameter h_d = ComputeHeightAndDiameter(e.root);
+			// Track two greatest heights from this node.
 			if (h_d.height + e.length > heights[0])
-				heights = { { h_d.height + e.length, heights[0] } };
+				heights = { { h_d.height + e.length, heights[0] } }; // Replace top height and displace 2nd max height.
 			else if (h_d.height + e.length > heights[1])
 				heights[1] = h_d.height + e.length;
 			diameter = max(diameter, h_d.diameter);
 		}
-		return { heights[0], max(diameter, heights[0] + heights[1]) };
+		// The diameter is the maximum of the greatest diameter found in a subtree (meaning the path is found within that subtree), 
+		// and the sum of the height of the two deepest subtrees (meaning the path goes through the current node and into each of the subtrees).
+		return { heights[0], max(diameter, heights[0] + heights[1]) }; // Height is greatest height, diameter is sum of two greatest heights.
 	}
 
 	double ComputeDiameter(const unique_ptr<TreeNode>& T)
