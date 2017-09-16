@@ -36,6 +36,7 @@ namespace Solutions
 		}
 
 		// Resets table for the following counting.
+		// MUST get a reference here.
 		for (auto& it : table)
 			it.second = 0;
 

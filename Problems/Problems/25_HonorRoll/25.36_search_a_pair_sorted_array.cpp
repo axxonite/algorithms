@@ -11,7 +11,7 @@ struct IndexPair
 
 IndexPair FindPairSumK(const vector<int>& a, int k)
 {
-	return {};
+	return { -1, -1 };
 }
 
 #pragma region Test

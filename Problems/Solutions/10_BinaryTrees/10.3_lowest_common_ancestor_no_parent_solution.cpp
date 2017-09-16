@@ -28,6 +28,8 @@ namespace Solutions
 		if (rightResult.targetNodeCount == 2)
 			return rightResult; // Found both nodes in the right subtree.
 
+		// Add up node counts, including if the root node is one of our target nodes.
+		// Return the solution if we have found one here.
 		int targetNodeCount = leftResult.targetNodeCount + rightResult.targetNodeCount + (tree == node0) + (tree == node1);
 		return { targetNodeCount, targetNodeCount == 2 ? tree.get() : nullptr };
 	}

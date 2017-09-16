@@ -12,6 +12,7 @@ namespace Solutions
 		for (int i = 0; i < k; ++i)
 		{
 			// Generate a random index in [i, n - 1].
+			// NOTE that we are using n - 1.
 			int randIndex = uniform_int_distribution<int>{ i, n - 1 }(seed);
 			auto iterRand = changedElements.find(randIndex), iterI = changedElements.find(i);
 			if (iterRand == changedElements.end() && iterI == changedElements.end())

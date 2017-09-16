@@ -13,6 +13,7 @@ namespace Solutions
 	vector<unique_ptr<BinaryTreeNode<int>>> GenerateAllBinaryTrees(int nodeCount)
 	{
 		vector<unique_ptr<BinaryTreeNode<int>>> result;
+		// Don't forget to check for a node count of zero.
 		if (nodeCount == 0)
 			result.emplace_back(nullptr); // Empty tree, add as an nullptr.
 
@@ -21,7 +22,7 @@ namespace Solutions
 			int rightTreeNodes = nodeCount - 1 - leftTreeNodes;
 			auto left_subtrees = GenerateAllBinaryTrees(leftTreeNodes);
 			auto right_subtrees = GenerateAllBinaryTrees(rightTreeNodes);
-			// Generates all combinations of left_subtrees and right_subtrees.
+			// Generates all combinations of left_subtrees and right_subtrees. Pair up all possible left trees with all possible right trees.
 			for (auto& left : left_subtrees)
 				for (auto& right : right_subtrees)
 					result.emplace_back(make_unique<BinaryTreeNode<int>>(BinaryTreeNode<int>{0, Clone(left), Clone(right)}));
