@@ -7,7 +7,7 @@
 
 string MajoritySearch(istringstream& input)
 {
-	return"";
+	return "";
 }
 
 #pragma region Test

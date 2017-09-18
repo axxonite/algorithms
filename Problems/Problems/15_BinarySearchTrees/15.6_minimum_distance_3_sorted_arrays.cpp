@@ -6,7 +6,7 @@
 
 int FindClosestElementsInSortedArrays(const vector<vector<int>>& arrays)
 {
-	return 0;
+	 return 0;
 }
 
 #pragma region Test
@@ -71,7 +71,8 @@ void FindClosestElementsInSortedArraysTest()
 		}
 		int ans = FindClosestElementsInSortedArrays(sorted_arrays);
 		//cout << ans << endl;
-		assert(BruteForceGenAnswer(sorted_arrays) == ans);
+		int bruteForceAnswer = BruteForceGenAnswer(sorted_arrays);
+		assert(bruteForceAnswer == ans);
 	}
 #endif
 }

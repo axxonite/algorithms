@@ -4,28 +4,28 @@
 
 namespace Solutions
 {
-	// Generate all subsets whose intersection with inputSet[0], ...,
-	// inputSet[toBeSelected - 1] is exactly selectedSoFar.
-	void DirectedPowerSet(const vector<int>& inputSet, int toBeSelected, vector<int>& selectedSoFar, vector<vector<int>>& powerSet)
+	// Generate all subsets whose intersection with input[0], ...,
+	// input[index - 1] is exactly partial.
+	void DirectedPowerSet(const vector<int>& input, int index, vector<int>& partial, vector<vector<int>>& result)
 	{
-		if (toBeSelected == inputSet.size())
+		if (index == input.size())
 		{
-			powerSet.emplace_back(selectedSoFar);
+			result.emplace_back(partial);
 			return;
 		}
-		// Generate all subsets that contain inputSet[toBeSelected].
-		selectedSoFar.emplace_back(inputSet[toBeSelected]);
-		DirectedPowerSet(inputSet, toBeSelected + 1, selectedSoFar, powerSet);
-		// Generate all subsets that do not contain inputSet[toBeSelected].
-		selectedSoFar.pop_back();
-		DirectedPowerSet(inputSet, toBeSelected + 1, selectedSoFar, powerSet);
+		// Generate all subsets that contain input[index].
+		partial.emplace_back(input[index]);
+		DirectedPowerSet(input, index + 1, partial, result);
+		// Generate all subsets that do not contain input[index].
+		partial.pop_back();
+		DirectedPowerSet(input, index + 1, partial, result);
 	}
 
-	vector<vector<int>> GeneratePowerSet(const vector<int>& input_set)
+	vector<vector<int>> GeneratePowerSet(const vector<int>& inputSet)
 	{
-		vector<vector<int>> power_set;
+		vector<vector<int>> result;
 		vector<int> selectedSoFar;
-		DirectedPowerSet(input_set, 0, selectedSoFar, power_set);
-		return power_set;
+		DirectedPowerSet(inputSet, 0, selectedSoFar, result);
+		return result;
 	}
 }

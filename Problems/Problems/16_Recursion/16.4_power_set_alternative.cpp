@@ -4,10 +4,11 @@
 
 #define TEST 0
 
-vector<vector<int>> GeneratePowerSet(const vector<int>& inputSet)
+vector<vector<int>> GeneratePowerSet(const vector<int>& input)
 {
-	vector<vector<int>> powerSet;
-	return powerSet;
+	vector<vector<int>> result;
+	vector<int> partialResult;
+	return result;
 }
 
 #pragma region Test

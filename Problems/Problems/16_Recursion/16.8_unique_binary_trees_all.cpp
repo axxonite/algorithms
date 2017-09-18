@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-vector<unique_ptr<BinaryTreeNode<int>>> GenerateAllBinaryTrees( int nodeCount)
+vector<unique_ptr<BinaryTreeNode<int>>> GenerateAllBinaryTrees( int nodeCount )
 {
 	vector<unique_ptr<BinaryTreeNode<int>>> result;
 	return result;

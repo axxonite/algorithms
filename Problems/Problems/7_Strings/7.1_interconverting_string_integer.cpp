@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+#define TEST 1
 
 string IntToString(int x)
 {
