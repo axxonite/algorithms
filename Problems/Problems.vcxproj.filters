@@ -50,6 +50,7 @@
     <ClInclude Include="Problems\6_Arrays\6.11_offline_sampling.h">
       <Filter>Problems\6. Arrays</Filter>
     </ClInclude>
+    <ClInclude Include="doubly_linked_list_prototype.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -444,6 +445,66 @@
     <ClCompile Include="Solutions\16_Recursion\16.4_power_set_alternative_solution.cpp">
       <Filter>Solutions\16. Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\9_StacksQueues\9.7_binary_tree_level_order.cpp">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.7_binary_tree_level_order_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.22_sorted_list_to_bst.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.22_sorted_list_to_bst_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.12_reservoir_sampling.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.12_reservoir_sampling_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\7_Strings\7.9_roman_to_integer.cpp">
+      <Filter>Problems\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.9_roman_to_integer_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.7_remove_kth_last_list.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.7_remove_kth_last_list_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\9.8_circular_queue.cpp">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.8_circular_queue_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\9_StacksQueues\9.9_queue_from_stacks.cpp">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.9_queue_from_stacks_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\11_Heaps\11.5_online_median.cpp">
+      <Filter>Problems\11. Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\11_Heaps\11.5_online_median_solution.cpp">
+      <Filter>Solutions\11, Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.10_longest_contained_range_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -553,6 +614,12 @@
     </Filter>
     <Filter Include="Solutions\11, Heaps">
       <UniqueIdentifier>{97645c64-f08a-4800-9cf2-afb1e216c91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\13. Hash Tables">
+      <UniqueIdentifier>{0a60eb93-9005-412a-9788-dd4eea2bf0c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\13. Hash Tables">
+      <UniqueIdentifier>{16cbae48-ec34-4645-b96f-51a7222a9704}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -22,19 +22,25 @@ int main()
 	BuyAndSellStockTwiceTest();
 	ComputeRandomPermutationTest();
 	RandomSubsetTest();
+	OnlineRandomSampleTest();
 
 	// 7. Strings
 	InterconvertStringIntTest();
 	SpreadsheetEncodingTest();
+	RomanToIntegerTest();
 
 	// 8. Lists
 	OverlappingListsTest();
 	CyclicallyRightShiftListTest();
+	RemoveKthLastTest();
 
 	// 9. Stacks & Queues
 	StackTest();
 	TestQueueWithMax();
 	ExamineBuildingsWithSunsetTest();
+	BinaryTreeDepthOrderTest();
+	CircularQueueTest();
+	QueueTest();
 
 	// 10. Binary Trees
 	BSTInSortedOrderTest();
@@ -44,10 +50,14 @@ int main()
 
 	// 11. Heaps
 	KLargestInBinaryHeapTest();
+	OnlineMedianTest();
 
 	// 12. Searching
 	SquareRootTest();
 	FindDuplicateMissingTest();
+
+	// 13. Hash Tables
+	LongestContainedRangeTest();
 
 	// 14. Sorting
 	UnionOfIntervalsTest();
@@ -94,4 +104,5 @@ int main()
 	IsArbitrageExistTest();
 	CountInversionsTest();
 	FindPairSumKTest();
+	BuildBSTFromSortedDoublyListTest();
 }

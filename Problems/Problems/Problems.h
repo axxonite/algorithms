@@ -20,19 +20,25 @@ void NextPermutationTest();
 void BuyAndSellStockTwiceTest();
 void ComputeRandomPermutationTest();
 void RandomSubsetTest();
+void OnlineRandomSampleTest();
 
 // Chapter 7 : Strings.
 void InterconvertStringIntTest();
 void SpreadsheetEncodingTest();
+void RomanToIntegerTest();
 
 // Chapter 8 : Linked lists.
 void OverlappingListsTest();
 void CyclicallyRightShiftListTest();
+void RemoveKthLastTest();
 
 // Chapter 9 : Stacks & Queues
 void StackTest();
 void TestQueueWithMax();
 void ExamineBuildingsWithSunsetTest();
+void BinaryTreeDepthOrderTest();
+void CircularQueueTest();
+void QueueTest();
 
 // Chapter 10: Binary Trees
 void BSTInSortedOrderTest();
@@ -42,10 +48,14 @@ void LCATest();
 
 // Chapter 11: Heaps
 void KLargestInBinaryHeapTest();
+void OnlineMedianTest();
 
 // Chapter 12 : Searching
 void SquareRootTest();
 void FindDuplicateMissingTest();
+
+// Chapter 13: Hash Tables
+void LongestContainedRangeTest();
 
 // Chapter 14: Sorting
 void UnionOfIntervalsTest();
@@ -92,3 +102,4 @@ void FindLongestSubarrayLessEqualKTest();
 void IsArbitrageExistTest();
 void CountInversionsTest();
 void FindPairSumKTest();
+void BuildBSTFromSortedDoublyListTest();

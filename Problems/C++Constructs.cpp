@@ -8,5 +8,4 @@ struct Foo
 
 void function()
 {
-	auto p = make_shared<Foo>(Foo{ 0, 0 });
 } 

@@ -7,11 +7,11 @@
 vector<vector<int>> GeneratePowerSet(const vector<int>& input)
 {
 	vector<vector<int>> result;
-	vector<int> partialResult;
 	return result;
 }
 
 #pragma region Test
+
 void GeneratePowerSetSimpleTest()
 {
 	vector<vector<int>> golden_result = {{0, 1, 2},{0, 1},{0, 2},{0},

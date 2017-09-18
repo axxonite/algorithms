@@ -6,7 +6,7 @@
 
 int FindClosestElementsInSortedArrays(const vector<vector<int>>& arrays)
 {
-	 return 0;
+	return 0;
 }
 
 #pragma region Test
