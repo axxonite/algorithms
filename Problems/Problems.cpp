@@ -43,6 +43,7 @@ int main()
 	QueueTest();
 
 	// 10. Binary Trees
+	FindSuccessorTest();
 	BSTInSortedOrderTest();
 	ExteriorBinaryTreeTest();
 	BinaryTreeFromPreorderInorderTest();
@@ -51,6 +52,7 @@ int main()
 	// 11. Heaps
 	KLargestInBinaryHeapTest();
 	OnlineMedianTest();
+	SortApproximatelySortedDataTest();
 
 	// 12. Searching
 	SquareRootTest();
@@ -58,9 +60,12 @@ int main()
 
 	// 13. Hash Tables
 	LongestContainedRangeTest();
+	FindAllSubstringsTest();
+	LCA2Test();
 
 	// 14. Sorting
 	UnionOfIntervalsTest();
+	FindSalaryCapTest();
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();
@@ -94,6 +99,7 @@ int main()
 
 	// 19. Graphs
 	IsAnyPlacementFeasibleTest();
+	IsDeadlockedTest();
 
 	// 25. Honor Roll
 	ComputeSkylineTest();

@@ -51,6 +51,7 @@
       <Filter>Problems\6. Arrays</Filter>
     </ClInclude>
     <ClInclude Include="doubly_linked_list_prototype.h" />
+    <ClInclude Include="binary_tree_with_parent_prototype.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -437,7 +438,7 @@
       <Filter>Problems\11. Heaps</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\11_Heaps\11.6_k_largest_elements_binary_heap_solution.cpp">
-      <Filter>Solutions\11, Heaps</Filter>
+      <Filter>Solutions\11. Heaps</Filter>
     </ClCompile>
     <ClCompile Include="Problems\16_Recursion\16.4_power_set_alternative.cpp">
       <Filter>Problems\16. Recursion</Filter>
@@ -497,13 +498,55 @@
       <Filter>Problems\11. Heaps</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\11_Heaps\11.5_online_median_solution.cpp">
-      <Filter>Solutions\11, Heaps</Filter>
+      <Filter>Solutions\11. Heaps</Filter>
     </ClCompile>
     <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp">
       <Filter>Problems\13. Hash Tables</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.10_longest_contained_range_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10.10_successor.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.10_successor_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.4_2_exists.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.4_2_exists_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.2_substring_with_concatenation_of_all_words.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.12_substring_with_concatenation_of_all_words_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.4_lowest_common_ancestor_hash.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.4_lowest_common_ancestor_hash_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.10_completion_search.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\14_Sorting\14.10_completion_search_solution.cpp">
+      <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\11_Heaps\11.3_approximate_sort.cpp">
+      <Filter>Problems\11. Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\11_Heaps\11.3_approximate_sort_solution.cpp">
+      <Filter>Solutions\11. Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\12_Searching\12.8_order_statistic.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\12_Searching\12.8_order_statistic_solution.cpp">
+      <Filter>Solutions\12. Searching</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -612,14 +655,14 @@
     <Filter Include="Problems\11. Heaps">
       <UniqueIdentifier>{8118bfca-cb15-4264-9969-458b6d98b1f9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Solutions\11, Heaps">
-      <UniqueIdentifier>{97645c64-f08a-4800-9cf2-afb1e216c91e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Problems\13. Hash Tables">
       <UniqueIdentifier>{0a60eb93-9005-412a-9788-dd4eea2bf0c0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Solutions\13. Hash Tables">
       <UniqueIdentifier>{16cbae48-ec34-4645-b96f-51a7222a9704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\11. Heaps">
+      <UniqueIdentifier>{97645c64-f08a-4800-9cf2-afb1e216c91e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

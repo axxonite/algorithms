@@ -25,13 +25,19 @@ namespace Solutions
 		int i = 0, j = 0;
 		for (int n = 1; n < k; ++n)
 		{
-			ABSqrt2 iplus1(result[i].a + 1, result[i].b);
-			ABSqrt2 jplusqrt2(result[j].a, result[j].b + 1);
-			result.emplace_back(min(iplus1, jplusqrt2));
-			if (iplus1.val == result.back().val)
+			ABSqrt2 iplus1(result[i].a + 1, result[i].b); // increase a 
+			ABSqrt2 jplusqrt2(result[j].a, result[j].b + 1); // increase b
+			 // add the smaller one to the result.
+			if (iplus1 < jplusqrt2)
+			{
+				result.emplace_back(iplus1);
 				++i;
-			if (jplusqrt2.val == result.back().val)
+			}
+			else
+			{
+				result.emplace_back(jplusqrt2);
 				++j;
+			}
 		}
 		return result;
 	}

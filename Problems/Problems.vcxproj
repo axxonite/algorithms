@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="binary_tree_prototype.h" />
     <ClInclude Include="binary_tree_utils.h" />
+    <ClInclude Include="binary_tree_with_parent_prototype.h" />
     <ClInclude Include="BSTPrototype.h" />
     <ClInclude Include="doubly_linked_list_prototype.h" />
     <ClInclude Include="LinkedListPrototype.h" />
@@ -162,15 +163,21 @@
   <ItemGroup>
     <ClCompile Include="C++Constructs.cpp" />
     <ClCompile Include="Problems.cpp" />
+    <ClCompile Include="Problems\10.10_successor.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.15_exterior_binary_tree.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.7_bst_sorted_order.cpp" />
+    <ClCompile Include="Problems\11_Heaps\11.3_approximate_sort.cpp" />
     <ClCompile Include="Problems\11_Heaps\11.5_online_median.cpp" />
     <ClCompile Include="Problems\11_Heaps\11.6_k_largest_elements_binary_heap.cpp" />
     <ClCompile Include="Problems\12_Searching\12.10_find_missing_and_duplicate.cpp" />
     <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp" />
+    <ClCompile Include="Problems\12_Searching\12.8_order_statistic.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp" />
+    <ClCompile Include="Problems\13_HashTables\13.2_substring_with_concatenation_of_all_words.cpp" />
+    <ClCompile Include="Problems\13_HashTables\13.4_lowest_common_ancestor_hash.cpp" />
+    <ClCompile Include="Problems\14_Sorting\14.10_completion_search.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.6_union_intervals.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.13_add_credits.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays.cpp" />
@@ -195,6 +202,7 @@
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.7_container_with_most_water.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
+    <ClCompile Include="Problems\19_Graphs\19.4_2_exists.cpp" />
     <ClCompile Include="Problems\19_Graphs\19.6_wiring_circuit_board.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.28_count_inversions.cpp" />
@@ -237,15 +245,21 @@
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
     <ClCompile Include="Shared.cpp" />
+    <ClCompile Include="Solutions\10_BinaryTrees\10.10_successor_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.15_exterior_binary_tree_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.7_bst_sorted_order_solution.cpp" />
+    <ClCompile Include="Solutions\11_Heaps\11.3_approximate_sort_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.5_online_median_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.6_k_largest_elements_binary_heap_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.10_find_missing_and_duplicate_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.4_square_root_int_solution.cpp" />
+    <ClCompile Include="Solutions\12_Searching\12.8_order_statistic_solution.cpp" />
     <ClCompile Include="Solutions\13_HashTables\13.10_longest_contained_range_solution.cpp" />
+    <ClCompile Include="Solutions\13_HashTables\13.12_substring_with_concatenation_of_all_words_solution.cpp" />
+    <ClCompile Include="Solutions\13_HashTables\13.4_lowest_common_ancestor_hash_solution.cpp" />
+    <ClCompile Include="Solutions\14_Sorting\14.10_completion_search_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.6_union_intervals_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays_solution.cpp" />
@@ -270,6 +284,7 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.7_container_with_most_water_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\19.4_2_exists_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\19.6_wiring_circuit_board_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.28_count_inversions_solution.cpp" />

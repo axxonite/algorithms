@@ -17,11 +17,10 @@ namespace Solutions
 		int seenSoFar = k;
 		while (*sin >> x)
 		{
+			const int toReplace = uniform_int_distribution<int>{ 0, seenSoFar}(seed);
+			if (toReplace < k)
+				runningSample[toReplace] = x;
 			++seenSoFar;
-			// Generate a random number in [0, num_seen_so_far - 1], and if this number is in [0, k - 1], we replace that element from the sample with x.
-			const int idx_to_replace = uniform_int_distribution<int>{ 0, seenSoFar - 1 }(seed);
-			if (idx_to_replace < k)
-				runningSample[idx_to_replace] = x;
 		}
 		return runningSample;
 	}

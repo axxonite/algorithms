@@ -41,6 +41,7 @@ void CircularQueueTest();
 void QueueTest();
 
 // Chapter 10: Binary Trees
+void FindSuccessorTest();
 void BSTInSortedOrderTest();
 void ExteriorBinaryTreeTest();
 void BinaryTreeFromPreorderInorderTest();
@@ -49,6 +50,7 @@ void LCATest();
 // Chapter 11: Heaps
 void KLargestInBinaryHeapTest();
 void OnlineMedianTest();
+void SortApproximatelySortedDataTest();
 
 // Chapter 12 : Searching
 void SquareRootTest();
@@ -56,9 +58,12 @@ void FindDuplicateMissingTest();
 
 // Chapter 13: Hash Tables
 void LongestContainedRangeTest();
+void FindAllSubstringsTest();
+void LCA2Test();
 
 // Chapter 14: Sorting
 void UnionOfIntervalsTest();
+void FindSalaryCapTest();
 
 // Chapter 15: Binary Search Trees
 void AddCreditsTest();
@@ -92,6 +97,7 @@ void GetMaxTrappedWaterTest();
 
 // Chapter 19: Graphs
 void IsAnyPlacementFeasibleTest();
+void IsDeadlockedTest();
 
 // Chapter 25: Honor roll
 void ComputeSkylineTest();

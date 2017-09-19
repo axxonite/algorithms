@@ -3,6 +3,8 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
+#define TEST 0
+
 vector<vector<int>> BinaryTreeDepthOrder(const unique_ptr<BinaryTreeNode<int>>& tree)
 {
 	vector<vector<int>> result;

@@ -6,7 +6,7 @@
 #define TEST 0
 
 // Returns the root of the corresponding BST. The prev and next fields of the list nodes are used as the BST nodes left and right fields, respectively. The length of the list is given.
-shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNode<int>> L, int length) 
+shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNode<int>> l, int length) 
 {
 	return nullptr;
 }
@@ -27,14 +27,10 @@ void InorderTraversal(const shared_ptr<ListNode<T>>& node, const T& pre,
 void BuildBSTFromSortedDoublyListTest()
 {
 #if TEST
-	shared_ptr<ListNode<int>> temp0 =
-		make_shared<ListNode<int>>(ListNode<int>{0});
-	shared_ptr<ListNode<int>> temp1 =
-		make_shared<ListNode<int>>(ListNode<int>{1});
-	shared_ptr<ListNode<int>> temp2 =
-		make_shared<ListNode<int>>(ListNode<int>{2});
-	shared_ptr<ListNode<int>> temp3 =
-		make_shared<ListNode<int>>(ListNode<int>{3});
+	shared_ptr<ListNode<int>> temp0 = make_shared<ListNode<int>>(ListNode<int>{0});
+	shared_ptr<ListNode<int>> temp1 = make_shared<ListNode<int>>(ListNode<int>{1});
+	shared_ptr<ListNode<int>> temp2 = make_shared<ListNode<int>>(ListNode<int>{2});
+	shared_ptr<ListNode<int>> temp3 = make_shared<ListNode<int>>(ListNode<int>{3});
 	temp0->next = temp1;
 	temp1->next = temp2;
 	temp2->next = temp3;
