@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-vector<int> KLargestInBinaryHeap(const vector<int>& a, int k)
+vector<int> KLargestInBinaryHeap(const vector<int>& A, int k)
 {
 	vector<int> result;
 	return result;
@@ -35,6 +35,10 @@ void KLargestInBinaryHeapTest()
 	expected_result = {100};
 	assert(equal(result.begin(), result.end(), expected_result.begin(),
 		expected_result.end()));
+
+	result = KLargestInBinaryHeap(max_heap, 0);
+	expected_result = {};
+	assert(equal(result.begin(), result.end(), expected_result.begin(), expected_result.end()));
 #endif
 }
 

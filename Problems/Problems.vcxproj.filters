@@ -548,6 +548,9 @@
     <ClCompile Include="Solutions\12_Searching\12.8_order_statistic_solution.cpp">
       <Filter>Solutions\12. Searching</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\Math\GaussJordanElimination.cpp">
+      <Filter>Problems\Math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

@@ -14,7 +14,7 @@ struct TreeNode
 	vector<Edge> edges;
 };
 
-double ComputeDiameter(const unique_ptr<TreeNode>& T)
+double ComputeDiameter(const unique_ptr<TreeNode>& t) 
 {
 	return 0;
 }

@@ -241,6 +241,7 @@
     <ClCompile Include="Problems\9_StacksQueues\9.6_view_sunset.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.7_binary_tree_level_order.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.9_queue_from_stacks.cpp" />
+    <ClCompile Include="Problems\Math\GaussJordanElimination.cpp" />
     <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />

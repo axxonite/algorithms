@@ -7,16 +7,16 @@
 class ClientsCreditsInfo
 {
 public:
-	void Insert(const string& client_id, int c)
+	void Insert(const string& client, int c)
 	{
 	}
 
-	bool Remove(const string& client_id)
+	bool Remove(const string& client)
 	{
 		return false;
 	}
 
-	int Lookup(const string& client_id) const
+	int Lookup(const string& client) const
 	{
 		return 0;
 	}

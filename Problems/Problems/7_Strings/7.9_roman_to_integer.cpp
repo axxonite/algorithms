@@ -8,6 +8,7 @@ int RomanToInteger(const string& s)
 {
 	return 0;
 }
+
 #pragma region Test
 
 void RomanToIntegerTest()

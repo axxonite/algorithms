@@ -14,6 +14,7 @@ namespace Solutions
 		while (x >= y)
 		{
 			// Skip powers until we get one that is smaller than x;
+			// DO NOT add a >= sign here... I made this mistake when it should have been obvious.
 			while (ypow > x)
 			{
 				ypow >>= 1;

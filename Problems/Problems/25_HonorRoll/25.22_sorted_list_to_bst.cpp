@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 #include "doubly_linked_list_prototype.h"
+#include "binary_tree_prototype.h"
 
 #define TEST 0
 
-// Returns the root of the corresponding BST. The prev and next fields of the list nodes are used as the BST nodes left and right fields, respectively. The length of the list is given.
-shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNode<int>> l, int length) 
+shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNode<int>> l, int length)
 {
 	return nullptr;
 }
