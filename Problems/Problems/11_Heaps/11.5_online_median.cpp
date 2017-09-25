@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-vector<double> global_result; // ?????? Fix this, we don't need this to be global.
+vector<double> globalResult;
 
 void OnlineMedian(istringstream* sequence)
 {
@@ -17,29 +17,29 @@ void OnlineMedianSmallTest()
 	istringstream sequence("5 4 3 2 1");
 	OnlineMedian(&sequence);
 	vector<double> golden = {5, 4.5, 4, 3.5, 3};
-	assert(equal(golden.begin(), golden.end(), global_result.begin(),
-		global_result.end()));
+	assert(equal(golden.begin(), golden.end(), globalResult.begin(),
+		globalResult.end()));
 
-	global_result.clear();
+	globalResult.clear();
 	istringstream sequence1("1 2 3 4 5");
 	OnlineMedian(&sequence1);
 	golden = {1, 1.5, 2, 2.5, 3};
-	assert(equal(golden.begin(), golden.end(), global_result.begin(),
-		global_result.end()));
+	assert(equal(golden.begin(), golden.end(), globalResult.begin(),
+		globalResult.end()));
 
-	global_result.clear();
+	globalResult.clear();
 	istringstream sequence2("1 0 3 5 2 0 1");
 	OnlineMedian(&sequence2);
 	golden = {1, 0.5, 1, 2, 2, 1.5, 1};
-	assert(equal(golden.begin(), golden.end(), global_result.begin(),
-		global_result.end()));
+	assert(equal(golden.begin(), golden.end(), globalResult.begin(),
+		globalResult.end()));
 
-	global_result.clear();
+	globalResult.clear();
 	istringstream sequence3("-1");
 	OnlineMedian(&sequence3);
 	golden = {-1.0};
-	assert(equal(golden.begin(), golden.end(), global_result.begin(),
-		global_result.end()));
+	assert(equal(golden.begin(), golden.end(), globalResult.begin(),
+		globalResult.end()));
 }
 
 void OnlineMedianTest()

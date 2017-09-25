@@ -5,8 +5,8 @@
 
 #define TEST 0
 
-// Assumes L has at least k nodes, deletes the k-th last node in L.
-shared_ptr<ListNode<int>> RemoveKthLast(const shared_ptr<ListNode<int>>& L, int k)
+// Assumes L has at least k nodes, deletes the k-th last node in l.
+shared_ptr<ListNode<int>> RemoveKthLast(const shared_ptr<ListNode<int>>& l, int k)
 {
 	return nullptr;
 }

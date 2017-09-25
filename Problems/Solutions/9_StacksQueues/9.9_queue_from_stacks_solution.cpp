@@ -7,28 +7,28 @@ namespace Solutions
 	class QueueWithStacks
 	{
 	public:
-		void Enqueue(int x) { enqueue_.emplace(x); }
+		void Enqueue(int x) { enqueue.emplace(x); }
 
 		int Dequeue()
 		{
-			if (dequeue_.empty())
+			if (dequeue.empty())
 			{
-				// Transfers the elements in enqueue_ to dequeue_.
-				while (!enqueue_.empty())
+				// Transfers the elements in enqueue to dequeue.
+				while (!enqueue.empty())
 				{
-					dequeue_.emplace(enqueue_.top());
-					enqueue_.pop();
+					dequeue.emplace(enqueue.top());
+					enqueue.pop();
 				}
 			}
 
-			if (dequeue_.empty())
-				throw length_error("empty queue"); // dequeue_ is still empty!
-			int ret = dequeue_.top();
-			dequeue_.pop();
+			if (dequeue.empty())
+				throw length_error("empty queue"); // dequeue is still empty!
+			int ret = dequeue.top();
+			dequeue.pop();
 			return ret;
 		}
 
 	private:
-		stack<int> enqueue_, dequeue_;
+		stack<int> enqueue, dequeue;
 	};
 }

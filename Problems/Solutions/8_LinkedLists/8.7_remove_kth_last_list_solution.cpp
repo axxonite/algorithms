@@ -5,14 +5,17 @@
 
 namespace Solutions
 {
-	// Assumes L has at least k nodes, deletes the k-th last node in L.
-	shared_ptr<ListNode<int>> RemoveKthLast(const shared_ptr<ListNode<int>>& L, int k)
+	// Assumes l has at least k nodes, deletes the k-th last node in l.
+	shared_ptr<ListNode<int>> RemoveKthLast(const shared_ptr<ListNode<int>>& l, int k)
 	{
-		auto dummyHead = make_shared<ListNode<int>>(ListNode<int>{0, L});
+		// create a dummy head and attach the list to the front of it.
+		auto dummyHead = make_shared<ListNode<int>>(ListNode<int>{0, l});
 		auto first = dummyHead->next;
 		while (k--)
-			first = first->next;
+			first = first->next; // advance iterator by k steps
 
+		// now advance both until we reach the end of the list on the first iterator, and the second iterator will be k steps behind.
+		// we we want the second iterator to be at k-1, so that we can unlink the kth node from it.
 		auto second = dummyHead;
 		while (first)
 			second = second->next, first = first->next;

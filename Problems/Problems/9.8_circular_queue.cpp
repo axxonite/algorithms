@@ -20,7 +20,7 @@ public:
 		return 0;
 	}
 
-	size_t size() const { return 0; }
+	size_t Size() const { return 0; }
 
 private:
 };
@@ -98,7 +98,7 @@ void CircularQueueTest()
 	q.Enqueue(4);
 	q.Enqueue(4);
 	q.Enqueue(4);
-	assert(q.size() == 9);
+	assert(q.Size() == 9);
 #endif
 }
 

@@ -4,27 +4,29 @@
 
 namespace Solutions
 {
-	vector<double> global_result; // ?????? Fix this, we don't need this to be global.
+	vector<double> globalResult; // ?????? Fix this, we don't need this to be global.
 
 	void OnlineMedian(istringstream* sequence)
 	{
-		priority_queue<int, vector<int>, greater<>> min_heap; // min_heap stores the larger half seen so far.
-		priority_queue<int, vector<int>, less<>> max_heap; // max_heap stores the smaller half seen so far.
+		priority_queue<int, vector<int>, greater<>> minHeap; // min_heap stores the larger half seen so far.
+		priority_queue<int, vector<int>, less<>> maxHeap; // max_heap stores the smaller half seen so far.
 
 		int x;
 		while (*sequence >> x)
 		{
-			min_heap.emplace(x);
-			max_heap.emplace(min_heap.top());
-			min_heap.pop();
-			// Ensure min_heap and max_heap have equal number of elements if an even number of elements is read; otherwise, min_heap must have one more element than max_heap.
-			if (max_heap.size() > min_heap.size())
+			minHeap.emplace(x); // add to min heap.
+			maxHeap.emplace(minHeap.top()); // transfer min heap top to max heap.
+			minHeap.pop();
+			// Ensure minHeap and maxHeap have equal number of elements if an even number of elements is read; otherwise, minHeap must have one more element than maxHeap.
+			// in other words, every second element should go to the min heap.
+			if (maxHeap.size() > minHeap.size())
 			{
-				min_heap.emplace(max_heap.top());
-				max_heap.pop();
+				minHeap.emplace(maxHeap.top());
+				maxHeap.pop();
 			}
 
-			global_result.emplace_back(min_heap.size() == max_heap.size() ? 0.5 * (min_heap.top() + max_heap.top()) : min_heap.top());
+			// for even numbers of elements, take the average of the top values in each heap, for odd number of elements, take the top value from the min heap where the last element was inserted.
+			globalResult.emplace_back(minHeap.size() == maxHeap.size() ? 0.5 * (minHeap.top() + maxHeap.top()) : minHeap.top());
 		}
 	}
 }
