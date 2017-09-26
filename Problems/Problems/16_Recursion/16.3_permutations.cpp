@@ -11,6 +11,7 @@ vector<vector<int>> Permutations(vector<int> a)
 }
 
 #pragma region Test
+
 void PermutationsSmallTest()
 {
 	vector<int> A = {0, 1, 2};

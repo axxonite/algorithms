@@ -175,7 +175,7 @@
     <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp" />
     <ClCompile Include="Problems\12_Searching\12.8_order_statistic.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp" />
-    <ClCompile Include="Problems\13_HashTables\13.2_substring_with_concatenation_of_all_words.cpp" />
+    <ClCompile Include="Problems\13_HashTables\13.12_substring_with_concatenation_of_all_words.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.4_lowest_common_ancestor_hash.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.10_completion_search.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.6_union_intervals.cpp" />

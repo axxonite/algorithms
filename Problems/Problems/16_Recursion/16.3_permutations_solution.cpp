@@ -19,6 +19,7 @@ namespace Solutions
 		{
 			swap(a[i], a[j]);
 			// Generate all permutations for a[i + 1, a.size() - 1].
+			// Note that we use increment i, not j. This means we are swapping i with every other element after it in the array, and generating permutations on the rest of the array.
 			DirectedPermutations(i + 1, a, result);
 			swap(a[i], a[j]);
 		}

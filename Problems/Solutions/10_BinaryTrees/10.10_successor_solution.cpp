@@ -8,20 +8,19 @@ namespace Solutions
 	BinaryTreeNodeP<int>* FindSuccessor(const unique_ptr<BinaryTreeNodeP<int>>& node)
 	{
 		auto* iter = node.get();
+		// If there is a right subtree, then the successor is the leftmost element in the node's right subtree.
 		if (iter->right != nullptr)
 		{
-			// Successor is the leftmost element in node's right subtree.
 			iter = iter->right.get();
 			while (iter->left)
 				iter = iter->left.get();
 			return iter;
 		}
 
-		// Find the closest ancestor whose left subtree contains node.
+		// Otherwise, the successor is the closest ancestor where we came back up from the left side.
 		while (iter->parent != nullptr && iter->parent->right.get() == iter)
 			iter = iter->parent;
-		// A return value of nullptr means node does not have successor, i.e., it is
-		// the rightmost node in the tree.
+		// A return value of nullptr means node does not have successor, i.e., it  the rightmost node in the tree.
 		return iter->parent;
 	}
 }

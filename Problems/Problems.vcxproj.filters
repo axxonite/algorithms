@@ -518,9 +518,6 @@
     <ClCompile Include="Solutions\19_Graphs\19.4_2_exists_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.2_substring_with_concatenation_of_all_words.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.12_substring_with_concatenation_of_all_words_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
     </ClCompile>
@@ -550,6 +547,9 @@
     </ClCompile>
     <ClCompile Include="Problems\Math\GaussJordanElimination.cpp">
       <Filter>Problems\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.12_substring_with_concatenation_of_all_words.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -16,7 +16,7 @@ struct GraphVertex
 	vector<GraphVertex*> edges;
 };
 
-bool IsDeadlocked(vector<GraphVertex>* G)
+bool IsDeadlocked(vector<GraphVertex>* g)
 {
 	return false;
 }

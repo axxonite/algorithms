@@ -4,7 +4,7 @@
 
 namespace Solutions
 {
-	vector<double> globalResult; // ?????? Fix this, we don't need this to be global.
+	vector<double> globalResult;
 
 	void OnlineMedian(istringstream* sequence)
 	{

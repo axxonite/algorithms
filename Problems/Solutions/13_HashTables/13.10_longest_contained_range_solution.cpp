@@ -15,23 +15,24 @@ namespace Solutions
 			int a = *unprocessed.begin();
 			unprocessed.erase(a);
 
-			// Finds the lower bound of the largest range containing a.
-			int lower_bound = a - 1;
-			while (unprocessed.count(lower_bound))
+			// Look for the next values below a.
+			int low = a - 1;
+			while (unprocessed.count(low))
 			{
-				unprocessed.erase(lower_bound);
-				--lower_bound;
+				unprocessed.erase(low);
+				--low;
 			}
 
-			// Finds the upper bound of the largest range containing a.
-			int upper_bound = a + 1;
-			while (unprocessed.count(upper_bound))
+			// Look for the next values above a.
+			int high = a + 1;
+			while (unprocessed.count(high))
 			{
-				unprocessed.erase(upper_bound);
-				++upper_bound;
+				unprocessed.erase(high);
+				++high;
 			}
 
-			maxIntervalSize = max(maxIntervalSize, upper_bound - lower_bound - 1);
+			// note the - 1 here, since if high == low the range still has a length of 1.
+			maxIntervalSize = max(maxIntervalSize, high - low - 1);
 		}
 		return maxIntervalSize;
 	}
