@@ -4,6 +4,10 @@
 
 #define TEST 0
 
+void DirectedPermutations(vector<int>& a, int offset, vector<vector<int>>& result)
+{
+}
+
 vector<vector<int>> Permutations(vector<int> a)
 {
 	vector<vector<int>> result;

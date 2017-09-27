@@ -13,9 +13,7 @@ namespace Solutions
 			// Get the substring matching the current unit size position.
 			string curWord = s.substr(start + i * wordSize, wordSize);
 			auto iter = dictWordInstanceCount.find(curWord);
-			if (iter == dictWordInstanceCount.end())
-				return false;
-			if (++stringWordInstanceCount[curWord] > iter->second)
+			if (iter == dictWordInstanceCount.end() || ++stringWordInstanceCount[curWord] > iter->second)
 				return false; // can't match this word because there are more instance in the string than in the word dictionary.
 		}
 		return true;
@@ -33,6 +31,7 @@ namespace Solutions
 
 		vector<int> result;
 		// try to match each wordSize position in the input string.
+		// Notice the use of <= because we are comparing word sizes.
 		for (int i = 0; i + wordSize * words.size() <= s.size(); ++i)
 			if (MatchAllWordsInDict(s, dictWordInstanceCount, i, words.size(), wordSize))
 				result.emplace_back(i);

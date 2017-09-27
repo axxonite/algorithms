@@ -77,6 +77,7 @@ void GeneratePowerSetTest();
 void PalindromePartitioningTest();
 void GenerateAllBinaryTreesTest();
 void ComputeDiameterTest();
+void ComputeTowerHanoiTest();
 
 // Chapter 17: Dynamic Programming.
 void NumCombinationsForFinalScoreTest();
@@ -86,6 +87,7 @@ void LongestNondecreasingSubsequenceLengthTest();
 void MinimumMessinessTest();
 void MinimumPathWeightTest();
 void ComputeBinomialCoefficientTest();
+void OptimumSubjectToCapacityTest();
 
 // Chapter 18: Greedy Algorithms
 void HasThreeSumTest();

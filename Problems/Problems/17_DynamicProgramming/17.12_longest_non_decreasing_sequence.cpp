@@ -16,6 +16,8 @@ void LongestNondecreasingSubsequenceLengthTest()
 #if TEST
 	vector<int> a = { 0, 8, 4, 12, 2, 10, 6, 14, 1, 9 };
 	assert(LongestNondecreasingSubsequenceLength(a) == 4);
+	vector<int> a2 = { 0, 8, 4, 12, 12, 12, 12, 12, 2, 10, 6, 14, 1, 9 };
+	assert(LongestNondecreasingSubsequenceLength(a2) == 8);
 #endif
 }
 

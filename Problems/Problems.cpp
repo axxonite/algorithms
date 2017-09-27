@@ -79,6 +79,7 @@ int main()
 	PalindromePartitioningTest();
 	GenerateAllBinaryTreesTest();
 	ComputeDiameterTest();
+	ComputeTowerHanoiTest();
 
 	// 17. Dynamic Progamming
 	NumCombinationsForFinalScoreTest();
@@ -88,6 +89,7 @@ int main()
 	MinimumMessinessTest();
 	MinimumPathWeightTest();
 	ComputeBinomialCoefficientTest();
+	OptimumSubjectToCapacityTest();
 
 	// 18. Greedy Algorithms
 	HasThreeSumTest();

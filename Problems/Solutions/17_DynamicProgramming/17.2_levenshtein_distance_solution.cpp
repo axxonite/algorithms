@@ -16,10 +16,10 @@ namespace Solutions
 				distance[indexA][indexB] = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB - 1, distance);
 			else
 			{
-				int substituteLast = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB - 1, distance);
-				int addLast = ComputeDistanceBetweenPrefixes(a, indexA, b, indexB - 1, distance); // Transform a to b - 1, add b's last character
-				int deleteLast = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB, distance); // Trasnform a - 1 to b, and delete a's last character
-				distance[indexA][indexB] = 1 + min({substituteLast, addLast, deleteLast});
+				int substituteLastAB = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB - 1, distance);
+				int keepLastB = ComputeDistanceBetweenPrefixes(a, indexA, b, indexB - 1, distance); // Transform a to b - 1 and keep b's last character
+				int deleteLastA = ComputeDistanceBetweenPrefixes(a, indexA - 1, b, indexB, distance); // Delete a's last character and transform a - 1 to b, 
+				distance[indexA][indexB] = 1 + min({substituteLastAB, keepLastB, deleteLastA});
 			}
 		}
 		return distance[indexA][indexB];
