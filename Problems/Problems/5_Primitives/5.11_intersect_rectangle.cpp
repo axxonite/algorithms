@@ -6,8 +6,8 @@
 
 struct Rectangle
 {
-	int x1, y1, width, height;
-	int x2, y2;
+	int left, top, width, height;
+	int right, bottom;
 
 	Rectangle()
 	{
@@ -15,25 +15,26 @@ struct Rectangle
 
 	Rectangle(int _x1, int _y1, int _x2, int _y2)
 	{
-		x1 = _x1;
-		y1 = _y1;
-		x2 = _x2;
-		y2 = _y2;
-		width = x2 - x1;
-		height = y2 - y1;
+		left = _x1;
+		top = _y1;
+		right = _x2;
+		bottom = _y2;
+		width = right - left;
+		height = bottom - top;
 	}
 
-	void print(string s) const { cout << s << this->x1 << ' ' << this->y1 << ' ' << this->width << ' ' << this->height << endl; }
+	void print(string s) const { cout << s << this->left << ' ' << this->top << ' ' << this->width << ' ' << this->height << endl; }
 };
 
 bool IsIntersect(const Rectangle& a, const Rectangle& b)
 {
-	return false;
+	return true;
 }
 
+// return {0, 0, -1, -1} if there is no intersection.
 Rectangle IntersectRectangle(const Rectangle& a, const Rectangle& b)
 {
-	return Rectangle{ 0, 0, -1, -1 };
+	return Rectangle{ 0, 0, 0, 0 };
 }
 
 #pragma region Test
@@ -42,15 +43,15 @@ void SmallTest()
 {
 	Rectangle R1 = {0, 0, 2, 2}, R2 = {1, 1, 3, 3};
 	auto result = IntersectRectangle(R1, R2);
-	assert(result.x1 == 1 && result.y1 == 1 && result.width == 1 &&
+	assert(result.left == 1 && result.top == 1 && result.width == 1 &&
 		result.height == 1);
 	R1 = {0, 0, 1, 1} , R2 = {1, 1, 3, 3};
 	result = IntersectRectangle(R1, R2);
-	assert(result.x1 == 1 && result.y1 == 1 && result.width == 0 &&
+	assert(result.left == 1 && result.top == 1 && result.width == 0 &&
 		result.height == 0);
 	R1 = {0, 0, 1, 1} , R2 = {2, 2, 3, 3};
 	result = IntersectRectangle(R1, R2);
-	assert(result.x1 == 0 && result.y1 == 0 && result.width == -1 &&
+	assert(result.left == 0 && result.top == 0 && result.width == -1 &&
 		result.height == -1);
 }
 
@@ -70,9 +71,9 @@ void RectangleIntersectionTest()
 		{
 			default_random_engine gen((random_device())());
 			uniform_int_distribution<int> dis(1, 100);
-			R1.x1 = dis(gen), R1.y1 = dis(gen), R1.width = dis(gen),
+			R1.left = dis(gen), R1.top = dis(gen), R1.width = dis(gen),
 				R1.height = dis(gen);
-			R2.x1 = dis(gen), R2.y1 = dis(gen), R2.width = dis(gen),
+			R2.left = dis(gen), R2.top = dis(gen), R2.width = dis(gen),
 				R2.height = dis(gen);
 		}
 	// Intersect rectangle.

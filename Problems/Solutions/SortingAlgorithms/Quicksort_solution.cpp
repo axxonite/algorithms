@@ -27,6 +27,7 @@ namespace Solutions
 		if (start < end)
 		{
 			auto p = Partition(values, start, end);
+			// the correct thing to do is here to split the sort with p-1 as the last element. If the range from start to end is already in sorted, the returned pivot will be p = end. Calling quicksort(start, p) on this would result in an infinite loop.
 			Quicksort(values, start, p - 1);
 			Quicksort(values, p, end);
 		}

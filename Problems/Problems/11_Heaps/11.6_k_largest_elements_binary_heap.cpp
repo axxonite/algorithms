@@ -9,6 +9,7 @@ vector<int> KLargestInBinaryHeap(const vector<int>& A, int k)
 	vector<int> result;
 	return result;
 }
+
 #pragma region Test
 
 void KLargestInBinaryHeapTest()

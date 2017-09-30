@@ -13,7 +13,7 @@ namespace Solutions
 			int width = j - i;
 			// Max water is the minimum of the height on either side.
 			maxWater = max(maxWater, width * min(heights[i], heights[j]));
-			// if the heght at i is greater, then j is the limiting side, so decrease j.
+			// if the height at i is greater, then j is the limiting side, so decrease j.
 			if (heights[i] > heights[j])
 				--j;
 			else
