@@ -22,6 +22,7 @@ namespace Solutions
 		{
 			++table[buf], ++n;
 			// Detecting k items in table, at least one of them must have exactly one in it. We will discard those k items by one for each.
+			// Must check for exactly k here.
 			if (table.size() == k)
 			{
 				auto it = table.begin();

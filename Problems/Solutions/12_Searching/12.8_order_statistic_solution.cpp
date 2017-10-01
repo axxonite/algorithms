@@ -12,13 +12,13 @@ namespace Solutions
 	int PartitionAroundPivot(int left, int right, int pivotIndex, Compare comp, vector<int>& a)
 	{
 		int pivotVal = a[pivotIndex];
-		int newPivotIndex = left;
+		int j = left;
 		swap(a[pivotIndex], a[right]);
 		for (int i = left; i < right; ++i)
 			if (comp(a[i], pivotVal))
-				swap(a[i], a[newPivotIndex++]);
-		swap(a[right], a[newPivotIndex]);
-		return newPivotIndex;
+				swap(a[i], a[j++]);
+		swap(a[right], a[j]);
+		return j;
 	}
 
 	// The numbering starts from one for k.

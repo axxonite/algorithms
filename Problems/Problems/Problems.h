@@ -55,6 +55,7 @@ void SortApproximatelySortedDataTest();
 // Chapter 12 : Searching
 void SquareRootTest();
 void FindDuplicateMissingTest();
+void FindKthTest();
 
 // Chapter 13: Hash Tables
 void LongestContainedRangeTest();

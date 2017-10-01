@@ -57,6 +57,7 @@ int main()
 	// 12. Searching
 	SquareRootTest();
 	FindDuplicateMissingTest();
+	FindKthTest();
 
 	// 13. Hash Tables
 	LongestContainedRangeTest();

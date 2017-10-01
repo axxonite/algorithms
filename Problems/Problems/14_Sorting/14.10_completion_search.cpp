@@ -4,9 +4,9 @@
 
 #define TEST 0
 
-double FindSalaryCap(double targetPayroll, vector<double> current_salaries)
+double FindSalaryCap(double targetPayroll, vector<double> salaries)
 {
-	return 0;
+	return -1.0;
 }
 
 #pragma region Test
