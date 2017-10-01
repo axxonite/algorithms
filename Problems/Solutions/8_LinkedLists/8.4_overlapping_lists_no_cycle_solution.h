@@ -28,7 +28,7 @@ namespace Solutions
 		// Advances the longer list to get equal length lists.
 		AdvanceListByK(abs(l1Length - l2Length), l1Length > l2Length ? &l1 : &l2);
 		// Note that lists overlap only if they have the same tail node; once the lists converge at a node, they cannot diverge at a later node.
-		while (l1 && l2 && l1 != l2)
+		while (l1 && l2 && l1 != l2) // it's not actually necessary to test for l1 and l2 not being null because if one reaches null the other will reach null as well, meaning l1 == l2
 			l1 = l1->next, l2 = l2->next;
 		return l1; // nullptr implies there is no overlap between l1 and l2.
 	}

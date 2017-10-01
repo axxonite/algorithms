@@ -17,14 +17,14 @@ bool IsAnyPlacementFeasible(vector<GraphVertex>& g)
 
 #pragma region Test
 
-bool DFS(GraphVertex* s)
+bool IsTwoColorableDFS(GraphVertex* s)
 {
 	for (GraphVertex*& t : s->edges)
 	{
 		if (t->d == -1)
 		{
-			t->d = !s->d;
-			if (!DFS(t))
+			t->d = s->d + 1;
+			if (!IsTwoColorableDFS(t))
 				return false;
 		}
 		else if (t->d == s->d)
@@ -43,7 +43,7 @@ bool IsTwoColorable(vector<GraphVertex>* G)
 		if (v.d == -1)
 		{
 			v.d = 0;
-			if (!DFS(&v))
+			if (!IsTwoColorableDFS(&v))
 				return false;
 		}
 	}
@@ -89,7 +89,8 @@ void IsAnyPlacementFeasibleTest()
 		*/
 		bool res = IsAnyPlacementFeasible(G);
 		//cout << boolalpha << res << endl;
-		assert(res == IsTwoColorable(&G));
+		bool res2 = IsTwoColorable(&G);
+		assert(res == res2);
 	}
 #endif
 }
