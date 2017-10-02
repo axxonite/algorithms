@@ -13,7 +13,6 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include <fstream>
 #include <array>
 #include <limits>
 #include <vector>
@@ -27,6 +26,5 @@
 #include <stack>
 #include <numeric>
 #include "BSTPrototype.h"
-#include <bitset>
 
 using namespace std;

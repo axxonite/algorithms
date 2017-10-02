@@ -55,8 +55,6 @@ void SortApproximatelySortedDataTest();
 // Chapter 12 : Searching
 void SquareRootTest();
 void FindDuplicateMissingTest();
-void FindMissingElementTest();
-void SquareRootFloatTest();
 
 // Chapter 13: Hash Tables
 void LongestContainedRangeTest();
@@ -70,7 +68,6 @@ void FindSalaryCapTest();
 // Chapter 15: Binary Search Trees
 void AddCreditsTest();
 void FindClosestElementsInSortedArraysTest();
-void FindLCATest();
 
 // Chapter 16: Recursion
 void SolveNQueensTest();
@@ -81,7 +78,6 @@ void PalindromePartitioningTest();
 void GenerateAllBinaryTreesTest();
 void ComputeDiameterTest();
 void ComputeTowerHanoiTest();
-void SolveSudokuTest();
 
 // Chapter 17: Dynamic Programming.
 void NumCombinationsForFinalScoreTest();

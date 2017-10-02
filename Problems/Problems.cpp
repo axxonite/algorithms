@@ -57,8 +57,6 @@ int main()
 	// 12. Searching
 	SquareRootTest();
 	FindDuplicateMissingTest();
-	FindMissingElementTest();
-	SquareRootFloatTest();
 
 	// 13. Hash Tables
 	LongestContainedRangeTest();
@@ -72,7 +70,6 @@ int main()
 	// 15. Binary Search Trees
 	AddCreditsTest();
 	FindClosestElementsInSortedArraysTest();
-	FindLCATest();
 
 	// 16. Recursion
 	SolveNQueensTest();
@@ -83,7 +80,6 @@ int main()
 	GenerateAllBinaryTreesTest();
 	ComputeDiameterTest();
 	ComputeTowerHanoiTest();
-	SolveSudokuTest();
 
 	// 17. Dynamic Progamming
 	NumCombinationsForFinalScoreTest();

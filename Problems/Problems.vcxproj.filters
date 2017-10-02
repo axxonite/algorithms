@@ -563,36 +563,6 @@
     <ClCompile Include="Solutions\16_Recursion\16.1_tower_hanoi_solution.cpp">
       <Filter>Solutions\16. Recursion</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\16_Recursion\16.9_sudoku_solve.cpp">
-      <Filter>Problems\16. Recursion</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\16_Recursion\16.9_sudoku_solve_solution.cpp">
-      <Filter>Solutions\16. Recursion</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\15_BinarySearchTrees\15.4_bst_lowest_common_ancestor.cpp">
-      <Filter>Problems\15. Binary Search Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\15_BinarySearchTrees\15.4_bst_lowest_common_ancestor_solution.cpp">
-      <Filter>Solutions\15. Binary Search Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\12_Searching\12.9_missing_element.cpp">
-      <Filter>Problems\12. Searching</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\12_Searching\12.9_missing_element_solution.cpp">
-      <Filter>Solutions\12. Searching</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\12_Searching\12.5_square_root.cpp">
-      <Filter>Problems\12. Searching</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\12_Searching\12.5_square_root_solution.cpp">
-      <Filter>Solutions\12. Searching</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\11_Heaps\11.1_merge_sorted_arrays.cpp">
-      <Filter>Problems\11. Heaps</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\11_Heaps\11.1_merge_sorted_arrays_solution.cpp">
-      <Filter>Solutions\11. Heaps</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
