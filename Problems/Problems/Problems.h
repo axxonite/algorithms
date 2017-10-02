@@ -57,6 +57,7 @@ void SquareRootTest();
 void FindDuplicateMissingTest();
 void FindMissingElementTest();
 void SquareRootFloatTest();
+void FindKthTest();
 
 // Chapter 13: Hash Tables
 void LongestContainedRangeTest();

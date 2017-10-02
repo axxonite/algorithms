@@ -59,6 +59,7 @@ int main()
 	FindDuplicateMissingTest();
 	FindMissingElementTest();
 	SquareRootFloatTest();
+	FindKthTest();
 
 	// 13. Hash Tables
 	LongestContainedRangeTest();
