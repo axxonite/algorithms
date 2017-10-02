@@ -6,7 +6,7 @@
 
 vector<int> BSTInSortedOrder(const unique_ptr<BSTNode<int>>& t)
 {
-	vector<int> result;
+	vector<int> result;	
 	return result;
 }
 

@@ -6,45 +6,37 @@ namespace Solutions
 {
 	int FindMissingElement(ifstream* ifs)
 	{
+		// Count how many elements there are in each bucket.
 		const int kNumBucket = 1 << 16;
-		vector<size_t> counter(kNumBucket, 0);
+		vector<size_t> bucketCount(kNumBucket, 0);
 		unsigned int x;
 		while (*ifs >> x)
-		{
-			int upperPartX = x >> 16;
-			++counter[upperPartX];
-		}
+			++bucketCount[x >> 16];
 
-		// Look for a bucket that contains less than (1 << 16) elements.
+		// Find a bucket that is not filled to capacity.
 		const int kBucketCapacity = 1 << 16;
 		int candidateBucket = 0;
 		for (int i = 0; i < kNumBucket; ++i)
 		{
-			if (counter[i] < kBucketCapacity)
+			if (bucketCount[i] < kBucketCapacity)
 			{
 				candidateBucket = i;
 				break;
 			}
 		}
 
-		// Finds all IP addresses in the stream whose first 16 bits
-		// are equal to candidate_bucket.
+		// Find all elements for the candidate bucket and record the presence of the 16 bit LSB.
 		ifs->clear();
 		ifs->seekg(0, ios::beg);
 		bitset<kBucketCapacity> bitVec;
 		while (*ifs >> x)
 		{
-			int upperPartX = x >> 16;
-			if (candidateBucket == upperPartX)
-			{
-				// Records the presence of 16 LSB of x.
-				int lowerPartX = ((1 << 16) - 1) & x;
-				bitVec.set(lowerPartX);
-			}
+			if (candidateBucket == (x >> 16))
+				bitVec.set(((1 << 16) - 1) & x);
 		}
 		ifs->close();
 
-		// At least one of the LSB combinations is absent, find it.
+		// Find which 16 bit value is missing.
 		for (int i = 0; i < kBucketCapacity; ++i)
 			if (bitVec[i] == 0)
 				return (candidateBucket << 16) | i;

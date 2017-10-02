@@ -5,7 +5,7 @@
 #define TEST 0
 
 // Input nodes are not nonempty and the key at s is less than or equal to that at b.
-BSTNode<int>* FindLCA(const unique_ptr<BSTNode<int>>& tree, const unique_ptr<BSTNode<int>>& s, const unique_ptr<BSTNode<int>>& b)
+BSTNode<int>* FindLCA(const unique_ptr<BSTNode<int>>& tree, const unique_ptr<BSTNode<int>>& a, const unique_ptr<BSTNode<int>>& b)
 {
 	return nullptr;
 }

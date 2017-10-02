@@ -31,8 +31,8 @@ namespace Solutions
 		while (Compare(left, right) != EQUAL)
 		{
 			double mid = left + 0.5 * (right - left);
-			double mid_squared = mid * mid;
-			if (Compare(mid_squared, x) == LARGER)
+			double midSquared = mid * mid;
+			if (Compare(midSquared, x) == LARGER)
 				right = mid;
 			else
 				left = mid;

@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-vector<int> MergeSortedArrays(const vector<vector<int>>& sortedArrays)
+vector<int> MergeSortedArrays(const vector<vector<int>>& arrays)
 {
 	vector<int> result;
 	return result;

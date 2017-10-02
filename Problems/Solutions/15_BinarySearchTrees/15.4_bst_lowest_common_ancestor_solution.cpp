@@ -2,23 +2,21 @@
 
 #include "stdafx.h"
 
-#define TEST 0
-
 namespace Solutions
 {
-	// Input nodes are not nonempty and the key at s is less than or equal to that at b.
-	BSTNode<int>* FindLCA(const unique_ptr<BSTNode<int>>& tree, const unique_ptr<BSTNode<int>>& s, const unique_ptr<BSTNode<int>>& b)
+	// Input nodes are not nonempty and the key at a is less than or equal to that at b.
+	BSTNode<int>* FindLCA(const unique_ptr<BSTNode<int>>& tree, const unique_ptr<BSTNode<int>>& a, const unique_ptr<BSTNode<int>>& b)
 	{
 		auto* p = tree.get();
-		while (p->data < s->data || p->data > b->data)
+		while (p->data < a->data || p->data > b->data)
 		{
-			// Keep searching since p is outside of [s, b].
-			while (p->data < s->data)
-				p = p->right.get(); // LCA must be in p's right child.
+			// Keep searching since p is outside of [a, b].
+			while (p->data < a->data)
+				p = p->right.get(); // LCA must be in p'a right child.
 			while (p->data > b->data)
-				p = p->left.get(); // LCA must be in p's left child.
+				p = p->left.get(); // LCA must be in p'a left child.
 		}
-		// Now, s->data <= p->data && p->data <= b->data.
+		// Now, a->data <= p->data && p->data <= b->data.
 		return p;
 	}
 }

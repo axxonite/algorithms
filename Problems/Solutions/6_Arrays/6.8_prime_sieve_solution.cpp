@@ -7,7 +7,7 @@ namespace Solutions
 	vector<int> GeneratePrimes(int n)
 	{
 		// We start the sieve at 3.
-		const int size = floor(0.5 * (n - 3)) + 1;
+		const int size =(n - 3)/ 2 + 1;
 		vector<int> primes;
 		primes.emplace_back(2); // We know a priori that 2 is prime.
 		// is_prime[i] represents whether (2i + 3) is prime or not. Initially, set each to true. Then use sieving to eliminate nonprimes.
@@ -23,7 +23,7 @@ namespace Solutions
 				// The algebraic equation below is equivalent to taking the index, converting it to the corresponding prime with 2i + 3, squaring it
 				// then converting back to an index with (i-3)/2.
 				// Note that we need to use long for j because p^2 might overflow.
-				for (long j = long(i) * long(i) * 2 + 6 * i + 3; j < size; j += p)
+				for (long long j = long long(i) * long long(i) * 2 + 6 * i + 3; j < size; j += p)
 					isPrime[j] = false;
 			}
 		}

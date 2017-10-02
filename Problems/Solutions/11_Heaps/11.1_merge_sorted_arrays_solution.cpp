@@ -19,15 +19,16 @@ namespace Solutions
 	{
 		priority_queue<IteratorCurrentAndEnd, vector<IteratorCurrentAndEnd>, greater<>> minHeap;
 
-		for (const vector<int>& sorted_array : sortedArrays)
-			if (!sorted_array.empty())
-				minHeap.emplace(IteratorCurrentAndEnd{ sorted_array.cbegin(), sorted_array.cend() });
+		for (const vector<int>& a : sortedArrays)
+			if (!a.empty()) // don't forget to check whether the array is empty.
+				minHeap.emplace(IteratorCurrentAndEnd{ a.cbegin(), a.cend() });
 
 		vector<int> result;
 		while (!minHeap.empty())
 		{
 			auto smallestArray = minHeap.top();
 			minHeap.pop();
+			// If we haven't reached the end of that array, then put the next smallest element from that array in the min heap.
 			if (smallestArray.current != smallestArray.end)
 			{
 				result.emplace_back(*smallestArray.current);

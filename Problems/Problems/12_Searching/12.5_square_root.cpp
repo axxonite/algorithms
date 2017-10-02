@@ -46,8 +46,8 @@ void SquareRootFloatTest()
 		uniform_real_distribution<double> dis(0.0, 100000000.0);
 		x = dis(gen);
 		double res[2];
-		cout << "x is " << x << endl;
-		cout << (res[0] = SquareRoot(x)) << ' ' << (res[1] = sqrt(x)) << endl;
+		//cout << "x is " << x << endl;
+		//cout << (res[0] = SquareRoot(x)) << ' ' << (res[1] = sqrt(x)) << endl;
 		assert(Compare(res[0], res[1]) == EQUAL);
 	}
 #endif
