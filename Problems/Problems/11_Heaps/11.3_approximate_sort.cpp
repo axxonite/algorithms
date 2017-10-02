@@ -4,10 +4,10 @@
 
 #define TEST 0
 
-static vector<int> result;
-
-void SortApproximatelySortedData(istringstream* sequence, int k)
+vector<int> SortApproximatelySortedData(istringstream* sequence, int k)
 {
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test
@@ -22,7 +22,7 @@ void SortApproximatelySortedDataSimpleTest()
 		ss << a << ' ';
 	}
 	istringstream sequence(ss.str());
-	SortApproximatelySortedData(&sequence, 3);
+	auto result = SortApproximatelySortedData(&sequence, 3);
 	vector<int> golden_result = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 	assert(equal(result.begin(), result.end(), golden_result.begin(),
 		golden_result.end()));
@@ -48,7 +48,7 @@ void SortApproximatelySortedDataTest()
 		ss << a << ' ';
 	}
 	istringstream sequence(ss.str());
-	SortApproximatelySortedData(&sequence, n - 1);
+	auto result = SortApproximatelySortedData(&sequence, n - 1);
 	sort(A.begin(), A.end());
 	assert(equal(result.begin(), result.end(), A.begin(), A.end()));
 #endif

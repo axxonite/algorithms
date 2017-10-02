@@ -13,13 +13,12 @@ namespace Solutions
 			if (values[i] <= values[b])
 			{
 				// Swap i with insertion point so i is in the left section
-				j++;
-				swap(values[i], values[j]);
+				swap(values[i], values[++j]);
 			}
 		}
 		// Notice how we swap the final value (the pivot) at the insertion point.
-		swap(values[j + 1], values[b]);
-		return j + 1; // This is where the key value ended up at.
+		swap(values[++j], values[b]);
+		return j; // This is where the key value ended up at.
 	}
 
 	void Quicksort(vector<int>& values, int start, int end)

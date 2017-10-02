@@ -9,7 +9,7 @@ int FindClosestElementsInSortedArrays(const vector<vector<int>>& arrays)
 	return 0;
 }
 
-#pragma region Test
+#pragma region Test	
 
 int Distance(const vector<vector<int>>& sorted_arrays,
              const vector<int>& idx)

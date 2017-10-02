@@ -4,30 +4,29 @@
 
 namespace Solutions
 {
-	static vector<int> result;
-
-	void SortApproximatelySortedData(istringstream* sequence, int k)
+	vector<int> SortApproximatelySortedData(istringstream* sequence, int k)
 	{
-		result = {};
-		priority_queue<int, vector<int>, greater<>> min_heap;
-		// Adds the first k elements into min_heap. Stop if there are fewer than k elements.
+		vector<int> result;
+		priority_queue<int, vector<int>, greater<>> minHeap;
+		// Adds the first k elements into minHeap. Stop if there are fewer than k elements.
 		int x;
 		for (int i = 0; i < k && *sequence >> x; ++i)
-			min_heap.push(x);
+			minHeap.push(x);
 
-		// For every new element, add it to min_heap and extract the smallest.
+		// For every new element, add it to min_Hap and extract the smallest.
 		while (*sequence >> x)
 		{
-			min_heap.push(x);
-			result.push_back(min_heap.top());
-			min_heap.pop();
+			minHeap.push(x);
+			result.push_back(minHeap.top());
+			minHeap.pop();
 		}
 
 		// sequence is exhausted, iteratively extracts the remaining elements.
-		while (!min_heap.empty())
+		while (!minHeap.empty())
 		{
-			result.push_back(min_heap.top());
-			min_heap.pop();
+			result.push_back(minHeap.top());
+			minHeap.pop();
 		}
+		return result;
 	}
 }
