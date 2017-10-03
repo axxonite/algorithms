@@ -9,7 +9,7 @@ const int kEmptyEntry = 0;
 // Note the the first index is the column, the second index is the row.
 bool SolveSudoku(vector<vector<int>>& grid)
 {
-	return false;;
+	return false;
 }
 
 #pragma region Test

@@ -8,15 +8,14 @@ namespace Solutions
 	BSTNode<int>* FindLCA(const unique_ptr<BSTNode<int>>& tree, const unique_ptr<BSTNode<int>>& a, const unique_ptr<BSTNode<int>>& b)
 	{
 		auto* p = tree.get();
+		// if a < p < b then p is the LCA.
 		while (p->data < a->data || p->data > b->data)
 		{
-			// Keep searching since p is outside of [a, b].
 			while (p->data < a->data)
-				p = p->right.get(); // LCA must be in p'a right child.
+				p = p->right.get(); // p < a so search to the right so we can find a < p < b
 			while (p->data > b->data)
-				p = p->left.get(); // LCA must be in p'a left child.
+				p = p->left.get(); // p > b so search to the left so we can find a < p < b
 		}
-		// Now, a->data <= p->data && p->data <= b->data.
 		return p;
 	}
 }

@@ -6,8 +6,8 @@
 
 vector<int> GeneratePrimes(int n)
 {
-	vector<int> primes;
-	return primes;
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test
