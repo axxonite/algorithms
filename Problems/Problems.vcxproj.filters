@@ -593,6 +593,42 @@
     <ClCompile Include="Solutions\11_Heaps\11.1_merge_sorted_arrays_solution.cpp">
       <Filter>Solutions\11. Heaps</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\19.7_transform_string_to_other.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.7_transform_string_to_other_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\7_Strings\7.6_reverse_words.cpp">
+      <Filter>Problems\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.6_reverse_words_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.2_reverse_linked_list_from_s_to_f.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.2_reverse_linked_list_from_s_to_f_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14.9_insertion_sort_list.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\14_Sorting\14.9_insertion_sort_list_solution.cpp">
+      <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.1_intersect_sorted_arrays3.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\14_Sorting\14.1_intersect_sorted_arrays3_solution.cpp">
+      <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.10_insertion_deletion_bst.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.10_insertion_deletion_bst_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

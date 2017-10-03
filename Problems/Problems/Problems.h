@@ -26,11 +26,13 @@ void OnlineRandomSampleTest();
 void InterconvertStringIntTest();
 void SpreadsheetEncodingTest();
 void RomanToIntegerTest();
+void ReverseWordsTest();
 
 // Chapter 8 : Linked lists.
 void OverlappingListsTest();
 void CyclicallyRightShiftListTest();
 void RemoveKthLastTest();
+void ReverseSublistTest();
 
 // Chapter 9 : Stacks & Queues
 void StackTest();
@@ -67,11 +69,13 @@ void LCA2Test();
 // Chapter 14: Sorting
 void UnionOfIntervalsTest();
 void FindSalaryCapTest();
+void InsertionSortTest();
 
 // Chapter 15: Binary Search Trees
 void AddCreditsTest();
 void FindClosestElementsInSortedArraysTest();
 void FindLCATest();
+void BSTInsertDeleteTest();
 
 // Chapter 16: Recursion
 void SolveNQueensTest();
@@ -105,6 +109,7 @@ void GetMaxTrappedWaterTest();
 // Chapter 19: Graphs
 void IsAnyPlacementFeasibleTest();
 void IsDeadlockedTest();
+void TransformStringTest();
 
 // Chapter 25: Honor roll
 void ComputeSkylineTest();

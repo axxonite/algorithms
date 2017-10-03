@@ -28,11 +28,13 @@ int main()
 	InterconvertStringIntTest();
 	SpreadsheetEncodingTest();
 	RomanToIntegerTest();
+	ReverseWordsTest();
 
 	// 8. Lists
 	OverlappingListsTest();
 	CyclicallyRightShiftListTest();
 	RemoveKthLastTest();
+	ReverseSublistTest();
 
 	// 9. Stacks & Queues
 	StackTest();
@@ -69,11 +71,13 @@ int main()
 	// 14. Sorting
 	UnionOfIntervalsTest();
 	FindSalaryCapTest();
+	InsertionSortTest();
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();
 	FindClosestElementsInSortedArraysTest();
 	FindLCATest();
+	BSTInsertDeleteTest();
 
 	// 16. Recursion
 	SolveNQueensTest();
@@ -107,6 +111,7 @@ int main()
 	// 19. Graphs
 	IsAnyPlacementFeasibleTest();
 	IsDeadlockedTest();
+	TransformStringTest();
 
 	// 25. Honor Roll
 	ComputeSkylineTest();
