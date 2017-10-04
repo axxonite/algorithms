@@ -5,28 +5,28 @@
 
 #define TEST 0
 
-void ReverseWords(string* s)
+void ReverseWords(string& s)
 {
 }
 
 #pragma region Test
 
-void ReverseWordsCheckAnswer(const string& ori, string* str)
+void ReverseWordsCheckAnswer(const string& ori, string& str)
 {
 	ReverseWords(str);
-	assert(ori == *str);
+	assert(ori == str);
 }
 
 void ReverseWordsSimpleTest()
 {
 	string input = "a cat and dog";
-	ReverseWords(&input);
+	ReverseWords(input);
 	assert(input.compare("dog and cat a") == 0);
 	input = "dog";
-	ReverseWords(&input);
+	ReverseWords(input);
 	assert(input.compare("dog") == 0);
 	input = "a  bbb cc";
-	ReverseWords(&input);
+	ReverseWords(input);
 	cout << input << endl;
 }
 
@@ -42,9 +42,9 @@ void ReverseWordsTest()
 		str = RandString(dis(gen));
 		string original_str(str);
 		//cout << str << endl;
-		ReverseWords(&str);
+		ReverseWords(str);
 		//cout << str << endl;
-		ReverseWordsCheckAnswer(original_str, &str);
+		ReverseWordsCheckAnswer(original_str, str);
 	}
 #endif
 }

@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-int TransformString(unordered_set<string> D, const string& s, const string& t)
+int TransformString(unordered_set<string> d, const string& s, const string& t)
 {
 	return -1; // Cannot find a possible transformations.
 }

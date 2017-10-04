@@ -5,20 +5,21 @@
 
 namespace Solutions
 {
-	shared_ptr<ListNode<int>> ReverseSublist(shared_ptr<ListNode<int>> L, int start, int finish)
+	shared_ptr<ListNode<int>> ReverseSublist(shared_ptr<ListNode<int>> l, int start, int end)
 	{
-		auto dummyHead = make_shared<ListNode<int>>(ListNode<int>{0, L});
+		// add a dummy head so we can handle the case properly where start or end is zero.
+		auto dummyHead = make_shared<ListNode<int>>(ListNode<int>{0, l});
+		// find sublist head (get to the nth node based on start, with 1 being the first node).
 		auto subListHead = dummyHead;
-		int k = 1;
-		while (k++ < start)
+		for (int k = 1; k < start; ++k)
 			subListHead = subListHead->next;
 
 		// Reverses sublist.
-		auto subListIter = subListHead->next;
-		while (start++ < finish)
+		auto it = subListHead->next;
+		while (start++ < end)
 		{
-			auto temp = subListIter->next;
-			subListIter->next = temp->next;
+			auto temp = it->next;
+			it->next = temp->next;
 			temp->next = subListHead->next;
 			subListHead->next = temp;
 		}

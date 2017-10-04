@@ -5,19 +5,20 @@
 
 namespace Solutions
 {
-	void ReverseWords(string* s)
+	void ReverseWords(string& s)
 	{
-		// First, reverses the whole string.
-		reverse(s->begin(), s->end());
+		// First, reverse the whole string.
+		reverse(s.begin(), s.end());
 
 		size_t start = 0, end;
-		while ((end = s->find(" ", start)) != string::npos)
+		// Go over each word boundary. So that start and end are at the beginning and end of a word.
+		while ((end = s.find(" ", start)) != string::npos) // note the use of npos to indicate the end of a string.
 		{
 			// Reverses each word in the string.
-			reverse(s->begin() + start, s->begin() + end);
-			start = end + 1;
+			reverse(s.begin() + start, s.begin() + end);
+			start = end + 1; // move to next word.
 		}
 		// Reverses the last word.
-		reverse(s->begin() + start, s->end());
+		reverse(s.begin() + start, s.end());
 	}
 }

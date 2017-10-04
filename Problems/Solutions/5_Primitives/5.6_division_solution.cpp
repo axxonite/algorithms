@@ -9,7 +9,7 @@ namespace Solutions
 		unsigned result = 0;
 		// Start with the highest power available based on the number of bits.
 		int power = 32;
-		// Note the use of an UNSIGNED 64 bit value for the power.
+		// Note the use of an UNSIGNED 64 bit value for the power. If it's not unsigned we will potentially run into an infinite loop.
 		unsigned long long ypow = unsigned long long(y) << power;
 		while (x >= y)
 		{

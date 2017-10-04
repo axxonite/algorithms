@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-shared_ptr<ListNode<int>> ReverseSublist(shared_ptr<ListNode<int>> L, int start, int finish)
+shared_ptr<ListNode<int>> ReverseSublist(shared_ptr<ListNode<int>> l, int start, int end)
 {
 	return nullptr;
 }
