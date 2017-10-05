@@ -11,6 +11,7 @@ void IsPalindromeNumberTest();
 void RectangleIntersectionTest();
 void PowerTest();
 void ClosestIntSameBitCountTest();
+void UniformRandomTest();
 
 // Chapter 6 : Arrays.
 void DutchFlagPartitionTest();
@@ -65,11 +66,13 @@ void FindKthTest();
 void LongestContainedRangeTest();
 void FindAllSubstringsTest();
 void LCA2Test();
+void LongestSubarrayWithDistinctEntriesTest();
 
 // Chapter 14: Sorting
 void UnionOfIntervalsTest();
 void FindSalaryCapTest();
 void InsertionSortTest();
+void MergeTwoSortedArraysTest();
 
 // Chapter 15: Binary Search Trees
 void AddCreditsTest();

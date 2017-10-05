@@ -629,6 +629,24 @@
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.10_insertion_deletion_bst_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.9_longest_subarray_with_distinct_entries.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.9_longest_subarray_with_distinct_entries_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.2_merge_two_sorted_arrays_in_place.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\14_Sorting\14.2_merge_two_sorted_arrays_in_place_solution.cpp">
+      <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\5_Primitives\5.10_uniform_random_number_generation.cpp">
+      <Filter>Problems\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5_Primitives\5.10_uniform_random_number_generation_solution.cpp">
+      <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

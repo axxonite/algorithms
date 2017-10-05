@@ -13,6 +13,7 @@ int main()
 	RectangleIntersectionTest();
 	PowerTest();
 	ClosestIntSameBitCountTest();
+	UniformRandomTest();
 
 	// 6. Arrays
 	DutchFlagPartitionTest();
@@ -67,11 +68,13 @@ int main()
 	LongestContainedRangeTest();
 	FindAllSubstringsTest();
 	LCA2Test();
+	LongestSubarrayWithDistinctEntriesTest();
 
 	// 14. Sorting
 	UnionOfIntervalsTest();
 	FindSalaryCapTest();
 	InsertionSortTest();
+	MergeTwoSortedArraysTest();
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();
