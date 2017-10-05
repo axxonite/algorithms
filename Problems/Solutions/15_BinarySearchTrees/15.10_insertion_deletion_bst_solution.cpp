@@ -8,18 +8,20 @@ namespace Solutions
 	class BinarySearchTree
 	{
 	public:
-		bool Empty() const { return !root_.get(); }
+		bool Empty() const { return !root.get(); }
 
 		bool Insert(int key)
 		{
-			if (root_ == nullptr)
-				root_ = make_unique<BinaryTreeNode<int>>(BinaryTreeNode<int>{key, nullptr, nullptr});
+			// If there is no root, then make a new root with the new key.
+			if (root == nullptr)
+				root = make_unique<BinaryTreeNode<int>>(BinaryTreeNode<int>{key, nullptr, nullptr});
 			else
 			{
-				BinaryTreeNode<int> *curr = root_.get(), *parent = nullptr;
+				BinaryTreeNode<int> *curr = root.get(), *parent = nullptr;
+				// perform a binary search.
 				while (curr)
 				{
-					parent = curr;
+					parent = curr; // keep track of the last non-null node.
 					if (key == curr->data)
 						return false; // key already present, no duplicates to be added.
 					if (key < curr->data)
@@ -27,7 +29,7 @@ namespace Solutions
 					else curr = curr->right.get();
 				}
 
-				// Inserts key according to key and parent.
+				// Inserts key according to its value with respect to the last non-null node found.
 				if (key < parent->data)
 					parent->left.reset(new BinaryTreeNode<int>{ key });
 				else parent->right.reset(new BinaryTreeNode<int>{ key });
@@ -38,7 +40,7 @@ namespace Solutions
 		bool Delete(int key)
 		{
 			// Find the node with key.
-			BinaryTreeNode<int>* curr = root_.get(), *parent = nullptr;
+			BinaryTreeNode<int>* curr = root.get(), *parent = nullptr;
 			while (curr && curr->data != key)
 			{
 				parent = curr;
@@ -66,9 +68,9 @@ namespace Solutions
 			}
 			else
 			{
-				// Updates root_ link if needed.
-				if (root_.get() == keyNode)
-					root_.reset(keyNode->left.release());
+				// Updates root link if needed.
+				if (root.get() == keyNode)
+					root.reset(keyNode->left.release());
 				else
 				{
 					if (parent->left.get() == keyNode)
@@ -79,9 +81,9 @@ namespace Solutions
 			return true;
 		}
 
-		int GetRootVal() const { return root_->data; }
+		int GetRootVal() const { return root->data; }
 
 	private:
-		unique_ptr<BinaryTreeNode<int>> root_ = nullptr;
+		unique_ptr<BinaryTreeNode<int>> root = nullptr;
 	};
 }

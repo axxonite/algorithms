@@ -8,7 +8,7 @@
 class BinarySearchTree
 {
 public:
-	bool Empty() const { return !root_.get(); }
+	bool Empty() const { return !root.get(); }
 
 	bool Insert(int key)
 	{
@@ -20,10 +20,10 @@ public:
 		return true;
 	}
 
-	int GetRootVal() const { return root_->data; }
+	int GetRootVal() const { return root->data; }
 
 private:
-	unique_ptr<BinaryTreeNode<int>> root_ = nullptr;
+	unique_ptr<BinaryTreeNode<int>> root = nullptr;
 };
 
 #pragma region Test
