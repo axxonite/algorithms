@@ -25,6 +25,7 @@ namespace Solutions
 			// Add i as the next element in the partial combination.
 			partial_combination->emplace_back(i);
 			// Enumerate the remaining elements to finish a combination of size k.
+			// IMPORTANT we pass in i+1 here, not offset + 1. Otherwise we will end up adding i twice to the subset.
 			DirectedCombinations(n, k, i + 1, partial_combination, result);
 			// Pop i back so we can replace it with i + 1 on the next iteration.
 			partial_combination->pop_back();

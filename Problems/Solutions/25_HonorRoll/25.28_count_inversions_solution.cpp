@@ -27,7 +27,7 @@ namespace Solutions
 		copy(a.begin() + rightStart, a.begin() + end, back_inserter(sortedA));
 
 		// Updates a with sortedA.
-		// Don't forget to copy the destination at the start offset.
+		// IMPORTANT - Don't forget to copy the destination at the start offset.
 		copy(sortedA.begin(), sortedA.end(), a.begin() + start);
 		return inversionCount;
 	}

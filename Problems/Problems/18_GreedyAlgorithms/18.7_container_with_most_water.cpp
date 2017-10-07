@@ -29,6 +29,8 @@ void GetMaxTrappedWaterSmallTest()
 {
 	vector<int> A = {1, 2, 1, 3, 4, 4, 5, 6, 2, 1, 3, 1, 3, 2, 1, 2, 4, 1};
 	assert(48 == GetMaxTrappedWater(A));
+	vector<int> A2 = { 1, 1 };
+	assert(1 == GetMaxTrappedWater(A2));
 }
 
 void GetMaxTrappedWaterTest()

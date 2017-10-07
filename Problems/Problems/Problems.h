@@ -63,6 +63,7 @@ void SquareRootFloatTest();
 void FindKthTest();
 
 // Chapter 13: Hash Tables
+void IsPalindromeTest();
 void LongestContainedRangeTest();
 void FindAllSubstringsTest();
 void LCA2Test();
@@ -71,7 +72,7 @@ void LongestSubarrayWithDistinctEntriesTest();
 // Chapter 14: Sorting
 void UnionOfIntervalsTest();
 void FindSalaryCapTest();
-void InsertionSortTest();
+void StableSortListTest();
 void MergeTwoSortedArraysTest();
 
 // Chapter 15: Binary Search Trees

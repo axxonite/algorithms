@@ -65,6 +65,7 @@ int main()
 	FindKthTest();
 
 	// 13. Hash Tables
+	IsPalindromeTest();
 	LongestContainedRangeTest();
 	FindAllSubstringsTest();
 	LCA2Test();
@@ -73,7 +74,7 @@ int main()
 	// 14. Sorting
 	UnionOfIntervalsTest();
 	FindSalaryCapTest();
-	InsertionSortTest();
+	StableSortListTest();
 	MergeTwoSortedArraysTest();
 	
 	// 15. Binary Search Trees

@@ -9,7 +9,7 @@ struct Item
 	int weight, value;
 };
 
-int OptimumSubjecToCapacity(const vector<Item>& items, int capacity)
+int OptimumSubjectToCapacity(const vector<Item>& items, int capacity)
 {
 	return 0;
 }
@@ -35,10 +35,10 @@ void OptimumSubjecToCapacitySmallTest()
 	{ 40, 65 },{ 70, 150 },{ 85, 275 },{ 25, 155 },
 	{ 30, 120 },{ 65, 320 },{ 75, 75 },{ 10, 40 },
 	{ 95, 200 },{ 50, 100 },{ 40, 220 },{ 10, 99 } };
-	assert(695 == OptimumSubjecToCapacity(items, 130));
+	assert(695 == OptimumSubjectToCapacity(items, 130));
 
 	items = { { 5, 60 },{ 3, 50 },{ 4, 70 },{ 2, 30 } };
-	assert(80 == OptimumSubjecToCapacity(items, 5));
+	assert(80 == OptimumSubjectToCapacity(items, 5));
 }
 
 void OptimumSubjectToCapacityTest()
@@ -70,7 +70,7 @@ void OptimumSubjectToCapacityTest()
 		items.emplace_back(Item{ weight[i], value[i] });
 	}
 	cout << "Knapsack size = " << W << endl;
-	cout << "all value = " << OptimumSubjecToCapacity(items, W) << endl;
+	cout << "all value = " << OptimumSubjectToCapacity(items, W) << endl;
 #endif
 }
 

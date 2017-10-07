@@ -11,16 +11,15 @@ namespace Solutions
 		return dis(gen);
 	}
 
-	int UniformRandom(int lowerBound, int upperBound)
+	int UniformRandom(int low, int high)
 	{
-		int numberOfOUtcomes = upperBound - lowerBound + 1, result;
+		int outcomes = high - low + 1, result; // note the +1
 		do
 		{
 			result = 0;
-			for (int i = 0; (1 << i) < numberOfOUtcomes; ++i)
-
-				result = (result << 1) | ZeroOneRandom(); // ZeroOneRandom() is the provided random number generator.
-		} while (result >= numberOfOUtcomes);
-		return result + lowerBound;
+			for (int i = 0; (1 << i) < outcomes; ++i) // iterator over every bit until that bit is higher than the number of outcomes.
+				result = (result << 1) | ZeroOneRandom(); // Add one random bit
+		} while (result >= outcomes); // start over if we generated a number above the max.
+		return result + low; // add low.
 	}
 }

@@ -11,7 +11,7 @@ int ZeroOneRandom()
 	return dis(gen);
 }
 
-int UniformRandom(int lowerBound, int upperBound)
+int UniformRandom(int low, int high)
 {
 	return 0;
 }

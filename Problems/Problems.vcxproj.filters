@@ -52,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="doubly_linked_list_prototype.h" />
     <ClInclude Include="binary_tree_with_parent_prototype.h" />
+    <ClInclude Include="Solutions\8_LinkedLists\8.1_merge_sorted_lists_solution.h">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="Problems\8_LinkedLists\8.1_merge_sorted_lists.h">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -611,12 +617,6 @@
     <ClCompile Include="Solutions\8_LinkedLists\8.2_reverse_linked_list_from_s_to_f_solution.cpp">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\14.9_insertion_sort_list.cpp">
-      <Filter>Problems\14. Sorting</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\14_Sorting\14.9_insertion_sort_list_solution.cpp">
-      <Filter>Solutions\14. Sorting</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\14_Sorting\14.1_intersect_sorted_arrays3.cpp">
       <Filter>Problems\14. Sorting</Filter>
     </ClCompile>
@@ -646,6 +646,18 @@
     </ClCompile>
     <ClCompile Include="Solutions\5_Primitives\5.10_uniform_random_number_generation_solution.cpp">
       <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14.9_sort_list.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\14_Sorting\14.9_sort_list_solution.cpp">
+      <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.1_valid_palindrome.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.1_valid_palindrome_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -4,11 +4,11 @@
 
 #define TEST 0
 
-// The numbering starts from one for k.
+// IMPORTANT: The numbering starts from ONE for k.
 template <typename Compare>
 int FindKth(int k, Compare comp, vector<int>& a)
 {
-	return 0;
+	return -1;
 }
 
 int FindKthLargest(int k, vector<int>& a)
