@@ -63,7 +63,6 @@ void SquareRootFloatTest();
 void FindKthTest();
 
 // Chapter 13: Hash Tables
-void IsPalindromeTest();
 void LongestContainedRangeTest();
 void FindAllSubstringsTest();
 void LCA2Test();

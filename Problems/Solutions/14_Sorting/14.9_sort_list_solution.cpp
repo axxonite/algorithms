@@ -12,15 +12,15 @@ namespace Solutions
 		if (l == nullptr || l->next == nullptr)
 			return l;
 
-		// Find the midpoint of l using a slow and a fast pointer.
-		shared_ptr<ListNode<int>> preSlow = nullptr, slow = l, fast = l;
+		// Find the midpoint of l using a slow and a fast pointer. Keep track of the node before the slow pointer so we can split the list starting at that point.
+		shared_ptr<ListNode<int>> slowPrev = nullptr, slow = l, fast = l;
 		while (fast && fast->next)
 		{
-			preSlow = slow;
+			slowPrev = slow;
 			fast = fast->next->next, slow = slow->next;
 		}
 
-		preSlow->next = nullptr; // Splits the list into two equal-sized lists.
+		slowPrev->next = nullptr; // Split the list into two equal-sized lists.
 
 		return MergeTwoSortedLists(StableSortList(l), StableSortList(slow));
 	}

@@ -6,11 +6,12 @@ using namespace std;
 
 namespace Solutions
 {
+	// don't think this should be a function.
 	inline void AppendNode(shared_ptr<ListNode<int>>* node, shared_ptr<ListNode<int>>* tail)
 	{
-		(*tail)->next = *node;
-		*tail = *node; // Updates tail.
-		*node = (*node)->next;
+		(*tail)->next = *node; // attach node to tail
+		*tail = *node; // node is new tail
+		*node = (*node)->next; // node is next node.
 	}
 
 	inline shared_ptr<ListNode<int>> MergeTwoSortedLists(shared_ptr<ListNode<int>> l1, shared_ptr<ListNode<int>> l2)

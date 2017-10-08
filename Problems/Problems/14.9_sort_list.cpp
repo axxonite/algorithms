@@ -16,7 +16,7 @@ void StableSortListTest()
 {
 #if TEST
 	default_random_engine gen((random_device())());
-	for (int times = 0; times < 10000; ++times)
+	for (int times = 0; times < 100; ++times)
 	{
 		shared_ptr<ListNode<int>> L = nullptr;
 		int n;

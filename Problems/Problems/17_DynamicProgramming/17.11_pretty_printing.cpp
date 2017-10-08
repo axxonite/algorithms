@@ -11,6 +11,7 @@ int MinimumMessiness(const vector<string>& words, int lineLength)
 }
 
 #pragma region Test
+
 void SmallTestMinimumMessiness()
 {
 	assert(MinimumMessiness({ "aaa", "bbb", "c", "d", "ee", "ff", "gggggg" }, 11) == 45);

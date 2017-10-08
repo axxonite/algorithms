@@ -4,20 +4,17 @@
 
 namespace Solutions
 {
-	bool IsPalindrome2(const string& s)
+	bool CanFormPalindrome(const string& s)
 	{
-		// i moves forward, and j moves backward.
-		int i = 0, j = s.size() - 1;
-		while (i < j)
+		unordered_set<char> oddFreqChars;
+		for (char c : s)
 		{
-			// i and j both skip non-alphanumeric characters.
-			while (!isalnum(s[i]) && i < j)
-				++i;
-			while (!isalnum(s[j]) && i < j)
-				--j;
-			if (tolower(s[i++]) != tolower(s[j--]))
-				return false;
+			if (oddFreqChars.count(c))			
+				oddFreqChars.erase(c); // c now has appeared an even number of times.
+			else
+				oddFreqChars.insert(c); // c now has appeared an odd number of times.
 		}
-		return true;
+		// A string can be permuted to form a palindrome if and only if the number of chars whose frequencies is odd is at most 1.
+		return oddFreqChars.size() <= 1;
 	}
 }

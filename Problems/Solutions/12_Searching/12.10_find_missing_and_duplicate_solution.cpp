@@ -19,6 +19,7 @@ namespace Solutions
 
 		// We need to find a bit that's set to 1 in mXORd. Such a bit must exist if there is a single missing number and a single duplicated number in A.
 		// The bit-fiddling assignment below sets all of the bits in differ_bit to 0 except for the LSB in mXORd that's 1.
+		// x & (-x), x & (~x + 1), x & ~(x - 1) are all equivalent.
 		int differBit = mXORd & ~(mXORd - 1);
 		int mORd = 0;
 		for (int i = 0; i < A.size(); ++i)

@@ -65,7 +65,6 @@ int main()
 	FindKthTest();
 
 	// 13. Hash Tables
-	IsPalindromeTest();
 	LongestContainedRangeTest();
 	FindAllSubstringsTest();
 	LCA2Test();

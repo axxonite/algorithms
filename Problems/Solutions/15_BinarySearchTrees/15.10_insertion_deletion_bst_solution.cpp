@@ -64,7 +64,7 @@ namespace Solutions
 				// Replace the key node data with the successor's data.
 				keyNode->data = successor->data;
 				// Moves links to erase the node. Whichever child path the successor is on gets released.
-				// The successor always has only a right child.
+				// The successor always has only a right child, or no children at all.
 				if (sParent->left.get() == successor)
 					sParent->left.reset(successor->right.release());
 				else sParent->right.reset(successor->right.release()); // r_parent->right.get() == r_key_node.
