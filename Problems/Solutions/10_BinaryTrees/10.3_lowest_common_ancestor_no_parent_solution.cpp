@@ -11,10 +11,8 @@ namespace Solutions
 		BinaryTreeNode<int>* ancestor;
 	};
 
-	// Returns an object consisting of an int and a node. The int field is
-	// 0, 1, or 2 depending on how many of {node0, node1} are present in
-	// the tree. If both are present in the tree, when ancestor is
-	// assigned to a non-null value, it is the LCA.
+	// Returns an object consisting of an int and a node. The int field is 0, 1, or 2 depending on how many of {node0, node1} are present in
+	// the tree. If both are present in the tree, when ancestor is assigned to a non-null value, it is the LCA.
 	Status LCAHelper(const unique_ptr<BinaryTreeNode<int>>& tree, const unique_ptr<BinaryTreeNode<int>>& node0, const unique_ptr<BinaryTreeNode<int>>& node1)
 	{
 		if (tree == nullptr)

@@ -7,7 +7,7 @@
 
 bool Stack::Empty() const
 {
-	return false;
+	return true;
 }
 
 int Stack::Max() const
@@ -25,6 +25,7 @@ void Stack::Push(int x)
 }
 
 #pragma region Test
+
 void StackTest()
 {
 #if TEST

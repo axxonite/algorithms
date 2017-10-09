@@ -16,7 +16,7 @@ struct GraphVertex
 	vector<GraphVertex*> edges;
 };
 
-bool IsDeadlocked(vector<GraphVertex>* g)
+bool IsDeadlocked(vector<GraphVertex>& g)
 {
 	return false;
 }
@@ -69,7 +69,7 @@ void TestTwoNodesCycle()
 	vector<GraphVertex> G(2);
 	G[0].edges.emplace_back(&G[1]);
 	G[1].edges.emplace_back(&G[0]);
-	bool result = IsDeadlocked(&G);
+	bool result = IsDeadlocked(G);
 	cout << boolalpha << result << endl;
 	assert(CheckAnswer(&G) == result);
 	assert(result);
@@ -81,7 +81,7 @@ void TestDirectedCycle()
 	G[0].edges.emplace_back(&G[1]);
 	G[1].edges.emplace_back(&G[2]);
 	G[2].edges.emplace_back(&G[0]);
-	bool result = IsDeadlocked(&G);
+	bool result = IsDeadlocked(G);
 	cout << boolalpha << result << endl;
 	assert(CheckAnswer(&G) == result);
 	assert(result);
@@ -93,7 +93,7 @@ void TestDirectedStarTree()
 	G[0].edges.emplace_back(&G[1]);
 	G[0].edges.emplace_back(&G[2]);
 	G[0].edges.emplace_back(&G[3]);
-	bool result = IsDeadlocked(&G);
+	bool result = IsDeadlocked(G);
 	cout << boolalpha << result << endl;
 	assert(CheckAnswer(&G) == result);
 	assert(!result);
@@ -105,12 +105,12 @@ void TestDirectedLineTree()
 	G[0].edges.emplace_back(&G[1]);
 	G[1].edges.emplace_back(&G[2]);
 	G[2].edges.emplace_back(&G[3]);
-	bool result = IsDeadlocked(&G);
+	bool result = IsDeadlocked(G);
 	cout << boolalpha << result << endl;
 	assert(CheckAnswer(&G) == result);
 	assert(!result);
 	G[3].edges.emplace_back(&G[1]);
-	result = IsDeadlocked(&G);
+	result = IsDeadlocked(G);
 	assert(result);
 }
 
@@ -123,13 +123,13 @@ void TestDirectedBinaryTree()
 	G[1].edges.emplace_back(&G[4]);
 	G[2].edges.emplace_back(&G[5]);
 	G[2].edges.emplace_back(&G[6]);
-	bool result = IsDeadlocked(&G);
+	bool result = IsDeadlocked(G);
 	cout << boolalpha << result << endl;
 	assert(CheckAnswer(&G) == result);
 	assert(!result);
 	G[4].edges.emplace_back(&G[6]);
 	G[6].edges.emplace_back(&G[1]);
-	result = IsDeadlocked(&G);
+	result = IsDeadlocked(G);
 	assert(result);
 }
 
@@ -142,7 +142,7 @@ void TestDirectedTwoSeparateCycles()
 	G[3].edges.emplace_back(&G[4]);
 	G[4].edges.emplace_back(&G[5]);
 	G[5].edges.emplace_back(&G[3]);
-	bool result = IsDeadlocked(&G);
+	bool result = IsDeadlocked(G);
 	assert(result);
 }
 
@@ -187,7 +187,7 @@ void IsDeadlockedTest()
 			G[b].edges.emplace_back(&G[a]);
 		}
 
-		bool result = IsDeadlocked(&G);
+		bool result = IsDeadlocked(G);
 		cout << boolalpha << result << endl;
 		assert(CheckAnswer(&G) == result);
 	}
