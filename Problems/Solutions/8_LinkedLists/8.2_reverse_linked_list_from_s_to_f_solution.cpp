@@ -10,7 +10,7 @@ namespace Solutions
 		// add a dummy head so we can handle the case properly where start or end is zero.
 		auto dummyHead = make_shared<ListNode<int>>(ListNode<int>{0, l});
 		// find sublist head (get to the nth node based on start, with 1 being the first node).
-		// The sublist head is actually the node right before the first node that will be reversed. The sublist head does not move.
+		// IMPORTANT: sublist head is node start - 1. It is before the first node to be reversed. suvblist head does not move.
 		auto subListHead = dummyHead;
 		for (int k = 1; k < start; ++k)
 			subListHead = subListHead->next;
@@ -19,11 +19,11 @@ namespace Solutions
 		auto it = subListHead->next; // first node to be reversed is this. If k = 1 then this is l.
 		while (start++ < end)
 		{
-			auto newFirst = it->next; // temp is the node we will move around.
-			it->next = newFirst->next;  // detach temp node from chain, and ensure temp->next is the next node we will process.
+			auto newFirst = it->next; // newFirst is the node we will move around. it will end up after newFirst
+			it->next = newFirst->next;  // detach newFirst from chain, and ensure newFirst->next is the next node we will process.
 			// place newFirst(old it->next) before subListHead->next
-			newFirst->next = subListHead->next; // Link the first node in the sublist to the temp node.
-			subListHead->next = newFirst; // make temp the first sublist node.
+			newFirst->next = subListHead->next; // Link the first node in the sublist to the newFirst node.
+			subListHead->next = newFirst; // make newFirst the first sublist node.
 		}
 		return dummyHead->next;
 	}
