@@ -6,6 +6,7 @@ namespace Solutions
 {
 	int MinimumPathWeight(const vector<vector<int>>& triangle)
 	{
+		// make sure to check for when triangle is empty here.
 		if (triangle.empty())
 			return 0;
 

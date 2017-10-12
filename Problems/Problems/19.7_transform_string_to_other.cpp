@@ -9,6 +9,7 @@ int TransformString(unordered_set<string> d, const string& s, const string& t)
 {
 	return -1; // Cannot find a possible transformations.
 }
+
 #pragma region Test
 
 void TransformStringTest()

@@ -10,7 +10,7 @@ namespace Solutions
 	inline void AppendNode(shared_ptr<ListNode<int>>* node, shared_ptr<ListNode<int>>* tail)
 	{
 		(*tail)->next = *node; // attach node to tail
-		*tail = *node; // node is new tail
+		*tail = (*tail)->next; // node is new tail
 		*node = (*node)->next; // node is next node.
 	}
 
