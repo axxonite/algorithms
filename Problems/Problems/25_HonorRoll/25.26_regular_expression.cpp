@@ -25,6 +25,9 @@ void IsMatchTest()
 	assert(IsMatch(".*", ""));
 	assert(IsMatch("c*", "c"));
 	assert(!IsMatch("aa*", "c"));
+	assert(IsMatch("aa*$", "caaaa"));
+	assert(IsMatch("ca*$", "caaaa"));
+	assert(!IsMatch("aa*$", "caaaab"));
 	assert(IsMatch("ca*", "c"));
 	assert(IsMatch(".*", "asdsdsa"));
 	assert(IsMatch("9$", "xxxxW19"));

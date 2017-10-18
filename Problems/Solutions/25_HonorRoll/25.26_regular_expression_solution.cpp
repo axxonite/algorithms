@@ -18,7 +18,7 @@ namespace Solutions
 		if (regex.size() - regex_index >= 2 && regex[regex_index + 1] == '*')
 		{
 			// i is the next element after the match.
-			for (int i = s_index + 1; i < s.size() && (regex[regex_index] == '.' || regex[regex_index] == s[i - 1]); ++i)
+			for (int i = s_index + 1; i <= s.size() && (regex[regex_index] == '.' || regex[regex_index] == s[i - 1]); ++i)
 			{
 				// Continue matching here.
 				if (IsMatchHere(regex, regex_index + 2, s, i))
