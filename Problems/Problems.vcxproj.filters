@@ -557,12 +557,6 @@
     <ClCompile Include="Problems\13_HashTables\13.12_substring_with_concatenation_of_all_words.cpp">
       <Filter>Problems\13. Hash Tables</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\17_DynamicProgramming\17.6_0_1_knapsack.cpp">
-      <Filter>Problems\17. Dynamic Programming</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\17_DynamicProgramming\17.6_0_1_knapsack_solution.cpp">
-      <Filter>Solutions\17. Dynamic Programming</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\16_Recursion\16.1_tower_hanoi.cpp">
       <Filter>Problems\16. Recursion</Filter>
     </ClCompile>
@@ -658,6 +652,12 @@
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.1_valid_palindrome_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.6_knapsack.cpp">
+      <Filter>Problems\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.6_knapsack_solution.cpp">
+      <Filter>Solutions\17. Dynamic Programming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
