@@ -10,6 +10,7 @@ shared_ptr<ListNode<int>> StableSortList(shared_ptr<ListNode<int>> l)
 {
 	return nullptr;
 }
+
 #pragma region Test
 
 void StableSortListTest()
