@@ -217,6 +217,7 @@
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.5_search_majority.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.7_container_with_most_water.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline.cpp" />
+    <ClCompile Include="Problems\18_GreedyAlgorithms\2_sum_unsorted.cpp" />
     <ClCompile Include="Problems\19.7_transform_string_to_other.cpp" />
     <ClCompile Include="Problems\19_Graphs\19.4_2_exists.cpp" />
     <ClCompile Include="Problems\19_Graphs\19.6_wiring_circuit_board.cpp" />
@@ -317,6 +318,7 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.7_container_with_most_water_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\2_sum_unsorted_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\19.4_2_exists_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\19.6_wiring_circuit_board_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\19.7_transform_string_to_other_solution.cpp" />

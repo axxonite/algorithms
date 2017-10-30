@@ -659,6 +659,12 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.6_knapsack_solution.cpp">
       <Filter>Solutions\17. Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\2_sum_unsorted_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\2_sum_unsorted.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
