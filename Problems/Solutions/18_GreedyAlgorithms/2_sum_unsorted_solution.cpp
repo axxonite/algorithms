@@ -9,8 +9,8 @@ namespace Solutions
 		{
 			// Long for the value that would add up to t, given the first value A[i].
 			// Watch for overflow.
-			long long otherValue = long long(t) - long long(A[i]);
-			if ( otherValue >= numeric_limits<int>::min() && otherValue <= numeric_limits<int>::max() && values.count(t - A[i]))
+			long long difference = long long(t) - long long(A[i]);
+			if ( difference >= numeric_limits<int>::min() && difference <= numeric_limits<int>::max() && values.count(difference))
 				return true;
 		}
 		return false;

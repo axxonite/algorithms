@@ -12,9 +12,8 @@ namespace Solutions
 	// Reconstructs the subtree that is rooted at subtreeIdx.
 	inline unique_ptr<BinaryTreeNode<int>> ReconstructPreorderHelper(const vector<int*>& preorder, int& index)
 	{
-		int* key = preorder[index];
-		++index;
-		if (key == nullptr)
+		int* key = preorder[index++];
+		if (!key)
 			return nullptr; // empty child.
 
 		// Note that ReconstructPreorderHelper updates index. So the order of following two calls are critical.
