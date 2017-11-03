@@ -17,9 +17,7 @@ namespace Solutions
 			return nullptr; // empty child.
 
 		// Note that ReconstructPreorderHelper updates index. So the order of following two calls are critical.
-		auto leftTree = ReconstructPreorderHelper(preorder, index);
-		auto rightTree = ReconstructPreorderHelper(preorder, index);
-		return make_unique<BinaryTreeNode<int>>(BinaryTreeNode<int>{*key, move(leftTree), move(rightTree)});
+		return make_unique<BinaryTreeNode<int>>(BinaryTreeNode<int>{*key, move(ReconstructPreorderHelper(preorder, index)), move(ReconstructPreorderHelper(preorder, index))});
 	}
 
 	inline unique_ptr<BinaryTreeNode<int>> ReconstructPreorder(const vector<int*>& preorder)
