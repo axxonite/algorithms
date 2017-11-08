@@ -1,6 +1,7 @@
 // Copyright (c) 2016 Elements of Programming Interviews. All rights reserved.
 
 #pragma once
+
 #include <memory>
 #include <vector>
 #include "./Binary_tree_prototype.h"
