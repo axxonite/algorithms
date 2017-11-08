@@ -102,6 +102,7 @@ int main()
 	MinimumPathWeightTest();
 	ComputeBinomialCoefficientTest();
 	OptimumSubjectToCapacityTest();
+	DecomposeIntoDictionaryWordsTest();
 
 	// 18. Greedy Algorithms
 	HasThreeSumTest();

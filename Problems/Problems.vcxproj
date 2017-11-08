@@ -209,6 +209,7 @@
     <ClCompile Include="Problems\17_DynamicProgramming\17.1_score_combination.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.4_computing_binomial_coefficients.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.6_knapsack.cpp" />
+    <ClCompile Include="Problems\17_DynamicProgramming\17.7_word_breaking.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.8_triangle.cpp" />
     <ClCompile Include="Problems\17_DynamicProgramming\17.9_picking_up_coins.cpp" />
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.1_task_assignment.cpp" />
@@ -310,6 +311,7 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.1_score_combination_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.4_computing_binomial_coefficients_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.6_knapsack_solution.cpp" />
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.7_word_breaking_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.8_triangle_solution.cpp" />
     <ClCompile Include="Solutions\17_DynamicProgramming\17.9_picking_up_coins_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.1_task_assignment_solution.cpp" />

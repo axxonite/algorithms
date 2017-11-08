@@ -100,6 +100,7 @@ void MinimumMessinessTest();
 void MinimumPathWeightTest();
 void ComputeBinomialCoefficientTest();
 void OptimumSubjectToCapacityTest();
+void DecomposeIntoDictionaryWordsTest();
 
 // Chapter 18: Greedy Algorithms
 void HasThreeSumTest();
