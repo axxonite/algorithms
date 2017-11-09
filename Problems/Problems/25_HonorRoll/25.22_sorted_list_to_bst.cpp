@@ -8,7 +8,7 @@
 
 // Watch out, sometimes this fails the test even when it's the correct implementation, and a full rebuild is required.
 
-shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNode<int>> l, int length)
+shared_ptr<ListNodeDbl<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNodeDbl<int>> l, int length)
 {
 	return nullptr;
 }
@@ -16,7 +16,7 @@ shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNode<int>
 #pragma region Test
 
 template <typename T>
-void InorderTraversal(const shared_ptr<ListNode<T>>& node, const T& pre,
+void InorderTraversal(const shared_ptr<ListNodeDbl<T>>& node, const T& pre,
 	int depth) {
 	if (node) {
 		InorderTraversal(node->prev, pre, depth + 1);
@@ -29,10 +29,10 @@ void InorderTraversal(const shared_ptr<ListNode<T>>& node, const T& pre,
 void BuildBSTFromSortedDoublyListTest()
 {
 #if TEST
-	shared_ptr<ListNode<int>> temp0 = make_shared<ListNode<int>>(ListNode<int>{0});
-	shared_ptr<ListNode<int>> temp1 = make_shared<ListNode<int>>(ListNode<int>{1});
-	shared_ptr<ListNode<int>> temp2 = make_shared<ListNode<int>>(ListNode<int>{2});
-	shared_ptr<ListNode<int>> temp3 = make_shared<ListNode<int>>(ListNode<int>{3});
+	shared_ptr<ListNodeDbl<int>> temp0 = make_shared<ListNodeDbl<int>>(ListNodeDbl<int>{0});
+	shared_ptr<ListNodeDbl<int>> temp1 = make_shared<ListNodeDbl<int>>(ListNodeDbl<int>{1});
+	shared_ptr<ListNodeDbl<int>> temp2 = make_shared<ListNodeDbl<int>>(ListNodeDbl<int>{2});
+	shared_ptr<ListNodeDbl<int>> temp3 = make_shared<ListNodeDbl<int>>(ListNodeDbl<int>{3});
 	temp0->next = temp1;
 	temp1->next = temp2;
 	temp2->next = temp3;
@@ -42,7 +42,7 @@ void BuildBSTFromSortedDoublyListTest()
 	temp2->prev = temp1;
 	temp3->prev = temp2;
 
-	shared_ptr<ListNode<int>> L = temp0;
+	shared_ptr<ListNodeDbl<int>> L = temp0;
 	auto tree = BuildBSTFromSortedDoublyList(L, 4);
 	InorderTraversal(tree, -1, 0);
 	// Break the links of shared_ptr to prevent memory leak.

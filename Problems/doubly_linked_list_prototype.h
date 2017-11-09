@@ -5,8 +5,8 @@
 using namespace std;
 
 template <typename T>
-struct ListNode 
+struct ListNodeDbl 
 {
   T data;
-  shared_ptr<ListNode<T>> prev, next;
+  shared_ptr<ListNodeDbl<T>> prev, next;
 };

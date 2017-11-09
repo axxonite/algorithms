@@ -6,8 +6,8 @@
 
 vector<int> ExamineBuildingsWithSunset(istringstream* sin)
 {
-	vector<int> buildingsWithView;
-	return buildingsWithView;
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test

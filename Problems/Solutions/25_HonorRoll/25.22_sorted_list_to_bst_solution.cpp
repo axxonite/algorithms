@@ -7,7 +7,7 @@ namespace Solutions
 {
 	// Builds a BST from the (start + 1)-th to the end-th node, inclusive, in l, and returns the root.
 	// Note the use of a pointer to a shared pointer so we can update the shared pointer.
-	shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyListHelper(shared_ptr<ListNode<int>>* l, int start, int end) 
+	shared_ptr<ListNodeDbl<int>> BuildBSTFromSortedDoublyListHelper(shared_ptr<ListNodeDbl<int>>* l, int start, int end) 
 	{
 		// if note is that end is actually one past the index of the last element.
 		if (start >= end)
@@ -26,7 +26,7 @@ namespace Solutions
 	}
 
 	// Returns the root of the corresponding BST. The prev and next fields of the list nodes are used as the BST nodes left and right fields, respectively. The length of the list is given.
-	shared_ptr<ListNode<int>> BuildBSTFromSortedDoublyList(shared_ptr<ListNode<int>> l, int length)
+	shared_ptr<ListNodeDbl<int>> BuildBSTFromSortedDoublyList(shared_ptr<ListNodeDbl<int>> l, int length)
 	{
 		return BuildBSTFromSortedDoublyListHelper(&l, 0, length);
 	}
