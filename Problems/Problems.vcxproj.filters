@@ -671,6 +671,24 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.7_word_breaking_solution.cpp">
       <Filter>Solutions\17. Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.3_number_ways.cpp">
+      <Filter>Problems\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.3_number_ways_solution.cpp">
+      <Filter>Solutions\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.5_string_in_matrix.cpp">
+      <Filter>Problems\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.5_string_in_matrix_solution.cpp">
+      <Filter>Solutions\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\17_DynamicProgramming\17.10_number_steps.cpp">
+      <Filter>Problems\17. Dynamic Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\17_DynamicProgramming\17.10_number_steps_solution.cpp">
+      <Filter>Solutions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

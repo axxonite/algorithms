@@ -103,6 +103,9 @@ int main()
 	ComputeBinomialCoefficientTest();
 	OptimumSubjectToCapacityTest();
 	DecomposeIntoDictionaryWordsTest();
+	NumberOfWaysTest();
+	IsPatternContainedInGridTest();
+	NumberOfWaysToTopTest();
 
 	// 18. Greedy Algorithms
 	HasThreeSumTest();

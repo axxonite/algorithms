@@ -16,7 +16,7 @@ namespace Solutions
 		{
 			// Start a new level.
 			queue<BinaryTreeNode<int>*> nextDepthNodes;
-			vector<int> thisLevel;
+			vector<int> keysThisLevel;
 			// Inner loops iterates over nodes.
 			while (!currDepthNodes.empty())
 			{
@@ -24,7 +24,7 @@ namespace Solutions
 				currDepthNodes.pop();
 				if (curr) // Check that its null as we may be adding nulls in the queue.
 				{
-					thisLevel.emplace_back(curr->data); // add to current level.
+					keysThisLevel.emplace_back(curr->data); // add to current level.
 
 					// Defer the null checks to the null test above.
 					nextDepthNodes.emplace(curr->left.get());
@@ -33,8 +33,8 @@ namespace Solutions
 			}
 
 			// This level is finished.
-			if (!thisLevel.empty())
-				result.emplace_back(thisLevel);
+			if (!keysThisLevel.empty())
+				result.emplace_back(keysThisLevel);
 
 			// Move to the next level.
 			currDepthNodes = nextDepthNodes;

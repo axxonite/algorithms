@@ -6,8 +6,6 @@
 
 #define TEST 0
 
-// Watch out, sometimes this fails the test even when it's the correct implementation, and a full rebuild is required.
-
 shared_ptr<ListNodeDbl<int>> BuildBSTFromSortedDoublyList( shared_ptr<ListNodeDbl<int>> l, int length)
 {
 	return nullptr;
