@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int NumberOfWaysToTop(int top, int maximum_step)
+int NumberOfWaysToTop(int n, int k)
 {
 	return 0;
 }
