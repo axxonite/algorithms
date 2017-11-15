@@ -20,7 +20,7 @@ namespace Solutions
 		// test i <= n in case k is greater than n.
 		// TRICKY: test num_remaining + i - 1 <= n to check that the sum of the count of numbers we need to add (num_remaining), 
 		// plus the numbers we've already used up (i), minus one since the first number starts at 1.
-		for (int i = offset; i <= n && num_remaining + i - 1 <= n; ++i)
+		for (int i = offset; i <= n - num_remaining + i; ++i)
 		{
 			// Add i as the next element in the partial combination.
 			partial_combination->emplace_back(i);
