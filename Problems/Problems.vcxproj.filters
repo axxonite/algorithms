@@ -689,6 +689,9 @@
     <ClCompile Include="Solutions\17_DynamicProgramming\17.10_number_steps_solution.cpp">
       <Filter>Solutions</Filter>
     </ClCompile>
+    <ClCompile Include="Sandbox.cpp">
+      <Filter>Problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

@@ -270,6 +270,7 @@
     <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
+    <ClCompile Include="Sandbox.cpp" />
     <ClCompile Include="Shared.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.10_successor_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders_solution.cpp" />

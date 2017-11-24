@@ -7,7 +7,7 @@
 
 vector<string> DecomposeIntoDictionaryWords(const string& s, const unordered_set<string>& dict)
 {
-	vector<string> result;;
+	vector<string> result;
 	return result;
 }
 

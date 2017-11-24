@@ -130,4 +130,8 @@ int main()
 	CountInversionsTest();
 	FindPairSumKTest();
 	BuildBSTFromSortedDoublyListTest();
+
+	CalcContainedWaterTest();
+	ComputeSunShadowingTest();
+	IsContainedTest();
 }

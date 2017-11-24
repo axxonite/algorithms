@@ -128,3 +128,7 @@ void IsArbitrageExistTest();
 void CountInversionsTest();
 void FindPairSumKTest();
 void BuildBSTFromSortedDoublyListTest();
+
+void CalcContainedWaterTest();
+void ComputeSunShadowingTest();
+void IsContainedTest();
