@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int FindLongestSubarrayLessEqualK(const vector<int> &A, int k)
+int FindLongestSubarrayLessEqualK(const vector<int>& A, int k)
 {
 	return 0;
 }

@@ -5,11 +5,6 @@
 #include <xmmintrin.h>
 #include <smmintrin.h>
 
-#include <vector>
-#include <string>
-
-using namespace std;
-
 // ====================================================================================================================
 //
 // CONTAINED WATER PROBLEM.
@@ -503,7 +498,7 @@ void ComputeSunShadowing(vector<float> heights, Point sunDirection, vector<Point
 			//            overlapping the column, even when multiple shadows overlap the column.
 			//
 			// This algorithm relies on preprocessing to find, for each column on the screen, the y-intercept
-			// of the tallest shadow that intersects that column. This value is always the same for a given set
+			// of the tallest shadow that intersects that column. This values is always the same for a given set
 			// of height data and a given sun direction, thus if our sun's direction doesn't change every frame,
 			// we can precalculate this table and reuse it for several frames.
 			//

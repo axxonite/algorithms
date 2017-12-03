@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithms", "Algorithms\Algorithms.vcxproj", "{CB2D087E-72D7-4583-899B-88327AA2434A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Problems", "Problems\Problems.vcxproj", "{A29DA275-7589-4032-BD5A-7A0BF54F981B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TopCoder", "TopCoder\TopCoder\TopCoder.vcxproj", "{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,8 +33,19 @@ Global
 		{A29DA275-7589-4032-BD5A-7A0BF54F981B}.Release|x64.Build.0 = Release|x64
 		{A29DA275-7589-4032-BD5A-7A0BF54F981B}.Release|x86.ActiveCfg = Release|Win32
 		{A29DA275-7589-4032-BD5A-7A0BF54F981B}.Release|x86.Build.0 = Release|Win32
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Debug|x64.ActiveCfg = Debug|x64
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Debug|x64.Build.0 = Debug|x64
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Debug|x86.ActiveCfg = Debug|Win32
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Debug|x86.Build.0 = Debug|Win32
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Release|x64.ActiveCfg = Release|x64
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Release|x64.Build.0 = Release|x64
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Release|x86.ActiveCfg = Release|Win32
+		{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CA0F15E-8752-44BF-84B0-556542C25892}
 	EndGlobalSection
 EndGlobal

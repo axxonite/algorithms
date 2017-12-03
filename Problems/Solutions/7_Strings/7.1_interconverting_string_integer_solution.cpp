@@ -12,7 +12,7 @@ namespace Solutions
 		// Note that MUST be a do..while otherwise zero will not be handled properly.
 		do
 		{
-			s += '0' + abs(x % 10);
+			s += '0' + abs(x % 10); // IMPORTANT note that we take the absolute of the modulus, not the modulus of the absolute value. The latter will potentially cause overflow.
 			x /= 10;
 		} 
 		while (x);

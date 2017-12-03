@@ -13,7 +13,7 @@ void InsertionSort(vector<int>& values)
 	for (auto i = 1; i < values.size(); i++)
 	{
 		auto value = values[i];
-		// Insert into sorted sequence. We have to insert somewhere before j.
+		// Insert into sorted sequence. We have to insert somewhere before i.
 		auto insertionPoint = i - 1;
 		while (insertionPoint >= 0 && values[insertionPoint] > value)
 		{
