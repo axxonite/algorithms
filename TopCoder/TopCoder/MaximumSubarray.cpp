@@ -34,6 +34,7 @@ int FindBest(vector<int>& a, int left, int right, vector<vector<int>>& dp)
 		int best = 0;
 		for ( int i = left + 1; i < right; ++i)
 			best = max(best, FindBest(a, left, i, dp) + FindBest(a, i + 1, right, dp));
+		dp[left][right] = best;
 	}
 	return dp[left][right];
 }
