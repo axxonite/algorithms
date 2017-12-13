@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Problem.cpp" />
+    <ClCompile Include="SRMs\SRM724.cpp" />
     <ClCompile Include="TopCoder.cpp" />
     <ClCompile Include="UnfinishedTournamentEasy.cpp" />
   </ItemGroup>

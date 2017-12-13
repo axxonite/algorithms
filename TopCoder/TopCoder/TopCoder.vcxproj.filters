@@ -8,5 +8,13 @@
     <ClCompile Include="TopCoder.cpp" />
     <ClCompile Include="Problem.cpp" />
     <ClCompile Include="UnfinishedTournamentEasy.cpp" />
+    <ClCompile Include="SRMs\SRM724.cpp">
+      <Filter>SRMs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="SRMs">
+      <UniqueIdentifier>{37a52028-64c9-42f1-b045-008545e72350}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

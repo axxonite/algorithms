@@ -1,33 +1,24 @@
 #include <string>
 #include <cassert>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-class OrAndSumEasy
+struct MulticoreProcessingEasy
 {
-public :
-
-	string isPossible(long long pairOr, long long pairSum)
+	int fastestTime(int jobLength, int corePenalty, vector <int> speed, vector <int> cores)
 	{
-		for ( long long i = 1; i < pairSum; ++i)
-		{
-			long long a = i;
-			long long badBits = a & ~pairOr;
-			int c = 0;
-			while (badBits)
-				badBits >>= 1, ++c;
-			if ( c > 0 )
-				a = i = (1 << c);
-			long long b = pairSum - i;
-			if ((a | b) == pairOr)
-				return "Possible";
-		}
-		return "Impossible";
+		int best = numeric_limits<int>::max();
+		for (int i = 0; i < speed.size(); ++i)
+			for (int j = 1; j < cores.size(); ++j)
+				best = min(best, jobLength / (j * speed[i]) + (j - 1) * corePenalty);
+		return best;
 	}
 };
 
 void TestProblem()
 {
-	OrAndSumEasy object;
-	assert(object.isPossible(999799115789631487, 999999999999999999) == "Possible");
+	MulticoreProcessingEasy object;
+	//int test = object.longest(2, 1, 0);
 }
