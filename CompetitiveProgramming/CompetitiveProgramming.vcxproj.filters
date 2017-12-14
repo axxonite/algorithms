@@ -3,13 +3,13 @@
   <ItemGroup>
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Problem.h" />
+    <ClInclude Include="HackerRank\HackerRank.h">
+      <Filter>HackerRank</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Problem.cpp" />
     <ClCompile Include="TopCoder\SRM724.cpp">
-      <Filter>TopCoder</Filter>
-    </ClCompile>
-    <ClCompile Include="TopCoder\TopCoder.cpp">
       <Filter>TopCoder</Filter>
     </ClCompile>
     <ClCompile Include="TopCoder\UnfinishedTournamentEasy.cpp">
@@ -21,6 +21,7 @@
     <ClCompile Include="HackerRank\MaximumSubarray.cpp">
       <Filter>HackerRank</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HackerRank">

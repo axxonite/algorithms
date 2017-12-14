@@ -144,15 +144,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="HackerRank\HackerRank.h" />
     <ClInclude Include="Problem.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HackerRank\Equal.cpp" />
     <ClCompile Include="HackerRank\MaximumSubarray.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem.cpp" />
     <ClCompile Include="TopCoder\SRM724.cpp" />
-    <ClCompile Include="TopCoder\TopCoder.cpp" />
     <ClCompile Include="TopCoder\UnfinishedTournamentEasy.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

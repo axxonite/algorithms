@@ -13,8 +13,6 @@
       <Filter>Solutions\9. Stacks and Queues</Filter>
     </ClInclude>
     <ClInclude Include="Shared.h" />
-    <ClInclude Include="BSTPrototype.h" />
-    <ClInclude Include="LinkedListPrototype.h" />
     <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h">
       <Filter>Problems\18. Greedy Algorithms</Filter>
     </ClInclude>
@@ -27,7 +25,6 @@
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h">
       <Filter>Problems\8. Linked Lists</Filter>
     </ClInclude>
-    <ClInclude Include="binary_tree_prototype.h" />
     <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h">
       <Filter>Problems\10. Binary Trees</Filter>
     </ClInclude>
@@ -43,20 +40,35 @@
     <ClInclude Include="Solutions\8_LinkedLists\8.4_overlapping_lists_no_cycle_solution.h">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClInclude>
-    <ClInclude Include="binary_tree_utils.h" />
     <ClInclude Include="Solutions\6_Arrays\6.11_offline_sampling_solution.h">
       <Filter>Solutions\6. Arrays</Filter>
     </ClInclude>
     <ClInclude Include="Problems\6_Arrays\6.11_offline_sampling.h">
       <Filter>Problems\6. Arrays</Filter>
     </ClInclude>
-    <ClInclude Include="doubly_linked_list_prototype.h" />
-    <ClInclude Include="binary_tree_with_parent_prototype.h" />
     <ClInclude Include="Solutions\8_LinkedLists\8.1_merge_sorted_lists_solution.h">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClInclude>
     <ClInclude Include="Problems\8_LinkedLists\8.1_merge_sorted_lists.h">
       <Filter>Problems\8. Linked Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_tree_prototype.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_tree_utils.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_tree_with_parent_prototype.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTPrototype.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="doubly_linked_list_prototype.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListPrototype.h">
+      <Filter>Data Structures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -807,6 +819,9 @@
     </Filter>
     <Filter Include="Solutions\11. Heaps">
       <UniqueIdentifier>{97645c64-f08a-4800-9cf2-afb1e216c91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data Structures">
+      <UniqueIdentifier>{2d4892fb-b655-4fa2-b1cc-ec052e2cbb70}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
