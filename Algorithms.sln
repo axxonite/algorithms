@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithms", "Algorithms\Algorithms.vcxproj", "{CB2D087E-72D7-4583-899B-88327AA2434A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Problems", "Problems\Problems.vcxproj", "{A29DA275-7589-4032-BD5A-7A0BF54F981B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EPI", "EPI\EPI.vcxproj", "{A29DA275-7589-4032-BD5A-7A0BF54F981B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TopCoder", "TopCoder\TopCoder\TopCoder.vcxproj", "{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CompetitiveProgramming", "CompetitiveProgramming\CompetitiveProgramming.vcxproj", "{48B93B59-CC3F-4654-8F1E-BCCD8D957C21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

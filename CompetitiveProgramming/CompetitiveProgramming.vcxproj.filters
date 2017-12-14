@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Problem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Problem.cpp" />
+    <ClCompile Include="TopCoder\SRM724.cpp">
+      <Filter>TopCoder</Filter>
+    </ClCompile>
+    <ClCompile Include="TopCoder\TopCoder.cpp">
+      <Filter>TopCoder</Filter>
+    </ClCompile>
+    <ClCompile Include="TopCoder\UnfinishedTournamentEasy.cpp">
+      <Filter>TopCoder</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerRank\Equal.cpp">
+      <Filter>HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerRank\MaximumSubarray.cpp">
+      <Filter>HackerRank</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="HackerRank">
+      <UniqueIdentifier>{96f6bd4d-e7db-4487-a731-e072d7fe50ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TopCoder">
+      <UniqueIdentifier>{df8813f5-2d9d-4348-8045-2016b9028c66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
