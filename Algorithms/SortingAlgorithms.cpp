@@ -5,6 +5,24 @@
 using namespace std;
 
 // --------------------------------------------------
+// Bubble sort.
+// O(n^2).
+void BubbleSort(vector<int>& a)
+{
+	// Outer loop: iterate every element.
+	for (auto i = 0; i < a.size(); i++)
+	{
+		// Inner loop: iterate elements from n-1 down to i+1
+		for (auto j = a.size() - 1; j > i; j--)
+		{
+			// Swap the contiguous elements if they're in the wrong order.
+			if (a[j] < a[j - 1])
+				swap(a[j], a[j - 1]);
+		}
+	}
+}
+
+// --------------------------------------------------
 // Insertion sort.
 // O(n^2), but fast for small input sizes. Go through each value and insert in its appropriate location in the array.
 void InsertionSort(vector<int>& values)
@@ -23,6 +41,12 @@ void InsertionSort(vector<int>& values)
 		values[insertionPoint + 1] = value;
 	}
 }
+
+// --------------------------------------------------
+// Selection sort.
+// O(n^2)?
+
+// ??????
 
 // --------------------------------------------------
 // Merge sort. Subdivide int two subarrays recursively which will create hierarchy of smaller, sorted subarrays down to size 1, then compare the entries of each sub array to merge them. 
