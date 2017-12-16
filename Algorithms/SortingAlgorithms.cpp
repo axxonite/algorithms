@@ -53,16 +53,15 @@ void InsertionSort(vector<int>& values)
 // O(n log n)
 void Merge(vector<int>& values, int first, int pivot, int last)
 {
-	// Initialize the left and right arrays
-	vector<int> left(values.begin() + first, values.begin() + pivot + 1); // Need iterator one past to include the element we want at the end.
-	vector<int> right(values.begin() + pivot + 1, values.begin() + last + 1); // Same here.
+	vector<int> left(values.begin() + first, values.begin() + pivot);
+	vector<int> right(values.begin() + pivot, values.begin() + last);
 	left.push_back(numeric_limits<int>::max());
 	right.push_back(numeric_limits<int>::max());
 
 	// Insert into destination array based on comparison based left and right sub-arrays.
 	auto l = 0, r = 0;
-	for (auto k = first; k <= last; k++)
-		values[k] = left[l] < right[r] ? left[l++] : right[r++];
+	for (auto i = first; i <= last; i++)
+		values[i] = left[l] < right[r] ? left[l++] : right[r++];
 }
 
 void MergeSort(vector<int>& values, int first, int last)
@@ -70,17 +69,15 @@ void MergeSort(vector<int>& values, int first, int last)
 	if (first < last)
 	{
 		auto pivot = (first + last) / 2; // Choose pivot in the middle.
-		// Divide and conquer.
-		MergeSort(values, first, pivot);
-		MergeSort(values, pivot + 1, last);
-		// Merge the two sorted subarrays.
-		Merge(values, first, pivot, last);
+		MergeSort(values, first, pivot); // Divide and conquer.
+		MergeSort(values, pivot, last);
+		Merge(values, first, pivot, last); // Merge the two sorted subarrays.
 	}
 }
 
 void MergeSort(vector<int>& values)
 {
-	MergeSort(values, 0, values.size() - 1);
+	MergeSort(values, 0, values.size());
 }
 
 // --------------------------------------------------

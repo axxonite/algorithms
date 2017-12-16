@@ -25,39 +25,23 @@
 
 using namespace std;
 
-struct Best
+tuple<long long, long long> Solve(vector<long long>& A)
 {
-	int seq, arr;
-};
-
-Best FindBest(vector<int>& a, int left, int right, vector<vector<Best>>& dp)
-{
-	if (dp[left][right].seq == -1)
+	vector<long long> sum(A.size(), 0);
+	long long longestS = 0, maxVal = numeric_limits<long long>::min(), count = 0;
+	sum[0] = A[0];
+	for ( int i = 0; i < A.size(); ++i)
 	{
-		if (right == left)
-			return { 0, 0 };
-		if (right - left == 1)
-			return { a[left], a[left] };
-		Best best = {0, 0};
-		for (int i = left; i < right; ++i)
-			best.seq += a[i];
-		best.arr = best.seq;
-		// subsequences
-		for (int i = left + 1; i < right; ++i)
-		{
-			Best bestL = FindBest(a, left, i, dp);
-			Best bestR = FindBest(a, i + 1, right, dp);
-			best.seq = max(best.seq, bestL.seq + bestR.seq);
-		}
-		dp[left][right] = best;
-	}
-	return dp[left][right];
-}
+		if (A[i] > 0)
+			longestS += A[i], ++count;
+		maxVal = max(maxVal, A[i]);
+		if ( i > 0 )
+			sum[i] = max(sum[i - 1] + A[i], A[i]);
 
-Best Solve(vector<int>& a)
-{
-	vector<vector<Best>> dp(a.size() + 1, vector<Best>(a.size() + 1, Best{ -1, -1 }));
-	return FindBest(a, 0, int(a.size()), dp);
+	}
+	if (count == 0)
+		longestS = maxVal;
+	return { *max_element(sum.begin(), sum.end()), longestS };
 }
 
 void Run(istream& in, ostream& out)
@@ -68,23 +52,23 @@ void Run(istream& in, ostream& out)
 	{
 		int n, x;
 		in >> n;
-		vector<int> a(n);
+		vector<long long> a(n);
 		for (int j = 0; j < n; ++j)
 		{
 			in >> x;
 			a[j] = x;
 		}
 
-		Best result = Solve(a);
-		out << result.arr << " " << result.seq << endl;
+		auto result = Solve(a);
+		out << get<0>(result) << " " << get<1>(result) << endl;
 	}
 }
 
-int main3() 
-{
-	Run(cin, cout);
-	return 0;
-}
+//int main() 
+//{
+//	Run(cin, cout);
+//	return 0;
+//}
 
 // ----- TEST -----
 const char* testCase = R"(

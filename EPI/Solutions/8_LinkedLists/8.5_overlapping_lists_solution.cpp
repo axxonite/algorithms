@@ -37,6 +37,7 @@ namespace Solutions
 
 		// l1 and l2 end in the same cycle, locate the overlapping node if they first overlap before cycle starts.
 		int stem1Length = Distance(l1, cycle1), stem2Length = Distance(l2, cycle2); // Find out how far from each head the start of each cycle is.
+		// We want both iterators to be at the same distance to the cycle.
 		Solutions::AdvanceListByK(abs(stem1Length - stem2Length), stem1Length > stem2Length ? &l1 : &l2); // Advance by the difference in length between the start of each cycle.
 		while (l1 != l2 && l1 != cycle1 && l2 != cycle2) // Continue until we've either reached the overlap, or the start or either cycle.
 			l1 = l1->next, l2 = l2->next;

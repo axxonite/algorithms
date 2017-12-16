@@ -3,6 +3,8 @@
 
 int main()
 {
-	MaximumSubarrayTest();
+	//MaximumSubarrayTest();
+	//BricksGameTest();
+	XorAndSumTest();
 	return 0;
 }

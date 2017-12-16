@@ -5,6 +5,7 @@ int main()
 {
 	BubbleSortTest();
 	QuicksortTest();
+	MergeSortTest();
 	
 	// 5. Primitives
 	MultiplyShiftAddTest();

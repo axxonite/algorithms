@@ -270,6 +270,7 @@
     <ClCompile Include="Problems\Math\GaussJordanElimination.cpp" />
     <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
+    <ClCompile Include="Problems\SortingAlgorithms\MergeSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
     <ClCompile Include="Sandbox.cpp" />
     <ClCompile Include="Shared.cpp" />

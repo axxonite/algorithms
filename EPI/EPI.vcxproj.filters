@@ -704,6 +704,9 @@
     <ClCompile Include="Sandbox.cpp">
       <Filter>Problems</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\MergeSort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

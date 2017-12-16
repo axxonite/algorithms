@@ -3,6 +3,7 @@
 // Sorting algorithms.
 void BubbleSortTest();
 void QuicksortTest();
+void MergeSortTest();
 
 // Chapter 5: Primitives.
 void MultiplyShiftAddTest();

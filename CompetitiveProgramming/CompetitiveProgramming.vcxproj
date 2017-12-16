@@ -149,8 +149,10 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HackerRank\BricksGame.cpp" />
     <ClCompile Include="HackerRank\Equal.cpp" />
     <ClCompile Include="HackerRank\MaximumSubarray.cpp" />
+    <ClCompile Include="HackerRank\XorAndSum.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem.cpp" />
     <ClCompile Include="TopCoder\SRM724.cpp" />

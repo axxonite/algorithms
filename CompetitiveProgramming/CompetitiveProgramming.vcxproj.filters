@@ -22,6 +22,12 @@
       <Filter>HackerRank</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="HackerRank\BricksGame.cpp">
+      <Filter>HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="HackerRank\XorAndSum.cpp">
+      <Filter>HackerRank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HackerRank">
