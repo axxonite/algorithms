@@ -28,6 +28,9 @@
     <ClCompile Include="HackerRank\XorAndSum.cpp">
       <Filter>HackerRank</Filter>
     </ClCompile>
+    <ClCompile Include="LeetCode\LRUCache.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HackerRank">
@@ -35,6 +38,9 @@
     </Filter>
     <Filter Include="TopCoder">
       <UniqueIdentifier>{df8813f5-2d9d-4348-8045-2016b9028c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode">
+      <UniqueIdentifier>{7728b2ea-ac45-489d-b86a-710e099e2b6e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

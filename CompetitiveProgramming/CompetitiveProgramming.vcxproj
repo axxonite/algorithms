@@ -153,6 +153,7 @@
     <ClCompile Include="HackerRank\Equal.cpp" />
     <ClCompile Include="HackerRank\MaximumSubarray.cpp" />
     <ClCompile Include="HackerRank\XorAndSum.cpp" />
+    <ClCompile Include="LeetCode\LRUCache.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem.cpp" />
     <ClCompile Include="TopCoder\SRM724.cpp" />

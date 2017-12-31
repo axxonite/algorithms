@@ -5,6 +5,7 @@ int main()
 {
 	//MaximumSubarrayTest();
 	//BricksGameTest();
-	XorAndSumTest();
+	//XorAndSumTest();
+	//LRUCacheTest();
 	return 0;
 }

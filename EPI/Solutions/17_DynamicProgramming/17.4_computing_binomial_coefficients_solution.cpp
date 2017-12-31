@@ -4,18 +4,18 @@
 
 namespace Solutions
 {
-	int ComputeXChooseY(int x, int y, vector<vector<int>>& xChooseY)
+	int ComputeXChooseY(int n, int k, vector<vector<int>>& xChooseY)
 	{
-		if (y == 0 || x == y)
+		if (k == 0 || n == k)
 			return 1;
 
-		if (xChooseY[x][y] == 0)
+		if (xChooseY[n][k] == 0)
 		{
-			int withoutY = ComputeXChooseY(x - 1, y, xChooseY);
-			int withY = ComputeXChooseY(x - 1, y - 1, xChooseY);
-			xChooseY[x][y] = withoutY + withY;
+			int withoutY = ComputeXChooseY(n - 1, k, xChooseY);
+			int withY = ComputeXChooseY(n - 1, k - 1, xChooseY);
+			xChooseY[n][k] = withoutY + withY;
 		}
-		return xChooseY[x][y];
+		return xChooseY[n][k];
 	}
 
 	int ComputeBinomialCoefficient(int n, int k)
