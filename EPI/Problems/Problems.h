@@ -6,6 +6,7 @@ void QuicksortTest();
 void MergeSortTest();
 
 // Chapter 5: Primitives.
+void ReverseBitsTest();
 void MultiplyShiftAddTest();
 void DivideTest();
 void IsPalindromeNumberTest();
@@ -80,6 +81,7 @@ void AddCreditsTest();
 void FindClosestElementsInSortedArraysTest();
 void FindLCATest();
 void BSTInsertDeleteTest();
+void ReconstructBSTPreorderTest();
 
 // Chapter 16: Recursion
 void SolveNQueensTest();

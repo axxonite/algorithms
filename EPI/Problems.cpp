@@ -8,6 +8,7 @@ int main()
 	MergeSortTest();
 	
 	// 5. Primitives
+	ReverseBitsTest();
 	MultiplyShiftAddTest();
 	DivideTest();
 	IsPalindromeNumberTest();
@@ -20,7 +21,7 @@ int main()
 	DutchFlagPartitionTest();
 	RotateMatrixTest();
 	TestGeneratePrimes();
-	NextPermutationTest();
+	NextPermutationTest(); 
 	BuyAndSellStockTwiceTest();
 	ComputeRandomPermutationTest();
 	RandomSubsetTest();
@@ -82,6 +83,7 @@ int main()
 	FindClosestElementsInSortedArraysTest();
 	FindLCATest();
 	BSTInsertDeleteTest();
+	ReconstructBSTPreorderTest();
 
 	// 16. Recursion
 	SolveNQueensTest();

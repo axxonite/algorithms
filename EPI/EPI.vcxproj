@@ -145,6 +145,8 @@
     <ClInclude Include="LinkedListPrototype.h" />
     <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h" />
     <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h" />
+    <ClInclude Include="Problems\5_Primitives\5.1_parity.h" />
+    <ClInclude Include="Problems\5_Primitives\5.2_swap_bits.h" />
     <ClInclude Include="Problems\6_Arrays\6.11_offline_sampling.h" />
     <ClInclude Include="Problems\8_LinkedLists\8.1_merge_sorted_lists.h" />
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h" />
@@ -155,6 +157,8 @@
     <ClInclude Include="Shared.h" />
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h" />
     <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h" />
+    <ClInclude Include="Solutions\5_Primitives\5.1_parity_solution.h" />
+    <ClInclude Include="Solutions\5_Primitives\5.2_swap_bits_solution.h" />
     <ClInclude Include="Solutions\6_Arrays\6.11_offline_sampling_solution.h" />
     <ClInclude Include="Solutions\8_LinkedLists\8.1_merge_sorted_lists_solution.h" />
     <ClInclude Include="Solutions\8_LinkedLists\8.3_checking_cycle_solution.h" />
@@ -195,6 +199,7 @@
     <ClCompile Include="Problems\15_BinarySearchTrees\15.4_bst_lowest_common_ancestor.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved.cpp" />
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.5_reconstruct_binary_tree_pre_in_orders.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.11_tree_diameter.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.1_tower_hanoi.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.2_n_queens.cpp" />
@@ -239,6 +244,7 @@
     <ClCompile Include="Problems\25_HonorRoll\25.40_arbitrage.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.10_uniform_random_number_generation.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.11_intersect_rectangle.cpp" />
+    <ClCompile Include="Problems\5_Primitives\5.3_reverse_bits.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.4_closest_int_same_bits.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.5_multiply_shift_add.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.6_division.cpp" />
@@ -301,6 +307,7 @@
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.10_insertion_deletion_bst_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.4_bst_lowest_common_ancestor_solution.cpp" />
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.5_reconstruct_binary_tree_pre_in_orders_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.11_tree_diameter_solution.cpp" />
@@ -345,6 +352,7 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.40_arbitrage_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.10_uniform_random_number_generation_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.11_intersect_rectangle_solution.cpp" />
+    <ClCompile Include="Solutions\5_Primitives\5.3_reverse_bits_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.4_closest_int_same_bits_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.5_multiply_shift_add_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.6_division_solution.cpp" />
