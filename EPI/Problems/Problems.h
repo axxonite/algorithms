@@ -17,12 +17,18 @@ void UniformRandomTest();
 
 // Chapter 6 : Arrays.
 void DutchFlagPartitionTest();
+void PlusOneTest();
+void MultiplyTest();
+void CanReachEndTest();
+void DeleteDuplicatesTest();
+void BuyAndSellStockOnceTest();
 void RotateMatrixTest();
 void TestGeneratePrimes();
 void NextPermutationTest();
 void BuyAndSellStockTwiceTest();
 void ComputeRandomPermutationTest();
 void RandomSubsetTest();
+void NonuniformRandomNumberGenerationTest();
 void OnlineRandomSampleTest();
 
 // Chapter 7 : Strings.

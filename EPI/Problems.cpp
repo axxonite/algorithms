@@ -19,12 +19,18 @@ int main()
 
 	// 6. Arrays
 	DutchFlagPartitionTest();
+	PlusOneTest();
+	MultiplyTest();
+	CanReachEndTest();
+	DeleteDuplicatesTest();
+	BuyAndSellStockOnceTest();
 	RotateMatrixTest();
 	TestGeneratePrimes();
 	NextPermutationTest(); 
 	BuyAndSellStockTwiceTest();
 	ComputeRandomPermutationTest();
 	RandomSubsetTest();
+	NonuniformRandomNumberGenerationTest();
 	OnlineRandomSampleTest();
 
 	// 7. Strings
