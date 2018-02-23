@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Solution
+namespace Solutions
 {
 	inline long long SwapBits( long long x, int i, int j ) 
 	{

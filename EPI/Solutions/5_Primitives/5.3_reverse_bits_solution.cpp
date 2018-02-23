@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "5.2_swap_bits_solution.h"
 
-namespace Solution
+namespace Solutions
 {
 	vector<long long> precomputedReverse;
 

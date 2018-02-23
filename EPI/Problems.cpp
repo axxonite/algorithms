@@ -32,6 +32,8 @@ int main()
 	RandomSubsetTest();
 	NonuniformRandomNumberGenerationTest();
 	OnlineRandomSampleTest();
+	IsValidSudokuTest();
+	MatrixInSpiralOrderTest();
 
 	// 7. Strings
 	InterconvertStringIntTest();

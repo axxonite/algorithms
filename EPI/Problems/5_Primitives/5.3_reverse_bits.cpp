@@ -19,7 +19,7 @@ long long ReverseBits( long long x )
 long long ReverseX2( long long x, int n )
 {
 	for ( int i = 0, j = n; i < j; ++i, --j )
-		x = Solution::SwapBits( x, i, j );
+		x = Solutions::SwapBits( x, i, j );
 	return x;
 }
 void ReverseBitsTest()

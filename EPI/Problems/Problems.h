@@ -30,6 +30,8 @@ void ComputeRandomPermutationTest();
 void RandomSubsetTest();
 void NonuniformRandomNumberGenerationTest();
 void OnlineRandomSampleTest();
+void IsValidSudokuTest();
+void MatrixInSpiralOrderTest();
 
 // Chapter 7 : Strings.
 void InterconvertStringIntTest();
