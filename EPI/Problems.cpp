@@ -24,16 +24,16 @@ int main()
 	CanReachEndTest();
 	DeleteDuplicatesTest();
 	BuyAndSellStockOnceTest();
-	RotateMatrixTest();
-	TestGeneratePrimes();
-	NextPermutationTest(); 
 	BuyAndSellStockTwiceTest();
+	TestGeneratePrimes();
+	NextPermutationTest();
+	OnlineRandomSampleTest();
 	ComputeRandomPermutationTest();
 	RandomSubsetTest();
 	NonuniformRandomNumberGenerationTest();
-	OnlineRandomSampleTest();
 	IsValidSudokuTest();
 	MatrixInSpiralOrderTest();
+	RotateMatrixTest();
 
 	// 7. Strings
 	InterconvertStringIntTest();

@@ -22,16 +22,16 @@ void MultiplyTest();
 void CanReachEndTest();
 void DeleteDuplicatesTest();
 void BuyAndSellStockOnceTest();
-void RotateMatrixTest();
+void BuyAndSellStockTwiceTest();
 void TestGeneratePrimes();
 void NextPermutationTest();
-void BuyAndSellStockTwiceTest();
+void OnlineRandomSampleTest();
 void ComputeRandomPermutationTest();
 void RandomSubsetTest();
 void NonuniformRandomNumberGenerationTest();
-void OnlineRandomSampleTest();
 void IsValidSudokuTest();
 void MatrixInSpiralOrderTest();
+void RotateMatrixTest();
 
 // Chapter 7 : Strings.
 void InterconvertStringIntTest();
