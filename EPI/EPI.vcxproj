@@ -267,7 +267,16 @@
     <ClCompile Include="Problems\6_Arrays\6.7_buy_and_sell_stock_twice.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.8_prime_sieve.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.9_permutation_array1.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.10_valid_ip_address.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.11_snake_string.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.12_run_length_compression.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.13_rabin_karp.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.2_convert_base.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.4_replace_and_remove.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.5_valid_palindrome.cpp" />
     <ClCompile Include="Problems\7_Strings\7.6_reverse_words.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.7_phone_mnemonic.cpp" />
+    <ClCompile Include="Problems\7_Strings\7.8_look_and_say.cpp" />
     <ClCompile Include="Problems\7_Strings\7.9_roman_to_integer.cpp" />
     <ClCompile Include="Problems\7_Strings\7.1_interconverting_string_integer.cpp" />
     <ClCompile Include="Problems\7_Strings\7.3_spreadsheet_encoding.cpp" />

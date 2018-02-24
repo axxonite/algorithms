@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-bool IsPalindrome(const string& prefix)
+bool IsPalindrome2(const string& prefix)
 {
 	return true;
 }
@@ -25,7 +25,7 @@ void CheckAns(const vector<vector<string>>& vecs, const string& input)
 		string temp;
 		for (const string& s : vec)
 		{
-			assert(IsPalindrome(s));
+			assert( IsPalindrome2(s));
 			temp += s;
 		}
 		assert(!temp.compare(input));

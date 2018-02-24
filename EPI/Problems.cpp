@@ -37,9 +37,18 @@ int main()
 
 	// 7. Strings
 	InterconvertStringIntTest();
+	ConvertBaseTest();
 	SpreadsheetEncodingTest();
-	RomanToIntegerTest();
+	ReplaceAndRemoveTest();
+	IsPalindromeTest();
 	ReverseWordsTest();
+	PhoneMnemonicTest();
+	LookAndSayTest();
+	RomanToIntegerTest();
+	GetValidIPAddressTest();
+	SnakeStringTest();
+	RLEEncodingTest();
+	RabinKarpTest();
 
 	// 8. Lists
 	OverlappingListsTest();

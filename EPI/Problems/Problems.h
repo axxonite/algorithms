@@ -35,9 +35,18 @@ void RotateMatrixTest();
 
 // Chapter 7 : Strings.
 void InterconvertStringIntTest();
+void ConvertBaseTest();
 void SpreadsheetEncodingTest();
-void RomanToIntegerTest();
+void ReplaceAndRemoveTest();
+void IsPalindromeTest();
 void ReverseWordsTest();
+void PhoneMnemonicTest();
+void LookAndSayTest();
+void RomanToIntegerTest();
+void GetValidIPAddressTest();
+void SnakeStringTest();
+void RLEEncodingTest();
+void RabinKarpTest();
 
 // Chapter 8 : Linked lists.
 void OverlappingListsTest();

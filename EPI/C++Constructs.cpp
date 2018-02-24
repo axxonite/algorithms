@@ -8,4 +8,6 @@ struct Foo
 
 void function()
 {
+	vector<int> a, b;
+	a.insert( a.end(), b.begin(), b.end() );
 } 
