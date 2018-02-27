@@ -8,6 +8,7 @@ bool IsPalindrome( const string& s )
 {
 	return false;
 }
+
 #pragma region Test
 
 void IsPalindromeTest()

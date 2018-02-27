@@ -806,6 +806,21 @@
     <ClCompile Include="Problems\7_Strings\7.13_rabin_karp.cpp">
       <Filter>Problems\7. Strings</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.2_convert_base_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.4_replace_and_remove_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.5_valid_palindrome_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.7_phone_mnemonic_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.9_look_and_say_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
