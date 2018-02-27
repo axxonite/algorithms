@@ -818,7 +818,19 @@
     <ClCompile Include="Solutions\7_Strings\7.7_phone_mnemonic_solution.cpp">
       <Filter>Solutions\7. Strings</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\7_Strings\7.9_look_and_say_solution.cpp">
+    <ClCompile Include="Solutions\7_Strings\7.8_look_and_say_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.10_valid_ip_address_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.11_snake_string_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.12_run_length_compression_solution.cpp">
+      <Filter>Solutions\7. Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\7_Strings\7.13_rabin_karp_solution.cpp">
       <Filter>Solutions\7. Strings</Filter>
     </ClCompile>
   </ItemGroup>

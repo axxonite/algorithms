@@ -11,16 +11,6 @@ vector<string> GetValidIPAddress( const string& s )
 
 #pragma region Test
 
-bool IsValidPart( const string& s ) {
-	if ( s.size() > 3 )
-		return false;
-	// "00", "000", "01", etc. are not valid, but "0" is valid.
-	if ( s.front() == '0' && s.size() > 1 ) 
-		return false;
-	int val = stoi( s );
-	return val <= 255 && val >= 0;
-}
-
 void GetValidIPAddressTest()
 {
 #if TEST

@@ -9,7 +9,8 @@ string Decoding( const string &s )
 	return "";
 }
 
-string Encoding( const string &s ) {
+string Encoding( const string &s ) 
+{
 	return "";
 }
 
