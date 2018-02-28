@@ -49,10 +49,16 @@ void RLEEncodingTest();
 void RabinKarpTest();
 
 // Chapter 8 : Linked lists.
-void OverlappingListsTest();
-void CyclicallyRightShiftListTest();
-void RemoveKthLastTest();
 void ReverseSublistTest();
+void OverlappingListsTest();
+void DeletionFromListTest();
+void RemoveKthLastTest();
+void RemoveDuplicatesTest();
+void CyclicallyRightShiftListTest();
+void EvenOddMergeTest();
+void IsLinkedListAPalindromeTest();
+void ListPivotingTest();
+void AddTwoNumbersTest();
 
 // Chapter 9 : Stacks & Queues
 void StackTest();

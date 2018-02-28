@@ -280,10 +280,16 @@
     <ClCompile Include="Problems\7_Strings\7.9_roman_to_integer.cpp" />
     <ClCompile Include="Problems\7_Strings\7.1_interconverting_string_integer.cpp" />
     <ClCompile Include="Problems\7_Strings\7.3_spreadsheet_encoding.cpp" />
+    <ClCompile Include="Problems\8_LinkedLists\8.10_even_odd_merge_linked_list.cpp" />
+    <ClCompile Include="Problems\8_LinkedLists\8.11_palindrome_linked_list.cpp" />
+    <ClCompile Include="Problems\8_LinkedLists\8.12_list_pivoting.cpp" />
+    <ClCompile Include="Problems\8_LinkedLists\8.13_add_two_number_list.cpp" />
     <ClCompile Include="Problems\8_LinkedLists\8.2_reverse_linked_list_from_s_to_f.cpp" />
     <ClCompile Include="Problems\8_LinkedLists\8.5_overlapping_lists.cpp" />
     <ClCompile Include="Problems\8_LinkedLists\8.7_remove_kth_last_list.cpp" />
+    <ClCompile Include="Problems\8_LinkedLists\8.8_remove_duplicates_sorted_list.cpp" />
     <ClCompile Include="Problems\8_LinkedLists\8.9_cyclic_right_shift.cpp" />
+    <ClCompile Include="Problems\8_LinkedLists\8.6_deletion_list.cpp" />
     <ClCompile Include="Problems\9.8_circular_queue.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.10_queue_with_max.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.1_stack_with_max.cpp" />

@@ -51,10 +51,16 @@ int main()
 	RabinKarpTest();
 
 	// 8. Lists
-	OverlappingListsTest();
-	CyclicallyRightShiftListTest();
-	RemoveKthLastTest();
 	ReverseSublistTest();
+	OverlappingListsTest();
+	DeletionFromListTest();
+	RemoveKthLastTest();
+	RemoveDuplicatesTest();
+	CyclicallyRightShiftListTest();
+	EvenOddMergeTest();
+	IsLinkedListAPalindromeTest();
+	ListPivotingTest();
+	AddTwoNumbersTest();
 
 	// 9. Stacks & Queues
 	StackTest();

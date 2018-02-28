@@ -833,6 +833,24 @@
     <ClCompile Include="Solutions\7_Strings\7.13_rabin_karp_solution.cpp">
       <Filter>Solutions\7. Strings</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.6_deletion_list.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.8_remove_duplicates_sorted_list.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.10_even_odd_merge_linked_list.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.11_palindrome_linked_list.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.12_list_pivoting.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\8_LinkedLists\8.13_add_two_number_list.cpp">
+      <Filter>Problems\8. Linked Lists</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
