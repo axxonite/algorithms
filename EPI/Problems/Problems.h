@@ -62,11 +62,15 @@ void AddTwoNumbersTest();
 
 // Chapter 9 : Stacks & Queues
 void StackTest();
-void TestQueueWithMax();
+void EvalRPNTest();
+void IsWellFormedTest();
+void ShortestEquivalentPathTest();
+void SetJumpOrderTest();
 void ExamineBuildingsWithSunsetTest();
 void BinaryTreeDepthOrderTest();
 void CircularQueueTest();
 void QueueTest();
+void QueueWithMaxTest();
 
 // Chapter 10: Binary Trees
 void FindSuccessorTest();

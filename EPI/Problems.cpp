@@ -64,11 +64,15 @@ int main()
 
 	// 9. Stacks & Queues
 	StackTest();
-	TestQueueWithMax();
+	EvalRPNTest();
+	IsWellFormedTest();
+	ShortestEquivalentPathTest();
+	SetJumpOrderTest();
 	ExamineBuildingsWithSunsetTest();
 	BinaryTreeDepthOrderTest();
 	CircularQueueTest();
 	QueueTest();
+	QueueWithMaxTest();
 
 	// 10. Binary Trees
 	FindSuccessorTest();

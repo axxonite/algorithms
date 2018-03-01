@@ -293,6 +293,10 @@
     <ClCompile Include="Problems\9.8_circular_queue.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.10_queue_with_max.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.1_stack_with_max.cpp" />
+    <ClCompile Include="Problems\9_StacksQueues\9.2_rpn.cpp" />
+    <ClCompile Include="Problems\9_StacksQueues\9.3_valid_parentheses.cpp" />
+    <ClCompile Include="Problems\9_StacksQueues\9.4_normalized_pathnames.cpp" />
+    <ClCompile Include="Problems\9_StacksQueues\9.5_search_postings_list_iterative.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.6_view_sunset.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.7_binary_tree_level_order.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.9_queue_from_stacks.cpp" />
