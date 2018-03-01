@@ -851,6 +851,21 @@
     <ClCompile Include="Problems\8_LinkedLists\8.13_add_two_number_list.cpp">
       <Filter>Problems\8. Linked Lists</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.8_remove_duplicates_sorted_list_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.10_even_odd_merge_linked_list_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.11_palindrom_linked_list_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.12_list_pivoting_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.13_add_two_numbers_list_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

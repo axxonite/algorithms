@@ -411,9 +411,14 @@
     <ClCompile Include="Solutions\7_Strings\7.7_phone_mnemonic_solution.cpp" />
     <ClCompile Include="Solutions\7_Strings\7.8_look_and_say_solution.cpp" />
     <ClCompile Include="Solutions\7_Strings\7.9_roman_to_integer_solution.cpp" />
+    <ClCompile Include="Solutions\8_LinkedLists\8.10_even_odd_merge_linked_list_solution.cpp" />
+    <ClCompile Include="Solutions\8_LinkedLists\8.11_palindrom_linked_list_solution.cpp" />
+    <ClCompile Include="Solutions\8_LinkedLists\8.12_list_pivoting_solution.cpp" />
+    <ClCompile Include="Solutions\8_LinkedLists\8.13_add_two_numbers_list_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.2_reverse_linked_list_from_s_to_f_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.5_overlapping_lists_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.7_remove_kth_last_list_solution.cpp" />
+    <ClCompile Include="Solutions\8_LinkedLists\8.8_remove_duplicates_sorted_list_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.9_cyclic_right_shift_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.10_queue_with_max_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.cpp" />

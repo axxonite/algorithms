@@ -95,7 +95,7 @@ void EvenOddMergeTest()
 	EvenOddMergeSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	int n;
-	uniform_int_distribution<int> dis( 1, 1000 );
+	uniform_int_distribution<int> dis( 1, 500 );
 	n = dis( gen );
 	shared_ptr<ListNode<int>> head = CreateList( n );
 	CheckAnswer( EvenOddMerge( head ), n );
