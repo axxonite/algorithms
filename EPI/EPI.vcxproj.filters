@@ -25,9 +25,6 @@
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h">
       <Filter>Problems\8. Linked Lists</Filter>
     </ClInclude>
-    <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h">
-      <Filter>Problems\10. Binary Trees</Filter>
-    </ClInclude>
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h">
       <Filter>Solutions\10. Binary Trees</Filter>
     </ClInclude>
@@ -81,6 +78,9 @@
     </ClInclude>
     <ClInclude Include="Problems\5_Primitives\5.2_swap_bits.h">
       <Filter>Problems\5. Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h">
+      <Filter>Problems\10. Binary Trees</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -278,9 +278,6 @@
     <ClCompile Include="Problems\17_DynamicProgramming\17.11_pretty_printing.cpp">
       <Filter>Problems\17. Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\10_BinaryTrees\10.15_exterior_binary_tree.cpp">
-      <Filter>Problems\10. Binary Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\10_BinaryTrees\10.15_exterior_binary_tree_solution.cpp">
       <Filter>Solutions\10. Binary Trees</Filter>
     </ClCompile>
@@ -383,9 +380,6 @@
     <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp">
       <Filter>Problems\12. Searching</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders.cpp">
-      <Filter>Problems\10. Binary Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders_solution.cpp">
       <Filter>Solutions\10. Binary Trees</Filter>
     </ClCompile>
@@ -424,9 +418,6 @@
     </ClCompile>
     <ClCompile Include="Solutions\6_Arrays\6.13_compute_random_permutation_solution.cpp">
       <Filter>Solutions\6. Arrays</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\6.14_online_sampling.cpp">
-      <Filter>Problems\6. Arrays</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\6_Arrays\6.14_online_sampling_solution.cpp">
       <Filter>Solutions\6. Arrays</Filter>
@@ -509,9 +500,6 @@
     <ClCompile Include="Solutions\8_LinkedLists\8.7_remove_kth_last_list_solution.cpp">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\9.8_circular_queue.cpp">
-      <Filter>Problems\9. Stacks and Queues</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\9_StacksQueues\9.8_circular_queue_solution.cpp">
       <Filter>Solutions\9. Stacks and Queues</Filter>
     </ClCompile>
@@ -532,9 +520,6 @@
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.10_longest_contained_range_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\10.10_successor.cpp">
-      <Filter>Problems\10. Binary Trees</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\10_BinaryTrees\10.10_successor_solution.cpp">
       <Filter>Solutions\10. Binary Trees</Filter>
@@ -614,9 +599,6 @@
     <ClCompile Include="Solutions\11_Heaps\11.1_merge_sorted_arrays_solution.cpp">
       <Filter>Solutions\11. Heaps</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\19.7_transform_string_to_other.cpp">
-      <Filter>Problems\19. Graphs</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\19_Graphs\19.7_transform_string_to_other_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
@@ -661,9 +643,6 @@
     </ClCompile>
     <ClCompile Include="Solutions\5_Primitives\5.10_uniform_random_number_generation_solution.cpp">
       <Filter>Solutions\5. Primitives</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\14.9_sort_list.cpp">
-      <Filter>Problems\14. Sorting</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\14_Sorting\14.9_sort_list_solution.cpp">
       <Filter>Solutions\14. Sorting</Filter>
@@ -884,11 +863,65 @@
     <ClCompile Include="Solutions\9_StacksQueues\9.4_normalized_pathnames_solution.cpp">
       <Filter>Solutions\9. Stacks and Queues</Filter>
     </ClCompile>
-    <ClCompile Include="9.5_search_postings_list_solution.cpp">
-      <Filter>Solutions\9. Stacks and Queues</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\9_StacksQueues\9.5_search_postings_list.cpp">
       <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.5_search_postings_list_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.1_balanced_binary_tree.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.2_symmetric_binary_tree.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.4_lowest_common_ancestor.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.5_sum_root_to_leaf_binary_tree.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.6_path_sum_binary_tree.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.8_binary_tree_preorder_traversal_iterative.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.9_k_th_node_binary_tree.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.11_inorder_traversal_with_parent.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.14_connect_leaves_binary_tree.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.15_exterior_binary_tree.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.16_populating_next_right_pointers.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.17_binary_tree_lock.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\10_BinaryTrees\10.10_successor.cpp">
+      <Filter>Problems\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.14_online_sampling.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\9_StacksQueues\9.8_circular_queue.cpp">
+      <Filter>Problems\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.9_sort_list.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.7_transform_string_to_other.cpp">
+      <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -75,11 +75,22 @@ int main()
 	QueueWithMaxTest();
 
 	// 10. Binary Trees
-	FindSuccessorTest();
-	BSTInSortedOrderTest();
-	ExteriorBinaryTreeTest();
-	BinaryTreeFromPreorderInorderTest();
+	IsBalancedTest();
+	CheckSymmetricTest();
 	LCATest();
+	LCAParentTest();
+	SumRootToLeafTest();
+	HasPathSumTest();
+	BSTInSortedOrderTest();
+	PreorderTraversalTest();
+	FindKthNodeBinaryTreeTest();
+	FindSuccessorTest();
+	InorderTraversalTest();
+	BinaryTreeFromPreorderInorderTest();
+	CreateListOfLeavesTest();
+	ExteriorBinaryTreeTest();
+	ConstructRightSiblingTest();
+	BinaryTreeNodeLockableTest();
 
 	// 11. Heaps
 	KLargestInBinaryHeapTest();

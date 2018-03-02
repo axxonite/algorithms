@@ -73,11 +73,22 @@ void QueueTest();
 void QueueWithMaxTest();
 
 // Chapter 10: Binary Trees
-void FindSuccessorTest();
-void BSTInSortedOrderTest();
-void ExteriorBinaryTreeTest();
-void BinaryTreeFromPreorderInorderTest();
+void IsBalancedTest();
+void CheckSymmetricTest();
 void LCATest();
+void LCAParentTest();
+void SumRootToLeafTest();
+void HasPathSumTest();
+void BSTInSortedOrderTest();
+void PreorderTraversalTest();
+void FindKthNodeBinaryTreeTest();
+void FindSuccessorTest();
+void InorderTraversalTest();
+void BinaryTreeFromPreorderInorderTest();
+void CreateListOfLeavesTest();
+void ExteriorBinaryTreeTest();
+void ConstructRightSiblingTest();
+void BinaryTreeNodeLockableTest();
 
 // Chapter 11: Heaps
 void KLargestInBinaryHeapTest();
