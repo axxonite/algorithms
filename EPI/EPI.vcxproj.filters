@@ -875,7 +875,19 @@
     <ClCompile Include="Problems\9_StacksQueues\9.4_normalized_pathnames.cpp">
       <Filter>Problems\9. Stacks and Queues</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\9_StacksQueues\9.5_search_postings_list_iterative.cpp">
+    <ClCompile Include="Solutions\9_StacksQueues\9.2_rpn_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.3_valid_parentheses_solutions.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\9_StacksQueues\9.4_normalized_pathnames_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="9.5_search_postings_list_solution.cpp">
+      <Filter>Solutions\9. Stacks and Queues</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\9_StacksQueues\9.5_search_postings_list.cpp">
       <Filter>Problems\9. Stacks and Queues</Filter>
     </ClCompile>
   </ItemGroup>

@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int EvalRPN( const string& RPN_expression ) 
+int EvalRPN( const string& expr ) 
 {
 	return 0;
 }

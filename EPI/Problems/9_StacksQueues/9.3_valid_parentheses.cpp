@@ -11,7 +11,6 @@ bool IsWellFormed( const string& s )
 
 #pragma region Test
 
-
 void IsWellFormedSmallTest() 
 {
 	assert( IsWellFormed( "()" ) );

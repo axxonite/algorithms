@@ -66,7 +66,7 @@ void SimpleTestQueueWithMax() {
 	}
 }
 
-void TestQueueWithMax() {
+void QueueWithMaxTest() {
 #if TEST
 	SimpleTestQueueWithMax();
 	QueueWithMax Q;

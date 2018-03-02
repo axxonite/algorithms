@@ -168,6 +168,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="9.5_search_postings_list_solution.cpp" />
     <ClCompile Include="C++Constructs.cpp" />
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="Problems\10.10_successor.cpp" />
@@ -296,7 +297,7 @@
     <ClCompile Include="Problems\9_StacksQueues\9.2_rpn.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.3_valid_parentheses.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.4_normalized_pathnames.cpp" />
-    <ClCompile Include="Problems\9_StacksQueues\9.5_search_postings_list_iterative.cpp" />
+    <ClCompile Include="Problems\9_StacksQueues\9.5_search_postings_list.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.6_view_sunset.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.7_binary_tree_level_order.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.9_queue_from_stacks.cpp" />
@@ -426,6 +427,9 @@
     <ClCompile Include="Solutions\8_LinkedLists\8.9_cyclic_right_shift_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.10_queue_with_max_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.cpp" />
+    <ClCompile Include="Solutions\9_StacksQueues\9.2_rpn_solution.cpp" />
+    <ClCompile Include="Solutions\9_StacksQueues\9.3_valid_parentheses_solutions.cpp" />
+    <ClCompile Include="Solutions\9_StacksQueues\9.4_normalized_pathnames_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.6_sunset_view_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.7_binary_tree_level_order_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.8_circular_queue_solution.cpp" />
