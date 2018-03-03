@@ -923,6 +923,30 @@
     <ClCompile Include="Problems\19_Graphs\19.7_transform_string_to_other.cpp">
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.1_balanced_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.2_symmetric_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.4_lowest_common_ancestor_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.5_sum_root_to_leaf_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.6_path_sum_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.8_binary_tree_preorder_traversal_iterative_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.9_k_th_node_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.11_10.11_inorder_traversal_with_parent_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

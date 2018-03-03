@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-BinaryTreeNodeP<int>* LCAParent( const unique_ptr<BinaryTreeNodeP<int>>& node_0, const unique_ptr<BinaryTreeNodeP<int>>& node_1 )
+BinaryTreeNodeP<int>* LCAParent( const unique_ptr<BinaryTreeNodeP<int>>& n0, const unique_ptr<BinaryTreeNodeP<int>>& n1 )
 {
 	return nullptr;
 }

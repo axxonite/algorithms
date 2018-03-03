@@ -5,7 +5,8 @@
 
 #define TEST 0
 
-bool HasPathSum( const unique_ptr<BinaryTreeNode<int>>& tree, int remaining_weight ) {
+bool HasPathSum( const unique_ptr<BinaryTreeNode<int>>& tree, int targetWeight )
+{
 	return false;
 }
 

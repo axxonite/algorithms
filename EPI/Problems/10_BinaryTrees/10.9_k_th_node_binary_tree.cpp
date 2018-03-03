@@ -3,6 +3,8 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
+#define TEST 0
+
 template <typename T>
 struct BinaryTreeNodeWithSize 
 {
@@ -11,12 +13,10 @@ struct BinaryTreeNodeWithSize
 	int size;
 };
 
-const BinaryTreeNode<int>* FindKthNodeBinaryTree( const unique_ptr<BinaryTreeNodeWithSize<int>>& tree, int k )
+const BinaryTreeNodeWithSize<int>* FindKthNodeBinaryTree( const unique_ptr<BinaryTreeNodeWithSize<int>>& tree, int k )
 {
 	return nullptr;
 }
-
-#define TEST 0
 
 #pragma region Test
 

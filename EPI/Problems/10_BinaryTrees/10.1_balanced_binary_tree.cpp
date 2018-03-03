@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-bool IsBalanced( const unique_ptr<BinaryTreeNode<int>>& tree ) 
+bool IsBalanced( const unique_ptr<BinaryTreeNode<int>>& tree )
 {
 	return false;
 }
