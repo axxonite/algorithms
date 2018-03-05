@@ -5,11 +5,12 @@
 
 #define TEST 0
 
-#pragma region Test
-
-list<const unique_ptr<BinaryTreeNode<int>>*> CreateListOfLeaves(const unique_ptr<BinaryTreeNode<int>>& tree ) {
+list<const unique_ptr<BinaryTreeNode<int>>*> CreateListOfLeaves(const unique_ptr<BinaryTreeNode<int>>& t)
+{
 	return {};
 }
+
+#pragma region Test
 
 void CreateListOfLeavesTest()
 {

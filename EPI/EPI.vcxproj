@@ -168,6 +168,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="10.14_connect_leaves_binary_tree_solution.cpp" />
+    <ClCompile Include="10.16_populating_next_right_pointers_solution.cpp" />
     <ClCompile Include="C++Constructs.cpp" />
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.10_successor.cpp" />
