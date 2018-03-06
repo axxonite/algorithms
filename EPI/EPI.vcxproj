@@ -189,9 +189,12 @@
     <ClCompile Include="Problems\10_BinaryTrees\10.8_binary_tree_preorder_traversal_iterative.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.9_k_th_node_binary_tree.cpp" />
     <ClCompile Include="Problems\11_Heaps\11.1_merge_sorted_arrays.cpp" />
+    <ClCompile Include="Problems\11_Heaps\11.2_sort_k_increasing_decreasing_array.cpp" />
     <ClCompile Include="Problems\11_Heaps\11.3_approximate_sort.cpp" />
+    <ClCompile Include="Problems\11_Heaps\11.4_closest_stars.cpp" />
     <ClCompile Include="Problems\11_Heaps\11.5_online_median.cpp" />
     <ClCompile Include="Problems\11_Heaps\11.6_k_largest_elements_binary_heap.cpp" />
+    <ClCompile Include="Problems\11_Heaps\11.7_stack_queue_using_heap.cpp" />
     <ClCompile Include="Problems\12_Searching\12.10_find_missing_and_duplicate.cpp" />
     <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp" />
     <ClCompile Include="Problems\12_Searching\12.5_square_root.cpp" />
@@ -324,6 +327,7 @@
     <ClCompile Include="Solutions\10_BinaryTrees\10.11_10.11_inorder_traversal_with_parent_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.15_exterior_binary_tree_solution.cpp" />
+    <ClCompile Include="Solutions\10_BinaryTrees\10.17_binary_tree_lock_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.1_balanced_binary_tree_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.2_symmetric_binary_tree_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent_solution.cpp" />
@@ -334,6 +338,7 @@
     <ClCompile Include="Solutions\10_BinaryTrees\10.8_binary_tree_preorder_traversal_iterative_solution.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.9_k_th_node_binary_tree_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.1_merge_sorted_arrays_solution.cpp" />
+    <ClCompile Include="Solutions\11_Heaps\11.2_sort_k_increasing_decreasing_array_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.3_approximate_sort_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.5_online_median_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.6_k_largest_elements_binary_heap_solution.cpp" />

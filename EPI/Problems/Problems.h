@@ -91,9 +91,12 @@ void ConstructRightSiblingTest();
 void BinaryTreeNodeLockableTest();
 
 // Chapter 11: Heaps
-void KLargestInBinaryHeapTest();
-void OnlineMedianTest();
+void SortKIncreasingDecreasingArrayTest();
 void SortApproximatelySortedDataTest();
+void FindClosestKStarsTest();
+void OnlineMedianTest();
+void KLargestInBinaryHeapTest();
+void StackQueueHeapTest();
 
 // Chapter 12 : Searching
 void SquareRootTest();

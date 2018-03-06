@@ -93,9 +93,12 @@ int main()
 	BinaryTreeNodeLockableTest();
 
 	// 11. Heaps
-	KLargestInBinaryHeapTest();
-	OnlineMedianTest();
+	SortKIncreasingDecreasingArrayTest();
 	SortApproximatelySortedDataTest();
+	FindClosestKStarsTest();
+	OnlineMedianTest();
+	KLargestInBinaryHeapTest();
+	StackQueueHeapTest();
 
 	// 12. Searching
 	SquareRootTest();

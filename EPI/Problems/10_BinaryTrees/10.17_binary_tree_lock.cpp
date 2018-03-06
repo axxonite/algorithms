@@ -7,11 +7,14 @@
 class BinaryTreeNodeLockable 
 {
 public:
-	bool IsLocked() const { return false; }
+	bool IsLocked() const
+	{
+		return false;
+	}
 
 	bool Lock() 
 	{
-		return true;
+		return false;
 	}
 
 	void Unlock() 

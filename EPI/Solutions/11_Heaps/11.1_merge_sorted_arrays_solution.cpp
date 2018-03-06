@@ -29,11 +29,10 @@ namespace Solutions
 			auto smallestArray = minHeap.top();
 			minHeap.pop();
 			// If we haven't reached the end of that array, then put the next smallest element from that array in the min heap.
-			if (smallestArray.current != smallestArray.end)
-			{
-				result.emplace_back(*smallestArray.current);
-				minHeap.emplace(IteratorCurrentAndEnd{ next(smallestArray.current), smallestArray.end });
-			}
+			result.emplace_back( *smallestArray.current );
+			auto nextIter = next( smallestArray.current );
+			if ( nextIter != smallestArray.end)
+				minHeap.emplace(IteratorCurrentAndEnd{ nextIter, smallestArray.end });
 		}
 		return result;
 	}
