@@ -196,8 +196,13 @@
     <ClCompile Include="Problems\11_Heaps\11.6_k_largest_elements_binary_heap.cpp" />
     <ClCompile Include="Problems\11_Heaps\11.7_stack_queue_using_heap.cpp" />
     <ClCompile Include="Problems\12_Searching\12.10_find_missing_and_duplicate.cpp" />
+    <ClCompile Include="Problems\12_Searching\12.1_binary_search_first_k.cpp" />
+    <ClCompile Include="Problems\12_Searching\12.2_binary_search_ai=i.cpp" />
+    <ClCompile Include="Problems\12_Searching\12.3_binary_search_circular_array.cpp" />
     <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp" />
     <ClCompile Include="Problems\12_Searching\12.5_square_root.cpp" />
+    <ClCompile Include="Problems\12_Searching\12.6_matrix_search.cpp" />
+    <ClCompile Include="Problems\12_Searching\12.7_finding_min_max.cpp" />
     <ClCompile Include="Problems\12_Searching\12.8_order_statistic.cpp" />
     <ClCompile Include="Problems\12_Searching\12.9_missing_element.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp" />
@@ -340,11 +345,18 @@
     <ClCompile Include="Solutions\11_Heaps\11.1_merge_sorted_arrays_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.2_sort_k_increasing_decreasing_array_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.3_approximate_sort_solution.cpp" />
+    <ClCompile Include="Solutions\11_Heaps\11.4_closest_stars_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.5_online_median_solution.cpp" />
     <ClCompile Include="Solutions\11_Heaps\11.6_k_largest_elements_binary_heap_solution.cpp" />
+    <ClCompile Include="Solutions\11_Heaps\11.7_stack_queue_using_heap_solution.cpp" />
+    <ClCompile Include="Solutions\12_Searching\12.6_matrix_search_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.10_find_missing_and_duplicate_solution.cpp" />
+    <ClCompile Include="Solutions\12_Searching\12.1_binary_search_first_k_solution.cpp" />
+    <ClCompile Include="Solutions\12_Searching\12.2_binary_search_ai=i_solution.cpp" />
+    <ClCompile Include="Solutions\12_Searching\12.3_binary_search_circular_array_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.4_square_root_int_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.5_square_root_solution.cpp" />
+    <ClCompile Include="Solutions\12_Searching\12.7_finding_min_max_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.8_order_statistic_solution.cpp" />
     <ClCompile Include="Solutions\12_Searching\12.9_missing_element_solution.cpp" />
     <ClCompile Include="Solutions\13_HashTables\13.10_longest_contained_range_solution.cpp" />

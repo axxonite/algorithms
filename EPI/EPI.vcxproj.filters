@@ -968,6 +968,42 @@
     <ClCompile Include="Solutions\11_Heaps\11.2_sort_k_increasing_decreasing_array_solution.cpp">
       <Filter>Solutions\11. Heaps</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\11_Heaps\11.4_closest_stars_solution.cpp">
+      <Filter>Solutions\11. Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\11_Heaps\11.7_stack_queue_using_heap_solution.cpp">
+      <Filter>Solutions\11. Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\12_Searching\12.1_binary_search_first_k.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\12_Searching\12.2_binary_search_ai=i.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\12_Searching\12.3_binary_search_circular_array.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\12_Searching\12.6_matrix_search.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\12_Searching\12.7_finding_min_max.cpp">
+      <Filter>Problems\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\12_Searching\12.1_binary_search_first_k_solution.cpp">
+      <Filter>Solutions\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\12_Searching\12.2_binary_search_ai=i_solution.cpp">
+      <Filter>Solutions\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\12_Searching\12.3_binary_search_circular_array_solution.cpp">
+      <Filter>Solutions\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\12_Searching\12.6_matrix_search_solution.cpp">
+      <Filter>Solutions\12. Searching</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\12_Searching\12.7_finding_min_max_solution.cpp">
+      <Filter>Solutions\12. Searching</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

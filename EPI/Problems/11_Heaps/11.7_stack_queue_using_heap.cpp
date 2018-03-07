@@ -27,7 +27,9 @@ private:
 class HeapQueue 
 {
 public:
-	void Enqueue( int x ) {}
+	void Enqueue( int x ) 
+	{
+	}
 
 	int Dequeue() 
 	{
@@ -40,7 +42,6 @@ public:
 	}
 
 private:
-
 };
 
 

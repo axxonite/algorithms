@@ -99,11 +99,16 @@ void KLargestInBinaryHeapTest();
 void StackQueueHeapTest();
 
 // Chapter 12 : Searching
+void SearchFirstOfKTest();
+void SearchEntryEqualToItsIndexTest();
+void SearchSmallestTest();
 void SquareRootTest();
-void FindDuplicateMissingTest();
-void FindMissingElementTest();
 void SquareRootFloatTest();
+void MatrixSearchTest();
+void FindMinMaxTest();
 void FindKthTest();
+void FindMissingElementTest();
+void FindDuplicateMissingTest();
 
 // Chapter 13: Hash Tables
 void LongestContainedRangeTest();

@@ -101,11 +101,16 @@ int main()
 	StackQueueHeapTest();
 
 	// 12. Searching
+	SearchFirstOfKTest();
+	SearchEntryEqualToItsIndexTest();
+	SearchSmallestTest();
 	SquareRootTest();
-	FindDuplicateMissingTest();
-	FindMissingElementTest();
 	SquareRootFloatTest();
+	MatrixSearchTest();
+	FindMinMaxTest();
 	FindKthTest();
+	FindMissingElementTest();
+	FindDuplicateMissingTest();
 
 	// 13. Hash Tables
 	LongestContainedRangeTest();

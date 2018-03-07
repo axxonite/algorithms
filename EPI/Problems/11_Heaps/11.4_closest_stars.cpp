@@ -6,14 +6,9 @@
 
 struct Star 
 {
-	bool operator<( const Star& that ) const 
-	{
-		return Distance() < that.Distance();
-	}
-
-	double Distance() const { return sqrt( x * x + y * y + z * z ); }
-
 	double x, y, z;
+
+	double Distance() const { return sqrt( x * x + y * y + z * z ); } // why use a square root here?
 };
 
 vector<Star> FindClosestKStars( int k, istringstream* stars ) 
@@ -22,7 +17,6 @@ vector<Star> FindClosestKStars( int k, istringstream* stars )
 }
 
 #pragma region Test
-
 
 string CreateStreamingString( const vector<Star>& stars ) {
 	string s;
