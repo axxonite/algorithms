@@ -113,10 +113,18 @@ int main()
 	FindDuplicateMissingTest();
 
 	// 13. Hash Tables
-	LongestContainedRangeTest();
-	FindAllSubstringsTest();
+	IsLetterConstructibleFromMagazineTest();
+	LRUCacheTest();
 	LCA2Test();
+	KMostFrequentEntriesTest();
+	FindNearestRepetitionTest();
+	FindSmallestSubarrayCoveringSetTest();
+	FindSmallestSequentiallyCoveringSubsetTest();
 	LongestSubarrayWithDistinctEntriesTest();
+	LongestContainedRangeTest();
+	FindStudentWithHighestBestOfThreeScoresTest();
+	FindAllSubstringsTest();
+	TestCollatzConjectureTest();
 
 	// 14. Sorting
 	UnionOfIntervalsTest();

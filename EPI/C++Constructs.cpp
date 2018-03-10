@@ -8,6 +8,6 @@ struct Foo
 
 void function()
 {
-	vector<int> a, b;
-	a.insert( a.end(), b.begin(), b.end() );
+	vector<int> src, dest;
+	dest.insert(src.begin(), src.end(), dest.end());
 } 

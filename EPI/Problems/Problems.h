@@ -111,10 +111,18 @@ void FindMissingElementTest();
 void FindDuplicateMissingTest();
 
 // Chapter 13: Hash Tables
-void LongestContainedRangeTest();
-void FindAllSubstringsTest();
+void IsLetterConstructibleFromMagazineTest();
+void LRUCacheTest();
 void LCA2Test();
+void KMostFrequentEntriesTest();
+void FindNearestRepetitionTest();
+void FindSmallestSubarrayCoveringSetTest();
+void FindSmallestSequentiallyCoveringSubsetTest();
 void LongestSubarrayWithDistinctEntriesTest();
+void LongestContainedRangeTest();
+void FindStudentWithHighestBestOfThreeScoresTest();
+void FindAllSubstringsTest();
+void TestCollatzConjectureTest();
 
 // Chapter 14: Sorting
 void UnionOfIntervalsTest();

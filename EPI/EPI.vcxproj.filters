@@ -1004,6 +1004,48 @@
     <ClCompile Include="Solutions\12_Searching\12.7_finding_min_max_solution.cpp">
       <Filter>Solutions\12. Searching</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.2_anonymous_letter.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.3_lrucache.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="13.5_k_most_frequent_entries.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="13.6_nearest_repetition.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="13.8_subseq_cover.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="13.11_average_top_3_scores.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="13.13_collatz_conjecture.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="13.14_chess_hash_function.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.2_anonymous_letter_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.3_lrucache_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.5_k_most_frequent_entries_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.6_nearest_repetition_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.7_smallest_subarray_covering_set.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.7_smallest_subarray_covering_set_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

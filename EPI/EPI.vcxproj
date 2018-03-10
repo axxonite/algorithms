@@ -170,6 +170,12 @@
   <ItemGroup>
     <ClCompile Include="10.14_connect_leaves_binary_tree_solution.cpp" />
     <ClCompile Include="10.16_populating_next_right_pointers_solution.cpp" />
+    <ClCompile Include="13.13_collatz_conjecture.cpp" />
+    <ClCompile Include="13.14_chess_hash_function.cpp" />
+    <ClCompile Include="13.5_k_most_frequent_entries.cpp" />
+    <ClCompile Include="13.6_nearest_repetition.cpp" />
+    <ClCompile Include="13.8_subseq_cover.cpp" />
+    <ClCompile Include="13.11_average_top_3_scores.cpp" />
     <ClCompile Include="C++Constructs.cpp" />
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.10_successor.cpp" />
@@ -208,8 +214,11 @@
     <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.12_substring_with_concatenation_of_all_words.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.1_valid_palindrome.cpp" />
+    <ClCompile Include="Problems\13_HashTables\13.2_anonymous_letter.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.4_lowest_common_ancestor_hash.cpp" />
+    <ClCompile Include="Problems\13_HashTables\13.7_smallest_subarray_covering_set.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.9_longest_subarray_with_distinct_entries.cpp" />
+    <ClCompile Include="Problems\13_HashTables\13.3_lrucache.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.10_completion_search.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.1_intersect_sorted_arrays3.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.2_merge_two_sorted_arrays_in_place.cpp" />
@@ -362,7 +371,12 @@
     <ClCompile Include="Solutions\13_HashTables\13.10_longest_contained_range_solution.cpp" />
     <ClCompile Include="Solutions\13_HashTables\13.12_substring_with_concatenation_of_all_words_solution.cpp" />
     <ClCompile Include="Solutions\13_HashTables\13.1_valid_palindrome_solution.cpp" />
+    <ClCompile Include="Solutions\13_HashTables\13.2_anonymous_letter_solution.cpp" />
+    <ClCompile Include="Solutions\13_HashTables\13.3_lrucache_solution.cpp" />
     <ClCompile Include="Solutions\13_HashTables\13.4_lowest_common_ancestor_hash_solution.cpp" />
+    <ClCompile Include="Solutions\13_HashTables\13.5_k_most_frequent_entries_solution.cpp" />
+    <ClCompile Include="Solutions\13_HashTables\13.6_nearest_repetition_solution.cpp" />
+    <ClCompile Include="Solutions\13_HashTables\13.7_smallest_subarray_covering_set_solution.cpp" />
     <ClCompile Include="Solutions\13_HashTables\13.9_longest_subarray_with_distinct_entries_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.10_completion_search_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.1_intersect_sorted_arrays3_solution.cpp" />
