@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+#define TEST 1
 
 struct Subarray 
 {
@@ -12,7 +12,30 @@ struct Subarray
 
 Subarray FindSmallestSequentiallyCoveringSubset(const vector<string>& paragraph, const vector<string>& keywords ) 
 {
-	return { -1, -1 };
+	if ( keywords.empty() || paragraph.empty() )
+		return { -1, -1 };
+	Subarray result{ 0, numeric_limits<int>::max()};
+	vector<int> subarrayStart(keywords.size(), -1);
+	unordered_map<string, int> keywordToIndex;
+	for ( int i = 0; i < keywords.size(); ++i )
+		keywordToIndex[keywords[i]] = i;
+
+	for ( int i = 0; i < paragraph.size(); ++i )
+	{
+		auto it = keywordToIndex.find( paragraph[i] );
+		if ( it != keywordToIndex.end() )
+		{
+			if ( it->second == 0 )
+				subarrayStart[0] = i;
+			else if (subarrayStart[it->second - 1] != -1)
+			{
+				if ( it->second == keywords.size() - 1 && ( i - subarrayStart[it->second - 1] ) < ( result.end - result.start ) )
+					result = { subarrayStart[it->second - 1], i };
+				else subarrayStart[it->second] = subarrayStart[it->second - 1];
+			}
+		}
+	}
+	return result.end == numeric_limits<int>::max() ? Subarray{-1, -1} : result;
 }
 
 #pragma region Test
@@ -31,7 +54,7 @@ void FindSmallestSequentiallyCoveringSubsetTest()
 #if TEST
 	FindSmallestSequentiallyCoveringSubsetSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) 
+	for ( int times = 0; times < 20; ++times ) 
 	{
 		int n;
 		vector<string> A;
