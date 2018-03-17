@@ -5,7 +5,8 @@
 
 #define TEST 0
 
-string FindStudentWithHighestBestOfThreeScores( ifstream* name_score_data ) 
+// todo review ifstream vs stringstream
+string FindStudentWithHighestBestOfThreeScores( ifstream* nameScoreData ) 
 {
 	return "";
 }

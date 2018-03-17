@@ -125,12 +125,18 @@ int main()
 	FindStudentWithHighestBestOfThreeScoresTest();
 	FindAllSubstringsTest();
 	TestCollatzConjectureTest();
+	ChessHashTest();
 
 	// 14. Sorting
-	UnionOfIntervalsTest();
-	FindSalaryCapTest();
-	StableSortListTest();
 	MergeTwoSortedArraysTest();
+	EliminateDuplicateTest();
+	FindMaxSimultaneousEventsTest();
+	AddIntervalTest();
+	UnionOfIntervalsTest();
+	GroupByAgeTest();
+	TeamPhotoTest();
+	StableSortListTest();
+	FindSalaryCapTest();
 	
 	// 15. Binary Search Trees
 	AddCreditsTest();
@@ -150,7 +156,7 @@ int main()
 	ComputeTowerHanoiTest();
 	SolveSudokuTest();
 
-	// 17. Dynamic Progamming
+	// 17. Dynamic Programming
 	NumCombinationsForFinalScoreTest();
 	LevenshteinDistanceTest();
 	ComputeMaximumRevenueForRangeTest();

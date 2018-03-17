@@ -123,12 +123,18 @@ void LongestContainedRangeTest();
 void FindStudentWithHighestBestOfThreeScoresTest();
 void FindAllSubstringsTest();
 void TestCollatzConjectureTest();
+void ChessHashTest();
 
 // Chapter 14: Sorting
-void UnionOfIntervalsTest();
-void FindSalaryCapTest();
-void StableSortListTest();
 void MergeTwoSortedArraysTest();
+void EliminateDuplicateTest();
+void FindMaxSimultaneousEventsTest();
+void AddIntervalTest();
+void UnionOfIntervalsTest();
+void GroupByAgeTest();
+void TeamPhotoTest();
+void StableSortListTest();
+void FindSalaryCapTest();
 
 // Chapter 15: Binary Search Trees
 void AddCreditsTest();

@@ -1046,6 +1046,33 @@
     <ClCompile Include="Solutions\13_HashTables\13.7_smallest_subarray_covering_set_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.8_subseq_cover_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.11_average_top_3_scores_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.13_collatz_conjecture_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\13_HashTables\13.14_chess_hash_function_solution.cpp">
+      <Filter>Solutions\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.3_eliminate_duplicate.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.4_rendering_calendar.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.5_insert_interval.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.7_partition_array.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\14_Sorting\14.8_team_photo_1.cpp">
+      <Filter>Problems\14. Sorting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

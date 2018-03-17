@@ -31,7 +31,7 @@ void TestCollatzConjectureTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) 
+	for ( int times = 0; times < 5; ++times ) 
 	{
 		int n;
 		uniform_int_distribution<int> dis( 1, 100000 );
