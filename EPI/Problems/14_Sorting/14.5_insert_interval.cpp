@@ -9,7 +9,7 @@ struct Interval
 	int left, right;
 };
 
-vector<Interval> AddInterval( const vector<Interval>& disjoint_intervals, Interval new_interval ) 
+vector<Interval> AddInterval( const vector<Interval>& intervals, Interval newInterval ) 
 {
 	return {};
 }
@@ -39,7 +39,7 @@ void AddIntervalTest()
 #if TEST
 	AddIntervalSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times )
+	for ( int times = 0; times < 50; ++times )
 	{
 		size_t n;
 		uniform_int_distribution<size_t> dis( 1, 10000 );

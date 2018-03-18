@@ -11,7 +11,7 @@ struct Person
 	string name;
 };
 
-void GroupByAge( vector<Person>* people ) 
+void GroupByAge( vector<Person>& people ) 
 {
 }
 
@@ -21,7 +21,7 @@ static void GroupByAgeSimpleTest()
 {
 	vector<Person> people = { Person( { 20, "foo" } ), Person( { 10, "bar" } ), Person( { 20, "widget" } ), Person( { 20, "something" } ) };
 
-	GroupByAge( &people );
+	GroupByAge( people );
 	if ( people[0].age == 10 )
 		assert( people[1].age == 20 && people[2].age == 20 && people[3].age == 20 );
 	else
@@ -33,7 +33,7 @@ void GroupByAgeTest()
 #if TEST
 	GroupByAgeSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) 
+	for ( int times = 0; times < 100; ++times ) 
 	{
 		int size;
 		uniform_int_distribution<int> dis( 1, 10000 );
@@ -50,7 +50,7 @@ void GroupByAgeTest()
 		for ( const Person& p : people ) 
 			age_set.emplace( p.age );
 
-		GroupByAge( &people );
+		GroupByAge( people );
 
 		// Check the correctness of sorting.
 		int diff_count = 1;

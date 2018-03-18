@@ -390,7 +390,11 @@
     <ClCompile Include="Solutions\14_Sorting\14.10_completion_search_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.1_intersect_sorted_arrays3_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.2_merge_two_sorted_arrays_in_place_solution.cpp" />
+    <ClCompile Include="Solutions\14_Sorting\14.3_eliminate_duplicate_solution.cpp" />
+    <ClCompile Include="Solutions\14_Sorting\14.4_rendering_calendar_solution.cpp" />
+    <ClCompile Include="Solutions\14_Sorting\14.5_insert_interval_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.6_union_intervals_solution.cpp" />
+    <ClCompile Include="Solutions\14_Sorting\14.7_partition_array_solution.cpp" />
     <ClCompile Include="Solutions\14_Sorting\14.9_sort_list_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.10_insertion_deletion_bst_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.13_add_credits_solution.cpp" />

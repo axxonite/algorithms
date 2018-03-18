@@ -9,13 +9,7 @@ struct Event
 	int start, finish;
 };
 
-struct Endpoint 
-{
-	int time;
-	bool isStart;
-};
-
-int FindMaxSimultaneousEvents( const vector<Event>& A ) 
+int FindMaxSimultaneousEvents( const vector<Event>& a ) 
 {
 	return 0;
 }

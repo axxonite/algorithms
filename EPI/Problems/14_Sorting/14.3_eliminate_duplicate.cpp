@@ -8,18 +8,13 @@ struct Name
 {
 	bool operator==( const Name& that ) const 
 	{
-		return first_name == that.first_name;
+		return false;
 	}
 
-	bool operator<( const Name& that ) const 
-	{
-		return first_name != that.first_name ? first_name < that.first_name : last_name < that.last_name;
-	}
-
-	string first_name, last_name;
+	string firstName, lastName;
 };
 
-void EliminateDuplicate( vector<Name>* A ) 
+void EliminateDuplicate( vector<Name>& a ) 
 {
 }
 
@@ -34,7 +29,7 @@ void EliminateDuplicateCheckAns( const vector<Name>& A )
 void EliminateDuplicateSmallTest()
 {
 	vector<Name> A = { { "Foo", "Bar" },{ "ABC", "XYZ" },{ "Foo", "Widget" } };
-	EliminateDuplicate( &A );
+	EliminateDuplicate( A );
 	assert( A.size() == 2 );
 }
 
@@ -43,7 +38,7 @@ void EliminateDuplicateTest()
 #if TEST
 	EliminateDuplicateSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) 
+	for ( int times = 0; times < 50; ++times ) 
 	{
 		int n;
 		vector<Name> A;
@@ -54,7 +49,7 @@ void EliminateDuplicateTest()
 			uniform_int_distribution<int> dis( 0, n - 1 );
 			A.emplace_back( Name{ to_string( dis( gen ) ), to_string( dis( gen ) ) } );
 		}
-		EliminateDuplicate( &A );
+		EliminateDuplicate( A );
 		EliminateDuplicateCheckAns( A );
 	}
 #endif
