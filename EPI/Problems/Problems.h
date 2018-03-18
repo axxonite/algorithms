@@ -137,11 +137,18 @@ void StableSortListTest();
 void FindSalaryCapTest();
 
 // Chapter 15: Binary Search Trees
-void AddCreditsTest();
-void FindClosestElementsInSortedArraysTest();
+void IsBinaryTreeBSTTest();
+void FindFirstGreaterThanKTest();
+void FindKLargestInBSTTest();
 void FindLCATest();
-void BSTInsertDeleteTest();
 void ReconstructBSTPreorderTest();
+void FindClosestElementsInSortedArraysTest();
+void FindKMostVisitedTest();
+void BuildMinHeightBSTFromSortedArrayTest();
+void BSTInsertDeleteTest();
+void PairIncludesAncestorAndDescendantOfMTest();
+void RangeLookupInBSTTest();
+void AddCreditsTest();
 
 // Chapter 16: Recursion
 void SolveNQueensTest();

@@ -25,9 +25,6 @@
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h">
       <Filter>Problems\8. Linked Lists</Filter>
     </ClInclude>
-    <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClInclude>
     <ClInclude Include="Problems\Math\VectorN.h">
       <Filter>Solutions\Math</Filter>
     </ClInclude>
@@ -82,6 +79,9 @@
     <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h">
       <Filter>Problems\10. Binary Trees</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -93,9 +93,6 @@
     </ClCompile>
     <ClCompile Include="Problems\7_Strings\7.3_spreadsheet_encoding.cpp">
       <Filter>Problems\7. Strings</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\15_BinarySearchTrees\15.13_add_credits.cpp">
-      <Filter>Problems\15. Binary Search Trees</Filter>
     </ClCompile>
     <ClCompile Include="Problems\16_Recursion\16.5_generate_all_subsets.cpp">
       <Filter>Problems\16. Recursion</Filter>
@@ -218,9 +215,6 @@
     <ClCompile Include="Problems\10_BinaryTrees\10.7_bst_sorted_order.cpp">
       <Filter>Problems\10. Binary Trees</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.7_bst_sorted_order_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\25_HonorRoll\25.31_maximum_subarray_sum_in_circular_array.cpp">
       <Filter>Problems\25. Honor Roll</Filter>
     </ClCompile>
@@ -278,9 +272,6 @@
     <ClCompile Include="Problems\17_DynamicProgramming\17.11_pretty_printing.cpp">
       <Filter>Problems\17. Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.15_exterior_binary_tree_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\25_HonorRoll\25.29_drawing_skyline.cpp">
       <Filter>Problems\25. Honor Roll</Filter>
     </ClCompile>
@@ -307,9 +298,6 @@
     </ClCompile>
     <ClCompile Include="Problems\25_HonorRoll\25.40_arbitrage.cpp">
       <Filter>Problems\25. Honor Roll</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays.cpp">
-      <Filter>Problems\15. Binary Search Trees</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
@@ -380,9 +368,6 @@
     <ClCompile Include="Problems\12_Searching\12.4_square_root_int.cpp">
       <Filter>Problems\12. Searching</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\17_DynamicProgramming\17.4_computing_binomial_coefficients.cpp">
       <Filter>Problems\17. Dynamic Programming</Filter>
     </ClCompile>
@@ -424,9 +409,6 @@
     </ClCompile>
     <ClCompile Include="Problems\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent.cpp">
       <Filter>Problems\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
     </ClCompile>
     <ClCompile Include="Problems\16_Recursion\16.8_unique_binary_trees_all.cpp">
       <Filter>Problems\16. Recursion</Filter>
@@ -476,9 +458,6 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.22_sorted_list_to_bst_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved.cpp">
-      <Filter>Problems\15. Binary Search Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
     </ClCompile>
@@ -515,26 +494,14 @@
     <ClCompile Include="Solutions\11_Heaps\11.5_online_median_solution.cpp">
       <Filter>Solutions\11. Heaps</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.10_longest_contained_range_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.10_successor_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\19_Graphs\19.4_2_exists.cpp">
-      <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\19_Graphs\19.4_2_exists_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.12_substring_with_concatenation_of_all_words_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.4_lowest_common_ancestor_hash.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.4_lowest_common_ancestor_hash_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
@@ -560,9 +527,6 @@
     <ClCompile Include="Problems\Math\GaussJordanElimination.cpp">
       <Filter>Problems\Math</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.12_substring_with_concatenation_of_all_words.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\16_Recursion\16.1_tower_hanoi.cpp">
       <Filter>Problems\16. Recursion</Filter>
     </ClCompile>
@@ -574,9 +538,6 @@
     </ClCompile>
     <ClCompile Include="Solutions\16_Recursion\16.9_sudoku_solve_solution.cpp">
       <Filter>Solutions\16. Recursion</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\15_BinarySearchTrees\15.4_bst_lowest_common_ancestor.cpp">
-      <Filter>Problems\15. Binary Search Trees</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.4_bst_lowest_common_ancestor_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
@@ -620,14 +581,8 @@
     <ClCompile Include="Solutions\14_Sorting\14.1_intersect_sorted_arrays3_solution.cpp">
       <Filter>Solutions\14. Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\15_BinarySearchTrees\15.10_insertion_deletion_bst.cpp">
-      <Filter>Problems\15. Binary Search Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.10_insertion_deletion_bst_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.9_longest_subarray_with_distinct_entries.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.9_longest_subarray_with_distinct_entries_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
@@ -646,9 +601,6 @@
     </ClCompile>
     <ClCompile Include="Solutions\14_Sorting\14.9_sort_list_solution.cpp">
       <Filter>Solutions\14. Sorting</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.1_valid_palindrome.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.1_valid_palindrome_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
@@ -691,9 +643,6 @@
     </ClCompile>
     <ClCompile Include="Problems\SortingAlgorithms\MergeSort.cpp">
       <Filter>Problems\Sorting Algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\15_BinarySearchTrees\15.5_reconstruct_binary_tree_pre_in_orders.cpp">
-      <Filter>Problems\15. Binary Search Trees</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.5_reconstruct_binary_tree_pre_in_orders_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
@@ -923,39 +872,6 @@
     <ClCompile Include="Problems\19_Graphs\19.7_transform_string_to_other.cpp">
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.1_balanced_binary_tree_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.2_symmetric_binary_tree_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.4_lowest_common_ancestor_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.5_sum_root_to_leaf_binary_tree_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.6_path_sum_binary_tree_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.8_binary_tree_preorder_traversal_iterative_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.9_k_th_node_binary_tree_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.11_10.11_inorder_traversal_with_parent_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="10.14_connect_leaves_binary_tree_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="10.16_populating_next_right_pointers_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\10_BinaryTrees\10.17_binary_tree_lock_solution.cpp">
-      <Filter>Solutions\10. Binary Trees</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\11_Heaps\11.2_sort_k_increasing_decreasing_array.cpp">
       <Filter>Problems\11. Heaps</Filter>
     </ClCompile>
@@ -1004,30 +920,6 @@
     <ClCompile Include="Solutions\12_Searching\12.7_finding_min_max_solution.cpp">
       <Filter>Solutions\12. Searching</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.2_anonymous_letter.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.3_lrucache.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="13.5_k_most_frequent_entries.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="13.6_nearest_repetition.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="13.8_subseq_cover.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="13.11_average_top_3_scores.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="13.13_collatz_conjecture.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="13.14_chess_hash_function.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
-    </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.2_anonymous_letter_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
     </ClCompile>
@@ -1039,9 +931,6 @@
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.6_nearest_repetition_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
-    </ClCompile>
-    <ClCompile Include="Problems\13_HashTables\13.7_smallest_subarray_covering_set.cpp">
-      <Filter>Problems\13. Hash Tables</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\13_HashTables\13.7_smallest_subarray_covering_set_solution.cpp">
       <Filter>Solutions\13. Hash Tables</Filter>
@@ -1087,6 +976,138 @@
     </ClCompile>
     <ClCompile Include="Solutions\14_Sorting\14.8_team_photo_1_solution.cpp">
       <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.1_balanced_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.2_symmetric_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.3_lowest_common_ancestor_no_parent_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.4_lowest_common_ancestor_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.5_sum_root_to_leaf_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.6_path_sum_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.7_bst_sorted_order_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.8_binary_tree_preorder_traversal_iterative_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.9_k_th_node_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.10_successor_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.12_reconstruct_binary_tree_pre_in_orders_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.14_connect_leaves_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.15_exterior_binary_tree_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.16_populating_next_right_pointers_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.17_binary_tree_lock_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\10_BinaryTrees\10.11_inorder_traversal_with_parent_solution.cpp">
+      <Filter>Solutions\10. Binary Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.1_valid_palindrome.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.2_anonymous_letter.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.3_lrucache.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.4_lowest_common_ancestor_hash.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.5_k_most_frequent_entries.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.6_nearest_repetition.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.7_smallest_subarray_covering_set.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.8_subseq_cover.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.9_longest_subarray_with_distinct_entries.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.10_longest_contained_range.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.11_average_top_3_scores.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.12_substring_with_concatenation_of_all_words.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.13_collatz_conjecture.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\13.14_chess_hash_function.cpp">
+      <Filter>Problems\13. Hash Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.1_is_binary_tree_a_bst.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.3_find_k_largest_bst.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.4_bst_lowest_common_ancestor.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.5_reconstruct_binary_tree_pre_in_orders.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.6_minimum_distance_3_sorted_arrays.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.10_insertion_deletion_bst.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.13_add_credits.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.2_search_bst_first_larger_k.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.4_2_exists.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.8_most_visited_pages.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.9_build_bst_from_sorted_array.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.11_descendant_and_ancestor.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\15_BinarySearchTrees\15.12_range_lookup_bst.cpp">
+      <Filter>Problems\15. Binary Search Trees</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

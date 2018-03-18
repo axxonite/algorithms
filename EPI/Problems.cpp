@@ -139,11 +139,18 @@ int main()
 	FindSalaryCapTest();
 	
 	// 15. Binary Search Trees
-	AddCreditsTest();
-	FindClosestElementsInSortedArraysTest();
+	IsBinaryTreeBSTTest();
+	FindFirstGreaterThanKTest();
+	FindKLargestInBSTTest();
 	FindLCATest();
-	BSTInsertDeleteTest();
 	ReconstructBSTPreorderTest();
+	FindClosestElementsInSortedArraysTest();
+	FindKMostVisitedTest();
+	BuildMinHeightBSTFromSortedArrayTest();
+	BSTInsertDeleteTest();
+	PairIncludesAncestorAndDescendantOfMTest();
+	RangeLookupInBSTTest();
+	AddCreditsTest();
 
 	// 16. Recursion
 	SolveNQueensTest();
