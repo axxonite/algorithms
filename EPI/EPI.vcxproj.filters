@@ -1085,6 +1085,9 @@
     <ClCompile Include="Solutions\14_Sorting\14.7_partition_array_solution.cpp">
       <Filter>Solutions\14. Sorting</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\14_Sorting\14.8_team_photo_1_solution.cpp">
+      <Filter>Solutions\14. Sorting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

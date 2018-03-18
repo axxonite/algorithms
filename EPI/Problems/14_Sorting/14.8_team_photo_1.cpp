@@ -19,7 +19,7 @@ public:
 	}
 
 	// Checks if A can be placed in front of B.
-	static bool valid_placement_exists( const Team& A, const Team& B ) 
+	static bool valid_placement_exists( const Team& a, const Team& b ) 
 	{
 		return true;
 	}
