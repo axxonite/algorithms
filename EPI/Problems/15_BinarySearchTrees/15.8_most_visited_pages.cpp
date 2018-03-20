@@ -2,14 +2,13 @@
 
 #include "stdafx.h"
 
-#define TEST 1
+#define TEST 0
 
-void ReadFileLine(stringstream& s)
+void ReadFileLine(const string& line)
 {
-	
 }
 
-vector<string> FindKMostVisited()
+vector<string> FindKMostVisited(int k)
 {
 	return {};
 }
@@ -19,7 +18,21 @@ vector<string> FindKMostVisited()
 void FindKMostVisitedTest()
 {
 #if TEST
-	// todo build a test.
+	ReadFileLine( "g" );
+	ReadFileLine( "a" );
+	ReadFileLine( "t" );
+	ReadFileLine( "t" );
+	ReadFileLine( "a" );
+	ReadFileLine( "a" );
+	ReadFileLine( "a" );
+	ReadFileLine( "g" );
+	ReadFileLine( "t" );
+	ReadFileLine( "c" );
+	auto result = FindKMostVisited(2);
+	assert( result == vector<string>({"a", "t"}) );
+	ReadFileLine( "t" );
+	ReadFileLine( "a" );
+	ReadFileLine( "t" );
 #endif
 }
 

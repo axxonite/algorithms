@@ -4,9 +4,9 @@
 
 #define TEST 0
 
-unique_ptr<BSTNode<int>> BuildMinHeightBSTFromSortedArray(const vector<int>& A)
+unique_ptr<BSTNode<int>> BuildMinHeightBSTFromSortedArray(const vector<int>& a)
 {
-	return {};
+	return nullptr;
 }
 
 #pragma region Test

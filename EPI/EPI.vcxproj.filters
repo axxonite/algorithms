@@ -1109,6 +1109,54 @@
     <ClCompile Include="Problems\15_BinarySearchTrees\15.12_range_lookup_bst.cpp">
       <Filter>Problems\15. Binary Search Trees</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.1_is_binary_tree_a_bst_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.2_search_bst_first_larger_k_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.3_find_k_largest_bst_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.8_most_visited_pages_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.9_build_bst_from_sorted_array_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.11_descendant_and_ancestor_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\15_BinarySearchTrees\15.12_range_lookup_bst_solution.cpp">
+      <Filter>Solutions\15. Binary Search Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\16.10_gray_code_backtrack.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.3_points_covering_intervals_sorting.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\18_GreedyAlgorithms\18.6_gassing_up.cpp">
+      <Filter>Problems\18. Greedy Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.1_search_maze.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.2_painting_iterative.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.3_surrounded_regions.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.5_clone_graph.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.8_team_photo_2.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\19.9_shortest_path_fewest_edges.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

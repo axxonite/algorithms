@@ -157,9 +157,10 @@ void PermutationsTest();
 void GeneratePowerSetTest();
 void PalindromePartitioningTest();
 void GenerateAllBinaryTreesTest();
-void ComputeDiameterTest();
 void ComputeTowerHanoiTest();
 void SolveSudokuTest();
+void GrayCodeTest();
+void ComputeDiameterTest();
 
 // Chapter 17: Dynamic Programming.
 void NumCombinationsForFinalScoreTest();
@@ -179,14 +180,22 @@ void NumberOfWaysToTopTest();
 void HasThreeSumTest();
 void OptimumTaskAssignmentTest();
 void MinimumTotalWaitingTimeTest();
+void FindMinimumVisitsTest();
 void MajoritySearchTest();
 void CalculateLargestRectangleTest();
+void FindAmpleCityTest();
 void GetMaxTrappedWaterTest();
 
 // Chapter 19: Graphs
+void SearchMazeTest();
+void FlipColorTest();
+void FillSurroundedRegionsTest();
+void CloneGraphTest();
 void IsAnyPlacementFeasibleTest();
 void IsDeadlockedTest();
 void TransformStringTest();
+void FindLargestNumberTeamsTest();
+void DijkstraShortestPathTest();
 
 // Chapter 25: Honor roll
 void ComputeSkylineTest();

@@ -159,9 +159,10 @@ int main()
 	GeneratePowerSetTest();
 	PalindromePartitioningTest();
 	GenerateAllBinaryTreesTest();
-	ComputeDiameterTest();
 	ComputeTowerHanoiTest();
 	SolveSudokuTest();
+	GrayCodeTest();
+	ComputeDiameterTest();
 
 	// 17. Dynamic Programming
 	NumCombinationsForFinalScoreTest();
@@ -181,14 +182,22 @@ int main()
 	HasThreeSumTest();
 	OptimumTaskAssignmentTest();
 	MinimumTotalWaitingTimeTest();
+	FindMinimumVisitsTest();
 	MajoritySearchTest();
 	CalculateLargestRectangleTest();
+	FindAmpleCityTest();
 	GetMaxTrappedWaterTest();
 
 	// 19. Graphs
+	SearchMazeTest();
+	FlipColorTest();
+	FillSurroundedRegionsTest();
+	CloneGraphTest();
 	IsAnyPlacementFeasibleTest();
 	IsDeadlockedTest();
 	TransformStringTest();
+	FindLargestNumberTeamsTest();
+	DijkstraShortestPathTest();
 
 	// 25. Honor Roll
 	ComputeSkylineTest();
