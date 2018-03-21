@@ -240,7 +240,7 @@
     <ClCompile Include="Problems\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.8_most_visited_pages.cpp" />
     <ClCompile Include="Problems\15_BinarySearchTrees\15.9_build_bst_from_sorted_array.cpp" />
-    <ClCompile Include="Problems\16_Recursion\16.10_gray_code_backtrack.cpp" />
+    <ClCompile Include="Problems\16_Recursion\16.10_gray_code.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.11_tree_diameter.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.1_tower_hanoi.cpp" />
     <ClCompile Include="Problems\16_Recursion\16.2_n_queens.cpp" />
@@ -426,6 +426,7 @@
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.7_generating_a_b_sqrt2_improved_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.8_most_visited_pages_solution.cpp" />
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.9_build_bst_from_sorted_array_solution.cpp" />
+    <ClCompile Include="Solutions\16_Recursion\16.10_gray_code_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.11_tree_diameter_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.1_tower_hanoi_solution.cpp" />
     <ClCompile Include="Solutions\16_Recursion\16.2_n_queens_solution.cpp" />
@@ -450,6 +451,7 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.2_minimum_waiting_time_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.4_3_sum_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.5_search_majority_solution.cpp" />
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.6_gassing_up_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.7_container_with_most_water_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.8_largest_rectangle_under_skyline_solution.cpp" />
     <ClCompile Include="Solutions\18_GreedyAlgorithms\2_sum_unsorted_solution.cpp" />

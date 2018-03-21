@@ -1130,9 +1130,6 @@
     <ClCompile Include="Solutions\15_BinarySearchTrees\15.12_range_lookup_bst_solution.cpp">
       <Filter>Solutions\15. Binary Search Trees</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\16_Recursion\16.10_gray_code_backtrack.cpp">
-      <Filter>Problems\16. Recursion</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\18_GreedyAlgorithms\18.3_points_covering_intervals_sorting.cpp">
       <Filter>Problems\18. Greedy Algorithms</Filter>
     </ClCompile>
@@ -1156,6 +1153,15 @@
     </ClCompile>
     <ClCompile Include="Problems\19_Graphs\19.9_shortest_path_fewest_edges.cpp">
       <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.10_gray_code_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\16.10_gray_code.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\18_GreedyAlgorithms\18.6_gassing_up_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
