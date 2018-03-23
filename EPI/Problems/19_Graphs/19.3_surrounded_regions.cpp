@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-void FillSurroundedRegions( vector<vector<char>>* board_ptr ) 
+void FillSurroundedRegions( vector<vector<char>>& board ) 
 {
 }
 
@@ -16,7 +16,7 @@ void FillSurroundedRegionsSimpleTest()
 	{ 'W', 'B', 'W', 'B' },
 	{ 'B', 'W', 'W', 'B' },
 	{ 'B', 'B', 'B', 'B' } };
-	FillSurroundedRegions( &A );
+	FillSurroundedRegions( A );
 	vector<vector<char>> golden = { { 'B', 'B', 'B', 'B' },
 	{ 'W', 'B', 'B', 'B' },
 	{ 'B', 'B', 'B', 'B' },
@@ -49,16 +49,16 @@ void FillSurroundedRegionsTest()
 		}
 		cout << endl;
 	}
-	FillSurroundedRegions( &board );
-	cout << endl;
-	for ( int i = 0; i < board.size(); ++i ) 
-	{
-		for ( int j = 0; j < board[i].size(); ++j ) 
-		{
-			cout << board[i][j];
-		}
-		cout << endl;
-	}
+	FillSurroundedRegions( board );
+	//cout << endl;
+	//for ( int i = 0; i < board.size(); ++i ) 
+	//{
+	//	for ( int j = 0; j < board[i].size(); ++j ) 
+	//	{
+	//		cout << board[i][j];
+	//	}
+	//	cout << endl;
+	//}
 #endif
 }
 

@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-void FlipColor( int x, int y, vector<deque<bool>>* A_ptr ) 
+void FlipColor( int x, int y, vector<deque<bool>>& a ) 
 {
 }
 
@@ -41,7 +41,7 @@ void FlipColorTest()
 	size_t i = dis2( gen ), j = dis2( gen );
 	cout << "color = " << i << ' ' << j << ' ' << A[i][j] << endl;
 	PrintMatrix( A );
-	FlipColor( static_cast<int>( i ), static_cast<int>( j ), &A );
+	FlipColor( static_cast<int>( i ), static_cast<int>( j ), A );
 	cout << endl;
 	PrintMatrix( A );
 #endif

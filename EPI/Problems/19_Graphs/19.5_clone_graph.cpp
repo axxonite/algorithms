@@ -4,31 +4,31 @@
 
 #define TEST 0
 
-struct GraphVertex 
+struct CloneGraphVertex 
 {
 	int label;
-	vector<GraphVertex*> edges;
+	vector<CloneGraphVertex*> edges;
 };
 
-GraphVertex* CloneGraph( GraphVertex* G ) 
+CloneGraphVertex* CloneGraph( CloneGraphVertex* G )
 {
 	return nullptr;
 }
 
 #pragma region Test
 
-vector<int> CopyLabels( const vector<GraphVertex*>& edges ) 
+vector<int> CopyLabels( const vector<CloneGraphVertex*>& edges )
 {
 	vector<int> labels;
-	for ( GraphVertex* e : edges )
+	for ( CloneGraphVertex* e : edges )
 		labels.emplace_back( e->label );
 	return labels;
 }
 
-void CheckGraph( GraphVertex* node, const vector<GraphVertex>& G ) 
+void CheckGraph( CloneGraphVertex* node, const vector<CloneGraphVertex>& G )
 {
-	unordered_set<GraphVertex*> vertex_set;
-	queue<GraphVertex*> q;
+	unordered_set<CloneGraphVertex*> vertex_set;
+	queue<CloneGraphVertex*> q;
 	q.emplace( node );
 	vertex_set.emplace( node );
 	while ( !q.empty() ) 
@@ -40,7 +40,7 @@ void CheckGraph( GraphVertex* node, const vector<GraphVertex>& G )
 		label2 = CopyLabels( G[vertex->label].edges );
 		sort( label1.begin(), label1.end() ), sort( label2.begin(), label2.end() );
 		assert( equal( label1.begin(), label1.end(), label2.begin(), label2.end() ) );
-		for ( GraphVertex* e : vertex->edges )
+		for ( CloneGraphVertex* e : vertex->edges )
 		{
 			if ( vertex_set.find( e ) == vertex_set.end() )
 			{
@@ -55,14 +55,14 @@ void CloneGraphTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) 
+	for ( int times = 0; times < 100; ++times ) 
 	{
-		vector<GraphVertex> G;
+		vector<CloneGraphVertex> G;
 		int n;
 		uniform_int_distribution<int> n_dis( 2, 101 );
 		n = n_dis( gen );
 		for ( int i = 0; i < n; ++i )
-			G.emplace_back( GraphVertex{ i } );
+			G.emplace_back( CloneGraphVertex{ i } );
 		uniform_int_distribution<int> dis( 1, n * ( n - 1 ) / 2 );
 		int m = dis( gen );
 		vector<deque<bool>> is_edge_exist( n, deque<bool>( n, false ) );

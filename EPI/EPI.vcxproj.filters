@@ -1163,6 +1163,18 @@
     <ClCompile Include="Solutions\18_GreedyAlgorithms\18.6_gassing_up_solution.cpp">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.1_search_maze_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.2_painting_iterative_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.3_surrounded_regions_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.5_clone_graph_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
