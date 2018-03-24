@@ -4,14 +4,14 @@
 
 #define TEST 0
 
-struct GraphVertex 
+struct TeamPhotoGraphVertex 
 {
-	vector<GraphVertex*> edges;
+	vector<TeamPhotoGraphVertex*> edges;
 	// Set max_distance = 0 to indicate unvisited vertex.
 	int max_distance = 0;
 };
 
-int FindLargestNumberTeams( vector<GraphVertex>* G ) 
+int FindLargestNumberTeams( vector<TeamPhotoGraphVertex>& g )
 {
 	return 0;
 }
@@ -21,10 +21,10 @@ int FindLargestNumberTeams( vector<GraphVertex>* G )
 void FindLargestNumberTeamsTest()
 {
 #if TEST
-	vector<GraphVertex> G( 3 );
+	vector<TeamPhotoGraphVertex> G( 3 );
 	G[0].edges.emplace_back( &G[2] );
 	G[1].edges.emplace_back( &G[2] );
-	assert( 2 == FindLargestNumberTeams( &G ) ); 
+	assert( 2 == FindLargestNumberTeams( G ) ); 
 #endif
 }
 

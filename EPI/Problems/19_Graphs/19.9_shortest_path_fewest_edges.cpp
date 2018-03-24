@@ -4,31 +4,33 @@
 
 #define TEST 0
 
-struct GraphVertex 
+struct DijkstraGraphVertex 
 {
 	struct DistanceWithFewestEdges 
 	{
-		int distance, min_num_edges;
+		int distance, minNumEdges;
 	};
-	DistanceWithFewestEdges distance_with_fewest_edges = DistanceWithFewestEdges{ numeric_limits<int>::max(), 0 };
+	DistanceWithFewestEdges distanceWithFewestEdges = DistanceWithFewestEdges{ numeric_limits<int>::max(), 0 };
 
 	struct VertexWithDistance 
 	{
-		GraphVertex& vertex;
+		DijkstraGraphVertex& vertex;
 		int distance;
 	};
 	vector<VertexWithDistance> edges;
 	int id;  // The id of this vertex.
-	const GraphVertex* pred = nullptr;  // The predecessor in the shortest path.
+	const DijkstraGraphVertex* pred = nullptr;  // The predecessor in the shortest path.
 };
 
-void DijkstraShortestPath( GraphVertex* s, const GraphVertex* t ) 
+void OutputShortestPath(const DijkstraGraphVertex* v);
+
+void DijkstraShortestPath( DijkstraGraphVertex* s, const DijkstraGraphVertex* t )
 {
 }
 
 #pragma region Test
 
-void OutputShortestPath( const GraphVertex* v )
+void OutputShortestPath( const DijkstraGraphVertex* v )
 {
 	if ( v )
 	{
@@ -40,46 +42,46 @@ void OutputShortestPath( const GraphVertex* v )
 // DBH test
 void DijkstraShortestPathSmallTest() 
 {
-	vector<GraphVertex> G;
+	vector<DijkstraGraphVertex> G;
 	for ( int i = 0; i < 9; ++i ) 
 	{
-		G.emplace_back( GraphVertex() );
+		G.emplace_back( DijkstraGraphVertex() );
 		G[i].id = i;
 	}
 
 	// G[0] is the source node that connects to 8 other nodes.
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[1], 13 } );  // 0-1
-	G[1].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 13 } );  // 1-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[1], 13 } );  // 0-1
+	G[1].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 13 } );  // 1-0
 
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[2], 24 } );  // 0-2
-	G[2].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 24 } );  // 2-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[2], 24 } );  // 0-2
+	G[2].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 24 } );  // 2-0
 
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[3], 28 } );  // 0-3
-	G[3].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 28 } );  // 3-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[3], 28 } );  // 0-3
+	G[3].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 28 } );  // 3-0
 
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[4], 25 } );  // 0-4
-	G[4].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 25 } );  // 4-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[4], 25 } );  // 0-4
+	G[4].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 25 } );  // 4-0
 
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[5], 30 } );  // 0-5
-	G[5].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 30 } );  // 5-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[5], 30 } );  // 0-5
+	G[5].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 30 } );  // 5-0
 
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[6], 31 } );  // 0-6
-	G[6].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 31 } );  // 6-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[6], 31 } );  // 0-6
+	G[6].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 31 } );  // 6-0
 
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[7], 10 } );  // 0-7
-	G[7].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 10 } );  // 7-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[7], 10 } );  // 0-7
+	G[7].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 10 } );  // 7-0
 
-	G[0].edges.push_back( GraphVertex::VertexWithDistance{ G[8], 29 } );  // 0-8
-	G[8].edges.push_back( GraphVertex::VertexWithDistance{ G[0], 29 } );  // 8-0
+	G[0].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[8], 29 } );  // 0-8
+	G[8].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[0], 29 } );  // 8-0
 
-	G[1].edges.push_back( GraphVertex::VertexWithDistance{ G[8], 7 } );  // 1-8
-	G[8].edges.push_back( GraphVertex::VertexWithDistance{ G[1], 7 } );  // 8-1
+	G[1].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[8], 7 } );  // 1-8
+	G[8].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[1], 7 } );  // 8-1
 
-	G[2].edges.push_back( GraphVertex::VertexWithDistance{ G[8], 1 } );  // 2-8
-	G[8].edges.push_back( GraphVertex::VertexWithDistance{ G[2], 1 } );  // 8-2
+	G[2].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[8], 1 } );  // 2-8
+	G[8].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[2], 1 } );  // 8-2
 
-	G[7].edges.push_back( GraphVertex::VertexWithDistance{ G[8], 16 } );  // 7-8
-	G[8].edges.push_back( GraphVertex::VertexWithDistance{ G[7], 16 } );  // 8-7
+	G[7].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[8], 16 } );  // 7-8
+	G[8].edges.push_back( DijkstraGraphVertex::VertexWithDistance{ G[7], 16 } );  // 8-7
 
 	int s = 0;  // Source is G[0].
 	int t = 2;  // Destination is G[2].
@@ -89,10 +91,10 @@ void DijkstraShortestPathSmallTest()
 	// distance is: 13 + 7 + 1 = 21.
 
 	DijkstraShortestPath( &G[s], &G[t] );
-	cout << endl << "Min distance: " << G[t].distance_with_fewest_edges.distance << endl;
-	assert( G[t].distance_with_fewest_edges.distance == 21 );
-	cout << "Number of edges: " << G[t].distance_with_fewest_edges.min_num_edges << endl;
-	assert( G[t].distance_with_fewest_edges.min_num_edges == 3 );
+	cout << endl << "Min distance: " << G[t].distanceWithFewestEdges.distance << endl;
+	assert( G[t].distanceWithFewestEdges.distance == 21 );
+	cout << "Number of edges: " << G[t].distanceWithFewestEdges.minNumEdges << endl;
+	assert( G[t].distanceWithFewestEdges.minNumEdges == 3 );
 }
 
 void DijkstraShortestPathTest()
@@ -102,9 +104,9 @@ void DijkstraShortestPathTest()
 	int n;
 	uniform_int_distribution<int> dis( 2, 1000 );
 	n = dis( gen );
-	vector<GraphVertex> G;
+	vector<DijkstraGraphVertex> G;
 	for ( int i = 0; i < n; ++i ) 
-		G.emplace_back( GraphVertex() );
+		G.emplace_back( DijkstraGraphVertex() );
 	uniform_int_distribution<int> dis2( 1, n * ( n - 1 ) / 2 );
 	int m = dis2( gen );
 	vector<deque<bool>> is_edge_exist( n, deque<bool>( n, false ) );
@@ -113,8 +115,8 @@ void DijkstraShortestPathTest()
 	{
 		uniform_int_distribution<int> dis( 1, 100 );
 		int len = dis( gen );
-		G[i - 1].edges.emplace_back( GraphVertex::VertexWithDistance{ G[i], len } );
-		G[i].edges.emplace_back( GraphVertex::VertexWithDistance{ G[i - 1], len } );
+		G[i - 1].edges.emplace_back( DijkstraGraphVertex::VertexWithDistance{ G[i], len } );
+		G[i].edges.emplace_back( DijkstraGraphVertex::VertexWithDistance{ G[i - 1], len } );
 		is_edge_exist[i - 1][i] = is_edge_exist[i][i - 1] = true;
 	}
 
@@ -130,15 +132,15 @@ void DijkstraShortestPathTest()
 		is_edge_exist[a][b] = is_edge_exist[b][a] = true;
 		uniform_int_distribution<int> one_to_100( 1, 100 );
 		int len = one_to_100( gen );
-		G[a].edges.emplace_back( GraphVertex::VertexWithDistance{ G[b], len } );
-		G[b].edges.emplace_back( GraphVertex::VertexWithDistance{ G[a], len } );
+		G[a].edges.emplace_back( DijkstraGraphVertex::VertexWithDistance{ G[b], len } );
+		G[b].edges.emplace_back( DijkstraGraphVertex::VertexWithDistance{ G[a], len } );
 	}
 	int s = dis_n( gen ), t = dis_n( gen );
 	cout << "source = " << s << ", terminal = " << t << endl;
 	DijkstraShortestPath( &G[s], &G[t] );
 	cout << endl
-		<< G[t].distance_with_fewest_edges.distance << " "
-		<< G[t].distance_with_fewest_edges.min_num_edges << endl;
+		<< G[t].distanceWithFewestEdges.distance << " "
+		<< G[t].distanceWithFewestEdges.minNumEdges << endl;
 	DijkstraShortestPathSmallTest();
 #endif
 }

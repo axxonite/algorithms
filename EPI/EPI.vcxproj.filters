@@ -1175,6 +1175,12 @@
     <ClCompile Include="Solutions\19_Graphs\19.5_clone_graph_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.8_team_photo_2_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\19.9_shortest_path_fewest_edges_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
