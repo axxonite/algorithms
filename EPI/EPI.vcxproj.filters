@@ -82,6 +82,9 @@
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h">
       <Filter>Solutions\10. Binary Trees</Filter>
     </ClInclude>
+    <ClInclude Include="Problems\25_HonorRoll\25.6_rotate_array_permutation.h">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1180,6 +1183,33 @@
     </ClCompile>
     <ClCompile Include="Solutions\19_Graphs\19.9_shortest_path_fewest_edges_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.1_gcd1.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.2_first_missing_positive.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.3_max_difference_k_pairs.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.4_biggest_product_n_1.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.5_longest_increasing_subarray.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.7_rook_attack.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.8_justify_text.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.9_zipping_list.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.10_copying_postings_list.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

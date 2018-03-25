@@ -200,6 +200,14 @@ int main()
 	DijkstraShortestPathTest();
 
 	// 25. Honor Roll
+	FindFirstMissingPositiveTest();
+	MaxKPairsProfitsTest();
+	FindBiggestNMinusOneProductTest();
+	FindLongestIncreasingSubarrayTest();
+	RookAttackTest();
+	JustifyTextTest();
+	ZippingLinkedListTest();
+	CopyPostingsListTest();
 	ComputeSkylineTest();
 	GetHeightTest();
 	IsMatchTest();

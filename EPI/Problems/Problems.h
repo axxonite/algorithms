@@ -198,6 +198,14 @@ void FindLargestNumberTeamsTest();
 void DijkstraShortestPathTest();
 
 // Chapter 25: Honor roll
+void FindFirstMissingPositiveTest();
+void MaxKPairsProfitsTest();
+void FindBiggestNMinusOneProductTest();
+void FindLongestIncreasingSubarrayTest();
+void RookAttackTest();
+void JustifyTextTest();
+void ZippingLinkedListTest();
+void CopyPostingsListTest();
 void ComputeSkylineTest();
 void GetHeightTest();
 void IsMatchTest();
