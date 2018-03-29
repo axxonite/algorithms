@@ -5,7 +5,7 @@
 #define TEST 0
 
 // A is passed by value argument, since we change it.
-int FindFirstMissingPositive(vector<int> A)
+int FindFirstMissingPositive(vector<int> a)
 {
 	return -1;
 }
@@ -33,7 +33,7 @@ void FindFirstMissingPositiveTest()
 {
 #if TEST
 	default_random_engine gen((random_device())());
-	for (int times = 0; times < 1000; ++times)
+	for (int times = 0; times < 20; ++times)
 	{
 		size_t n;
 		uniform_int_distribution<size_t> dis(0, 500000);
@@ -47,7 +47,11 @@ void FindFirstMissingPositiveTest()
 		cout << endl;
 		cout << FindFirstMissingPositive(A) << " " << CheckAns(A) << endl;
 		*/
-		assert(FindFirstMissingPositive(A) == FindFirstMissingPositiveCheckAns(A));
+		int a = FindFirstMissingPositive( A );
+		int b = FindFirstMissingPositiveCheckAns( A );
+		if ( a != b )
+			assert( false );
+		assert( a == b );
 	}
 #endif
 }

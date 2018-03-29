@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-void RookAttack(vector<vector<int>>* A_ptr)
+void RookAttack( vector<vector<int>>& a )
 {
 }
 
@@ -31,7 +31,7 @@ void RookAttackTest()
 {
 #if TEST
 	default_random_engine gen((random_device())());
-	for (int times = 0; times < 1000; ++times)
+	for (int times = 0; times < 100; ++times)
 	{
 		size_t m, n;
 		uniform_int_distribution<size_t> dis(1, 50);
@@ -45,7 +45,7 @@ void RookAttackTest()
 		}
 		auto copy_A(A);
 		cout << "m = " << m << ", n = " << n << endl;
-		RookAttack(&A);
+		RookAttack(A);
 		RookAttackCheckAns(copy_A, A);
 	}
 #endif

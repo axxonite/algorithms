@@ -202,6 +202,7 @@ void FindFirstMissingPositiveTest();
 void MaxKPairsProfitsTest();
 void FindBiggestNMinusOneProductTest();
 void FindLongestIncreasingSubarrayTest();
+void RotateArrayTest();
 void RookAttackTest();
 void JustifyTextTest();
 void ZippingLinkedListTest();

@@ -204,6 +204,7 @@ int main()
 	MaxKPairsProfitsTest();
 	FindBiggestNMinusOneProductTest();
 	FindLongestIncreasingSubarrayTest();
+	RotateArrayTest();
 	RookAttackTest();
 	JustifyTextTest();
 	ZippingLinkedListTest();

@@ -145,7 +145,6 @@
     <ClInclude Include="LinkedListPrototype.h" />
     <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h" />
     <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h" />
-    <ClInclude Include="Problems\25_HonorRoll\25.6_rotate_array_permutation.h" />
     <ClInclude Include="Problems\5_Primitives\5.1_parity.h" />
     <ClInclude Include="Problems\5_Primitives\5.2_swap_bits.h" />
     <ClInclude Include="Problems\6_Arrays\6.11_offline_sampling.h" />
@@ -298,6 +297,7 @@
     <ClCompile Include="Problems\25_HonorRoll\25.1_gcd1.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.4_biggest_product_n_1.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.5_longest_increasing_subarray.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.6_rotate_array_permutation.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.7_rook_attack.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.8_justify_text.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.9_zipping_list.cpp" />
@@ -477,6 +477,7 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.28_count_inversions_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.29_drawing_skyline_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.2_first_missing_positive_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.31_maximum_subarray_sum_in_circular_array_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.32_height_determination_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.22_sorted_list_to_bst_solution.cpp" />
@@ -484,6 +485,10 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.37_search_frequent_items_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.38_longest_subarray_k_improved_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.40_arbitrage_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.4_biggest_product_n_1_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.5_longest_increasing_subarray_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.6_rotate_array_permutation_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.7_rook_attack.cpp_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.10_uniform_random_number_generation_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.11_intersect_rectangle_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.3_reverse_bits_solution.cpp" />

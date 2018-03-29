@@ -82,9 +82,6 @@
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h">
       <Filter>Solutions\10. Binary Trees</Filter>
     </ClInclude>
-    <ClInclude Include="Problems\25_HonorRoll\25.6_rotate_array_permutation.h">
-      <Filter>Problems\25. Honor Roll</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1210,6 +1207,24 @@
     </ClCompile>
     <ClCompile Include="Problems\25_HonorRoll\25.10_copying_postings_list.cpp">
       <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.2_first_missing_positive_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.5_longest_increasing_subarray_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.4_biggest_product_n_1_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.6_rotate_array_permutation.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.6_rotate_array_permutation_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.7_rook_attack.cpp_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

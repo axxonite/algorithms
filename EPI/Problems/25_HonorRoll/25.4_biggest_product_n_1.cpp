@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int FindBiggestNMinusOneProduct(const vector<int>& A)
+int FindBiggestNMinusOneProduct(const vector<int>& a)
 {
 	return 0;
 }
