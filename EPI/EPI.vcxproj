@@ -474,6 +474,7 @@
     <ClCompile Include="Solutions\19_Graphs\19.7_transform_string_to_other_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\19.8_team_photo_2_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\19.9_shortest_path_fewest_edges_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.10_copying_postings_list_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.28_count_inversions_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.29_drawing_skyline_solution.cpp" />
@@ -489,6 +490,7 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.5_longest_increasing_subarray_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.6_rotate_array_permutation_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.7_rook_attack.cpp_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.9_zipping_list_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.10_uniform_random_number_generation_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.11_intersect_rectangle_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.3_reverse_bits_solution.cpp" />

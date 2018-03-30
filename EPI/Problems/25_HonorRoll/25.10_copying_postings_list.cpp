@@ -28,7 +28,7 @@ void CheckPostingsListEqual(shared_ptr<PostingListNode> a, shared_ptr<PostingLis
 		assert((a->jump == shared_ptr<PostingListNode>(nullptr) &&
 			b->jump == shared_ptr<PostingListNode>(nullptr)) ||
 			(a->jump && b->jump && a->jump->order == b->jump->order));
-		if (a->jump)
+		if ( a->jump )
 			cout << a->jump->order;
 		cout << endl;
 		a = a->next , b = b->next;
@@ -40,7 +40,7 @@ void CopyPostingsListTest()
 {
 #if TEST
 	default_random_engine gen((random_device())());
-	for (int times = 0; times < 1000; ++times)
+	for (int times = 0; times < 20; ++times)
 	{
 		uniform_int_distribution<int> n_dis(1, 1000);
 		int n = n_dis(gen);

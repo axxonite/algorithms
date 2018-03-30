@@ -5,9 +5,9 @@
 
 #define TEST 0
 
-shared_ptr<ListNode<int>> ZippingLinkedList(const shared_ptr<ListNode<int>>& L)
+shared_ptr<ListNode<int>> ZippingLinkedList(const shared_ptr<ListNode<int>>& l)
 {
-	return nullptr;
+	return l;
 }
 
 #pragma region Test
@@ -18,7 +18,7 @@ void ZippingLinkedListTest()
 	default_random_engine gen((random_device())());
 	shared_ptr<ListNode<int>> head = nullptr;
 	int n;
-	uniform_int_distribution<int> dis(1, 1000);
+	uniform_int_distribution<int> dis(1, 250);
 	n = dis(gen);
 	for (int i = n; i >= 0; --i)
 	{

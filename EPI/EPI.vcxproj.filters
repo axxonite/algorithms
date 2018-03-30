@@ -1226,6 +1226,12 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.7_rook_attack.cpp_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.9_zipping_list_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.10_copying_postings_list_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
