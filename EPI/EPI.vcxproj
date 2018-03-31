@@ -282,6 +282,16 @@
     <ClCompile Include="Problems\19_Graphs\19.8_team_photo_2.cpp" />
     <ClCompile Include="Problems\19_Graphs\19.9_shortest_path_fewest_edges.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.10_copying_postings_list.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.11_longest_valid_parentheses.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.12_sliding_window.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.13_binary_tree_postorder_traversal_iterative.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.14_bonus_improved.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.15_binary_search_unknown_length.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.16_find_kth_element_in_two_sorted_arrays.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.17_k_th_largest_element_large_n.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.18_find_element_appears_once.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.19_line_most_points.cpp" />
+    <ClCompile Include="Problems\25_HonorRoll\25.20_shortest_unique_prefix.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.26_regular_expression.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.28_count_inversions.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.29_drawing_skyline.cpp" />

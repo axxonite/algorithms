@@ -209,6 +209,16 @@ int main()
 	JustifyTextTest();
 	ZippingLinkedListTest();
 	CopyPostingsListTest();
+	LongestValidParenthesesTest();
+	CalculateTrafficVolumesTest();
+	PostorderTraversalTest();
+	CalculateBonusTest();
+	BinarySearchUnknownLengthTest();
+	FindKthInTwoSortedArraysTest();
+	FindKthLargestUnknownLengthTest();
+	FindElementAppearsOnceTest();
+	FindLineWithMostPointsTest();
+	FindShortestPrefixTest();
 	ComputeSkylineTest();
 	GetHeightTest();
 	IsMatchTest();
