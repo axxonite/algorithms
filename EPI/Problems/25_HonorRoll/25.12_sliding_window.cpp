@@ -15,6 +15,7 @@ struct TrafficElement
 	}
 };
 
+// Perfect score on this one :). In fact I did even better than the book, assuming the time stamps are in order.
 vector<TrafficElement> CalculateTrafficVolumes(const vector<TrafficElement>& A, int w ) 
 {
 	return {};

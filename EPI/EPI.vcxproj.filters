@@ -1262,6 +1262,12 @@
     <ClCompile Include="Problems\25_HonorRoll\25.20_shortest_unique_prefix.cpp">
       <Filter>Problems\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.11_longest_valid_parentheses_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.12_sliding_window_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

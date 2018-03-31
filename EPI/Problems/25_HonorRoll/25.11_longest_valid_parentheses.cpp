@@ -7,7 +7,7 @@
 
 int LongestValidParentheses( const string& s )
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test
@@ -41,6 +41,7 @@ int LongestValidParenthesesConstantSpace( const string& s )
 }
 
 void LongestValidParenthesesSmallTest() {
+	assert( LongestValidParentheses( "(())()" ) == 6 );
 	assert( LongestValidParentheses( ")(((())()(()(" ) == 6 );
 	assert( LongestValidParentheses( "((())()(()(" ) == 6 );
 	assert( LongestValidParentheses( ")(" ) == 0 );
@@ -61,7 +62,7 @@ void LongestValidParenthesesTest()
 	LongestValidParenthesesSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	uniform_int_distribution<int> dis( 0, 100000 );
-	for ( int times = 0; times < 1000; ++times ) 
+	for ( int times = 0; times < 10; ++times ) 
 	{
 		string s = RandString( dis( gen ) );
 		assert( LongestValidParenthesesConstantSpace( s ) == LongestValidParentheses( s ) );
