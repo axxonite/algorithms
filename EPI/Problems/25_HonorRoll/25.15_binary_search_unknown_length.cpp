@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int BinarySearchUnknownLength( const vector<int>& A, int k )
+int BinarySearchUnknownLength( const vector<int>& a, int k )
 {
 	return -1;
 }
@@ -26,7 +26,7 @@ void BinarySearchUnknownLengthTest()
 	BinarySearchUnknownLengthSmallTest();
 	int n, k;
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) {
+	for ( int times = 0; times < 10; ++times ) {
 		uniform_int_distribution<int> n_dis( 1, 1000000 );
 		n = n_dis( gen );
 		uniform_int_distribution<int> k_dis( 0, ( n * 2 ) - 1 );
