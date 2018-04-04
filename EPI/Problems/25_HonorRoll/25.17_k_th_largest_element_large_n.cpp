@@ -4,6 +4,7 @@
 
 #define TEST 0
 
+// k starts at 1.
 int FindKthLargestUnknownLength( istringstream* stream, int k )
 {
 	return -1;
@@ -53,7 +54,7 @@ void FindKthLargestUnknownLengthTest()
 #if TEST
 	FindKthLargestUnknownLengthSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) {
+	for ( int times = 0; times < 1; ++times ) {
 		int n, k;
 		uniform_int_distribution<int> n_dis( 1, 100000 );
 		n = n_dis( gen );

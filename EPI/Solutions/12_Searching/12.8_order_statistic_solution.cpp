@@ -12,7 +12,7 @@ namespace Solutions
 	int PartitionAroundPivot(int left, int right, int pivotIndex, Compare comp, vector<int>& a)
 	{
 		int pivotVal = a[pivotIndex];
-		int j = left - 1;
+		int j = left;
 		swap(a[pivotIndex], a[right]);
 		for (int i = left; i < right; ++i)
 			if (comp(a[i], pivotVal))

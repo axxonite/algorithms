@@ -4,9 +4,9 @@
 
 #define TEST 0
 
-vector<string> JustifyText(const vector<string>& words, size_t L)
+vector<string> JustifyText(const vector<string>& words, size_t l)
 {
-	return {""};
+	return {};
 }
 
 #pragma region Test
