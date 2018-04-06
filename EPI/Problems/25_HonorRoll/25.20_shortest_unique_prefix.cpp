@@ -4,8 +4,7 @@
 #include "..\..\Shared.h"
 
 #define TEST 0
-
-string FindShortestPrefix( const string& s, const unordered_set<string>& D )
+string FindShortestPrefix( const string& s, const unordered_set<string>& d )
 {
 	return "";
 }
@@ -36,7 +35,7 @@ void FindShortestPrefixTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 100; ++times ) 
+	for ( int times = 0; times < 10; ++times ) 
 	{
 		unordered_set<string> D;
 		string s;
@@ -51,7 +50,9 @@ void FindShortestPrefixTest()
 		}
 		cout << s << ' ' << "shortest prefix = " << FindShortestPrefix( s, D )
 			<< endl;
-		assert( FindShortestPrefix( s, D ) == FindShortestPrefixCheckAns( s, D ) );
+		auto a = FindShortestPrefix( s, D );
+		auto b = FindShortestPrefixCheckAns( s, D );
+		assert( a == b );
 	}
 #endif
 }

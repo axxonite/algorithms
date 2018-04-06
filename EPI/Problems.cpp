@@ -228,6 +228,16 @@ int main()
 	CountInversionsTest();
 	FindPairSumKTest();
 	BuildBSTFromSortedDoublyListTest();
+	BSTToDoublyLinkedListTest();
+	MergeTwoBSTsTest();
+	CalculateViewFromAboveTest();
+	ExpressionSynthesisTest();
+	CheckFeasibleTest();
+	MaxRectangleSubmatrixTest();
+	MaxSquareSubmatrixTest();
+	HuffmanEncodingTest();
+	CalculateTrappingWaterTest();
+	FindBestProposalsTest();
 
 	CalcContainedWaterTest();
 	ComputeSunShadowingTest();

@@ -48,7 +48,7 @@ void FindElementAppearsOnceTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 10000; ++times ) {
+	for ( int times = 0; times < 100; ++times ) {
 		vector<int> A;
 		int n;
 		uniform_int_distribution<int> n_dis( 1, 10000 );

@@ -17,6 +17,7 @@ struct Point
 	int x, y;
 };
 
+
 struct Rational 
 {
 	bool operator==( const Rational& that ) const 
@@ -27,22 +28,8 @@ struct Rational
 	int numerator, denominator;
 };
 
-Rational GetCanonicalForm( int a, int b ) 
-{
-	int gcd = GCD( abs( a ), abs( b ) );
-	a /= gcd, b /= gcd;
-	return b < 0 ? Rational{ -a, -b } : Rational{ a, b };
-}
-
 struct Line 
 {
-	Line( const Point& a, const Point& b ) 
-	{
-		slope =
-			a.x != b.x ? GetCanonicalForm( b.y - a.y, b.x - a.x ) : Rational{ 1, 0 };
-		intercept = a.x != b.x ? GetCanonicalForm( b.x * a.y - a.x * b.y, b.x - a.x ) : Rational{ a.x, 1 };
-	}
-
 	// Equal function for Line.
 	bool operator==( const Line& that ) const 
 	{
@@ -55,23 +42,18 @@ struct Line
 	Rational intercept;
 };
 
-Line FindLineWithMostPoints( const vector<Point>& P )
+// The bulk of the difficulty here is defining all the auxiliary structures above to ensure we can convert the lines and points into hashes.
+// We find the line between each pair of points and create a hash to disambiguate identical lines (same slope and intercept).
+// To each line, we add the set of points that are on the line, again using a set so as to avoid counting the same point twice.
+// We then simply return the line with the most points.
+Line FindLineWithMostPoints( const vector<Point>& p )
 {
-	return { {0, 0}, {0, 0} };
+	return Line();
 }
 
 #pragma region Test
 
-// Hash function for Point.
-struct HashPoint 
-{
-	size_t operator()( const Point& p ) const 
-	{
-		return hash<int>()( p.x ) ^ hash<int>()( p.y );
-	}
-};
-
-
+#if TEST
 // n^3 checking
 int FindLineWithMostPointsCheck( const vector<Point>& P ) 
 {
@@ -93,12 +75,13 @@ int FindLineWithMostPointsCheck( const vector<Point>& P )
 
 	return max_count;
 }
+#endif
 
 void FindLineWithMostPointsTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 100; ++times ) 
+	for ( int times = 0; times < 20; ++times ) 
 	{
 		cout << times << endl;
 		int n;

@@ -226,6 +226,16 @@ void IsArbitrageExistTest();
 void CountInversionsTest();
 void FindPairSumKTest();
 void BuildBSTFromSortedDoublyListTest();
+void BSTToDoublyLinkedListTest();
+void MergeTwoBSTsTest();
+void CalculateViewFromAboveTest();
+void ExpressionSynthesisTest();
+void CheckFeasibleTest();
+void MaxRectangleSubmatrixTest();
+void MaxSquareSubmatrixTest();
+void HuffmanEncodingTest();
+void CalculateTrappingWaterTest();
+void FindBestProposalsTest();
 
 void CalcContainedWaterTest();
 void ComputeSunShadowingTest();

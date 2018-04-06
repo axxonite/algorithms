@@ -8,6 +8,7 @@ void GramSchmidtOrthogonalization(Vector<n>* b, Vector<n>* result)
 	{
 		result[i] = b[i];
 		for (int j = 0; j < i; ++j)
+			// We must project the current basis vector unto all the vectors we've found before.
 			result[i] -= b[i].ProjectUnto(result[j]);
 	}
 }

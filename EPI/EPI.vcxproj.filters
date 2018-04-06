@@ -1283,6 +1283,48 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.17_k_th_largest_element_large_n_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.19_line_most_points_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.18_find_element_appears_once_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.23_bst_to_sorted_doubly_list.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.24_merge_two_bsts.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.25_view_from_above.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.27_add_operators_in_string.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.30_three_jugs.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.33_max_submatrix_rectangle.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.33_max_submatrix_square.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.34_huffman_encoding.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.35_trapping_rain_water.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\25_HonorRoll\25.39_road_network.cpp">
+      <Filter>Problems\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.20_shortest_unique_prefix_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.23_bst_to_sorted_doubly_list_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
