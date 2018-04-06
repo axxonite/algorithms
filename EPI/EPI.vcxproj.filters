@@ -1325,6 +1325,9 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.23_bst_to_sorted_doubly_list_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.24_merge_two_bsts_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

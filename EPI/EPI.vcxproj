@@ -505,6 +505,7 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.19_line_most_points_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.20_shortest_unique_prefix_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.23_bst_to_sorted_doubly_list_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.24_merge_two_bsts_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.28_count_inversions_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.29_drawing_skyline_solution.cpp" />
