@@ -9,7 +9,7 @@ struct Jug
 	int low, high;
 };
 
-bool CheckFeasible( const vector<Jug>& jugs, int L, int H ) 
+bool CheckFeasible( const vector<Jug>& jugs, int l, int h ) 
 {
 	return false;
 }
