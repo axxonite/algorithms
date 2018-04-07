@@ -1334,6 +1334,9 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.30_three_jugs_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.16_find_kth_element_in_two_sorted_arrays_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

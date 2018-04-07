@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int FindKthInTwoSortedArrays( const vector<int>& A, const vector<int>& B, int k ) 
+int FindKthInTwoSortedArrays( const vector<int>& a, const vector<int>& b, int k ) 
 {
 	return -1;
 }
@@ -57,7 +57,7 @@ void FindKthInTwoSortedArraysTest()
 	FindKthInTwoSortedArraysSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	// Random test 10000 times.
-	for ( int times = 0; times < 10000; ++times ) {
+	for ( int times = 0; times < 100; ++times ) {
 		vector<int> A, B;
 		int n, m, k;
 		uniform_int_distribution<int> dis( 1, 10000 );
