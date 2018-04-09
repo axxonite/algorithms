@@ -2,11 +2,35 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+#define TEST 1
 
-int MaxRectangleSubmatrix( const vector<deque<bool>>& A )
+struct MaxHW
 {
-	return 0;
+	int w, h;
+};
+
+int MaxRectangleSubmatrix( const vector<deque<bool>>& a )
+{
+	vector<vector<MaxHW>> longestSpans(a.size(), vector<MaxHW>(a[0].size()));
+	for (int i = a.size() - 1; i >= 0; --i)
+		for (int j = a[i].size() - 1; j >= 0; --j)
+			longestSpans[i][j] = a[i][j] ? 
+				MaxHW{ i + 1 < a.size() ? longestSpans[i+1][j].w + 1 : 1, j + 1 < a[i].size() ? longestSpans[i][j+1].h : 1} : 
+				MaxHW{ 0, 0 };
+
+	int best = 0;
+	for ( int i = 0; i < a.size(); ++i)
+		for( int j = 0; j < a[i].size(); ++j)
+			if ( a[i][j] && longestSpans[i][j].w * longestSpans[i][j].h > best)
+			{
+				int minWidth = numeric_limits<int>::max();
+				for ( int k = 0; k < longestSpans[i][j].h; ++k)
+				{
+					minWidth = min(minWidth, longestSpans[i][j].w);
+					best = max(best, (k + 1) * minWidth);
+				}
+			}
+	return best;
 }
 
 #pragma region Test
