@@ -4,10 +4,16 @@
 
 #define TEST 0
 
-int MaxSquareSubmatrix( const vector<deque<bool>>& A ) 
+struct MaxHW
 {
-	return 0;
+	int h, w;
+};
+
+int MaxSquareSubmatrix( const vector<deque<bool>>& a )
+{
+	return -1;
 }
+
 #pragma region Test
 
 int MaxSquareSubmatrixSpaceEfficient( const vector<deque<bool>>& A ) 
@@ -61,7 +67,7 @@ void MaxSquareSubmatrixTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times )
+	for ( int times = 0; times < 10; ++times )
 	{
 		int n, m;
 		uniform_int_distribution<int> dis( 1, 50 );

@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-int CalculateTrappingWater( const vector<int> &heights )
+int CalculateTrappingWater( const vector<int>& heights )
 {
 	return -1;
 }
@@ -47,7 +47,7 @@ void CalculateTrappingWaterTest()
 #if TEST
 	CalculateTrappingWaterSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 10000; ++times ) {
+	for ( int times = 0; times < 20; ++times ) {
 		int n;
 		uniform_int_distribution<int> n_dis( 1, 1000 );
 		n = n_dis( gen );

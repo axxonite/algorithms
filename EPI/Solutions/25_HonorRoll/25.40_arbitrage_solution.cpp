@@ -4,6 +4,7 @@
 
 namespace Solutions
 {
+	// todo this was never explained.
 	bool BellmanFord(const vector<vector<double>>& G, int source)
 	{
 		vector<double> dis_to_source(G.size(), numeric_limits<double>::max());

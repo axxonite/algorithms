@@ -4,7 +4,8 @@
 
 #define TEST 0
 
-struct HighwaySection {
+struct HighwaySection 
+{
 	int x, y;
 	double distance;
 };
@@ -31,7 +32,7 @@ void FindBestProposalsTest()
 {
 #if TEST
 	FindBestProposalsSimpleTest();
-	for ( int times = 0; times < 1000; ++times ) {
+	for ( int times = 0; times < 2; ++times ) {
 		default_random_engine gen( ( random_device() )( ) );
 		int n, m, k;
 		uniform_int_distribution<int> five_to_100( 5, 100 );

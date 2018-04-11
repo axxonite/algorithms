@@ -516,9 +516,14 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.31_maximum_subarray_sum_in_circular_array_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.32_height_determination_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.22_sorted_list_to_bst_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.33_max_submatrix_rectangle_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.33_max_submatrix_square_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.34_huffman_encoding.cpp_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.35_trapping_rain_water_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.36_search_a_pair_sorted_array_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.37_search_frequent_items_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.38_longest_subarray_k_improved_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.39_road_network_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.40_arbitrage_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.4_biggest_product_n_1_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.5_longest_increasing_subarray_solution.cpp" />

@@ -2,35 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 1
+#define TEST 0
 
-struct MaxHW
+int MaxRectangleSubmatrix( const vector<deque<bool>>& a ) 
 {
-	int w, h;
-};
-
-int MaxRectangleSubmatrix( const vector<deque<bool>>& a )
-{
-	vector<vector<MaxHW>> longestSpans(a.size(), vector<MaxHW>(a[0].size()));
-	for (int i = a.size() - 1; i >= 0; --i)
-		for (int j = a[i].size() - 1; j >= 0; --j)
-			longestSpans[i][j] = a[i][j] ? 
-				MaxHW{ i + 1 < a.size() ? longestSpans[i+1][j].w + 1 : 1, j + 1 < a[i].size() ? longestSpans[i][j+1].h : 1} : 
-				MaxHW{ 0, 0 };
-
-	int best = 0;
-	for ( int i = 0; i < a.size(); ++i)
-		for( int j = 0; j < a[i].size(); ++j)
-			if ( a[i][j] && longestSpans[i][j].w * longestSpans[i][j].h > best)
-			{
-				int minWidth = numeric_limits<int>::max();
-				for ( int k = 0; k < longestSpans[i][j].h; ++k)
-				{
-					minWidth = min(minWidth, longestSpans[i][j].w);
-					best = max(best, (k + 1) * minWidth);
-				}
-			}
-	return best;
+	return -1;
 }
 
 #pragma region Test
@@ -72,7 +48,7 @@ void MaxRectangleSubmatrixTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times ) {
+	for ( int times = 0; times < 5; ++times ) {
 		int n, m;
 		uniform_int_distribution<int> dis( 1, 50 );
 		n = dis( gen ), m = dis( gen );

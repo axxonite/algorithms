@@ -10,7 +10,7 @@ struct CharWithFrequency
 	double freq;
 };
 
-unordered_map<char, string> HuffmanEncoding(vector<CharWithFrequency>* symbols )
+unordered_map<char, string> HuffmanEncoding(vector<CharWithFrequency>& symbols )
 {
 	return {};
 }
@@ -28,20 +28,17 @@ const double kEnglishFreq[] =
 void HuffmanEncodingTest()
 {
 #if TEST
-	int n;
 	default_random_engine gen( ( random_device() )( ) );
-	uniform_int_distribution<int> dis( 1, 255 );
-	n = dis( gen );
 	vector<CharWithFrequency> symbols;
 	int sum = 0;
 
-	for ( int i = 0; i < n; ++i ) {
+	for ( int i = 0; i < 26; ++i ) {
 		CharWithFrequency t;
 		t.c = 'a' + i;
 		t.freq = kEnglishFreq[i];
 		symbols.emplace_back( t );
 	}
-	auto result = HuffmanEncoding( &symbols );
+	auto result = HuffmanEncoding( symbols );
 	double avg = 0.0;
 	for ( const auto& symbol : symbols ) {
 		cout << symbol.c << " " << symbol.freq << " " << result[symbol.c] << endl;
