@@ -6,26 +6,7 @@
 
 double MaxKPairsProfits(const vector<double>& prices, int k)
 {
-	vector<double> profitsBySellDateLast( prices.size(), 0 );
-	vector<double> profitsBySellDate( prices.size(), 0 );
-	for ( int i = 1; i <= k; ++i )
-	{
-		double maxTerm = -prices[0];
-		profitsBySellDate[0] = 0;
-		for ( int j = 1; j < prices.size(); ++j ) // for each sale date - note we cannot sell on first day.
-		{
-			// max term computes the cost of the buy price and the max profit for the period ending the day before, for all days prior to day j.
-			// max term is max(profitsBySellDateLast[x - 1] - prices[x]) over all values x less than j.
-			// Note we cannot have previous profits on first or second day.
-			// j is sale date, j - 1 is last possible date for a buy for that sale, j - 2 is last possible date for prior profits from the other trades.
-			maxTerm = max( maxTerm, ( j > 1 ? profitsBySellDateLast[j - 2] : 0 ) - prices[j - 1] );
-			// Note that we need to take the max with the best profits from the previous data. Aka, don't force a sale on this day if selling on a prior day was better.
-			profitsBySellDate[j] = max( profitsBySellDate[j-1], prices[j] + maxTerm); // sales price plus the max term.
-		}
-		profitsBySellDateLast.swap(profitsBySellDate);
-	}
-
-	return profitsBySellDateLast.back();
+	return 0;
 }
 
 #pragma region Test
