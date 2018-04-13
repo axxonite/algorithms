@@ -17,8 +17,7 @@ struct ABSqrt2
 
 vector<ABSqrt2> GenerateFirstKABSqrt2(int k)
 {
-	vector<ABSqrt2> result;
-	return result;
+	return {};
 }
 
 // No test.

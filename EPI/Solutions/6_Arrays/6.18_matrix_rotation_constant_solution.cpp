@@ -11,6 +11,7 @@ namespace Solutions
 		// Since there's there's two edges per dimension, we only need to iterate for the length of half the size of the array.
 		for (int i = 0; i < a.size() / 2; ++i)
 		{
+			// The minus one here is important! The last cell on each row will overlap with the first cell of the next column if we don't include it.
 			for (int j = i; j < a.size() - i - 1; ++j)
 			{
 				int temp = a[i][j];

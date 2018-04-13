@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#define TEST 1
+#define TEST 0
 
 unique_ptr<BSTNode<int>> ReconstructBSTPreorder( const vector<int>& a )
 {
