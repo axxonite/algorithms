@@ -6,7 +6,7 @@
 
 double FindSalaryCap(double targetPayroll, vector<double> salaries)
 {
-	return -1.0;
+	return -1;
 }
 
 #pragma region Test
