@@ -1,12 +1,13 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
+#include "..\..\Shared.h"
 
 #define TEST 0
 
 string IntToString(int x)
 {
-	return to_string(x);
+	return "";
 }
 
 int StringToInt(const string& s)
