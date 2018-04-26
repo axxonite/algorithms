@@ -21,7 +21,7 @@ namespace Solutions
 				int cycle_len = 1;
 				fast = fast->next;
 				while (slow != fast)
-					++cycle_len , fast = fast->next;
+					++cycle_len, fast = fast->next;
 
 				// Setup a cycle iterator set to forward by the length of the cycle, from the head.
 				auto cycleIter = head;

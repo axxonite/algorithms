@@ -9,12 +9,13 @@ namespace Solutions
 		// Bases cases.
 		if (cases == 0 || drops == 0)
 			return 0;
-		if (cases == 1)
+		if (cases == 1) // If we only have one case, then we can test as many floors as we have drops.
 			return drops;
 		// Plan to use our remaining cases and drops if our first drop breaks, in which case we would be left with c - 1 cases and d - 1 drops, meaning we can test (c-1,d-1) floors if the first case breaks.
 		// If the first case doesn't break, we still have the same amount of cases but one less drop. This is implemented by the following recurrence.
 		if (f[cases][drops] == -1)
-			f[cases][drops] = GetHeightHelper(cases, drops - 1, f) + GetHeightHelper(cases - 1, drops - 1, f) + 1;
+			// We test ONE floor on this iteration, plus whatever floors we test on the lower level recurrences.
+			f[cases][drops] = GetHeightHelper(cases, drops - 1, f) + GetHeightHelper(cases - 1, drops - 1, f) + 1; 
 		return f[cases][drops];
 	}
 

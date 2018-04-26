@@ -23,6 +23,8 @@ void GenerateAllBinaryTreesSmallTest()
 	assert(GenerateAllBinaryTrees(10).size() == 16796);
 }
 
+// This isn't really a test.
+
 void GenerateAllBinaryTreesTest()
 {
 #if TEST

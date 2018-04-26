@@ -3,13 +3,16 @@
 namespace Solutions
 {
 	// --------------------------------------------------
-	// Quicksort - pick a key value, classify with respect to the key values as < or >, then run again on each < and > classication. O(n lg n)
+	// Quicksort - pick a key value, classify with respect to the key values as < or >, then run again on each < and > classification. O(n lg n)
 	int Partition(vector<int>& values, int a, int b)
 	{
 		// Note how the insertion point j is right before our range, so that when we do insert an element, we will increment it to the first element in the range.
 		int j = a - 1;
 		for (int i = a; i < b; i++)
 		{
+			// Using <=, and not <, is crucial here. This is because you can end up with a range of only two equal values, in which case no swap will happen, and the returned
+			// pivot will be the zero index. Since in the Quicksort call from [p..end] we are iterating over the same range we just iterated, and we have made no modifications
+			// to the array, we end up redoing the same work in an infinite loop.
 			if (values[i] <= values[b])
 			{
 				// Swap i with insertion point so i is in the left section

@@ -16,10 +16,9 @@ namespace Solutions
 		{
 			// The count for the heaps for each element inserted is [min1, max0], [min1, max1], [min2, max1], and so forth.
 			minHeap.emplace(x); // add to min heap.
-			maxHeap.emplace(minHeap.top()); // transfer smallest value in min heap to max heap, where it will be at the bottom of that heap.
+			maxHeap.emplace(minHeap.top()); // transfer smallest value in min heap to max heap.
 			minHeap.pop();
 			// Ensure minHeap and maxHeap have equal number of elements if an even number of elements is read; otherwise, minHeap must have one more element than maxHeap.
-			// in other words, every second element should go to the min heap.
 			if (maxHeap.size() > minHeap.size())
 			{
 				minHeap.emplace(maxHeap.top()); // transfer greatest value in max heap to min heap.

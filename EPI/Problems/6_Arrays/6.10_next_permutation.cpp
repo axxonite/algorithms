@@ -6,7 +6,7 @@
 
 vector<int> NextPermutation(vector<int> perm)
 {
-	return perm;
+	return {};
 }
 
 #pragma region Test
@@ -24,10 +24,10 @@ void NextPermutationTest()
 		generate_n(back_inserter(perm), n, [&] { return n_dis(gen); });
 
 		vector<int> ans(NextPermutation(perm));
+		auto copy = perm;
 		// Use built-in function verification.
-		bool has_next_one = next_permutation(perm.begin(), perm.end());
-		assert((ans.size() == 0 && !has_next_one) ||
-			equal(ans.cbegin(), ans.cend(), perm.cbegin(), perm.cend()));
+		bool has_next_one = next_permutation(copy.begin(), copy.end());
+		assert((ans.size() == 0 && !has_next_one) || equal(ans.cbegin(), ans.cend(), copy.cbegin(), copy.cend()));
 	}
 #endif
 }

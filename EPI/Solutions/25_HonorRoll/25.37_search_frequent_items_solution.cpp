@@ -6,12 +6,16 @@ namespace Solutions
 {
 	// Finds the candidates which may occur > n / k times.
 	//
-	// Some observations:
-	// We reject k elements at a time, which implies we will only ever do n/k rejections.
-	// Thus any candidate with greater than n/k elements is guaranteed to have a positive count after all rejections have been performed.
-	// Furthermore, there can't be more than k such candidates, since those candidates have more than n/k elements to start with.
+	// We start with a set of elements (imagine a set of letter tiles in a bad), and lets assume that one element m appears more than n/k times, e.g. m>n/k. 
+	// We take k DISTINCT elements at random and remove them from the set (which means if we draw the same letter twice from the bag, we will put it back in the bag). 
+	// If m happened to not be in those k elements, then clearly m>(n-k)/k since only the right side was decremented.
+	// Now let's assume m was part of the k elements. Now have m-1>(n-k)/k => k(m-1)>n-k => km-k>n-k => km>n => m>n/k.
+	// This means that after taking k random, distinct letter tiles from an imaginary bag, the letters that are still in the bag still have enough m elements to have reach the threshold for the
+	// right proportion.
 	//
-	// Also, it can proved that elements that appear n/k times before discarding the current set of candidates wills still appear n/k times after discarding the current set (aka m-1>/(n-k)/k implies m>n/k).
+	// An easier way to see this is that we form random subsets of k distinct elements from the elements in the wider set. Each subset of distinct elements is discarded from the set.
+	// Since there are k elements in each set, we will only have a maximum of n/k such subsets. Since the letters in each subset are distinct, a given element will only ever be discard n/k times.
+	// Because the elements we are looking appear more than n/k times, they are guaranteed to be the last ones remaining after we have discarded as many distinct k-size subsets as we can.
 	vector<string> SearchFrequentItems(int k, istringstream* stream)
 	{
 		string buf;

@@ -35,6 +35,7 @@ vector<vector<int>> RandMatrix(int n)
 	return matrix;
 }
 
+// Not an actual test.
 void IsPatternContainedInGridTest()
 {
 #if TEST
