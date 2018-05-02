@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-struct Interval
+struct EndpointInterval
 {
 private:
 	struct Endpoint
@@ -18,15 +18,16 @@ public:
 	Endpoint l, r;
 };
 
-vector<Interval> UnionOfIntervals(vector<Interval> intervals)
+vector<EndpointInterval> UnionOfIntervals(vector<EndpointInterval> intervals)
 {
-	vector<Interval> result;
+	vector<EndpointInterval> result;
+
 	return result;
 }
 
 #pragma region Test
 
-void CheckIntervals(const vector<Interval>& A)
+void CheckIntervals(const vector<EndpointInterval>& A)
 {
 	// Only check the intervals do not overlap with each other.
 	for (size_t i = 1; i < A.size(); ++i)
@@ -41,10 +42,10 @@ void UnionOfIntervalsTest()
 	{
 		uniform_int_distribution<int> dis(1, 1000);
 		int n = dis(gen);
-		vector<Interval> A;
+		vector<EndpointInterval> A;
 		for (int i = 0; i < n; ++i)
 		{
-			Interval temp;
+			EndpointInterval temp;
 			uniform_int_distribution<int> zero_or_one(0, 1);
 			uniform_int_distribution<int> dis1(0, 9999);
 			temp.l.isClosed = zero_or_one(gen) , temp.l.val = dis1(gen);
@@ -52,7 +53,7 @@ void UnionOfIntervalsTest()
 			temp.r.isClosed = zero_or_one(gen) , temp.r.val = dis2(gen);
 			A.emplace_back(temp);
 		}
-		vector<Interval> ret = UnionOfIntervals(A);
+		vector<EndpointInterval> ret = UnionOfIntervals(A);
 		if (!ret.empty())
 			CheckIntervals(ret);
 	}

@@ -14,6 +14,10 @@ namespace Solutions
 		return true;
 	}
 
+	// Why is this not a dynamic programming solution?
+	// Say we have "ABAABABEEB".
+	// Then we can have "ABA+ABA+BEEB" or "ABAABA+BEEB". When we do the second case we could have looked it up in an array instead of doing a palindromic test on BEEB.
+	// It was somewhat harder to write though, because that means storing all decompositions start at the index.
 	void DirectedPalindromePartitioning(const string& input, int offset, vector<string>& partial, vector<vector<string>>& result)
 	{
 		if (offset == input.size())

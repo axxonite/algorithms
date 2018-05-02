@@ -4,7 +4,6 @@
 
 #define TEST 0
 
-// IMPORTANT: The numbering starts from ONE for k.
 template <typename Compare>
 int FindKth(int k, Compare comp, vector<int>& a)
 {

@@ -5,10 +5,11 @@
 
 #define TEST 0
 
-bool IsPalindrome2(const string& prefix)
+bool IsPalindrome2(const string& s)
 {
 	return true;
 }
+
 
 vector<vector<string>> PalindromePartitioning(const string& input)
 {

@@ -22,6 +22,9 @@ namespace Solutions
 			minLeft = min(minLeft, b.left), maxRight = max(maxRight, b.right);
 
 		// Digitize the problem into an array.
+		// Note: this doesn't seem like the most effective solution. We could sort the buildings edges to only update the building when we cross a building edge.
+		// Keep a separate structure for each building so we can mark a building when we get past it. Put those structures in a max-heap to track the highest building.
+		// If we get past a building and it's the top one on the heap, pop it from the heap along with any other buildings that have been marked when we got past them.
 		vector<int> heights(maxRight - minLeft + 1, 0);
 		for (const Rectangle& b : buildings)
 		{

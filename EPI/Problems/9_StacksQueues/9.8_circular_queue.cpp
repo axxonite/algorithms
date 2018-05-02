@@ -7,6 +7,8 @@
 class Queue
 {
 public:
+	// the front of the queue is the next element to be dequeued.
+	// the back of the queue is where we enqueue new elements.
 	explicit Queue(size_t capacity)
 	{
 	}
@@ -23,6 +25,7 @@ public:
 	size_t Size() const { return 0; }
 
 private:
+
 };
 
 #pragma region Test
