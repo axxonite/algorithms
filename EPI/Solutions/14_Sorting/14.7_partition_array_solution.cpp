@@ -13,23 +13,23 @@ namespace Solutions
 
 	void GroupByAge(vector<Person>& people)
 	{
-		unordered_map<int, int> counts;
+		unordered_map<int, int> partitionCount;
 		for (auto p : people)
-			counts[p.age]++;
+			partitionCount[p.age]++;
 		int index = 0;
-		unordered_map<int, int> indices;
-		for (auto it = counts.begin(); it != counts.end(); ++it)
-			indices[it->first] = index, index += it->second;
-		while (!indices.empty())
+		unordered_map<int, int> partitionIndices;
+		for (auto it = partitionCount.begin(); it != partitionCount.end(); ++it)
+			partitionIndices[it->first] = index, index += it->second;
+		while (!partitionIndices.empty())
 		{
 			// Pretty tricky exchange between subarrays here.
-			auto from = indices.begin(); // find a slot that hasn't been moved to its proper place yet.
-			auto to = indices.find(people[from->second].age); // based on the age of the person currently in the from slot, the to slot that person would go to.
-			swap(people[from->second], people[to->second]); // swap it to the to slot.
-			counts[people[to->second].age]--;
-			if (counts[people[to->second].age] == 0)
-				indices.erase(to);
-			else to->second++;
+			auto unpartitionedSrc = partitionIndices.begin(); // find a slot that hasn't been moved to its proper place yet.
+			auto partitionedDest = partitionIndices.find(people[unpartitionedSrc->second].age); // based on the age of the person currently in the from slot, the to slot that person would go to.
+			swap(people[unpartitionedSrc->second], people[partitionedDest->second]); // swap it to the to slot.
+			partitionCount[people[partitionedDest->second].age]--;
+			if (partitionCount[people[partitionedDest->second].age] == 0)
+				partitionIndices.erase(partitionedDest);
+			else partitionedDest->second++;
 		}
 	}
 }

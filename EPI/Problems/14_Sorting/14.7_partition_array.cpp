@@ -33,7 +33,7 @@ void GroupByAgeTest()
 #if TEST
 	GroupByAgeSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 100; ++times ) 
+	for ( int times = 0; times < 10; ++times ) 
 	{
 		int size;
 		uniform_int_distribution<int> dis( 1, 10000 );

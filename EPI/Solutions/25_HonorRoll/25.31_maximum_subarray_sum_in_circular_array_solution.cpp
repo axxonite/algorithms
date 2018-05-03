@@ -6,18 +6,16 @@ namespace Solutions
 {
 	int FindOptimumSubarrayUsingComp(const vector<int>& A, const int& (*comp)(const int&, const int&))
 	{
-		// "till" computes the best value for the subarray from 0 to i. "overall" keeps track of the best result we found in all the subarrays so far.
-		int till = 0, overall = 0;
+		// Kadane's algorithm.
+		// Suppose we know the largest subarray sum ending at i. Call this sum B{i}. How do we compute B{i+1}?
+		// Either B{i+1} includes B{i} as a prefix, or it doesn't. Thus B{i+1}=max(A{i+1},A{i+1}+B{i})
+		int maxEndingHere = 0, overallMax = 0;
 		for (int a : A)
 		{
-			// The logic for this here is, if the sum of the entries before i is less than a, its better to start the subarray from a instead.
-			// Another way to see it is, any number in the prefix that makes the prefix even smaller, needs to be discarded for a max subarray result.
-			// Once a[i] is greater than the subarray sum ("till"), then the we have found the minimum subarray starting from 0, and the remaining entries after that minimum subarray, will form the maximum subarray.
-			// I'm still unsure how to prove this, exactly, and the way it's written out here is very counter-intuitive.
-			till = comp(a, a + till);
-			overall = comp(overall, till);
+			maxEndingHere = comp(a, a + maxEndingHere);
+			overallMax = comp(overallMax, maxEndingHere);
 		}
-		return overall;
+		return overallMax;
 	}
 
 	int MaxSubarraySumInCircular(const vector<int>& A)
