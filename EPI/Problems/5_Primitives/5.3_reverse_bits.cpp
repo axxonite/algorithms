@@ -5,10 +5,6 @@
 
 #define TEST 0
 
-void InitReverseBits()
-{
-}
-
 long long ReverseBits( long long x )
 {
 	return 0;
@@ -32,7 +28,9 @@ void ReverseBitsTest()
 		uniform_int_distribution<long> dis( 0, numeric_limits<long>::max() );
 		long x = dis( gen );
 		cout << "x = " << x << ", reverse x = " << ReverseBits( x ) << endl;
-		assert( ReverseBits( x ) == ReverseX2( x, 63 ) );
+		long long a = ReverseBits(x);
+		long long b = ReverseX2(x, 63);
+		assert( a == b );
 	}
 #endif
 }

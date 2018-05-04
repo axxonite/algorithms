@@ -328,6 +328,7 @@
     <ClCompile Include="Problems\5_Primitives\5.5_multiply_shift_add.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.6_division.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.7_power_x_y.cpp" />
+    <ClCompile Include="Problems\5_Primitives\5.8_reverse_digits.cpp" />
     <ClCompile Include="Problems\5_Primitives\5.9_palindrome_number.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.14_online_sampling.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.15_nonuniform_random_number_generation.cpp" />
@@ -539,6 +540,7 @@
     <ClCompile Include="Solutions\5_Primitives\5.5_multiply_shift_add_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.6_division_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.7_power_x_y_solution.cpp" />
+    <ClCompile Include="Solutions\5_Primitives\5.8_reverse_digits_solution.cpp" />
     <ClCompile Include="Solutions\5_Primitives\5.9_palindrome_number_solution.cpp" />
     <ClCompile Include="Solutions\6_Arrays\6.10_next_permutation_solution.cpp" />
     <ClCompile Include="Solutions\6_Arrays\6.12_reservoir_sampling_solution.cpp" />

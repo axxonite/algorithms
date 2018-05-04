@@ -11,6 +11,7 @@ int main()
 	ReverseBitsTest();
 	MultiplyShiftAddTest();
 	DivideTest();
+	ReverseDigitsTest();
 	IsPalindromeNumberTest();
 	RectangleIntersectionTest();
 	PowerTest();

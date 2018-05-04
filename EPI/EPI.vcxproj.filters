@@ -1355,6 +1355,12 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.3_max_difference_k_pairs_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\5_Primitives\5.8_reverse_digits.cpp">
+      <Filter>Problems\5. Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\5_Primitives\5.8_reverse_digits_solution.cpp">
+      <Filter>Solutions\5. Primitives</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

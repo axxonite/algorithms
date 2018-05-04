@@ -10,6 +10,8 @@ struct CharWithFrequency
 	double freq;
 };
 
+
+
 unordered_map<char, string> HuffmanEncoding(vector<CharWithFrequency>& symbols )
 {
 	return {};

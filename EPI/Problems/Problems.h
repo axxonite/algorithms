@@ -9,6 +9,7 @@ void MergeSortTest();
 void ReverseBitsTest();
 void MultiplyShiftAddTest();
 void DivideTest();
+void ReverseDigitsTest();
 void IsPalindromeNumberTest();
 void RectangleIntersectionTest();
 void PowerTest();
