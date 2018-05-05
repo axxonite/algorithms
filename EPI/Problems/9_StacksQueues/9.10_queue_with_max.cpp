@@ -1,7 +1,6 @@
 // Copyright (c) 2013 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include "Solutions/9_StacksQueues/9.1_stack_with_max_solution.h"
 
 #define TEST 0
 
@@ -10,6 +9,7 @@ class QueueWithMax
 public:
 	void Enqueue(int x)
 	{
+
 	}
 
 	int Dequeue() 

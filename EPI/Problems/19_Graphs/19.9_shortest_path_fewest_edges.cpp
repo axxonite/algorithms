@@ -4,12 +4,13 @@
 
 #define TEST 0
 
-struct DijkstraGraphVertex 
+struct DistanceWithFewestEdges
 {
-	struct DistanceWithFewestEdges 
-	{
-		int distance, minNumEdges;
-	};
+	int distance, minNumEdges;
+};
+
+struct DijkstraGraphVertex
+{
 	DistanceWithFewestEdges distanceWithFewestEdges = DistanceWithFewestEdges{ numeric_limits<int>::max(), 0 };
 
 	struct VertexWithDistance 
