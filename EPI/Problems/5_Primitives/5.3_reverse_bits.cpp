@@ -5,14 +5,20 @@
 
 #define TEST 0
 
-long long ReverseBits( long long x )
+unsigned short lookup[0x10000];
+
+ void InitReverseBits()
+{
+}
+
+unsigned long long ReverseBits(unsigned long long x )
 {
 	return 0;
 }
 
 #pragma region Test
 
-long long ReverseX2( long long x, int n )
+long long ReverseX2(unsigned long long x, int n )
 {
 	for ( int i = 0, j = n; i < j; ++i, --j )
 		x = Solutions::SwapBits( x, i, j );
@@ -30,6 +36,8 @@ void ReverseBitsTest()
 		cout << "x = " << x << ", reverse x = " << ReverseBits( x ) << endl;
 		long long a = ReverseBits(x);
 		long long b = ReverseX2(x, 63);
+		if (a != b)
+			int a = 1;
 		assert( a == b );
 	}
 #endif

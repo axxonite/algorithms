@@ -1361,6 +1361,12 @@
     <ClCompile Include="Solutions\5_Primitives\5.8_reverse_digits_solution.cpp">
       <Filter>Solutions\5. Primitives</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\6_Arrays\6.19_pascal_triangle.cpp">
+      <Filter>Problems\6. Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\6_Arrays\6.19_pascal_triangle_solution.cpp">
+      <Filter>Solutions\6. Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

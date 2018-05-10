@@ -6,7 +6,7 @@
 
 int NonuniformRandomNumberGeneration( const vector<int>& values, const vector<double>& probabilities)
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test
@@ -21,14 +21,16 @@ void NonuniformRandomNumberGenerationTest()
 	vector<int> T( n );
 	iota( T.begin(), T.end(), 0 );
 	vector<double> P;
-	double full_prob = 1.0;
-	for ( size_t i = 0; i < n - 1; ++i ) {
-		uniform_real_distribution<double> dis( 0.0, full_prob );
+	double sum = 0;
+	for ( size_t i = 0; i < n; ++i ) 
+	{
+		uniform_real_distribution<double> dis( 0.0, 1.0f );
 		double pi = dis( gen );
+		sum += pi;
 		P.emplace_back( pi );
-		full_prob -= pi;
 	}
-	P.emplace_back( full_prob );
+	for (auto& p : P)
+		p = p / sum;
 	for ( size_t i = 0; i < T.size(); ++i ) 
 		cout << T[i] << ' ';
 	cout << endl;

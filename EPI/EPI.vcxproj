@@ -334,6 +334,7 @@
     <ClCompile Include="Problems\6_Arrays\6.15_nonuniform_random_number_generation.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.16_sudoku_check.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.17_spiral_matrix.cpp" />
+    <ClCompile Include="Problems\6_Arrays\6.19_pascal_triangle.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.2_plus_one.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.10_next_permutation.cpp" />
     <ClCompile Include="Problems\6_Arrays\6.12_reservoir_sampling.cpp" />
@@ -550,6 +551,7 @@
     <ClCompile Include="Solutions\6_Arrays\6.16_sudoku_check_solution.cpp" />
     <ClCompile Include="Solutions\6_Arrays\6.17_spiral_matrix_solution.cpp" />
     <ClCompile Include="Solutions\6_Arrays\6.18_matrix_rotation_constant_solution.cpp" />
+    <ClCompile Include="Solutions\6_Arrays\6.19_pascal_triangle_solution.cpp" />
     <ClCompile Include="Solutions\6_Arrays\6.1_dutch_national_flag_solution.cpp" />
     <ClCompile Include="Solutions\6_Arrays\6.2_plus_one_solution.cpp" />
     <ClCompile Include="Solutions\6_Arrays\6.3_bignumber_multiplication_solution.cpp" />

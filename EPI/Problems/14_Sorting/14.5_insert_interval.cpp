@@ -11,7 +11,8 @@ struct Interval
 
 vector<Interval> AddInterval( const vector<Interval>& intervals, Interval newInterval ) 
 {
-	return {};
+	vector<Interval> result;
+	return result;
 }
 
 #pragma region Test

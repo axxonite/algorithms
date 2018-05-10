@@ -33,6 +33,7 @@ void NonuniformRandomNumberGenerationTest();
 void IsValidSudokuTest();
 void MatrixInSpiralOrderTest();
 void RotateMatrixTest();
+void PascalTriangleTest();
 
 // Chapter 7 : Strings.
 void InterconvertStringIntTest();

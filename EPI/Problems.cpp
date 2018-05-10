@@ -35,6 +35,7 @@ int main()
 	IsValidSudokuTest();
 	MatrixInSpiralOrderTest();
 	RotateMatrixTest();
+	PascalTriangleTest();
 
 	// 7. Strings
 	InterconvertStringIntTest();

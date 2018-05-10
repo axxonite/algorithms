@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-bool PairIncludesAncestorAndDescendantOfM(const unique_ptr<BSTNode<int>>& possible_anc_or_desc_0, const unique_ptr<BSTNode<int>>& possible_anc_or_desc_1, const unique_ptr<BSTNode<int>>& middle)
+bool PairIncludesAncestorAndDescendantOfM(const unique_ptr<BSTNode<int>>& a, const unique_ptr<BSTNode<int>>& b, const unique_ptr<BSTNode<int>>& middle)
 {
 	return false;
 }
