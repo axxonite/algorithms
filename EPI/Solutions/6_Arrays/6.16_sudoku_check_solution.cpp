@@ -48,4 +48,24 @@ namespace Solutions
 
 		return true;
 	}
+
+	bool IsValidSudoku2(const vector<vector<int>>& grid)
+	{
+		vector<int> rows(9, 0), columns(9, 0), subgrids(9, 0);
+		for (int i = 0; i < grid.size(); ++i)
+		{
+			for (int j = 0; j < grid[0].size(); ++j)
+			{
+				if (grid[i][j])
+				{
+					int mask = 1 << grid[i][j];
+					int grid = (i / 3) * 3 + j / 3;
+					if ((rows[i] & mask) || (columns[j] & mask) || (subgrids[grid] & mask))
+						return false;
+					rows[i] |= mask, columns[j] |= mask, subgrids[grid] |= mask;
+				}
+			}
+		}
+		return true;
+	}
 }

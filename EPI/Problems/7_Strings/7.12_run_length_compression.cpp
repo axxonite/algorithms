@@ -6,12 +6,14 @@
 
 string Decoding( const string &s ) 
 {
-	return "";
+	string result;
+	return result;
 }
 
 string Encoding( const string &s ) 
 {
-	return "";
+	string result;
+	return result;
 }
 
 #pragma region Test

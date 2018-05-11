@@ -7,7 +7,8 @@
 
 vector<string> PhoneMnemonic( const string& n ) 
 {
-	return {};
+	vector<string> results;
+	return results;
 }
 
 #pragma region Test

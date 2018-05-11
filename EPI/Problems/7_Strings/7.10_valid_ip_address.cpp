@@ -6,7 +6,8 @@
 
 vector<string> GetValidIPAddress( const string& s )
 {
-	return {};
+	vector<string> result;
+	return result;
 }
 
 #pragma region Test

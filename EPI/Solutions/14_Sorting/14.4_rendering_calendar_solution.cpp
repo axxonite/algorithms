@@ -17,6 +17,9 @@ namespace Solutions
 		bool operator < (const Endpoint& other) const
 		{
 			// watch out for the comparator - the comparator will assert if a < b is false and a > b is false but they are not equal.
+
+			// so... if we are starting an event here, and the other event isn't... we start the new event before ending the last one? Doesn't seem legit, really. The
+			// problem didn't specify what to do with intervals, and I assumed them to be disjoint. I suppose the end time means it's still running for that time period.
 			return time < other.time || (time == other.time && isStart && !other.isStart);
 		}
 	};

@@ -5,15 +5,13 @@
 
 #define TEST 0
 
-unsigned short lookup[0x10000];
-
  void InitReverseBits()
 {
 }
 
 unsigned long long ReverseBits(unsigned long long x )
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test

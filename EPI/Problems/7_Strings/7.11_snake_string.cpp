@@ -7,7 +7,8 @@
 
 string SnakeString( const string& s )
 {
-	return "";
+	string result;
+	return result;
 }
 
 #pragma region Test
