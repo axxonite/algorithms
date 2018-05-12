@@ -11,8 +11,6 @@ vector<string> KMostFrequentEntries( const vector<string>& s, int k )
 	return result;
 }
 
-// The book has no code solution for this one. This is my own.
-
 #pragma region Test
 
 void KMostFrequentEntriesTest()
