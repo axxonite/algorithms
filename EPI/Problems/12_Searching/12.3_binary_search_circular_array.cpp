@@ -6,7 +6,7 @@
 
 int SearchSmallest( const vector<int>& a ) 
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test

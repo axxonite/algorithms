@@ -6,23 +6,19 @@ namespace Solutions
 {
 	vector<int> MatrixInSpiralOrder( vector<vector<int>> matrix )
 	{
-		const array<int, 2> directions[] = { { 1, 0 },{ 0, 1 },{ -1, 0 },{ 0, -1 } };
 		vector<int> result;
-		int x = 0, y = 0, dirIndex = 0, minValue = 0, maxValue = matrix.size();
-		for ( int i = 0; i < matrix.size() * matrix.size(); ++i )
+		// first value is y, second value is x.
+		const tuple<int, int> directions[] = { { 0, 1 },{ 1, 0 },{ 0, -1 },{ -1, 0 } };
+		int directionIndex = 0, x = 0, y = 0, minxy = 0, maxy = matrix.size() - 1, maxx = matrix[0].size() - 1;
+		for (int i = 0; i < matrix.size() * matrix[0].size(); ++i)
 		{
-			result.emplace_back( matrix[y][x] );
-			int nextX = x + directions[dirIndex][0], nextY = y + directions[dirIndex][1];
-			// We could change the matrix value to zero to indicate it was visited, but I prefer to leave the matrix untouched (how would we know if zero is a valid value in the matrix?)
-			if ( dirIndex == 3 && nextX == minValue && nextY == minValue )
-				minValue++, maxValue--;
-			if ( nextX == maxValue || nextY == maxValue || nextX < minValue || nextY < minValue )
-			{
-				dirIndex = ( dirIndex + 1 ) % 4; // Note the modulo trick here.
-				nextX = x + directions[dirIndex][0], nextY = y + directions[dirIndex][1];
-			}
-
-			x = nextX, y = nextY;
+			result.emplace_back(matrix[y][x]);
+			int nextX = x + get<1>(directions[directionIndex]), nextY = y + get<0>(directions[directionIndex]);
+			if (nextX < minxy || nextX > maxx || nextY < minxy || nextY > maxy) // technically nextY < minxy is unnecessary because of the next condition below.
+				directionIndex++;
+			if (nextX == minxy && nextY == minxy)
+				directionIndex = 0, minxy++, maxx--, maxy--;
+			x = x + get<1>(directions[directionIndex]), y = y + get<0>(directions[directionIndex]);
 		}
 		return result;
 	}

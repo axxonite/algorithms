@@ -28,7 +28,6 @@ namespace Solutions
 					avg += it->second.top();
 					it->second.pop();
 				}
-				avg /= 3;
 				if ( avg > bestScore )
 				{
 					bestScore = avg;

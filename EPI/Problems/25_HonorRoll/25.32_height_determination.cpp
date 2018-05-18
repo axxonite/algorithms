@@ -6,7 +6,7 @@
 
 int GetHeight(int cases, int drops)
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test

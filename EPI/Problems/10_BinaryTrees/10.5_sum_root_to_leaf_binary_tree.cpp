@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-int SumRootToLeaf( const unique_ptr<BinaryTreeNode<int>>& tree ) 
+int SumRootToLeaf( const unique_ptr<BinaryTreeNode<int>>& tree )
 {
 	return 0;
 }

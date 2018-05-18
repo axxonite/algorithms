@@ -9,10 +9,9 @@ struct MinMax
 	int smallest, largest;
 };
 
-// Note the use of the minmax function to keep everything really short.
-MinMax FindMinMax( const vector<int>& a ) 
+MinMax FindMinMax( const vector<int>& A ) 
 {
-	return {};
+	return { -1, -1 };
 }
 
 #pragma region Test

@@ -7,7 +7,8 @@
 
 vector<int> InorderTraversal( const unique_ptr<BinaryTreeNodeP<int>>& tree ) 
 {
-	return {};
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test

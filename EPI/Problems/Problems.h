@@ -242,3 +242,8 @@ void FindBestProposalsTest();
 void CalcContainedWaterTest();
 void ComputeSunShadowingTest();
 void IsContainedTest();
+
+namespace Solutions
+{
+	vector<int> MergeSortedArrays(const vector<vector<int>>& sortedArrays);
+}

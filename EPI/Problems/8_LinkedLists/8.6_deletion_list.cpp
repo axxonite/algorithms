@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-void DeletionFromList( const shared_ptr<ListNode<int>>& node_to_delete ) 
+void DeletionFromList( const shared_ptr<ListNode<int>>& node ) 
 {
 }
 

@@ -8,13 +8,12 @@ struct Subarray
 {
 	int start, end;
 
-	bool operator == ( const Subarray& a )
+	bool operator == (const Subarray& a)
 	{
 		return start == a.start && end == a.end;
 	}
 };
 
-// A clever solution.
 Subarray FindSmallestSubarrayCoveringSet( const vector<string>& paragraph, const unordered_set<string>& keywords )
 {
 	return { -1, -1 };

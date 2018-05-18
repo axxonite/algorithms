@@ -16,8 +16,6 @@ namespace Solutions
 			pathParts.emplace_back( "/" ); // A leading / means the root - keep around.
 		while ( getline( ss, token, '/' ) )
 		{
-			if ( token == "." || token == "" ) // Explicitly skip ./ or empty token (meaning //)
-				continue;
 			if ( token == ".." )
 			{
 				if ( pathParts.empty() || pathParts.back() == ".." ) // TRICKY! add the .. if there is not path part to pop OR if another .. is at the top of the stack.
@@ -26,7 +24,7 @@ namespace Solutions
 					throw invalid_argument( "" );
 				else pathParts.pop_back();
 			}
-			else
+			else if (token != "." && token != "") // Explicitly skip ./ or empty token (meaning //)
 				pathParts.emplace_back( token );
 		}
 

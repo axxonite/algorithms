@@ -1367,6 +1367,9 @@
     <ClCompile Include="Solutions\6_Arrays\6.19_pascal_triangle_solution.cpp">
       <Filter>Solutions\6. Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.6_deletion_list_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

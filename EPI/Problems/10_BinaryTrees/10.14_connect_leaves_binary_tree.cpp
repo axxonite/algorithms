@@ -7,7 +7,8 @@
 
 list<const unique_ptr<BinaryTreeNode<int>>*> CreateListOfLeaves(const unique_ptr<BinaryTreeNode<int>>& t)
 {
-	return {};
+	list<const unique_ptr<BinaryTreeNode<int>>*> result;
+	return result;
 }
 
 #pragma region Test

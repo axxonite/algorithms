@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-bool IsLinkedListAPalindrome( shared_ptr<ListNode<int>> L ) 
+bool IsLinkedListAPalindrome( shared_ptr<ListNode<int>> l ) 
 {
 	return true;
 }

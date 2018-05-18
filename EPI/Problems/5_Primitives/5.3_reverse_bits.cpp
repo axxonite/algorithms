@@ -5,13 +5,13 @@
 
 #define TEST 0
 
- void InitReverseBits()
+void InitReverseBits()
 {
 }
 
 unsigned long long ReverseBits(unsigned long long x )
 {
-	return -1;
+	return 0;
 }
 
 #pragma region Test
@@ -34,8 +34,6 @@ void ReverseBitsTest()
 		cout << "x = " << x << ", reverse x = " << ReverseBits( x ) << endl;
 		long long a = ReverseBits(x);
 		long long b = ReverseX2(x, 63);
-		if (a != b)
-			int a = 1;
 		assert( a == b );
 	}
 #endif

@@ -5,43 +5,36 @@
 
 namespace Solutions
 {
-	// TRICKY one here.
-	vector<int> InorderTraversal( const unique_ptr<BinaryTreeNodeP<int>>& tree )
+	BinaryTreeNodeP<int>* NextState(BinaryTreeNodeP<int>* cur, BinaryTreeNodeP<int>* prev, vector<int>& result)
 	{
-		// to do this correctly, we must thoroughly think about all the possible ways a particular node might traversed:
-		// going down, coming from the parent: 
-		// happens once per node, and the correct behavior is to go the left node.
-		// If there is no left node, then we won't have any other values < than the current node, so record the current node,
-		// then go right, or back to the parent if there is no right child.
-		//
-		// going up, coming from the left child: record the node's value. Go to the right node if there is one, otherwise go to the parent.
-		//
-		// going up, coming from the right child: do NOT record the node's value again. Go back up to the next parent node.
-		vector<int> result;
-		BinaryTreeNodeP<int>* cur = tree.get(), *prev = nullptr;
-		while ( cur )
+		if (prev == cur->parent)
 		{
-			auto newPrev = cur;
-			if ( prev == cur->parent ) // downward phase
-			{
-				if ( cur->left )
-					cur = cur->left.get();
-				else
-				{
-					// We are done with left. Record the value of the node - we will only have larger values from now on.
-					result.emplace_back( cur->data );
-					cur = cur->right ? cur->right.get() : cur->parent;
-				}
-			}
-			else
-			{
-				if ( prev == cur->left.get() )
-					result.emplace_back( cur->data );
-				if ( prev == cur->left.get() && cur->right )
-					cur = cur->right.get();
-				else cur = cur->parent;
-			}
-			prev = newPrev;
+			if (cur->left)
+				return cur->left.get();
+		}
+		if (prev == cur->left.get() || prev == cur->parent)
+		{
+			result.emplace_back(cur->data);
+			if (cur->right)
+				return cur = cur->right.get();
+		}
+		return cur->parent;
+	}
+
+	vector<int> InorderTraversal(const unique_ptr<BinaryTreeNodeP<int>>& tree)
+	{
+		// we can avoid extra storage by keeping track of where we came from.
+		// If we come from the parent (or nullptr), we need go left.
+		// If we come from the left child, we need to record the node, and go right.
+		// If we come from the right child, we need to go to the parent;
+		// Any of these paths may lead to a null child. In this case, continue to the next state.
+		BinaryTreeNodeP<int>* cur = tree.get(), *prev = nullptr;
+		vector<int> result;
+		while (cur)
+		{
+			auto temp = cur;
+			cur = NextState(cur, prev, result); // Beautiful.
+			prev = temp;
 		}
 		return result;
 	}
