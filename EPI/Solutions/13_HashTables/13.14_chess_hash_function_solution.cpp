@@ -53,6 +53,15 @@ namespace Solutions
 		}
 	}
 
+	long long InitHash(const ChessState& state)
+	{
+		long long hash = 0;
+		for (int x = 0; x < 8; ++x)
+			for (int y = 0; y < 8; ++y)
+				hash ^= hashCodes[x][y][state.Get(y, x)];
+		return hash;
+	}
+
 	// Tricky.
 	long long ChessHash( ChessState& state, long long stateHash, const pair<int, int>& start, const pair<int, int>& dest )
 	{

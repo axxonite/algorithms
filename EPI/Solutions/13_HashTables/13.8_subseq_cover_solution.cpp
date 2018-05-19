@@ -19,19 +19,19 @@ namespace Solutions
 			keywordToIndex[keywords[i]] = i;
 
 		// Keep the index of the first keyword in the subsequence, for the last subsequence found that includes the ith keyword.
-		vector<int> subsequenceLength( keywords.size(), -1 );
+		vector<int> subsequenceStart( keywords.size(), -1 );
 		for ( int i = 0; i < paragraph.size(); ++i )
 		{
 			auto it = keywordToIndex.find( paragraph[i] );
 			if ( it != keywordToIndex.end() )
 			{
 				if ( it->second == 0 )
-					subsequenceLength[0] = i;
-				else if ( subsequenceLength[it->second - 1] != -1 ) // Do we have an active subsequence for the prior keywords?
+					subsequenceStart[0] = i;
+				else if ( subsequenceStart[it->second - 1] != -1 ) // Do we have an active subsequence for the prior keywords?
 				{
-					if ( it->second == keywords.size() - 1 && ( i - subsequenceLength[it->second - 1] ) < ( result.end - result.start ) )
-						result = { subsequenceLength[it->second - 1], i };
-					else subsequenceLength[it->second] = subsequenceLength[it->second - 1]; // If so, extend the coverage of the subsequence.
+					if ( it->second == keywords.size() - 1 && ( i - subsequenceStart[it->second - 1] ) < ( result.end - result.start ) )
+						result = { subsequenceStart[it->second - 1], i };
+					else subsequenceStart[it->second] = subsequenceStart[it->second - 1]; // If so, extend the coverage of the subsequence.
 				}
 			}
 		}

@@ -4,6 +4,23 @@
 
 #define TEST 0
 
+enum SquareState
+{
+	Blank,
+	BlackPawn,
+	BlackBishop,
+	BlackKnight,
+	BlackRook,
+	BlackQueen,
+	BlackKing,
+	WhitePawn,
+	WhiteBishop,
+	WhiteKnight,
+	WhiteRook,
+	WhiteQueen,
+	WhiteKing,
+};
+
 struct ChessState
 {
 	array<unsigned char, 32> bytes;
@@ -30,35 +47,22 @@ struct ChessState
 	}
 };
 
-long long ChessHash( ChessState& state, long long stateHash, const pair<int, int>& start, const pair<int, int>& dest )
+void InitHashes()
+{
+}
+
+long long InitHash(const ChessState& state)
+{
+	return 0;
+}
+
+
+long long ChessHash( ChessState& state, long long stateHash, int srcY, int srcX, int dstY, int dstX )
 {
 	return 0;
 }
 
 #pragma region Test
-
-enum SquareState
-{
-	Blank,
-	BlackPawn,
-	BlackBishop,
-	BlackKnight,
-	BlackRook,
-	BlackQueen,
-	BlackKing,
-	WhitePawn,
-	WhiteBishop,
-	WhiteKnight,
-	WhiteRook,
-	WhiteQueen,
-	WhiteKing,
-};
-
-long long InitHash( const ChessState& state )
-{
-	assert( false );
-	return 0;
-}
 
 void ChessHashTest()
 {
@@ -98,12 +102,12 @@ void ChessHashTest()
 	state.Set( 7, 6, WhitePawn );
 	state.Set( 7, 7, WhitePawn );
 	long long hash1 = InitHash( state );
-	long long hash2 = ChessHash( state, hash1, { 1, 3 }, { 3, 3 } );
+	long long hash2 = ChessHash( state, hash1, 1, 3, 3, 3 );
 	assert( hash2 != hash1 );
-	long long hash3 = ChessHash( state, hash1, { 3, 3 }, { 1, 3 } );
+	long long hash3 = ChessHash( state, hash1, 3, 3, 1, 3 );
 	assert( hash3 == hash1 );
-	long long hash4 = ChessHash( state, hash1, { 0, 3 }, { 7, 3 } );
-	long long hash5 = ChessHash( state, hash1, { 7, 3 }, { 0, 3 } );
+	long long hash4 = ChessHash( state, hash1, 0, 3, 7, 3 );
+	long long hash5 = ChessHash( state, hash1, 7, 3, 0, 3 );
 	assert( hash4 != hash5 );
 #endif
 }
