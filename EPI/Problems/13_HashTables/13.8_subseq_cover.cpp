@@ -12,7 +12,8 @@ struct Subarray
 
 Subarray FindSmallestSequentiallyCoveringSubset(const vector<string>& paragraph, const vector<string>& keywords ) 
 {
-	return { -1, -1 };
+	Subarray result = { -1, -1 };
+	return result;
 }
 
 #pragma region Test

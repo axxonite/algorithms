@@ -6,7 +6,7 @@
 
 bool IsPalindrome( const string& s )
 {
-	return false;
+	return true;
 }
 
 #pragma region Test

@@ -2,8 +2,6 @@
 
 #include "stdafx.h"
 
-#define TEST 1
-
 namespace Solutions 
 {
 	bool IsValidPart( const string& s )

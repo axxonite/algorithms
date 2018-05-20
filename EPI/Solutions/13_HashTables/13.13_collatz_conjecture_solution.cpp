@@ -24,7 +24,7 @@ namespace Solutions
 				{
 					if ( it->second == i )	// We've encountered a cycle.
 						return false;
-					else break; // We've already tested this value.
+					break; // We've already tested this value.
 				}
 				tested[v] = i;
 				if ( v % 2 == 0 )
@@ -39,6 +39,7 @@ namespace Solutions
 				}
 			}
 			tested.erase( i );
+			tested.erase( i + 1);
 		}
 		return true;
 	}

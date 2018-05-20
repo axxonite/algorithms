@@ -4,12 +4,12 @@
 
 #define TEST 0
 
-#pragma region Test
-
-string ShortestEquivalentPath( const string& path ) 
+string ShortestEquivalentPath(const string& path)
 {
 	return "";
 }
+
+#pragma region Test
 
 void ShortestEquivalentPathTest()
 {

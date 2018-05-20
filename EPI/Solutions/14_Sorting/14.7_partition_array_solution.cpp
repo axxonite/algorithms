@@ -24,10 +24,10 @@ namespace Solutions
 		{
 			// Pretty tricky exchange between subarrays here.
 			auto unpartitionedSrc = partitionIndices.begin(); // find a slot that hasn't been moved to its proper place yet.
-			auto partitionedDest = partitionIndices.find(people[unpartitionedSrc->second].age); // based on the age of the person currently in the from slot, the to slot that person would go to.
+			int age = people[unpartitionedSrc->second].age;
+			auto partitionedDest = partitionIndices.find(age); // based on the age of the person currently in the from slot, the to slot that person would go to.
 			swap(people[unpartitionedSrc->second], people[partitionedDest->second]); // swap it to the to slot.
-			partitionCount[people[partitionedDest->second].age]--;
-			if (partitionCount[people[partitionedDest->second].age] == 0)
+			if (--partitionCount[age] == 0)
 				partitionIndices.erase(partitionedDest);
 			else partitionedDest->second++;
 		}

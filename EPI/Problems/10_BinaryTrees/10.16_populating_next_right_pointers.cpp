@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 1
+#define TEST 0
 
 template <typename T>
 struct BinaryTreeNodeNext 
@@ -12,22 +12,8 @@ struct BinaryTreeNodeNext
 	BinaryTreeNodeNext<T>* next;  // Populates this field.
 };
 
-// Tricky.
 void ConstructRightSibling( BinaryTreeNodeNext<int>* tree ) 
 {
-	// Much of the simplicity here is predicated on the fact is a COMPLETE binary tree. This is essential.
-	BinaryTreeNodeNext<int>* leftmostNode = tree;
-	while ( leftmostNode && leftmostNode->left)
-	{
-		auto iter = leftmostNode;
-		while (iter)
-		{
-			iter->left->next = iter->right.get();
-			iter->right->next = iter->next ? iter->next->left.get() : nullptr;
-			iter = iter->next;
-		}
-		leftmostNode = leftmostNode->left.get(); // Process next level.
-	}
 }
 
 #pragma region Test
