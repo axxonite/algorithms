@@ -8,7 +8,7 @@ struct Name
 {
 	bool operator==( const Name& that ) const 
 	{
-		return false;
+		return firstName == that.firstName;
 	}
 
 	string firstName, lastName;
@@ -40,14 +40,13 @@ void EliminateDuplicateTest()
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 50; ++times ) 
 	{
-		int n;
 		vector<Name> A;
 		uniform_int_distribution<int> dis( 0, 1000 );
-		n = dis( gen );
+		int n = dis( gen );
 		for ( int i = 0; i < n; ++i ) 
 		{
-			uniform_int_distribution<int> dis( 0, n - 1 );
-			A.emplace_back( Name{ to_string( dis( gen ) ), to_string( dis( gen ) ) } );
+			uniform_int_distribution<int> dis2( 0, n - 1 );
+			A.emplace_back( Name{ to_string( dis2( gen ) ), to_string( dis2( gen ) ) } );
 		}
 		EliminateDuplicate( A );
 		EliminateDuplicateCheckAns( A );

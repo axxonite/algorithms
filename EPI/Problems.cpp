@@ -159,6 +159,7 @@ int main()
 	CombinationsTest();
 	PermutationsTest();
 	GeneratePowerSetTest();
+	GenerateBalancedParenthesesTest();
 	PalindromePartitioningTest();
 	GenerateAllBinaryTreesTest();
 	ComputeTowerHanoiTest();

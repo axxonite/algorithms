@@ -1370,6 +1370,15 @@
     <ClCompile Include="Solutions\8_LinkedLists\8.6_deletion_list_solution.cpp">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\16_Recursion\16.6_enumerate_balanced_parentheses.cpp">
+      <Filter>Problems\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\16.6_enumerate_balanced_parentheses_solution.cpp">
+      <Filter>Solutions\16. Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\16_Recursion\18.3_points_covering_intervals_sorting_solution.cpp">
+      <Filter>Solutions\18. Greedy Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

@@ -11,7 +11,8 @@ struct Interval
 
 vector<int> FindMinimumVisits( vector<Interval> intervals ) 
 {
-	return {};
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test
@@ -55,7 +56,7 @@ void FindMinimumVisitsTest()
 #if TEST
 	FindMinimumVisitsSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 1000; ++times )
+	for ( int times = 0; times < 10; ++times )
 	{
 		cout << "Test " << times << endl;
 		int n;

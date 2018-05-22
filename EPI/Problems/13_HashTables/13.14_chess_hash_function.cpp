@@ -56,7 +56,6 @@ long long InitHash(const ChessState& state)
 	return 0;
 }
 
-
 long long ChessHash( ChessState& state, long long stateHash, int srcY, int srcX, int dstY, int dstX )
 {
 	return 0;

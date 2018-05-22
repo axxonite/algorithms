@@ -22,10 +22,12 @@ namespace Solutions
 	void EliminateDuplicate(vector<Name>& a)
 	{
 		sort(a.begin(), a.end());
+		int dst = 1;
 		for (int i = 1; i < a.size(); ++i)
 		{
-			if (a[i].first_name == a[i - 1].first_name)
-				a.erase(a.begin() + i), --i;
+			if (a[i].first_name != a[dst - 1].first_name)
+				a[dst++] = a[i];
 		}
+		a.resize(dst);
 	}
 }

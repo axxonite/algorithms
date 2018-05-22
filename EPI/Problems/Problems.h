@@ -157,6 +157,7 @@ void SolveNQueensTest();
 void CombinationsTest();
 void PermutationsTest();
 void GeneratePowerSetTest();
+void GenerateBalancedParenthesesTest();
 void PalindromePartitioningTest();
 void GenerateAllBinaryTreesTest();
 void ComputeTowerHanoiTest();

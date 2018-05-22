@@ -8,6 +8,7 @@ namespace Solutions
 	{
 		vector<double> sums{ 0.0 };
 		// notice the use of the back_inserter trick.
+		// A value will be selected if we draw a normalized random value between sums[i] and sums[i + 1]
 		partial_sum( probabilities.begin(), probabilities.end(), back_inserter( sums ) );
 
 		default_random_engine rnd( ( random_device() )( ) );
