@@ -25,10 +25,30 @@ namespace Solutions
 				int nextX = cur.x + directions[i].x, nextY = cur.y + directions[i].y;
 				if ( nextX >= 0 && nextY >= 0 && nextX < a.size() && nextY < a[0].size() && a[x][y] == color )
 				{
-					// Note that we must flip the color, then queue the cell. This will allow us to properly flip the colors and making sure they don't get queued again.
 					a[nextX][nextY] = !color;
 					q.emplace( Coordinate{ nextX, nextY } );
 				}
+			}
+		}
+	}
+
+	void FlipColor2(int x, int y, vector<deque<bool>>& a)
+	{
+		// start from x,y. Take color from that point. Any adjacent entries of that color get changes to the opposite color.
+		queue<Coordinate> q;
+		q.emplace(Coordinate{ x, y });
+		bool color = a[x][y];
+		while (!q.empty())
+		{
+			auto cur = q.front();
+			q.pop();
+			if (cur.x >= 0 && cur.x < a.size() && cur.y >= 0 && cur.y < a[0].size() && a[cur.x][cur.y] == color)
+			{
+				a[cur.x][cur.y] = !color;
+				q.emplace(Coordinate{ x - 1, y });
+				q.emplace(Coordinate{ x + 1, y });
+				q.emplace(Coordinate{ x, y - 1 });
+				q.emplace(Coordinate{ x, y + 1 });
 			}
 		}
 	}

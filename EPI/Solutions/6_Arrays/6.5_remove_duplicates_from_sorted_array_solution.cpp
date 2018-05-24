@@ -7,7 +7,7 @@ namespace Solutions
 	int DeleteDuplicates( vector<int>& a )
 	{
 		if ( a.empty() )
-			0;
+			return 0;
 
 		int dst = 1;
 		for ( int i = 1; i < a.size(); ++i )

@@ -13,7 +13,6 @@ namespace Solutions
 		{
 			for ( int j = num2.size() - 1; j >= 0; --j )
 			{
-				int val = num1[i] * num2[j];
 				result[i + j + 1] += num1[i] * num2[j];
 				result[i + j] += result[i + j + 1] / 10;
 				result[i + j + 1] %= 10;
