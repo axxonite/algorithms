@@ -20,10 +20,10 @@ void PrintMatrix( const vector<deque<bool>>& A )
 	}
 }
 
+// this doesn't really test that the colors were flipped.
 void FlipColorTest()
 {
 #if TEST
-	// this doesn't really test that the colors were flipped....
 	size_t n;
 	default_random_engine gen( ( random_device() )( ) );
 	uniform_int_distribution<size_t> dis( 1, 100 );

@@ -28,4 +28,4 @@ void FindLargestNumberTeamsTest()
 #endif
 }
 
-#pragma endregion
+#pragma endregion 
