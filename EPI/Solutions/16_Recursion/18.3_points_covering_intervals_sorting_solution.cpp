@@ -22,8 +22,7 @@ namespace Solutions
 		// Sort intervals based on the right endpoints.
 		sort(intervals.begin(), intervals.end(), [](const Interval& a, const Interval& b) { return a.right < b.right; });
 		vector<int> visits;
-		int lastVisitTime = intervals.front().right;
-		visits.emplace_back(lastVisitTime);
+		int lastVisitTime = -1;
 		for (const Interval& interval : intervals)
 		{
 			if (interval.left > lastVisitTime)

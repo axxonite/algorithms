@@ -52,7 +52,11 @@ namespace Solutions
 			int remainingInt = FindRemainingInt( digits, index );
 			operands.emplace_back( 0 ); // Start a new operand.
 
-										// If the difference between our result and our target is already larger than the remaining digits, then we can't add a + here (or a *?)
+			// If the difference between our result and our target is already larger than the remaining digits, then we can't add a + here (or a *?)
+			// this doesn't make sense. we would be adding a product of other elements, so we can certainly add a bigger number than the number composed of all following digits.
+			// furthermore, if the following digits happen to all be 111111, then we could form a 1*1*1*1 product with these, so the lower bound for what number we could add here is 
+			// actually 1.
+			// sounds like a bug to me.
 			if ( target - result <= remainingInt )
 			{
 				operators.emplace_back( '+' );
