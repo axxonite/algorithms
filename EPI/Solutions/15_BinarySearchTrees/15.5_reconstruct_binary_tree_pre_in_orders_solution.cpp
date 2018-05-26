@@ -4,7 +4,6 @@
 
 namespace Solutions
 {
-
 	// Wrote both working implementations here in 47 minutes.
 
 	// Given a binary search tree's preorder traversal value, reconstruct the binary search tree.
@@ -15,6 +14,7 @@ namespace Solutions
 		if ( index < end )
 		{
 			int key = a[index++];
+			// Do a linear seach of values to find the first value > the key. We use end as the upper bound for our linear search.
 			int rightStart = index;
 			while ( rightStart < end && a[rightStart] < key )
 				++rightStart;
@@ -28,6 +28,7 @@ namespace Solutions
 	// O(n)
 	unique_ptr<BSTNode<int>> ReconstructBSTPreorder2( const vector<int>& a, int& index, int max )
 	{
+		// A better approach.
 		int key = a[index++];
 
 		unique_ptr<BSTNode<int>> left = nullptr, right = nullptr;
@@ -41,6 +42,7 @@ namespace Solutions
 	// From EPI, O(n).
 	unique_ptr<BSTNode<int>> ReconstructBSTPreorder3( const vector<int>& a, int min, int max, int& index )
 	{
+		// Cleanest approach.
 		if ( index == a.size() )
 			return nullptr;
 

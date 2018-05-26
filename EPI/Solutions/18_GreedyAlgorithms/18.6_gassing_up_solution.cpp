@@ -10,17 +10,13 @@ namespace Solutions
 	size_t FindAmpleCity( const vector<int>& gallons, const vector<int>& distances )
 	{
 		// City 0 start with zero gas. It does NOT start with the gas in the first city.
+		int gas = 0, lowestGas = 0, ampleCity = 0;
 		// City 0 will starts as the candidate ample city, and will remain so if we find no other city where we end up with less gas.
-		int minGas = 0, gas = 0, ampleCity = 0;
-		for ( int i = 1; i < gallons.size(); ++i )
+		for (int i = 0; i < gallons.size(); ++i) // i is the city where we've arrived.
 		{
-			// Fill up in the previous city, and drive here.
-			gas += gallons[i - 1] - distances[i - 1] / kMPG;
-			if ( gas < minGas )
-			{
-				minGas = gas;
-				ampleCity = i;
-			}
+			if (gas > lowestGas)
+				lowestGas = gas, ampleCity = i;
+			gas = gas + gallons[i] - distances[i] / kMPG;
 		}
 		return ampleCity;
 	}

@@ -10,7 +10,8 @@ void ReadFileLine(const string& line)
 
 vector<string> FindKMostVisited(int k)
 {
-	return {};
+	vector<string> result;
+	return result;
 }
 
 #pragma region Test

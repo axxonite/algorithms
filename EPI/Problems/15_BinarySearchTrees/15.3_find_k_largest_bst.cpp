@@ -6,7 +6,8 @@
 
 vector<int> FindKLargestInBST(const unique_ptr<BSTNode<int>>& tree, int k)
 {
-	return {};
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test
