@@ -37,4 +37,22 @@ namespace Solutions
 		}
 		return mapping[G];
 	}
+
+	CloneGraphVertex* CloneGraph(CloneGraphVertex* G, unordered_map<CloneGraphVertex*, CloneGraphVertex*>& mapping)
+	{
+		auto it = mapping.find(G);
+		if (it != mapping.end())
+			return it->second;
+		CloneGraphVertex* clone = new CloneGraphVertex{ G->label };
+		mapping[G] = clone;
+		for (auto e : G->edges)
+			clone->edges.emplace_back(CloneGraph(e, mapping));
+		return clone;
+	}
+
+	CloneGraphVertex* CloneGraph2(CloneGraphVertex* G)
+	{
+		unordered_map<CloneGraphVertex*, CloneGraphVertex*> mapping;
+		return CloneGraph(G, mapping);;
+	}
 }
