@@ -5,7 +5,7 @@
 
 #define TEST 0
 
-shared_ptr<ListNode<int>> ListPivoting( const shared_ptr<ListNode<int>>& L, int x ) 
+shared_ptr<ListNode<int>> ListPivoting( const shared_ptr<ListNode<int>>& L, int k ) 
 {
 	return nullptr;
 }

@@ -18,7 +18,7 @@ namespace Solutions
 			++bitIndex;
 		}
 		// This is the key aspect in this algorith. We have tested all ranges from 2^(i-1)..2^(i)-1.
-		// That means the value cannot be in an index < 2^(i-1). It's imperative of thinking of the binary search as testing particular subranges off the array, which do not necessarily start at zero.
+		// That means the value cannot be in an index < 2^(i-1). It's imperative of thinking of the binary search as testing particular subranges of the array, which do not necessarily start at zero.
 		// range is 0, index. index may be > size, k is definitely on the left side, if it exists.
 		int left = max(0, (1 << (bitIndex - 1)) - 1), right = (1 << bitIndex) - 1;
 		// We continue until left > right so that we test the value even if there is only candidate value. right is the last value in the subarray.

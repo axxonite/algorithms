@@ -41,9 +41,8 @@ void GrayCodeTest()
 #if TEST
 	GrayCodeSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
-	int n;
 	uniform_int_distribution<int> dis( 1, 9 );
-	n = dis( gen );
+	int n = dis( gen );
 	cout << "n = " << n << endl;
 	auto vec = GrayCode( n );
 	for ( int a : vec )
