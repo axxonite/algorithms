@@ -21,19 +21,23 @@ namespace Solutions
 			// iterate all vertex pairs.
 			for (size_t i = 0; i < G.size(); ++i)
 			{
-				for (size_t j = 0; j < G[i].size(); ++j)
+				if (distanceToSource[i] != numeric_limits<double>::max())
 				{
-					// dist[j] = min( dist[j], dist[i] + g[i][j] ), for is that have been initialized.
-					// in words, if a vertex (with distance assigned) + edge has a lower value than the existing shortest part, assign it as the new shortest distance.
-					// for each pass (iterated as times), we will compute a shortest path from the vertices that have been initialized.
-					// thus we will start from source and fan out from there.
-
-					// How does this even check that two graph nodes are connected?
-					if (distanceToSource[i] != numeric_limits<double>::max() && distanceToSource[j] > distanceToSource[i] + G[i][j])
+					for (size_t j = 0; j < G[i].size(); ++j)
 					{
-						haveUpdate = true;
-						distanceToSource[j] = distanceToSource[i] + G[i][j];
+						// dist[j] = min( dist[j], dist[i] + g[i][j] ), for is that have been initialized.
+						// in words, if a vertex (with distance assigned) + edge has a lower value than the existing shortest part, assign it as the new shortest distance.
+						// for each pass (iterated as times), we will compute a shortest path from the vertices that have been initialized.
+						// thus we will start from source and fan out from there.
+
+						// How does this even check that two graph nodes are connected?
+						if (distanceToSource[j] > distanceToSource[i] + G[i][j])
+						{
+							haveUpdate = true;
+							distanceToSource[j] = distanceToSource[i] + G[i][j];
+						}
 					}
+
 				}
 			}
 
