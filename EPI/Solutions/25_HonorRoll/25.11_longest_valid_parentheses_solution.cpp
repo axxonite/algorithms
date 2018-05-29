@@ -7,6 +7,9 @@ namespace Solutions
 {
 	int LongestValidParentheses( const string& s )
 	{
+		// think of a matching window. the match extends from the right of the last unmatched open parens up to the current position.
+		// If we don't have any unmatched parens, we need to match up to the position of the last unmatched closing parens.
+
 		// origin refers to the floor - that is the index that is one level below the first open parens in the current run.
 		// I was struggling with this concept of origin - a fall back that needs to be used when the stack has been emptied.
 		// It's also tricky that I didn't realize I had to offset this origin with a -1.

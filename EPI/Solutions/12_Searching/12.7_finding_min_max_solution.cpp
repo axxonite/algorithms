@@ -10,18 +10,19 @@ namespace Solutions
 	};
 
 	// Note the use of the minmax function to keep everything really short.
-	MinMax FindMinMax( const vector<int>& a )
+	MinMax FindMinMax( const vector<int>& A )
 	{
-		if ( a.size() < 2 )
-			return { a.front(), a.front() };
-		pair<int, int> result = minmax( a[0], a[1] );
-		for ( int i = 2; i + 1 < a.size(); i += 2 )
+		if (A.empty())
+			return { -1, -1 };
+		pair<int, int> result = { numeric_limits<int>::max(), numeric_limits<int>::min() };
+		if (A.size() % 2)
+			result = { A[0], A[1] };
+		for (int i = A.size() % 2 ? 1 : 0; i < A.size(); i += 2)
 		{
-			pair<int, int> local = minmax( a[i], a[i + 1] );
-			result = { min( result.first, local.first ), max( result.second, local.second ) };
+			auto local = minmax(A[i], A[i + 1]);
+			result = { min(local.first, result.first), max(local.second, result.second) };
 		}
-		if ( a.size() % 2 )
-			result = { min( result.first, a.back() ), max( result.second, a.back() ) };
-		return { result.first, result.second };
+		return { result.first, result.second};
+
 	}
 }
