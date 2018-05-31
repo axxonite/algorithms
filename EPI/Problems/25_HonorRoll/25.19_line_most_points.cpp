@@ -8,52 +8,47 @@ long long GCD( long long x, long long y );
 
 struct Point 
 {
-	// Equal function for hash.
 	bool operator==( const Point& that ) const 
 	{
 		return x == that.x && y == that.y;
 	}
 
-	int x, y;
+	int x = 0, y = 0;
 };
 
-
-struct Rational 
+struct HashPoint
 {
-	bool operator==( const Rational& that ) const 
+	size_t operator() (const Point& p) const
 	{
-		return numerator == that.numerator && denominator == that.denominator;
+		return hash<int>()(p.x) ^ hash<int>()(p.y);
 	}
-
-	int numerator, denominator;
 };
 
 struct Line 
 {
+	Line(const Point& a, const Point& b )
+	{
+		// todo expand this.
+	}
+
 	// Equal function for Line.
 	bool operator==( const Line& that ) const 
 	{
-		return slope == that.slope && intercept == that.intercept;
+		// todo expand this.
+		return false;
 	}
 
-	// slope is a rational number. Note that if the line is parallel to y-axis that we store 1/0.
-	Rational slope;
-	// intercept is a rational number for the y-intercept unless the line is parallel to y-axis in which case it is the x-intercept.
-	Rational intercept;
 };
 
-// The bulk of the difficulty here is defining all the auxiliary structures above to ensure we can convert the lines and points into hashes.
-// We find the line between each pair of points and create a hash to disambiguate identical lines (same slope and intercept).
-// To each line, we add the set of points that are on the line, again using a set so as to avoid counting the same point twice.
-// We then simply return the line with the most points.
-Line FindLineWithMostPoints( const vector<Point>& p )
+int FindLineWithMostPoints( const vector<Point>& p, Line& result )
 {
-	return Line();
+	return 0;
 }
 
 #pragma region Test
 
 #if TEST
+
 // n^3 checking
 int FindLineWithMostPointsCheck( const vector<Point>& P ) 
 {
@@ -81,7 +76,7 @@ void FindLineWithMostPointsTest()
 {
 #if TEST
 	default_random_engine gen( ( random_device() )( ) );
-	for ( int times = 0; times < 20; ++times ) 
+	for ( int times = 0; times < 10; ++times ) 
 	{
 		cout << times << endl;
 		int n;
@@ -104,7 +99,10 @@ void FindLineWithMostPointsTest()
 		cout << points[i].x << ", " << points[i].y << endl;
 		}
 		*/
-		Line l = FindLineWithMostPoints( points );
+		Line l;
+		int count = FindLineWithMostPoints(points, l);
+		int count2 = FindLineWithMostPointsCheck(points);
+		assert(count == count2);
 		cout << l.slope.numerator << " " << l.slope.denominator << " "
 			<< l.intercept.numerator << " " << l.intercept.denominator << endl;
 	}

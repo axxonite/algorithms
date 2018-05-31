@@ -40,7 +40,7 @@ namespace Solutions
 
 	Rational GetCanonicalForm( int a, int b )
 	{
-		int gcd = GCD( abs( a ), abs( b ) );
+		int gcd = GCD( abs( a ), abs( b ) ); // note that we need to take absolute values for the GCD.
 		a /= gcd, b /= gcd;
 		return b < 0 ? Rational{ -a, -b } : Rational{ a, b };
 	}
@@ -49,6 +49,7 @@ namespace Solutions
 	{
 		Line( const Point& a, const Point& b )
 		{
+			// Note the special cases for when the line is vertical.
 			slope = a.x != b.x ? GetCanonicalForm( b.y - a.y, b.x - a.x ) : Rational{ 1, 0 };
 			intercept = a.x != b.x ? GetCanonicalForm( b.x * a.y - a.x * b.y, b.x - a.x ) : Rational{ a.x, 1 };
 		}

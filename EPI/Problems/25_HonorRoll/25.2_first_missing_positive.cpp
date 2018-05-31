@@ -33,7 +33,7 @@ void FindFirstMissingPositiveTest()
 {
 #if TEST
 	default_random_engine gen((random_device())());
-	for (int times = 0; times < 20; ++times)
+	for (int times = 0; times < 10; ++times)
 	{
 		size_t n;
 		uniform_int_distribution<size_t> dis(0, 500000);

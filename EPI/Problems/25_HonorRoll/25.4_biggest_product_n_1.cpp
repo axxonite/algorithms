@@ -6,7 +6,7 @@
 
 int FindBiggestNMinusOneProduct(const vector<int>& a)
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test
@@ -32,7 +32,7 @@ void FindBiggestNMinusOneProductTest()
 {
 #if TEST
 	default_random_engine gen((random_device())());
-	for (int times = 0; times < 10000; ++times)
+	for (int times = 0; times < 200; ++times)
 	{
 		int n;
 		vector<int> A;
@@ -42,12 +42,9 @@ void FindBiggestNMinusOneProductTest()
 		{
 			uniform_int_distribution<int> dis(-9, 9);
 			A.emplace_back(dis(gen));
-			cout << A[i] << ' ';
 		}
-		cout << endl;
 		int res = FindBiggestNMinusOneProduct(A);
 		assert(res == FindBiggestNMinusOneProductCheckAns(A));
-		cout << res << endl;
 	}
 #endif
 }
