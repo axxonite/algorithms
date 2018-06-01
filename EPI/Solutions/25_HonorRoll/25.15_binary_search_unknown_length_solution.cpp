@@ -10,6 +10,9 @@ namespace Solutions
 		int bitIndex = 0;
 		while (true)
 		{
+			// we are trying to establish the upper bound for what the value might lie. If we find that 2^power is an upper bound, we also know that 2^(power-1) is also a lower bound, because we tested that value previously.
+			// However, since we start at a power of 0, 2^0=1. This means we haven't actually checked that 0 was an upper bound, because if we reach a power of 1, our range is (1,2).
+			// if we reach a power of 2, our range is (2,4). We need our range for a power of zero to start at zero, so substract that from the index.
 			int index = (1 << bitIndex) - 1;
 			if (index >= a.size() || a[index] > k)
 				break;
