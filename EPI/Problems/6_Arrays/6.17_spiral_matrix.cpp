@@ -4,6 +4,7 @@
 
 #define TEST 0
 
+// Note the matrix is in row-column order.
 vector<int> MatrixInSpiralOrder( vector<vector<int>> matrix )
 {
 	vector<int> result;

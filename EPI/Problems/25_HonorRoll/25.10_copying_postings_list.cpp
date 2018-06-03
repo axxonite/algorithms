@@ -11,7 +11,7 @@ public:
 	shared_ptr<PostingListNode> next, jump;
 };
 
-shared_ptr<PostingListNode> CopyPostingsList(const shared_ptr<PostingListNode>& L)
+shared_ptr<PostingListNode> CopyPostingsList(const shared_ptr<PostingListNode> L)
 {
 	return nullptr;
 }

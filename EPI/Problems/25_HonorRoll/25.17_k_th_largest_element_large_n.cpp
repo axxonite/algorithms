@@ -18,7 +18,7 @@ static void SimpleTestArray( vector<int> A ) {
 		ss << a << ' ';
 	}
 	for ( int i = 0; i < A.size(); ++i ) {
-		cout << "i = " << i << endl;
+		//cout << "i = " << i << endl;
 		istringstream stream( ss.str() );
 		int k = i + 1;
 		int result = FindKthLargestUnknownLength( &stream, k );
@@ -72,7 +72,7 @@ void FindKthLargestUnknownLengthTest()
 		istringstream stream( ss.str() );
 		int result = FindKthLargestUnknownLength( &stream, k );
 		nth_element( A.begin(), A.begin() + A.size() - k, A.end() );
-		cout << result << endl << A[A.size() - k] << endl;
+		//cout << result << endl << A[A.size() - k] << endl;
 		assert( result == A[A.size() - k] );
 	}
 #endif
