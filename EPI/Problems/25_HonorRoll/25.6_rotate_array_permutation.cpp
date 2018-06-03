@@ -4,6 +4,7 @@
 
 #define TEST 0
 
+// two implementations?
 void RotateArray( int shift, vector<int>& a )
 {
 }

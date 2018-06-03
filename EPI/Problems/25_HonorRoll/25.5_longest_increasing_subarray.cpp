@@ -11,7 +11,8 @@ struct Subarray
 
 Subarray FindLongestIncreasingSubarray(const vector<int>& a)
 {
-	return { -1, -1 };
+	Subarray result = { 0, 0 };
+	return result;
 }
 
 #pragma region Test
@@ -29,7 +30,7 @@ void FindLongestIncreasingSubarrayTest()
 #if TEST
 	FindLongestIncreasingSubarraySimpleTest();
 	default_random_engine gen((random_device())());
-	for (int times = 0; times < 50; ++times)
+	for (int times = 0; times < 20; ++times)
 	{
 		vector<int> A;
 

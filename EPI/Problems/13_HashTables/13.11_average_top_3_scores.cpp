@@ -8,7 +8,8 @@
 // todo review ifstream vs stringstream
 string FindStudentWithHighestBestOfThreeScores( ifstream* nameScoreData ) 
 {
-	return "";
+	string result;
+	return result;
 }
 
 #pragma region Test
@@ -39,9 +40,8 @@ void FindStudentWithHighestBestOfThreeScoresTest()
 #if TEST
 	FindStudentWithHighestBestOfThreeScoresSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
-	int n;
 	uniform_int_distribution<int> dis( 1, 10000 );
-	n = dis( gen );
+	int n = dis( gen );
 	ofstream ofs( "/tmp/scores.txt" );
 	for ( int i = 0; i < n; ++i ) {
 		uniform_int_distribution<int> test_num_dis( 0, 20 );
