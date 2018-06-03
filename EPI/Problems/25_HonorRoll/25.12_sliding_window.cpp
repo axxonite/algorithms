@@ -17,7 +17,8 @@ struct TrafficElement
 
 vector<TrafficElement> CalculateTrafficVolumes(const vector<TrafficElement>& A, int w ) 
 {
-	return {};
+	vector<TrafficElement> result;
+	return result;
 }
 
 #pragma region Test
