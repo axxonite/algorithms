@@ -581,6 +581,7 @@
     <ClCompile Include="Solutions\8_LinkedLists\8.11_palindrom_linked_list_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.12_list_pivoting_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.13_add_two_numbers_list_solution.cpp" />
+    <ClCompile Include="Solutions\8_LinkedLists\8.1_merge_sorted_lists_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.2_reverse_linked_list_from_s_to_f_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.5_overlapping_lists_solution.cpp" />
     <ClCompile Include="Solutions\8_LinkedLists\8.6_deletion_list_solution.cpp" />

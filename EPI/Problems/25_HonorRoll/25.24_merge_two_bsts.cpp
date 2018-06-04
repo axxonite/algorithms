@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include "doubly_linked_list_prototype.h"
+#include "..\Problems.h"
 
 #define TEST 0
 

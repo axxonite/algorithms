@@ -4,7 +4,7 @@
 
 namespace Solutions
 {
-	void BSTToDoublyLinkedListHelper( const shared_ptr<BSTNodeShared<int>>& tree, BSTNodeShared<int>*& last )
+	void BSTToDoublyLinkedListHelper( const shared_ptr<BSTNodeShared<int>> tree, BSTNodeShared<int>*& last )
 	{
 		if ( !tree )
 			return;
@@ -14,9 +14,7 @@ namespace Solutions
 		// Here we have a proper link between tree and last. If there is no last, tree->left is null.
 		last = tree.get();
 		// Last is now our current node, tree.
-		auto right = tree->right;
-		tree->right = nullptr;
-		BSTToDoublyLinkedListHelper( right, last );
+		BSTToDoublyLinkedListHelper( tree->right, last );
 		// After this point, tree->right would be assigned to whatever was on the right of that subtree.
 	}
 

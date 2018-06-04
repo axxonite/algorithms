@@ -1379,6 +1379,9 @@
     <ClCompile Include="Solutions\16_Recursion\18.3_points_covering_intervals_sorting_solution.cpp">
       <Filter>Solutions\18. Greedy Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\8_LinkedLists\8.1_merge_sorted_lists_solution.cpp">
+      <Filter>Solutions\8. Linked Lists</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

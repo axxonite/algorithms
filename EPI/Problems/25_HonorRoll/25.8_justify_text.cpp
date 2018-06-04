@@ -6,7 +6,8 @@
 
 vector<string> JustifyText(const vector<string>& words, size_t l)
 {
-	return {};
+	vector<string> result;
+	return result;
 }
 
 #pragma region Test

@@ -6,10 +6,12 @@
 namespace Solutions
 {
 	shared_ptr<BSTNodeShared<int>> BSTToDoublyLinkedList( const shared_ptr<BSTNodeShared<int>>& tree );
+	shared_ptr<BSTNodeShared<int>> MergeTwoSortedLists(shared_ptr<BSTNodeShared<int>> l1, shared_ptr<BSTNodeShared<int>> l2, int& length);
+	shared_ptr<BSTNodeShared<int>> BuildBSTFromSortedDoublyList(shared_ptr<BSTNodeShared<int>> l, int length);
 
-	// ------------------------------------------------------------------------------------------------
-	// Adapted from 8.1.
-	inline void AppendNode( shared_ptr<BSTNodeShared<int>>* node, shared_ptr<BSTNodeShared<int>>* tail )
+	/*
+	// Adapted from 8.1
+	void AppendNode(shared_ptr<BSTNodeShared<int>>* node, shared_ptr<BSTNodeShared<int>>* tail);
 	{
 		( *tail )->right = *node; // attach node to tail
 		( *node )->left = *tail;
@@ -35,7 +37,7 @@ namespace Solutions
 	// Adapted from 25.22.
 	shared_ptr<BSTNodeShared<int>> BuildBSTFromSortedDoublyListHelper( shared_ptr<BSTNodeShared<int>>* l, int start, int end )
 	{
-		// if note is that end is actually one past the index of the last element.
+		// of note is that end is actually one past the index of the last element.
 		if ( start >= end )
 			return nullptr;
 
@@ -57,19 +59,22 @@ namespace Solutions
 		return BuildBSTFromSortedDoublyListHelper( &l, 0, length );
 	}
 
-	int Length( shared_ptr<BSTNodeShared<int>> l )
+	*/
+
+	int Length(shared_ptr<BSTNodeShared<int>> l)
 	{
 		int length = 0;
-		while ( l )
+		while (l)
 			length++, l = l->right;
 		return length;
 	}
 
 	shared_ptr<BSTNodeShared<int>> MergeTwoBSTs( shared_ptr<BSTNodeShared<int>> A, shared_ptr<BSTNodeShared<int>> B )
 	{
-		auto a = Solutions::BSTToDoublyLinkedList( A );
-		auto b = Solutions::BSTToDoublyLinkedList( B );
-		auto combined = MergeTwoSortedLists( a, b );
-		return BuildBSTFromSortedDoublyList( combined, Length( combined ) );
+		auto a = BSTToDoublyLinkedList( A );
+		auto b = BSTToDoublyLinkedList( B );
+		int length;
+		auto combined = MergeTwoSortedLists( a, b, length );
+		return BuildBSTFromSortedDoublyList( combined, length );
 	}
 }
