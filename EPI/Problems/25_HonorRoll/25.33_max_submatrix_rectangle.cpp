@@ -4,6 +4,11 @@
 
 #define TEST 0
 
+struct LongestSpan
+{
+	int h, w;
+};
+
 int MaxRectangleSubmatrix( const vector<deque<bool>>& a ) 
 {
 	return -1;

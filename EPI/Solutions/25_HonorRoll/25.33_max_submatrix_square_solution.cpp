@@ -4,7 +4,7 @@
 
 namespace Solutions
 {
-	struct MaxHW
+	struct LongestSpan
 	{
 		int h, w;
 	};
@@ -13,14 +13,14 @@ namespace Solutions
 	{
 		// Store, for each row and column, the longest span of 1s to the right or downward from the current cell.
 		// Iterate starting from the bottom-right corner so we can accumulate spans in a single pass when we go to the left and up.
-		vector<vector<MaxHW>> longestSpans( a.size(), vector<MaxHW>( a.front().size() ) );
+		vector<vector<LongestSpan>> longestSpans( a.size(), vector<LongestSpan>( a.front().size() ) );
 		for ( int i = a.size() - 1; i >= 0; --i )
 		{
 			for ( int j = a[i].size() - 1; j >= 0; --j )
 			{
 				longestSpans[i][j] = a[i][j] ?
-					MaxHW{ i + 1 < a.size() ? longestSpans[i + 1][j].h + 1 : 1, j + 1 < a[i].size() ? longestSpans[i][j + 1].w + 1 : 1 } :
-					MaxHW{ 0, 0 };
+					LongestSpan{ i + 1 < a.size() ? longestSpans[i + 1][j].h + 1 : 1, j + 1 < a[i].size() ? longestSpans[i][j + 1].w + 1 : 1 } :
+					LongestSpan{ 0, 0 };
 			}
 		}
 
