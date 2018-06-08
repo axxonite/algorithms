@@ -37,14 +37,14 @@ namespace Solutions
 		// start from x,y. Take color from that point. Any adjacent entries of that color get changes to the opposite color.
 		queue<Coordinate> q;
 		q.emplace(Coordinate{ x, y });
-		bool color = a[x][y];
+		bool regionColor = a[x][y];
 		while (!q.empty())
 		{
 			auto cur = q.front();
 			q.pop();
-			if (cur.x >= 0 && cur.x < a.size() && cur.y >= 0 && cur.y < a[0].size() && a[cur.x][cur.y] == color)
+			if (cur.x >= 0 && cur.x < a.size() && cur.y >= 0 && cur.y < a[0].size() && a[cur.x][cur.y] == regionColor)
 			{
-				a[cur.x][cur.y] = !color;
+				a[cur.x][cur.y] = !regionColor;
 				q.emplace(Coordinate{ x - 1, y });
 				q.emplace(Coordinate{ x + 1, y });
 				q.emplace(Coordinate{ x, y - 1 });

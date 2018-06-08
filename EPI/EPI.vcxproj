@@ -512,6 +512,7 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.20_shortest_unique_prefix_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.23_bst_to_sorted_doubly_list_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.24_merge_two_bsts_solution.cpp" />
+    <ClCompile Include="Solutions\25_HonorRoll\25.25_view_from_above_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.26_regular_expression_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.27_add_operators_in_string_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.28_count_inversions_solution.cpp" />

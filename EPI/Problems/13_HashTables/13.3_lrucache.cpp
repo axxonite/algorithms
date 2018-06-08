@@ -4,7 +4,6 @@
 
 #define TEST 0
 
-// A tricky implementation due to the particulars of STL.
 template <size_t capacity>
 class LRUCache
 {

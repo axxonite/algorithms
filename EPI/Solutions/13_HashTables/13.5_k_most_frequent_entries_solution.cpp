@@ -12,6 +12,9 @@ namespace Solutions
 			entries[cur]++;
 		// Tricky declaration here.
 		priority_queue<pair<string, int>, vector<pair<string, int>>, function<bool( pair<string, int>, pair<string, int> )>> heap( []( pair<string, int> a, pair<string, int> b ) { return a.second > b.second; } );
+		
+		// isn't this O(N log n)? Am I not going to get the same result by just sorting the list?
+		// - actually its ((N log k).
 		for ( auto it = entries.begin(); it != entries.end(); ++it )
 		{
 			if ( heap.size() < k || heap.top().second < it->second )

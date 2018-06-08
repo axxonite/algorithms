@@ -6,7 +6,7 @@
 
 bool IsValidSudoku( const vector<vector<int>>& grid ) 
 {
-	return false;
+	return true;
 }
 
 #pragma region Test

@@ -26,18 +26,13 @@ struct HashPoint
 
 struct Line 
 {
-	Line(const Point& a, const Point& b )
-	{
-		// todo expand this.
-	}
+	Line() {}
 
 	// Equal function for Line.
 	bool operator==( const Line& that ) const 
 	{
-		// todo expand this.
 		return false;
 	}
-
 };
 
 int FindLineWithMostPoints( const vector<Point>& p, Line& result )

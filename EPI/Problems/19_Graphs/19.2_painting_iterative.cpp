@@ -4,6 +4,7 @@
 
 #define TEST 0
 
+// the matrix is in [x][y] order.
 void FlipColor( int x, int y, vector<deque<bool>>& a ) 
 {
 }

@@ -7,8 +7,7 @@
 
 vector<string> KMostFrequentEntries( const vector<string>& s, int k )
 {
-	vector<string> result;
-	return result;
+	return {};
 }
 
 #pragma region Test

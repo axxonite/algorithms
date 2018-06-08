@@ -4,11 +4,6 @@
 
 #define TEST 0
 
-struct MaxHW
-{
-	int h, w;
-};
-
 int MaxSquareSubmatrix( const vector<deque<bool>>& a )
 {
 	return -1;

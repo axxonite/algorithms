@@ -6,7 +6,8 @@
 
 int FindElementAppearsOnce( const vector<int> &A )
 {
-	return -1;
+	int result = 0;
+	return result;
 }
 
 #pragma region Test

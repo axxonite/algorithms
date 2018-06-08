@@ -4,6 +4,7 @@
 #include "..\..\Shared.h"
 
 #define TEST 0
+
 string FindShortestPrefix( const string& s, const unordered_set<string>& d )
 {
 	return "";

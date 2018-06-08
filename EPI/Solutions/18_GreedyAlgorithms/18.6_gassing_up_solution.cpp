@@ -14,7 +14,7 @@ namespace Solutions
 		// City 0 will starts as the candidate ample city, and will remain so if we find no other city where we end up with less gas.
 		for (int i = 0; i < gallons.size(); ++i) // i is the city where we've arrived.
 		{
-			if (gas > lowestGas)
+			if (gas < lowestGas)
 				lowestGas = gas, ampleCity = i;
 			gas = gas + gallons[i] - distances[i] / kMPG;
 		}

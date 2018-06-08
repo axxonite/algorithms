@@ -11,7 +11,8 @@ struct Interval
 
 vector<int> RangeLookupInBST(const unique_ptr<BSTNode<int>>& tree, const Interval& interval)
 {
-	return {};
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test

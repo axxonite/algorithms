@@ -1382,6 +1382,9 @@
     <ClCompile Include="Solutions\8_LinkedLists\8.1_merge_sorted_lists_solution.cpp">
       <Filter>Solutions\8. Linked Lists</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\25_HonorRoll\25.25_view_from_above_solution.cpp">
+      <Filter>Solutions\25. Honor Roll</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
