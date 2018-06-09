@@ -14,10 +14,10 @@ namespace Solutions
 	public:
 		bool operator<(const Endpoint& that) const
 		{
-			return Value() < that.Value();
+			return Coord() < that.Coord();
 		}
 
-		int Value() const
+		int Coord() const
 		{
 			return isLeft ? line->left : line->right;
 		}
@@ -31,48 +31,48 @@ namespace Solutions
 		vector<Endpoint> sortedEndpoints;
 		for (const LineSegment& a : A)
 		{
-			sortedEndpoints.emplace_back(Endpoint{true, &a});
-			sortedEndpoints.emplace_back(Endpoint{false, &a});
+			sortedEndpoints.emplace_back(Endpoint{ true, &a });
+			sortedEndpoints.emplace_back(Endpoint{ false, &a });
 		}
 		sort(sortedEndpoints.begin(), sortedEndpoints.end());
 
 		vector<LineSegment> result;
-		int prevXAxis = sortedEndpoints.front().Value(); // Leftmost end point.
-		unique_ptr<LineSegment> prev = nullptr;
 		map<int, const LineSegment*> activeSegments;
-		for (const Endpoint& endpoint : sortedEndpoints)
+		for (int i = 0; i < sortedEndpoints.size(); ++i)
 		{
-			const LineSegment* topSegment = activeSegments.crbegin()->second;
-			if (!activeSegments.empty() && prevXAxis != endpoint.Value())
+			const Endpoint& endpoint = sortedEndpoints[i];
+			// Note how we don't do any processing when we encounter two endpoints at the same coordinate.
+			if (!activeSegments.empty() && sortedEndpoints[i - 1].Coord() != endpoint.Coord())
 			{
-				if (prev)
+				int prevEndpointCoord = sortedEndpoints[i - 1].Coord();
+				const LineSegment* topSegment = activeSegments.crbegin()->second;
+				if (!result.empty())
 				{
-					if (prev->height == topSegment->height && prev->color == topSegment->color && prevXAxis == prev->right)
-						prev->right = endpoint.Value();
+					// Case 1: segments are mergeable if they have same height and color, and the last endpoint encountered is on the right side.
+					// If our last endpoint was on the left side, then that endpoint's segment isn't in the result array yet so there is nothing to merge with.
+					if (result.back().height == topSegment->height && result.back().color == topSegment->color && prevEndpointCoord == result.back().right)
+						result.back().right = endpoint.Coord();
 					else
 					{
-						result.emplace_back(*prev);
-						*prev = {prevXAxis, endpoint.Value(), topSegment->color, topSegment->height};
+						// Case 2 : segments are not mergeable. Add to the result, and set the previous segment as
+						// a segment starting from the last endpoint and ending at the current endpoint, with the top segment's height and color.
+						result.emplace_back(LineSegment{ prevEndpointCoord, endpoint.Coord(), topSegment->color, topSegment->height });
 					}
 				}
 				else
 				{
-					// Found first segment.
-					prev = make_unique<LineSegment>(LineSegment{ prevXAxis, endpoint.Value(), topSegment->color, topSegment->height });
+					// Case 3 : this is the second endpoint in the array. just add it.
+					result.emplace_back(LineSegment{ prevEndpointCoord, endpoint.Coord(), topSegment->color, topSegment->height });
 				}
 			}
-			prevXAxis = endpoint.Value();
 
+			// update active segments.
 			if (endpoint.isLeft == true)
 				activeSegments.emplace(endpoint.line->height, endpoint.line); // Left end point.
 			else
 				activeSegments.erase(endpoint.line->height); // Right end point.
 		}
 
-		// Output the remaining segment(if any).
-		if (prev)
-			result.emplace_back(*prev);
 		return result;
 	}
-	
 }
