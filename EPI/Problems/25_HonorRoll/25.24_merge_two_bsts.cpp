@@ -1,7 +1,6 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include "doubly_linked_list_prototype.h"
 #include "..\Problems.h"
 
 #define TEST 0

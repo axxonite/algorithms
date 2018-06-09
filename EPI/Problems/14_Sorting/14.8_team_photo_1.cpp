@@ -7,6 +7,11 @@
 struct Player 
 {
 	int height;
+
+	bool operator < ( const Player& rhs ) const
+	{
+		return height < rhs.height;
+	}
 };
 
 class Team 
