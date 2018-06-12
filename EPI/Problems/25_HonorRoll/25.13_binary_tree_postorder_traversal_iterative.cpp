@@ -7,7 +7,8 @@
 
 vector<int> PostorderTraversal( const unique_ptr<BinaryTreeNode<int>>& tree )
 {
-	return {};
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test

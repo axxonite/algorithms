@@ -17,31 +17,34 @@ namespace Solutions
 	{
 		if ( k == 0 )
 			return 0;
-		else if ( 2 * k >= prices.size() ) // When we have enough transactions such that we can buy and sell every day, use a simpler strategy.
+		if ( 2 * k >= prices.size() ) // When we have enough transactions such that we can buy and sell every day, use a simpler strategy.
 			return UnlimitedPairsProfits( prices );
-		vector<double> bestProfitBySellDate_LastTransaction( prices.size(), 0 );
-		vector<double> bestProfitBySellDate( prices.size(), 0 );
-		for ( int i = 1; i <= k; ++i ) // for each transaction.
+		vector<double> bestProfitForSaleOnDayOrPrior_lastTransaction( prices.size(), 0 );
+		vector<double> bestProfitForSaleOnDayOrPrior( prices.size(), 0 );
+		for ( int transaction = 1; transaction <= k; ++transaction ) // for each transaction.
 		{
 			double maxTerm = -prices[0];
-			bestProfitBySellDate[0] = 0;
-			for ( int j = 1; j < prices.size(); ++j ) // for each sale date - note we cannot sell on first day.
+			bestProfitForSaleOnDayOrPrior[0] = 0; // don't forget to initialize this.
+			for ( int saleDay = 1; saleDay < prices.size(); ++saleDay ) // for each sale day - note we cannot sell on first day.
 			{
-				// The computation entails iterating over some index m from day 0.. j to find the maximum of value of profitsFromPriorSales[m-2] - prices[m-1] (buy) + prices[j] (sale).
-				// Note that this formulation repeats work, as compute the max for a range from 0..j, thus finding a max from days from 0..0, 0..1, 0..2, and so forth.
-				// We can save work by reformulating the equation to keep a running maximum of the first two terms in the equation: profitsFromPriorSales[m-2] - prices[m-1] (buy).
-				// Then we don't need to re-iterate over the prior elements. This running maximum is stored into maxTerm below.
-				maxTerm = max( maxTerm, ( j > 1 ? bestProfitBySellDate_LastTransaction[j - 2] : 0 ) - prices[j - 1] );
+				// Note that this formulation repeats work, as compute the max for a range from 0..saleDay, thus finding a max from days from 0..0, 0..1, 0..2, and so forth.
+				/*
+				double bestProfitIfWeSellOnThisDay = 0.0;
+				for ( int buyDay = 0; buyDay < saleDay; ++buyDay)
+					bestProfitIfWeSellOnThisDay = max(bestProfitIfWeSellOnThisDay, buyDay > 0 ? bestProfitForSaleOnDayOrPrior_lastTransaction[buyDay - 1] : 0 - prices[buyDay] + prices[saleDay]);
+				// Note the max function here, so we don't force a sale on this day if selling on a prior day was better.
+				bestProfitForSaleOnDayOrPrior[saleDay] = max(bestProfitForSaleOnDayOrPrior[saleDay - 1], bestProfitIfWeSellOnThisDay);
+				*/
 
-
-				// j is sell date, j - 1 is last possible date for a buy for that sale, j - 2 is last possible date for prior profits from the other trades. Hence, take profits from first j - 2 days.
-				// Note we cannot have previous profits on first or second day.
-				// Note also the max function here, so we don't force a sale on this day if selling on a prior day was better.
-				bestProfitBySellDate[j] = max( bestProfitBySellDate[j - 1], prices[j] + maxTerm ); // sales price plus the max term.
+				// We can save work by reformulating the equation above to keep a running maximum of the first two terms in the equation: bestProfitForSaleOnDayOrPrior_lastTransaction[buyDay - 1] - prices[buyDay].
+				// Then we don't need to re-iterate over the prior elements. This running maximum is stored in maxTerm instead.
+				// The offsets from the above equation are changed to correspond to the last day before the sale day, which is why we getting -1 and -2 offsets here.
+				maxTerm = max( maxTerm, ( saleDay > 1 ? bestProfitForSaleOnDayOrPrior_lastTransaction[saleDay - 2] : 0 ) - prices[saleDay - 1] );
+				bestProfitForSaleOnDayOrPrior[saleDay] = max( bestProfitForSaleOnDayOrPrior[saleDay - 1], prices[saleDay] + maxTerm );
 			}
-			bestProfitBySellDate_LastTransaction.swap( bestProfitBySellDate ); // Move on to next transaction, make this transaction our last one.
+			bestProfitForSaleOnDayOrPrior_lastTransaction.swap( bestProfitForSaleOnDayOrPrior ); // Move on to next transaction, make this transaction our last one.
 		}
 
-		return bestProfitBySellDate_LastTransaction.back(); // result is the best profit we can make over the range including all days in the arrays, aka up to the last.
+		return bestProfitForSaleOnDayOrPrior_lastTransaction.back(); // result is the best profit we can make over the range including all days in the arrays, aka up to the last.
 	}
 }
