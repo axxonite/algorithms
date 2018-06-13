@@ -5,8 +5,6 @@
 namespace Solutions
 {
 	// Using the STL built-in functions obscures the fact that values in the permutation array are not necessarily distinct.
-	// It's imperative that any < or > comparisons be <= or >= for the tests to validate. In practice, It seems a permutations array
-	// *should* composed entirely of distinct values, otherwise, one would you differentiate between two different permutation orders?
 	vector<int> NextPermutation(vector<int> perm)
 	{
 		// Find the first entry from the right that is smaller than the entry immediately after it.

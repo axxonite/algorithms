@@ -4,30 +4,39 @@
 
 namespace Solutions
 {
+	// shortcut to simplify the code.
+	int GetValue(const vector<int>& x, int index)
+	{
+		if (index < 0)
+			return numeric_limits<int>::min();
+		if (index >= x.size())
+			return numeric_limits<int>::max();
+		return x[index];
+	}
+
 	int FindKthInTwoSortedArrays(const vector<int>& a, const vector<int>& b, int k)
 	{
-		if (a.size() + b.size() < k)
-			return -1; // There aren't k elements in both combined arrays.
-
-		// start with a range of 0..k.
-		// We must have k - mid < b.size() => mid > k - b.size() - 1
-		// k = 6, a = 10, b = 5, 6 - 5 = 1
-		int left = max(0, k - int(b.size())), right = min(int(a.size()), k); // how many elements from a that we want.
-		while (left <= right)
+		// the initial range is 0..a.size(), but:
+		// if b has fewer than k elements, we can skip ahead to k - size(b) since the kth element will not be < than that.
+		// on the right side, we don't need to search more than k elements on the right.
+		int left = max(0, k - int(b.size())), right = min(int(a.size()), k);
+		while (left < right)
 		{
-			int mid = (left + right) / 2;
-			// mid is how many elements from a that we want.
-			// Say k = 6, we want 4 elements in a and 2 elements in b. That means range is 0..3 for a and 0..1 for b.
-			// So range for a is 0..mid-1, and range for b is 0..k-mid-1
-			// We want to check that a[mid]>b[k-mid-1] and b[k-mid]>a[mid-1].
-			if (mid < a.size() && a[mid] < b[k - mid - 1]) // there's a smaller element in a, we need more elements from a.
+			// note that mid - 1 is the last element in the candidate set for a, k - mid - 1 is the last element in the candidate set for b
+			// mid and k - mid are the elements right past the end of the candidate set, which we use to check if the elements are well ordered.
+			int mid = left + ((right - left) / 2);
+			if (GetValue(a, mid) < GetValue(b, k - mid - 1))
 				left = mid + 1;
-			else if (mid > 0 && a[mid - 1] > b[k - mid]) // there's a smaller element in b, we need more elements from b.
+			else if (GetValue(a, mid - 1) > GetValue(b, k - mid))
 				right = mid - 1;
 			else
-			// We have a well-ordered set when we split the arrays at these points. Return the highest value between the two arrays as the kth element.
-				return (mid > 0 && a[mid - 1] > b[k - mid - 1]) ? a[mid - 1] : b[k - mid - 1];
+			{
+				// take the greater of the two elements from each candidate set from a or b.
+				return max(GetValue(a, mid - 1), GetValue(b, k - mid - 1));
+			}
 		}
-		return -1;
+
+		// here we have left == right. Since left - 1 is the last value in the candidate set, take the greater of the two elements between a and b as the answer.
+		return max(GetValue(a, left - 1), GetValue(b, k - left - 1));
 	}
 }

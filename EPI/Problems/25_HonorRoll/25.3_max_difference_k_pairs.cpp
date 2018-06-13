@@ -53,7 +53,7 @@ void MaxKPairsProfitsTest()
 
 	uniform_int_distribution<int> n_dis(1, 60);
 	n = n_dis(gen);
-	uniform_int_distribution<int> k_dis(1, n / 10);
+	uniform_int_distribution<int> k_dis(1, max(1, n / 10));
 	k = (k_dis(gen));
 	vector<double> A;
 	uniform_real_distribution<double> dis(0, 99);

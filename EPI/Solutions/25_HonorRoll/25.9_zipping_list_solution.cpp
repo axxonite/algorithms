@@ -43,4 +43,44 @@ namespace Solutions
 		}
 		return l;
 	}
+
+	shared_ptr<ListNode<int>> ReverseList2(shared_ptr<ListNode<int>> l)
+	{
+		shared_ptr<ListNode<int>> last = nullptr;
+		while (l)
+		{
+			auto next = l->next;
+			l->next = last;
+			last = l;
+			l = next;
+		}
+		return last;
+	}
+
+	shared_ptr<ListNode<int>> ZippingLinkedList2(const shared_ptr<ListNode<int>>& l)
+	{
+		// find the midpoint of the list with a slow and a fast iterator.
+		auto slow = l, fast = l;
+		while (fast && fast->next)
+			slow = slow->next, fast = fast->next->next;
+
+		// Reverse the second half of the list.
+		auto reversed = ReverseList2(slow);
+
+		shared_ptr<ListNode<int>> dummyHead = make_shared<ListNode<int>>(ListNode<int>{ 0, nullptr });
+		// Iterator on the left and right halves simultaneously.
+		auto cur = l, cur2 = reversed, dst = dummyHead;
+		while (cur || cur2)
+		{
+			// Add the ith node, followed by the (n - i) node.
+			dst->next = cur;
+			cur = cur->next;
+			if (cur2)
+			{
+				dst->next = cur2;
+				cur2 = cur2->next;
+			}
+		}
+		return dummyHead->next;
+	}
 }
