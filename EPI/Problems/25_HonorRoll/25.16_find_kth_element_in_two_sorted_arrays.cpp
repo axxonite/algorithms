@@ -6,7 +6,7 @@
 
 int FindKthInTwoSortedArrays( const vector<int>& a, const vector<int>& b, int k ) 
 {
-	return -1;
+	return 0;
 }
 
 #pragma region Test
@@ -57,7 +57,7 @@ void FindKthInTwoSortedArraysTest()
 	FindKthInTwoSortedArraysSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	// Random test 10000 times.
-	for ( int times = 0; times < 1000; ++times ) {
+	for ( int times = 0; times < 100; ++times ) {
 		vector<int> A, B;
 		int n, m, k;
 		uniform_int_distribution<int> dis( 1, 10000 );

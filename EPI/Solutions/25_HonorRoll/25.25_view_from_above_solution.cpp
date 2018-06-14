@@ -46,22 +46,16 @@ namespace Solutions
 			{
 				int prevEndpointCoord = sortedEndpoints[i - 1].Coord();
 				const LineSegment* topSegment = activeSegments.crbegin()->second;
-				if (!result.empty())
-				{
-					// Case 1: segments are mergeable if they have same height and color, and the last endpoint encountered is on the right side.
-					// If our last endpoint was on the left side, then that endpoint's segment isn't in the result array yet so there is nothing to merge with.
-					if (result.back().height == topSegment->height && result.back().color == topSegment->color && prevEndpointCoord == result.back().right)
-						result.back().right = endpoint.Coord();
-					else
-					{
-						// Case 2 : segments are not mergeable. Add to the result, and set the previous segment as
-						// a segment starting from the last endpoint and ending at the current endpoint, with the top segment's height and color.
-						result.emplace_back(LineSegment{ prevEndpointCoord, endpoint.Coord(), topSegment->color, topSegment->height });
-					}
-				}
+				// Segments are mergeable if:
+				// * this is not the very first endpoint, in which case the result array is empty
+				// * the endpoint's segment has the same height and color as the top segment
+				// * the last endpoint we processed was the right side of the last segment we added to the result.
+				// If our last endpoint was on the left side, then that endpoint's segment isn't in the result array yet so there is nothing to merge with.
+				if (!result.empty() && result.back().height == topSegment->height && result.back().color == topSegment->color && prevEndpointCoord == result.back().right)
+					result.back().right = endpoint.Coord();
 				else
 				{
-					// Case 3 : this is the second endpoint in the array. just add it.
+					// Add a new segment.
 					result.emplace_back(LineSegment{ prevEndpointCoord, endpoint.Coord(), topSegment->color, topSegment->height });
 				}
 			}

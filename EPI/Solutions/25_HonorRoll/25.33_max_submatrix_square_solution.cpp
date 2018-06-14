@@ -32,7 +32,10 @@ namespace Solutions
 			{
 				if ( a[i][j] )
 				{
-					if ( i + 1 < a.size() && j + 1 < a[i + 1].size() ) // ha man, look at that +1 on the second size... this will matter if we have uneven rows.
+					// check if we are at the bottom left corner.
+					if ( i + 1 < a.size() && j + 1 < a[0].size() )
+						// for a given cell, if we know cell i+1,j+1 has a square of size n, then at best we can add one row and column to that.
+						// we will only add an extra row to the square the right and down if the span in both directions is greater than the largest square side that would be formed.
 						largestSquareSide[i][j] = min( min( longestSpans[i][j].w, longestSpans[i][j].h ), largestSquareSide[i + 1][j + 1] + 1 );
 					else largestSquareSide[i][j] = 1;
 					best = max( best, largestSquareSide[i][j] * largestSquareSide[i][j] );

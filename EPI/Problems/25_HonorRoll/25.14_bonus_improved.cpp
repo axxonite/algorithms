@@ -6,7 +6,8 @@
 
 vector<int> CalculateBonus( const vector<int>& productivity )
 {
-	return {};
+	vector<int> result;
+	return result;
 }
 
 #pragma region Test

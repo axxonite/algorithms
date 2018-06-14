@@ -13,7 +13,8 @@ struct LineSegment
 
 vector<LineSegment> CalculateViewFromAbove(const vector<LineSegment>& A)
 {
-	return {};
+	vector<LineSegment> result;
+	return result;
 }
 
 #pragma region Test
