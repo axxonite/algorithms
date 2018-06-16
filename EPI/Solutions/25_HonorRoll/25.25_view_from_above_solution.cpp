@@ -41,7 +41,7 @@ namespace Solutions
 		for (int i = 0; i < sortedEndpoints.size(); ++i)
 		{
 			const Endpoint& endpoint = sortedEndpoints[i];
-			// Note how we don't do any processing when we encounter two endpoints at the same coordinate.
+			// Note how we don't do any processing when we encounter two endpoints at the same coordinate, or when we are coming from a gap.
 			if (!activeSegments.empty() && sortedEndpoints[i - 1].Coord() != endpoint.Coord())
 			{
 				int prevEndpointCoord = sortedEndpoints[i - 1].Coord();
@@ -49,15 +49,14 @@ namespace Solutions
 				// Segments are mergeable if:
 				// * this is not the very first endpoint, in which case the result array is empty
 				// * the endpoint's segment has the same height and color as the top segment
-				// * the last endpoint we processed was the right side of the last segment we added to the result.
-				// If our last endpoint was on the left side, then that endpoint's segment isn't in the result array yet so there is nothing to merge with.
-				if (!result.empty() && result.back().height == topSegment->height && result.back().color == topSegment->color && prevEndpointCoord == result.back().right)
+				// * the last condition merits commenting on. 
+				// It deals with the case where the last segment added has the same height and color as our top segment, but the right side boundary of the last segment doesn't
+				// match our previous endpoint coordinate because there's a gap between the segments.
+				if (!result.empty() && result.back().height == topSegment->height && result.back().color == topSegment->color && result.back().right == prevEndpointCoord)
 					result.back().right = endpoint.Coord();
 				else
-				{
 					// Add a new segment.
 					result.emplace_back(LineSegment{ prevEndpointCoord, endpoint.Coord(), topSegment->color, topSegment->height });
-				}
 			}
 
 			// update active segments.
