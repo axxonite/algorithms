@@ -18,10 +18,11 @@ namespace Solutions
 		// Note the O(n^3) loop.
 		for ( int k = 0; k < g.size(); ++k )
 			for ( int i = 0; i < g.size(); ++i )
-				for ( int j = 0; j < g.size(); ++j )
-					// we have triplets of cities, that we treat as i->j->k. Make sure we have shortest path distances from i->j and from j->k.
-					if ( g[i][k] != numeric_limits<int>::max() && g[k][j] != numeric_limits<int>::max() )
-						g[i][j] = min( g[i][j], g[i][k] + g[k][j] ); // Then the distance from i->k->j is a candidate for minimal value from i->k.
+				if (g[i][k] != numeric_limits<int>::max())
+					for ( int j = 0; j < g.size(); ++j )
+						// we have triplets of cities, that we treat as i->j->k. Make sure we have shortest path distances from i->j and from j->k.
+						if ( g[k][j] != numeric_limits<int>::max() )
+							g[i][j] = min( g[i][j], g[i][k] + g[k][j] ); // Then the distance from i->k->j is a candidate for minimal value from i->k.
 	}
 
 	HighwaySection FindBestProposals( const vector<HighwaySection>& H, const vector<HighwaySection>& P, int n )
