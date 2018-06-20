@@ -7,7 +7,7 @@
 
 string IntToString(int x)
 {
-	return "";
+	return to_string(x);
 }
 
 int StringToInt(const string& s)

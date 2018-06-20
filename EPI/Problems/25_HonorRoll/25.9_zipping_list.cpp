@@ -7,7 +7,7 @@
 
 shared_ptr<ListNode<int>> ZippingLinkedList(const shared_ptr<ListNode<int>>& l)
 {
-	return l;
+	return nullptr;
 }
 
 #pragma region Test
