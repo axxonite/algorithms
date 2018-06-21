@@ -52,6 +52,7 @@ namespace Solutions
 				// * the last condition merits commenting on. 
 				// It deals with the case where the last segment added has the same height and color as our top segment, but the right side boundary of the last segment doesn't
 				// match our previous endpoint coordinate because there's a gap between the segments.
+				// Note that we are checking the last segment added here, and not checking any values on the current endpoint apart from the coordinate.
 				if (!result.empty() && result.back().height == topSegment->height && result.back().color == topSegment->color && result.back().right == prevEndpointCoord)
 					result.back().right = endpoint.Coord();
 				else

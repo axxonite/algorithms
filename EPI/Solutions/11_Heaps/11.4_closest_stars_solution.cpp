@@ -21,18 +21,17 @@ namespace Solutions
 	{
 		priority_queue<Star, vector<Star>> heap;
 		vector<Star> result;
-		double x, y, z;
 		string line;
 		while ( getline( *stars, line ) )
 		{
 			stringstream lineStream( line );
 			string token;
 			getline( lineStream, token, ',' );
-			x = stod( token );
+			double x = stod( token );
 			getline( lineStream, token, ',' );
-			y = stod( token );
+			double y = stod( token );
 			getline( lineStream, token, ',' );
-			z = stod( token );
+			double z = stod( token );
 
 			// Note how much cleaner it is to emplace first, then pop if the heap has a size greater than k.
 			heap.emplace( Star{ x, y, z } );
