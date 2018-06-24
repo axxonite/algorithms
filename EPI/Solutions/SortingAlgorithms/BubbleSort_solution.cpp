@@ -7,7 +7,7 @@ namespace Solutions
 		// Outer loop: iterate every element.
 		for (auto i = 0; i < a.size(); i++)
 		{
-			// Inner loop: iterate elements from n-1 down to i+1 - this is at the hear of the "bubble" part of the algorithm,
+			// Inner loop: iterate elements from n-1 down to i+1 - this is at the heart of the "bubble" part of the algorithm,
 			// where the minimum value in the unsorted partition will float "up" towards the beginning of the array, to finally
 			// land on the top unsorted slot.
 			for (auto j = a.size() - 1; j > i; j--)
