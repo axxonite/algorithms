@@ -27,8 +27,6 @@ namespace Solutions
 
 	void AssignCodes( shared_ptr<HuffmanNode> node, string& code, unordered_map<char, string>& result )
 	{
-		if ( !node )
-			return;
 		if ( node->charFreq.c != '_' )
 			result[node->charFreq.c] = code;
 		else

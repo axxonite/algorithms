@@ -19,13 +19,13 @@ namespace Solutions
 			for ( int j = a[i].size() - 1; j >= 0; --j )
 			{
 				longestSpans[i][j] = a[i][j] ?
-					LongestSpan{ i + 1 < a.size() ? longestSpans[i + 1][j].h + 1 : 1, j + 1 < a[i].size() ? longestSpans[i][j + 1].w + 1 : 1 } :
+					LongestSpan{ i + 1 < a.size() ? longestSpans[i + 1][j].h + 1 : 1, j + 1 < a[0].size() ? longestSpans[i][j + 1].w + 1 : 1 } :
 					LongestSpan{ 0, 0 };
 			}
 		}
 
 		vector<vector<int>> largestSquareSide( a.size(), vector<int>( a.front().size(), 0 ) );
-		int best = 1;
+		int best = 0;
 		for ( int i = a.size() - 1; i >= 0; --i )
 		{
 			for ( int j = a[i].size() - 1; j >= 0; --j )
