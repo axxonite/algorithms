@@ -8,7 +8,7 @@ struct Subarray
 {
 	int start, end;
 
-	bool operator == (const Subarray& a)
+	bool operator == (const Subarray& a) const
 	{
 		return start == a.start && end == a.end;
 	}
