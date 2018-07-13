@@ -4,7 +4,21 @@
 
 #define TEST 0
 
-long long GCD( long long x, long long y );
+int gcd(int a, int b)
+{
+	if (a == 0)
+		return b;
+	if (b == 0)
+		return a;
+	int c = a % b;
+	while (c != 0)
+	{
+		a = b;
+		b = c;
+		c = a % b;
+	}
+	return b;
+}
 
 struct Point 
 {

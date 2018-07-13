@@ -27,3 +27,17 @@ namespace Solutions
 		return result;
 	}
 }
+
+unsigned Divide2(unsigned x, unsigned y)
+{
+	int result = 0;
+	unsigned int power = 31;
+	unsigned long long ypower = unsigned long long(y) << power;
+	while (x >= y)
+	{
+		if (x >= ypower)
+			x -= ypower, result |= 1 << power;
+		ypower >>= 1, power--;
+	}
+	return result;
+}
