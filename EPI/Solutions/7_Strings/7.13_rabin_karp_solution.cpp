@@ -36,3 +36,22 @@ namespace Solutions
 		return -1;
 	}
 }
+
+int RabinKarp2(const string& t, const string& s)
+{
+	if (s.size() > t.size())
+		return -1;
+	if (s.empty())
+		return 0;
+	int hashS = 0, hashT = 0, weight = 1, prevWeight = 0;
+	for (int i = 0; i < s.size(); ++i, weight *= 26)
+		hashS = hashS * 26 + s[i], hashT = hashT * 26 + t[i], prevWeight = weight;
+
+	for (int i = 0; i <= t.size() - s.size(); ++i)
+	{
+		if (hashS == hashT && strncmp(s.c_str(), t.c_str() + i, s.size()) == 0)
+			return i;
+		hashT = (hashT - t[i] * prevWeight) * 26 + t[i + s.size()];
+	}
+	return -1;
+}

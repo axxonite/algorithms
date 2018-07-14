@@ -6,7 +6,7 @@
 
 unsigned Divide(unsigned x, unsigned y)
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test

@@ -32,7 +32,7 @@ namespace Solutions
 				if ( it->second != loc.end() )
 					loc.erase( it->second );
 				loc.emplace_back( i );
-				it->second = --loc.end(); // Update the entry in the hash table
+				coveredKeywords[word] = --loc.end(); // Update the entry in the hash table
 				if ( loc.size() == keywords.size() && ( i - loc.front() ) < ( result.end - result.start ) ) // look for a winning candidate.
 					result = { loc.front(), i };
 			}

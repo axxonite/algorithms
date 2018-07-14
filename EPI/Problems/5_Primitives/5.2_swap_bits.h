@@ -2,7 +2,7 @@
 
 #pragma once
 
-long long SwapBits( long long x, int i, int j ) 
+inline long long SwapBits( long long x, int i, int j ) 
 {
-	return 0;
+	return -1;
 }
