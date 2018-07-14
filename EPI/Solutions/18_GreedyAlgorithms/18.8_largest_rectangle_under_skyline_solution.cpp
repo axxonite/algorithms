@@ -5,7 +5,7 @@
 namespace Solutions
 {
 	// As a reminder, a new "pillar" is a building that blocks the last pillar, that is, is shorter than the last pillar.
-	bool IsNewPillarOrReachEnd(const vector<int>& heights, int curr_idx, int last_pillar_idx)
+	bool IsShorterPillarOrReachEnd(const vector<int>& heights, int curr_idx, int last_pillar_idx)
 	{
 		return curr_idx < heights.size() ? heights[curr_idx] <= heights[last_pillar_idx] : true;
 	}
@@ -18,11 +18,11 @@ namespace Solutions
 		for (int i = 0; i <= heights.size(); ++i)
 		{
 			// Don't forget to check if we have no pillar indices yet, in which case we need to add this new building as our first pillar.
-			while (!pillar_indices.empty() && IsNewPillarOrReachEnd(heights, i, pillar_indices.top()))
+			while (!pillar_indices.empty() && IsShorterPillarOrReachEnd(heights, i, pillar_indices.top()))
 			{
-				// this is a new pillar, meaning its shorter than the last pillar.
+				// this is a pillar that is shorter or equal to the last pillar.
 				int height = heights[pillar_indices.top()]; // height of last pillar.
-				pillar_indices.pop(); // remove last pillar - our new rectangle will extended from the first pillar to the new pillar we just found.
+				pillar_indices.pop(); // remove last pillar - our new rectangle will extended from the previous pillar to the new pillar we just found.
 				int width = pillar_indices.empty() ? i : i - pillar_indices.top() - 1; // Calculate width of rectangle supported by the new pillar set.
 				max_rectangle_area = max(max_rectangle_area, height * width); // Compute area.
 			}
