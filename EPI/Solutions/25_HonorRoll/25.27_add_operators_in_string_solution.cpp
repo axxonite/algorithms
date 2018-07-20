@@ -57,7 +57,7 @@ namespace Solutions
 			// furthermore, if the following digits happen to all be 111111, then we could form a 1*1*1*1 product with these, so the lower bound for what number we could add here is 
 			// actually 1.
 			// sounds like a bug to me.
-			if ( target - result <= remainingInt )
+			//if ( target - result <= remainingInt )
 			{
 				operators.emplace_back( '+' );
 				if ( ExpressionSynthesisHelper( digits, index, target, operands, operators, true ) )

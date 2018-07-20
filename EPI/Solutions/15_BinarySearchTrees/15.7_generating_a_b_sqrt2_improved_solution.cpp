@@ -29,12 +29,10 @@ namespace Solutions
 			ABSqrt2 jplussqrt2(result[j].a, result[j].b + 1); // increase b
 			 // add the smaller one to the result.
 			result.emplace_back(min(iplus1, jplussqrt2));
-			if (iplus1.val == result.back().val) {
+			if (iplus1.val == result.back().val)
 				++i;
-			}
-			if (jplussqrt2.val == result.back().val) {
+			if (jplussqrt2.val == result.back().val)
 				++j;
-			}
 		}
 		return result;
 	}
