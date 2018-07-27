@@ -44,12 +44,12 @@ namespace Solutions
 		if ( !lastWasOperator )
 		{
 			int result = Evaluate( operands, operators );
-			if ( result > target ) // If the result already exceeds our target, then we don't need to proceed further.
+			if ( result >= target ) // If the result already exceeds our target, then we don't need to proceed further.
 			{
 				return false;
 			}
 
-			int remainingInt = FindRemainingInt( digits, index );
+			//int remainingInt = FindRemainingInt( digits, index );
 			operands.emplace_back( 0 ); // Start a new operand.
 
 			// If the difference between our result and our target is already larger than the remaining digits, then we can't add a + here (or a *?)
@@ -88,5 +88,58 @@ namespace Solutions
 		vector<char> operators;
 		operands.emplace_back( 0 );
 		return ExpressionSynthesisHelper( digits, 0, target, operands, operators, true );
+	}
+
+	int EvaluateExpression2(vector<string>& values, string& operators)
+	{
+		int product = stoi(values[0]), sum = 0;
+		for (int i = 0; i < operators.size(); ++i)
+		{
+			if (operators[i] == '*')
+				product *= stoi(values[i + 1]);
+			else
+			{
+				sum += product;
+				product = stoi(values[i + 1]);
+			}
+		}
+		sum += product;
+		return sum;
+	}
+
+	bool ExpressionSynthesis2(const vector<int>& digits, int target, int index, vector<string>& values, string& operators)
+	{
+		if (index == digits.size())
+		{
+			return EvaluateExpression2(values, operators) == target;
+		}
+		if (values.back() != "")
+		{
+			int result = EvaluateExpression2(values, operators);
+			if (result >= target)
+				return false;
+			operators.push_back('+');
+			values.emplace_back("");
+			if (ExpressionSynthesis2(digits, target, index, values, operators))
+				return true;
+			operators.back() = '*';
+			if (ExpressionSynthesis2(digits, target, index, values, operators))
+				return true;
+			operators.pop_back();
+			values.pop_back();
+		}
+		values.back() += '0' + digits[index];
+		if (ExpressionSynthesis2(digits, target, index + 1, values, operators))
+			return true;
+		values.back().pop_back();
+		return false;
+	}
+
+	bool ExpressionSynthesis2(const vector<int>& digits, int target)
+	{
+		vector<string> values;
+		string operators;
+		values.emplace_back("");
+		return ExpressionSynthesis2(digits, target, 0, values, operators);
 	}
 }
