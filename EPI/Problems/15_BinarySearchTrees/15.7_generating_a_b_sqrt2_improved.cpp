@@ -2,7 +2,6 @@
 
 #include "stdafx.h"
 
-// These numbers have very interesting property, and people called it ugly numbers. It is also called Quadratic integer rings.
 struct ABSqrt2
 {
 	ABSqrt2(int a, int b) : a(a), b(b), val(a + b * sqrt(2))
