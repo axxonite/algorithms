@@ -16,11 +16,11 @@ namespace Solutions
 			subListHead = subListHead->next;
 
 		// Reverses sublist.
-		auto it = subListHead->next; // first node to be reversed is this. If k = 1 then this is l.
+		auto cur = subListHead->next; // first node to be reversed is this. If k = 1 then this is l.
 		while (start++ < end)
 		{
-			auto newFirst = it->next; // newFirst is the node we will move around. it will end up after newFirst
-			it->next = newFirst->next;  // detach newFirst from chain, and ensure newFirst->next is the next node we will process.
+			auto newFirst = cur->next; // newFirst is the node we will move around. it will end up after newFirst
+			cur->next = newFirst->next;  // detach newFirst from chain, and ensure newFirst->next is the next node we will process.
 			// place newFirst(old it->next) before subListHead->next
 			newFirst->next = subListHead->next; // Link the first node in the sublist to the newFirst node.
 			subListHead->next = newFirst; // make newFirst the first sublist node.
