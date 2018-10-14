@@ -32,7 +32,7 @@ namespace Solutions
 		}
 	}
 	
-		vector<vector<int>> Combinations(int n, int k)
+	vector<vector<int>> Combinations(int n, int k)
 	{
 		vector<vector<int>> result;
 		// Numbers in the set start at 1 so start offset at 1.
@@ -40,6 +40,5 @@ namespace Solutions
 		DirectedCombinations(n, k, 1, make_unique<vector<int>>().get(), &result);
 		return result;
 	}
-
 
 }
