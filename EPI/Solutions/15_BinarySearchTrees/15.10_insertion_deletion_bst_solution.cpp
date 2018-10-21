@@ -48,12 +48,14 @@ namespace Solutions
 			}
 
 			if (!c)
-				return false; // There's no node with key in this tree.
+				return false; // There's no node with the given key in the tree.
 
 			BinaryTreeNode<int>* keyNode = c;
+			// If there is a right node, then find the successor of that key.
 			if (keyNode->right)
 			{
-				// Find the successor.
+				// The successor is the leftmost child starting from the current node's right.
+				// Note that we never have to climb up the tree to find the successor because we are guaranteed to have a right child.
 				BinaryTreeNode<int>* successor = keyNode->right.get(), *sParent = keyNode;
 				while (successor->left)
 				{
@@ -68,15 +70,19 @@ namespace Solutions
 				if (sParent->left.get() == successor)
 					sParent->left.reset(successor->right.release());
 				else sParent->right.reset(successor->right.release()); // r_parent->right.get() == r_key_node.
+
+				// note that if the key node is the root node, for this case, we do not need to update the root since the
+				// we are copying data to the key node and not deleting the key node itself. The successor node will never
+				// be the root, so we don't have to worry about that case either.
 			}
 			else
 			{
-				// Updates root link if needed.
+				// No right child, delete the node directy since the key node only has one child at most.
+				// If the key node is the root node, then reset the root node to the key node's left child.
 				if (root.get() == keyNode)
 					root.reset(keyNode->left.release());
 				else
 				{
-					// No right child, delete the node directy since the parent only has one child.
 					// Whichever child path the node is on gets released from the parent.
 					if (parent->left.get() == keyNode)
 						parent->left.reset(keyNode->left.release());

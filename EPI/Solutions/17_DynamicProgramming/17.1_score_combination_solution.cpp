@@ -16,6 +16,8 @@ namespace Solutions
 				int withoutThisPlay = i > 0 ? combinationsForScore[i - 1][j] : 0; // number of combinations that lead to j using the last i - 1 score combinations.
 				// Number of combinations that lead to j using scores[i] * 1, scores[i] * 2, etc. As it so happens every entry at a multiple of scores[i] will already have an added 1 coming from the base case in the outer loop, so we can just add that instead of 
 				// computing multiples explicitly. Another way to see this: the formula is A[i][j - w * scores[i]] for all w * scores[i] <= j, and prior entries in the array already contain all terms for all w's except the last one.
+				
+				// A simpler way to think of this, is to think of scores[i], backtrack from it, and realize there is only one way to get from that score to the current score using scores[i].
 				int withThisPlay = j >= scores[i] ? combinationsForScore[i][j - scores[i]] : 0;
 				combinationsForScore[i][j] = withoutThisPlay + withThisPlay;
 			}
