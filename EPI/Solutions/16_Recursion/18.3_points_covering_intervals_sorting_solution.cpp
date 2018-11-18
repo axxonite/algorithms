@@ -7,11 +7,6 @@ namespace Solutions
 	struct Interval
 	{
 		int left, right;
-
-		bool operator <(const Interval& rhs) const
-		{
-			return right < rhs.right;
-		}
 	};
 
 	vector<int> FindMinimumVisits(vector<Interval> intervals)
@@ -21,17 +16,13 @@ namespace Solutions
 
 		// Sort intervals based on the right endpoints.
 		sort(intervals.begin(), intervals.end(), [](const Interval& a, const Interval& b) { return a.right < b.right; });
-		vector<int> visits;
-		int lastVisitTime = -1;
-		for (const Interval& interval : intervals)
+		vector<int> result;
+		result.emplace_back(intervals[0].right);
+		for (int i = 1; i < intervals.size(); ++i)
 		{
-			if (interval.left > lastVisitTime)
-			{
-				// The current right endpoint, last_visit_time, will not cover any more intervals.
-				lastVisitTime = interval.right;
-				visits.emplace_back(lastVisitTime);
-			}
+			if (intervals[i].left > result.back())
+				result.emplace_back(intervals[i].right);
 		}
-		return visits;
+		return result;
 	}
 }
