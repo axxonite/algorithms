@@ -3,6 +3,7 @@
 
 int main()
 {
+	InsertionSortTest();
 	BubbleSortTest();
 	QuicksortTest();
 	MergeSortTest();
