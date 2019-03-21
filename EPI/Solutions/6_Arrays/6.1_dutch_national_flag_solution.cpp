@@ -21,18 +21,18 @@ namespace Solutions
 		* unclassified group: A[equal, larger - 1].
 		* top group: A[larger, A.size() - 1].
 		*/
-		int equalStart = 0, equalEnd = 0, largerStart = a.size();
+		int equalStart = 0, unpartitioned = 0, largerStart = a.size();
 		// Keep iterating as long as there is an unclassified element.
-		while (equalEnd < largerStart)
+		while (unpartitioned < largerStart)
 		{
 			// A[equal] is the incoming unclassified element.
-			if (a[equalEnd] < pivotVal)
-				swap(a[equalStart++], a[equalEnd++]);
-			else if (a[equalEnd] == pivotVal)
-				++equalEnd;
+			if (a[unpartitioned] < pivotVal)
+				swap(a[equalStart++], a[unpartitioned++]);
+			else if (a[unpartitioned] == pivotVal)
+				++unpartitioned;
 			else
 				// Note how is the largerStart how is decrementing BEFORE we get the value at that index, otherwise we will access outside the vector's range.
-				swap(a[equalEnd], a[--largerStart]); // A[equal] > pivot.
+				swap(a[unpartitioned], a[--largerStart]); // A[equal] > pivot.
 		}
 	}
 }

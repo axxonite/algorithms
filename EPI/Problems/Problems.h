@@ -3,6 +3,7 @@
 #include "doubly_linked_list_prototype.h"
 
 // Sorting algorithms.
+void InsertionSortTest();
 void BubbleSortTest();
 void QuicksortTest();
 void MergeSortTest();

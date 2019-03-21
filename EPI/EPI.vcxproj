@@ -23,7 +23,7 @@
     <ProjectGuid>{A29DA275-7589-4032-BD5A-7A0BF54F981B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Problems</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectName>EPI</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -386,7 +386,7 @@
     <ClCompile Include="Problems\Math\GaussJordanElimination.cpp" />
     <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
-    <ClCompile Include="Problems\SortingAlgorithms\HeapSort.cpp" />
+    <ClCompile Include="Problems\SortingAlgorithms\InsertionSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\MergeSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
     <ClCompile Include="Sandbox.cpp" />
@@ -603,7 +603,7 @@
     <ClCompile Include="Solutions\9_StacksQueues\9.9_queue_from_stacks_solution.cpp" />
     <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />
-    <ClCompile Include="Solutions\SortingAlgorithms\HeapSort_solution.cpp" />
+    <ClCompile Include="Solutions\SortingAlgorithms\InsertionSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\Quicksort_solution.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
