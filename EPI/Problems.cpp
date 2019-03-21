@@ -6,6 +6,7 @@ int main()
 	BubbleSortTest();
 	QuicksortTest();
 	MergeSortTest();
+  HeapSortTest();
 	
 	// 5. Primitives
 	ReverseBitsTest();

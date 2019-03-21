@@ -6,6 +6,7 @@
 void BubbleSortTest();
 void QuicksortTest();
 void MergeSortTest();
+void HeapSortTest();
 
 // Chapter 5: Primitives.
 void ReverseBitsTest();

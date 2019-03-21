@@ -7,7 +7,7 @@ namespace Solutions
 {
 	vector<int> PreorderTraversal( const unique_ptr<BinaryTreeNode<int>>& tree )
 	{
-		// got it on the first try... but how do would I have made sure this works 100%?
+		// got it on the first try... but how would I have made sure this works 100%?
 		if ( !tree )
 			return {};
 		vector<int> result;
