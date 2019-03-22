@@ -8,6 +8,7 @@ void BubbleSortTest();
 void QuicksortTest();
 void MergeSortTest();
 void HeapSortTest();
+void MaxHeapTest();
 
 // Chapter 5: Primitives.
 void ReverseBitsTest();

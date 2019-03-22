@@ -383,6 +383,7 @@
     <ClCompile Include="Problems\9_StacksQueues\9.7_binary_tree_level_order.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.8_circular_queue.cpp" />
     <ClCompile Include="Problems\9_StacksQueues\9.9_queue_from_stacks.cpp" />
+    <ClCompile Include="Problems\Data Structures\MaxHeap.cpp" />
     <ClCompile Include="Problems\Math\GaussJordanElimination.cpp" />
     <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
@@ -602,6 +603,7 @@
     <ClCompile Include="Solutions\9_StacksQueues\9.7_binary_tree_level_order_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.8_circular_queue_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.9_queue_from_stacks_solution.cpp" />
+    <ClCompile Include="Solutions\Data Structures\MaxHeap_solution.cpp" />
     <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\HeapSort_solution.cpp" />

@@ -8,6 +8,7 @@ int main()
 	QuicksortTest();
 	MergeSortTest();
   HeapSortTest();
+  MaxHeapTest();
 	
 	// 5. Primitives
 	ReverseBitsTest();
