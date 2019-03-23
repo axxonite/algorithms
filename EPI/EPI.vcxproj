@@ -387,6 +387,7 @@
     <ClCompile Include="Problems\Math\GaussJordanElimination.cpp" />
     <ClCompile Include="Problems\Math\GramSchmidtOrthogonalization.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\BubbleSort.cpp" />
+    <ClCompile Include="Problems\SortingAlgorithms\CountingSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\HeapSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\InsertionSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\MergeSort.cpp" />
@@ -606,6 +607,7 @@
     <ClCompile Include="Solutions\Data Structures\MaxHeap_solution.cpp" />
     <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />
+    <ClCompile Include="Solutions\SortingAlgorithms\CountingSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\HeapSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\InsertionSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\Quicksort_solution.cpp" />

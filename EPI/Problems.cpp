@@ -7,9 +7,10 @@ int main()
 	BubbleSortTest();
 	QuicksortTest();
 	MergeSortTest();
-  HeapSortTest();
-  MaxHeapTest();
-	
+	HeapSortTest();
+	CountingSortTest();
+	MaxHeapTest();
+
 	// 5. Primitives
 	ReverseBitsTest();
 	MultiplyShiftAddTest();
@@ -142,7 +143,7 @@ int main()
 	TeamPhotoTest();
 	StableSortListTest();
 	FindSalaryCapTest();
-	
+
 	// 15. Binary Search Trees
 	IsBinaryTreeBSTTest();
 	FindFirstGreaterThanKTest();

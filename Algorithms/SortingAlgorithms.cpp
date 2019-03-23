@@ -132,7 +132,7 @@ void Quicksort(vector<int>& values)
 
 void BalancedQuicksort(vector<int>& values)
 {
-	Quicksort(values, 0, values.size() - 1);
+	BalancedQuicksort(values, 0, values.size() - 1);
 }
 
 // --------------------------------------------------
