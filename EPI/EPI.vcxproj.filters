@@ -1409,6 +1409,12 @@
     <ClCompile Include="Solutions\SortingAlgorithms\CountingSort_solution.cpp">
       <Filter>Solutions\Sorting Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\RadixSort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\SortingAlgorithms\RadixSort_solution.cpp">
+      <Filter>Solutions\Sorting Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

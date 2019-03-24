@@ -392,6 +392,7 @@
     <ClCompile Include="Problems\SortingAlgorithms\InsertionSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\MergeSort.cpp" />
     <ClCompile Include="Problems\SortingAlgorithms\Quicksort.cpp" />
+    <ClCompile Include="Problems\SortingAlgorithms\RadixSort.cpp" />
     <ClCompile Include="Sandbox.cpp" />
     <ClCompile Include="Shared.cpp" />
     <ClCompile Include="Solutions\10_BinaryTrees\10.10_successor_solution.cpp" />
@@ -611,6 +612,7 @@
     <ClCompile Include="Solutions\SortingAlgorithms\HeapSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\InsertionSort_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\Quicksort_solution.cpp" />
+    <ClCompile Include="Solutions\SortingAlgorithms\RadixSort_solution.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
