@@ -4,8 +4,8 @@
 
 vector<int> RadixSort(vector<int> values, int maxDigits)
 {
-	vector<int> result(values.size());
-	return result;
+	vector<int> result(values);
+  return result;
 }
 
 #pragma region Test
@@ -18,9 +18,9 @@ void RadixSortTest()
 	uniform_int_distribution<int> dis(0, 1000);
 	for (int i = 0; i < 1000; ++i)
 		a.emplace_back(dis(rnd));
-	RadixSort(a, 1000);
+	auto result = RadixSort(a, 4);
 	for (int i = 1; i < 1000; i++)
-		assert(a[i] >= a[i - 1]);
+		assert(result[i] >= result[i - 1]);
 #endif
 }
 

@@ -9,6 +9,7 @@ int main()
 	MergeSortTest();
 	HeapSortTest();
 	CountingSortTest();
+  RadixSortTest();
 	MaxHeapTest();
 
 	// 5. Primitives

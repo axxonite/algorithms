@@ -9,6 +9,7 @@ void QuicksortTest();
 void MergeSortTest();
 void HeapSortTest();
 void CountingSortTest();
+void RadixSortTest();
 void MaxHeapTest();
 
 // Chapter 5: Primitives.
