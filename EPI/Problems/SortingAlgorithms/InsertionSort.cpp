@@ -1,16 +1,9 @@
 #include "stdafx.h"
 
-#define TEST 1
+#define TEST 0
 
 void InsertionSort(vector<int>& a)
 {
-  for (int i = 1; i < a.size(); ++i)
-  {
-    for (int j = i - 1; j >= 0; --j)
-      if (a[j] > a[j + 1])
-        swap(a[j], a[j + 1]);
-      else break;
-  }
 }
 
 #pragma region Test
