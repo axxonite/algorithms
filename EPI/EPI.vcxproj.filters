@@ -1385,6 +1385,36 @@
     <ClCompile Include="Solutions\25_HonorRoll\25.25_view_from_above_solution.cpp">
       <Filter>Solutions\25. Honor Roll</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\InsertionSort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\SortingAlgorithms\InsertionSort_solution.cpp">
+      <Filter>Solutions\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\HeapSort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\SortingAlgorithms\HeapSort_solution.cpp">
+      <Filter>Solutions\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\Data Structures\MaxHeap.cpp">
+      <Filter>Problems\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\Data Structures\MaxHeap_solution.cpp">
+      <Filter>Solutions\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\CountingSort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\SortingAlgorithms\CountingSort_solution.cpp">
+      <Filter>Solutions\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\RadixSort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\SortingAlgorithms\RadixSort_solution.cpp">
+      <Filter>Solutions\Sorting Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
@@ -1503,6 +1533,12 @@
     </Filter>
     <Filter Include="Data Structures">
       <UniqueIdentifier>{2d4892fb-b655-4fa2-b1cc-ec052e2cbb70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Problems\Data Structures">
+      <UniqueIdentifier>{5f5320c2-2b88-4849-bc65-557a1b5a5a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\Data Structures">
+      <UniqueIdentifier>{83a54681-fdea-4738-9068-7b79773624be}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

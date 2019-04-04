@@ -3,9 +3,14 @@
 #include "doubly_linked_list_prototype.h"
 
 // Sorting algorithms.
+void InsertionSortTest();
 void BubbleSortTest();
 void QuicksortTest();
 void MergeSortTest();
+void HeapSortTest();
+void CountingSortTest();
+void RadixSortTest();
+void MaxHeapTest();
 
 // Chapter 5: Primitives.
 void ReverseBitsTest();
