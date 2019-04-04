@@ -15,4 +15,16 @@ namespace Solutions
 		}
 		return false;
 	}
+
+	inline bool HasTwoSum2(const vector<int>& A, int t)
+	{
+		unordered_set<long long> values;
+		for (int val : A)
+		{
+			if (values.count(static_cast<long long>(t) - val))
+				return true;
+			values.emplace(val);
+		}
+		return false;
+	}
 }
