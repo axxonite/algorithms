@@ -206,6 +206,7 @@ int main()
 	TransformStringTest();
 	FindLargestNumberTeamsTest();
 	DijkstraShortestPathTest();
+	StronglyConnectedComponentsTest();
 
 	// 25. Honor Roll
 	FindFirstMissingPositiveTest();

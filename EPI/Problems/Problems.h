@@ -206,6 +206,7 @@ void IsDeadlockedTest();
 void TransformStringTest();
 void FindLargestNumberTeamsTest();
 void DijkstraShortestPathTest();
+void StronglyConnectedComponentsTest();
 
 // Chapter 25: Honor roll
 void FindFirstMissingPositiveTest();

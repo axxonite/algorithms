@@ -1415,6 +1415,12 @@
     <ClCompile Include="Solutions\SortingAlgorithms\RadixSort_solution.cpp">
       <Filter>Solutions\Sorting Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
