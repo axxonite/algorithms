@@ -1421,6 +1421,12 @@
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\DepthFirstSearch.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\DepthFirstSearch_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
