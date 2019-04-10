@@ -7,11 +7,11 @@ namespace Solutions
 		int data;
 		bool discovered[2] = { false, false };
 		int finishTime = -1;
-		vector<shared_ptr<SCCGraphVertex>> edges;
-		vector<shared_ptr<SCCGraphVertex>> edgesTransposed;
+		vector<SCCGraphVertex*> edges;
+		vector<SCCGraphVertex*> edgesTransposed;
 	};
 
-	void SCCDFS1(shared_ptr<SCCGraphVertex> v, int& time)
+	void SCCDFS1(SCCGraphVertex* v, int& time)
 	{
 		if (v->discovered[0])
 			return;
@@ -23,12 +23,12 @@ namespace Solutions
 		v->finishTime = time++;
 	}
 
-	bool SortEdges(const shared_ptr<SCCGraphVertex>& a, const shared_ptr<SCCGraphVertex>& b)
+	bool SortEdges(const SCCGraphVertex* a, const SCCGraphVertex* b)
 	{
 		return a->finishTime > b->finishTime;
 	}
 
-	void SCCDFS2(shared_ptr<SCCGraphVertex> v, int& time, unordered_set<shared_ptr<SCCGraphVertex>>& component)
+	void SCCDFS2(SCCGraphVertex* v, int& time, unordered_set<SCCGraphVertex*>& component)
 	{
 		if (v->discovered[1])
 			return;
@@ -39,9 +39,9 @@ namespace Solutions
 		component.emplace(v);
 	}
 
-	vector<unordered_set<shared_ptr<SCCGraphVertex>>> StronglyConnectedComponents(vector<shared_ptr<SCCGraphVertex>> G)
+	vector<unordered_set<SCCGraphVertex*>> StronglyConnectedComponents(vector<SCCGraphVertex*> G)
 	{
-		vector<unordered_set<shared_ptr<SCCGraphVertex>>> result;
+		vector<unordered_set<SCCGraphVertex*>> result;
 		int time = 0;
 		for (auto e : G)
 			if (!e->discovered[0])
@@ -49,7 +49,7 @@ namespace Solutions
 		for (auto e : G)
 			if (!e->discovered[1])
 			{
-				result.emplace_back(unordered_set<shared_ptr<SCCGraphVertex>>());
+				result.emplace_back(unordered_set<SCCGraphVertex*>());
 				SCCDFS2(e, time, result.back());
 			}
 		return result;
