@@ -285,6 +285,7 @@
     <ClCompile Include="Problems\19_Graphs\19.9_shortest_path_fewest_edges.cpp" />
     <ClCompile Include="Problems\19_Graphs\DepthFirstSearch.cpp" />
     <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp" />
+    <ClCompile Include="Problems\19_Graphs\TopologicalSort.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.10_copying_postings_list.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.11_longest_valid_parentheses.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.12_sliding_window.cpp" />
@@ -509,6 +510,7 @@
     <ClCompile Include="Solutions\19_Graphs\19.9_shortest_path_fewest_edges_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\DepthFirstSearch_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\TopologicalSort_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.10_copying_postings_list_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.11_longest_valid_parentheses_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.12_sliding_window_solution.cpp" />

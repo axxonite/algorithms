@@ -9,7 +9,7 @@ int main()
 	MergeSortTest();
 	HeapSortTest();
 	CountingSortTest();
-  RadixSortTest();
+	RadixSortTest();
 	MaxHeapTest();
 
 	// 5. Primitives
@@ -207,6 +207,7 @@ int main()
 	FindLargestNumberTeamsTest();
 	DijkstraShortestPathTest();
 	StronglyConnectedComponentsTest();
+	TopoSortTest();
 
 	// 25. Honor Roll
 	FindFirstMissingPositiveTest();
