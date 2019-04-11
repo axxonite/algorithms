@@ -1439,6 +1439,12 @@
     <ClCompile Include="Solutions\19_Graphs\BreadthFirstSearch_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\Data Structures\DisjointSet.cpp">
+      <Filter>Problems\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\Data Structures\DisjointSet_solution.cpp">
+      <Filter>Solutions\Data Structures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

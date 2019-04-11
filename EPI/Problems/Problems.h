@@ -253,6 +253,8 @@ void CalcContainedWaterTest();
 void ComputeSunShadowingTest();
 void IsContainedTest();
 
+void DisjointSetTest();
+
 namespace Solutions
 {
 	vector<int> MergeSortedArrays(const vector<vector<int>>& sortedArrays);

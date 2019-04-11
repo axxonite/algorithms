@@ -252,4 +252,6 @@ int main()
 	CalcContainedWaterTest();
 	ComputeSunShadowingTest();
 	IsContainedTest();
+
+  DisjointSetTest();
 }
