@@ -82,6 +82,9 @@
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h">
       <Filter>Solutions\10. Binary Trees</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\Data Structures\DisjointSet_solution.h">
+      <Filter>Solutions\Data Structures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1442,8 +1445,11 @@
     <ClCompile Include="Problems\Data Structures\DisjointSet.cpp">
       <Filter>Problems\Data Structures</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\Data Structures\DisjointSet_solution.cpp">
-      <Filter>Solutions\Data Structures</Filter>
+    <ClCompile Include="Problems\19_Graphs\MSTKruskal.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\MSTKruskal_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

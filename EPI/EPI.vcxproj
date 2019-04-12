@@ -165,6 +165,7 @@
     <ClInclude Include="Solutions\8_LinkedLists\8.3_checking_cycle_solution.h" />
     <ClInclude Include="Solutions\8_LinkedLists\8.4_overlapping_lists_no_cycle_solution.h" />
     <ClInclude Include="Solutions\9_StacksQueues\9.1_stack_with_max_solution.h" />
+    <ClInclude Include="Solutions\Data Structures\DisjointSet_solution.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -285,6 +286,7 @@
     <ClCompile Include="Problems\19_Graphs\19.9_shortest_path_fewest_edges.cpp" />
     <ClCompile Include="Problems\19_Graphs\BreadthFirstSearch.cpp" />
     <ClCompile Include="Problems\19_Graphs\DepthFirstSearch.cpp" />
+    <ClCompile Include="Problems\19_Graphs\MSTKruskal.cpp" />
     <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp" />
     <ClCompile Include="Problems\19_Graphs\TopologicalSort.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.10_copying_postings_list.cpp" />
@@ -512,6 +514,7 @@
     <ClCompile Include="Solutions\19_Graphs\19.9_shortest_path_fewest_edges_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\BreadthFirstSearch_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\DepthFirstSearch_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\MSTKruskal_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\TopologicalSort_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.10_copying_postings_list_solution.cpp" />
@@ -614,7 +617,6 @@
     <ClCompile Include="Solutions\9_StacksQueues\9.7_binary_tree_level_order_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.8_circular_queue_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.9_queue_from_stacks_solution.cpp" />
-    <ClCompile Include="Solutions\Data Structures\DisjointSet_solution.cpp" />
     <ClCompile Include="Solutions\Data Structures\MaxHeap_solution.cpp" />
     <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp" />
     <ClCompile Include="Solutions\SortingAlgorithms\BubbleSort_solution.cpp" />

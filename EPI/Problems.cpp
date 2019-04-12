@@ -208,6 +208,7 @@ int main()
 	DijkstraShortestPathTest();
 	StronglyConnectedComponentsTest();
 	TopoSortTest();
+  MstKruskalTest();
 
 	// 25. Honor Roll
 	FindFirstMissingPositiveTest();

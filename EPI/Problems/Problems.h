@@ -208,6 +208,7 @@ void FindLargestNumberTeamsTest();
 void DijkstraShortestPathTest();
 void StronglyConnectedComponentsTest();
 void TopoSortTest();
+void MstKruskalTest();
 
 // Chapter 25: Honor roll
 void FindFirstMissingPositiveTest();

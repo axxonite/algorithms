@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#pragma once
 
 using namespace std;
 
@@ -16,21 +16,21 @@ namespace Solutions
   {
   public:
 
-    static shared_ptr<DisjointSet> MakeSet(shared_ptr<SetElem> x)
+    static shared_ptr<DisjointSet> MakeSet(SetElem* x)
     {
       auto set = make_shared<DisjointSet>();
-      set->head = set->tail = x;
+      set->head = set->tail = make_shared<SetElem>(*x);
       x->set = set.get();
       set->length = 1;
       return set;
     }
 
-    static DisjointSet* FindSet(shared_ptr<SetElem> x)
+    static DisjointSet* FindSet(SetElem* x)
     {
       return x->set;
     }
 
-    static DisjointSet* Union(shared_ptr<SetElem> x, shared_ptr<SetElem> y)
+    static DisjointSet* Union(SetElem* x, SetElem* y)
     {
       auto dstSet = y->set;
       auto srcSet = x->set;
