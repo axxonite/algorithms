@@ -209,6 +209,7 @@ void DijkstraShortestPathTest();
 void StronglyConnectedComponentsTest();
 void TopoSortTest();
 void MstKruskalTest();
+void BellmanFordTest();
 
 // Chapter 25: Honor roll
 void FindFirstMissingPositiveTest();

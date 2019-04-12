@@ -209,6 +209,7 @@ int main()
 	StronglyConnectedComponentsTest();
 	TopoSortTest();
   MstKruskalTest();
+  BellmanFordTest();
 
 	// 25. Honor Roll
 	FindFirstMissingPositiveTest();
