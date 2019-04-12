@@ -8,7 +8,7 @@ namespace Solutions
 
   struct SetElem
   {
-    DisjointSet* set = nullptr;
+    shared_ptr<DisjointSet> set = nullptr;
     shared_ptr<SetElem> next = nullptr;
   };
 
@@ -16,18 +16,18 @@ namespace Solutions
   {
   public:
 
-    static shared_ptr<DisjointSet> MakeSet(SetElem* x)
+    static shared_ptr<DisjointSet> MakeSet(shared_ptr<SetElem> x)
     {
       auto set = make_shared<DisjointSet>();
-      set->head = set->tail = make_shared<SetElem>(*x);
-      x->set = set.get();
+      set->head = set->tail = x;
+	  x->set = set;
       set->length = 1;
       return set;
     }
 
     static DisjointSet* FindSet(SetElem* x)
     {
-      return x->set;
+      return x->set.get();
     }
 
     static DisjointSet* Union(SetElem* x, SetElem* y)
@@ -44,12 +44,12 @@ namespace Solutions
         dstSet->length++;
       }
       srcSet->head = srcSet->tail = nullptr;
-      return dstSet;
+      return dstSet.get();
     }
 
   private:
 
-    shared_ptr<SetElem> head, tail;
+    shared_ptr<SetElem> head = nullptr, tail = nullptr;
     int length = 0;
 
   };
