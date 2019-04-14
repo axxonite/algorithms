@@ -85,6 +85,9 @@
     <ClInclude Include="Solutions\Data Structures\DisjointSet_solution.h">
       <Filter>Solutions\Data Structures</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\19_Graphs\TopologicalSort_solution.h">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1433,9 +1436,6 @@
     <ClCompile Include="Problems\19_Graphs\TopologicalSort.cpp">
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions\19_Graphs\TopologicalSort_solution.cpp">
-      <Filter>Solutions\19. Graphs</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\19_Graphs\BreadthFirstSearch.cpp">
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
@@ -1455,6 +1455,12 @@
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\19_Graphs\BellmanFord_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPaths.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPaths_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
   </ItemGroup>

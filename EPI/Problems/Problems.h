@@ -210,6 +210,7 @@ void StronglyConnectedComponentsTest();
 void TopoSortTest();
 void MstKruskalTest();
 void BellmanFordTest();
+void SingleSourceShortestPathTest();
 
 // Chapter 25: Honor roll
 void FindFirstMissingPositiveTest();

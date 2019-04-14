@@ -158,6 +158,7 @@
     <ClInclude Include="Shared.h" />
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h" />
     <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h" />
+    <ClInclude Include="Solutions\19_Graphs\TopologicalSort_solution.h" />
     <ClInclude Include="Solutions\5_Primitives\5.1_parity_solution.h" />
     <ClInclude Include="Solutions\5_Primitives\5.2_swap_bits_solution.h" />
     <ClInclude Include="Solutions\6_Arrays\6.11_offline_sampling_solution.h" />
@@ -288,6 +289,7 @@
     <ClCompile Include="Problems\19_Graphs\BreadthFirstSearch.cpp" />
     <ClCompile Include="Problems\19_Graphs\DepthFirstSearch.cpp" />
     <ClCompile Include="Problems\19_Graphs\MSTKruskal.cpp" />
+    <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPaths.cpp" />
     <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp" />
     <ClCompile Include="Problems\19_Graphs\TopologicalSort.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.10_copying_postings_list.cpp" />
@@ -517,8 +519,8 @@
     <ClCompile Include="Solutions\19_Graphs\BreadthFirstSearch_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\DepthFirstSearch_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\MSTKruskal_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPaths_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp" />
-    <ClCompile Include="Solutions\19_Graphs\TopologicalSort_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.10_copying_postings_list_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.11_longest_valid_parentheses_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.12_sliding_window_solution.cpp" />

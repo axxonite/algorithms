@@ -208,8 +208,9 @@ int main()
 	DijkstraShortestPathTest();
 	StronglyConnectedComponentsTest();
 	TopoSortTest();
-  MstKruskalTest();
-  BellmanFordTest();
+	MstKruskalTest();
+	BellmanFordTest();
+	SingleSourceShortestPathTest();
 
 	// 25. Honor Roll
 	FindFirstMissingPositiveTest();
@@ -255,5 +256,5 @@ int main()
 	ComputeSunShadowingTest();
 	IsContainedTest();
 
-  DisjointSetTest();
+	DisjointSetTest();
 }
