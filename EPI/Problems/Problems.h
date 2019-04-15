@@ -211,6 +211,7 @@ void TopoSortTest();
 void MstKruskalTest();
 void BellmanFordTest();
 void SingleSourceShortestPathTest();
+void DijkstraTest();
 
 // Chapter 25: Honor roll
 void FindFirstMissingPositiveTest();

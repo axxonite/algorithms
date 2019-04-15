@@ -23,27 +23,25 @@ namespace Solutions
 	{
 		size_t operator () (const shared_ptr<Edge>& edge) const
 		{
-			return hash<int>()(edge->src->data ^ edge->dest->data);
+			return hash<size_t>()(reinterpret_cast<size_t>(edge.get()));
+		}
+
+		bool operator () (const shared_ptr<Edge>& a, const shared_ptr<Edge>& b)
+		{
+			return a->weight < b->weight || (a->weight == b->weight && a.get() < b.get());
 		}
 	};
-
-	bool SortEdges(const shared_ptr<Edge>& a, const shared_ptr<Edge>& b)
-	{
-		return a->weight < b->weight;
-	}
 
 	unordered_set<shared_ptr<Edge>, HashEdge> MstKruskal(vector<shared_ptr<KruskalGraphVertex>> g)
 	{
 		unordered_set<shared_ptr<Edge>, HashEdge> result;
-		unordered_set<shared_ptr<Edge>, HashEdge> edges;
+		set<shared_ptr<Edge>, HashEdge> sortedEdges;
 		for (auto v : g)
 		{
 			Solutions::DisjointSet::MakeSet(v);
 			for (auto e : v->edges)
-				edges.emplace(e);
+				sortedEdges.emplace(e);
 		}
-		vector<shared_ptr<Edge>> sortedEdges(edges.begin(), edges.end());
-		sort(sortedEdges.begin(), sortedEdges.end(), SortEdges);
 		for (auto e : sortedEdges)
 		{
 			if (Solutions::DisjointSet::FindSet(e->src) != Solutions::DisjointSet::FindSet(e->dest)) {

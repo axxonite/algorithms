@@ -211,6 +211,7 @@ int main()
 	MstKruskalTest();
 	BellmanFordTest();
 	SingleSourceShortestPathTest();
+	DijkstraTest();
 
 	// 25. Honor Roll
 	FindFirstMissingPositiveTest();

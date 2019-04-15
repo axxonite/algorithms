@@ -38,7 +38,7 @@ void SingleSourceShortestPathTest()
 	v.emplace_back(G['x'].get());
 	v.emplace_back(G['y'].get());
 	v.emplace_back(G['z'].get());
-	assert(SingleSourceShortestPath(v, 0));
+	SingleSourceShortestPath(v, 0);
 	assert(G['r']->dist == numeric_limits<int>::max());
 	assert(G['s']->dist == 0);
 	assert(G['t']->dist == 2);
