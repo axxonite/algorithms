@@ -10,7 +10,7 @@ namespace Solutions
 		double distance;
 	};
 
-	void FloydMarshall( vector<vector<int>>& g )
+	void FloydMarshallRoadNetwork( vector<vector<int>>& g )
 	{
 		// O(n^3). Floyd-Marshall effectively picks an in-between city k and updates shortest paths for all pairs of cities, going through the intermediate city, aka i->k->j.
 		// I'm a little unclear how this order of evaluation guarantees every shortest possible path is evaluated.
@@ -36,7 +36,7 @@ namespace Solutions
 			shortestPaths[h.x][h.y] = shortestPaths[h.y][h.x] = h.distance; // Set distances going both directions.
 
 		// Fill up all the shortest paths between cities.
-		FloydMarshall( shortestPaths );
+    FloydMarshallRoadNetwork( shortestPaths );
 
 		// Test every proposal.
 		int bestSavings = numeric_limits<int>::min();

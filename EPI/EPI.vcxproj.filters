@@ -1469,6 +1469,12 @@
     <ClCompile Include="Solutions\19_Graphs\Dijkstra_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\FloydWarshall.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\FloydWarshall_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

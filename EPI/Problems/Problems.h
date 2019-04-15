@@ -212,6 +212,7 @@ void MstKruskalTest();
 void BellmanFordTest();
 void SingleSourceShortestPathTest();
 void DijkstraTest();
+void FloydMarshallTest();
 
 // Chapter 25: Honor roll
 void FindFirstMissingPositiveTest();
