@@ -1,11 +1,6 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
-struct DFSGraphVertex
-{
-	vector<DFSGraphVertex*> edges;
-	DFSGraphVertex* pred;
-};
-
-void DFS(vector<DFSGraphVertex*> g)
+void DFS(vector<GraphVertex*> g)
 {
 }

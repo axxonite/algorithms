@@ -1,24 +1,9 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
 #define TEST 0
 
-struct BFGraphVertex;
-
-struct Edge
-{
-	BFGraphVertex* dst;
-	int weight;
-};
-
-struct BFGraphVertex
-{
-	int data;
-	vector<Edge> edges;
-	int dist = numeric_limits<int>::max();
-	BFGraphVertex* pred = nullptr;
-};
-
-bool BellmanFord(vector<BFGraphVertex*> G, int src)
+bool BellmanFord(vector<GraphVertex*> G, int src)
 {
 	return true;
 }
@@ -28,12 +13,12 @@ bool BellmanFord(vector<BFGraphVertex*> G, int src)
 void BellmanFordTest()
 {
 #if TEST
-	unordered_map<char, shared_ptr<BFGraphVertex>> G;
-	G['s'] = make_shared<BFGraphVertex>(BFGraphVertex{ 's' });
-	G['t'] = make_shared<BFGraphVertex>(BFGraphVertex{ 't' });
-	G['x'] = make_shared<BFGraphVertex>(BFGraphVertex{ 'x' });
-	G['y'] = make_shared<BFGraphVertex>(BFGraphVertex{ 'y' });
-	G['z'] = make_shared<BFGraphVertex>(BFGraphVertex{ 'z' });
+	unordered_map<char, shared_ptr<GraphVertex>> G;
+	G['s'] = make_shared<GraphVertex>(GraphVertex{ 's' });
+	G['t'] = make_shared<GraphVertex>(GraphVertex{ 't' });
+	G['x'] = make_shared<GraphVertex>(GraphVertex{ 'x' });
+	G['y'] = make_shared<GraphVertex>(GraphVertex{ 'y' });
+	G['z'] = make_shared<GraphVertex>(GraphVertex{ 'z' });
 
 	G['s']->edges.emplace_back(Edge{ G['t'].get(), 6 });
 	G['s']->edges.emplace_back(Edge{ G['y'].get(), 7 });
@@ -46,7 +31,7 @@ void BellmanFordTest()
 	G['z']->edges.emplace_back(Edge{ G['s'].get(), 2 });
 	G['z']->edges.emplace_back(Edge{ G['x'].get(), 7 });
 
-	vector< BFGraphVertex*> v;
+	vector< GraphVertex*> v;
 	v.emplace_back(G['s'].get());
 	v.emplace_back(G['t'].get());
 	v.emplace_back(G['x'].get());

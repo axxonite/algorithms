@@ -1,9 +1,10 @@
 #include "stdafx.h"
 #include "..\..\Solutions\19_Graphs\TopologicalSort_solution.h"
+#include "GraphVertex.h"
 
 namespace Solutions
 {
-	void Relax(Solutions::TopoGraphVertex* u, Solutions::TopoGraphVertex* v, int weight)
+	void Relax(GraphVertex* u, GraphVertex* v, int weight)
 	{
 		if (u->dist + weight < v->dist)
 		{
@@ -13,7 +14,7 @@ namespace Solutions
 	}
 
 	// todo make a shared vertex type for all graphs.
-	void SingleSourceShortestPath(vector<Solutions::TopoGraphVertex*> G, int src)
+	void SingleSourceShortestPath(vector<GraphVertex*> G, int src)
 	{
 		G[src]->dist = 0;
 		auto topoSort = Solutions::TopologicalSort(G);

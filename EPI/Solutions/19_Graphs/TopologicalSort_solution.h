@@ -3,29 +3,14 @@
 #include <string>
 #include <list>
 #include <vector>
+#include "GraphVertex.h"
 
 using namespace std;
 
 namespace Solutions
 {
-	struct TopoGraphVertex;
 
-	struct Edge
-	{
-		TopoGraphVertex* dst;
-		int weight;
-	};
-
-	struct TopoGraphVertex
-	{
-		char name;
-		int stage = 0;
-		int dist = numeric_limits<int>::max();
-		TopoGraphVertex* pred = nullptr;
-		vector<Edge> edges;
-	};
-
-	inline void TopologicalSort(TopoGraphVertex* v, list<TopoGraphVertex*>& result)
+	inline void TopologicalSort(GraphVertex* v, list<GraphVertex*>& result)
 	{
 		v->stage = 1;
 		for (auto e : v->edges)
@@ -36,9 +21,9 @@ namespace Solutions
 		result.emplace_front(v);
 	}
 
-	inline list<TopoGraphVertex*> TopologicalSort(vector<TopoGraphVertex*>& g)
+	inline list<GraphVertex*> TopologicalSort(vector<GraphVertex*>& g)
 	{
-		list<TopoGraphVertex*> result;
+		list<GraphVertex*> result;
 		for (auto v : g)
 			if (v->stage == 0)
 				TopologicalSort(v, result);

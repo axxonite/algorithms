@@ -4,11 +4,11 @@
 
 #define TEST 0
 
-void FloydMarshall(vector<vector<int>>& g)
+void FloydWarshall(vector<vector<int>>& g)
 {
 }
 
-void FloydMarshallTest()
+void FloydWarshallTest()
 {
 #if TEST
   vector<vector<int>> g(6, vector<int>(6, numeric_limits<int>::max()));
@@ -23,7 +23,7 @@ void FloydMarshallTest()
   g[4][1] = 2;
   g[4][3] = -5;
   g[5][4] = 6;
-  FloydMarshall(g);
+  FloydWarshall(g);
   assert(g[1] == vector<int>({ numeric_limits<int>::max(),0,1,-3,2,-4 }));
   assert(g[2] == vector<int>({ numeric_limits<int>::max(),3,0,-4,1,-1 }));
   assert(g[3] == vector<int>({ numeric_limits<int>::max(),7,4,0,5,3 }));

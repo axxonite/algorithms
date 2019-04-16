@@ -212,7 +212,8 @@ int main()
 	BellmanFordTest();
 	SingleSourceShortestPathTest();
 	DijkstraTest();
-  FloydMarshallTest();
+  FloydWarshallTest();
+  TransitiveClosureTest();
 
 	// 25. Honor Roll
 	FindFirstMissingPositiveTest();

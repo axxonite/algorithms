@@ -88,6 +88,9 @@
     <ClInclude Include="Solutions\19_Graphs\TopologicalSort_solution.h">
       <Filter>Solutions\19. Graphs</Filter>
     </ClInclude>
+    <ClInclude Include="GraphVertex.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1473,6 +1476,12 @@
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\19_Graphs\FloydWarshall_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\TransitiveClosure.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\TransitiveClosure_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
   </ItemGroup>

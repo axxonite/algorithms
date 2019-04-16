@@ -1,17 +1,11 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
 #define TEST 0
 
-struct TopoGraphVertex
+list<GraphVertex*> TopologicalSort(vector<GraphVertex*>& g)
 {
-	string name;
-	int stage = 0;
-	vector<shared_ptr<TopoGraphVertex>> edges;
-};
-
-list<TopoGraphVertex*> TopologicalSort(vector<TopoGraphVertex*>& g)
-{
-	list<TopoGraphVertex*> result;
+	list<GraphVertex*> result;
 	return result;
 }
 

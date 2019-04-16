@@ -1,20 +1,13 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
 namespace Solutions
 {
 #include "stdafx.h"
 
-  struct BFSGraphVertex
+  void BFS(GraphVertex* v)
   {
-    vector<BFSGraphVertex*> edges;
-    int dist = -1;
-    int stage = 0;
-    BFSGraphVertex* pred = nullptr;
-  };
-
-  void BFS(BFSGraphVertex* v)
-  {
-    queue<BFSGraphVertex*> q;
+    queue<GraphVertex*> q;
     v->dist = 0;
     q.emplace(v);
     while (!q.empty())
@@ -23,18 +16,18 @@ namespace Solutions
       q.pop();
       cur->stage = 1;
       for (auto e : cur->edges)
-        if (e->stage == 0)
+        if (e.dst->stage == 0)
         {
-          e->pred = v;
-          e->dist = v->dist + 1;
-          e->stage = 1;
-          q.emplace(e);
+          e.dst->pred = v;
+          e.dst->dist = v->dist + 1;
+          e.dst->stage = 1;
+          q.emplace(e.dst);
         }
       cur->stage = 2;
     }
   }
 
-  void BFS(vector<BFSGraphVertex*> g)
+  void BFS(vector<GraphVertex*> g)
   {
     for (auto v : g)
       if (v->stage == 0)

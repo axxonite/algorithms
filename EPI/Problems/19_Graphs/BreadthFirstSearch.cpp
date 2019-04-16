@@ -1,12 +1,6 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
-struct BFSGraphVertex
-{
-  vector<BFSGraphVertex*> edges;
-  int dist = -1;
-  BFSGraphVertex* pred = nullptr;
-};
-
-void BFS(vector<BFSGraphVertex*> g)
+void BFS(vector<GraphVertex*> g)
 {
 }

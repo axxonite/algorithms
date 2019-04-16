@@ -4,7 +4,7 @@
 
 #define TEST 0
 
-struct GraphVertex
+struct DeadlockGraphVertex
 {
 	enum Color
 	{
@@ -13,24 +13,24 @@ struct GraphVertex
 		black
 	} color = white;
 
-	vector<GraphVertex*> edges;
+	vector<DeadlockGraphVertex*> edges;
 };
 
-bool IsDeadlocked(vector<GraphVertex>& g)
+bool IsDeadlocked(vector<DeadlockGraphVertex>& g)
 {
 	return false;
 }
 
 #pragma region Test
 
-bool HasCycleExclusion(GraphVertex* cur)
+bool HasCycleExclusion(DeadlockGraphVertex* cur)
 {
-	if (cur->color == GraphVertex::black)
+	if (cur->color == DeadlockGraphVertex::black)
 	{
 		return true;
 	}
-	cur->color = GraphVertex::black;
-	for (GraphVertex*& next : cur->edges)
+	cur->color = DeadlockGraphVertex::black;
+	for (DeadlockGraphVertex*& next : cur->edges)
 	{
 		if (HasCycleExclusion(next))
 		{
@@ -41,24 +41,24 @@ bool HasCycleExclusion(GraphVertex* cur)
 }
 
 // O(n^2) check answer.
-bool CheckAnswer(vector<GraphVertex>* G)
+bool CheckAnswer(vector<DeadlockGraphVertex>* G)
 {
 	// marks all vertices as white.
-	for (GraphVertex& n : *G)
+	for (DeadlockGraphVertex& n : *G)
 	{
-		n.color = GraphVertex::white;
+		n.color = DeadlockGraphVertex::white;
 	}
 
-	for (GraphVertex& g : *G)
+	for (DeadlockGraphVertex& g : *G)
 	{
 		if (HasCycleExclusion(&g))
 		{
 			return true;
 		}
 		// Reset color to white.
-		for (GraphVertex& n : *G)
+		for (DeadlockGraphVertex& n : *G)
 		{
-			n.color = GraphVertex::white;
+			n.color = DeadlockGraphVertex::white;
 		}
 	}
 	return false;
@@ -66,7 +66,7 @@ bool CheckAnswer(vector<GraphVertex>* G)
 
 void TestTwoNodesCycle()
 {
-	vector<GraphVertex> G(2);
+	vector<DeadlockGraphVertex> G(2);
 	G[0].edges.emplace_back(&G[1]);
 	G[1].edges.emplace_back(&G[0]);
 	bool result = IsDeadlocked(G);
@@ -77,7 +77,7 @@ void TestTwoNodesCycle()
 
 void TestDirectedCycle()
 {
-	vector<GraphVertex> G(3);
+	vector<DeadlockGraphVertex> G(3);
 	G[0].edges.emplace_back(&G[1]);
 	G[1].edges.emplace_back(&G[2]);
 	G[2].edges.emplace_back(&G[0]);
@@ -89,7 +89,7 @@ void TestDirectedCycle()
 
 void TestDirectedStarTree()
 {
-	vector<GraphVertex> G(4);
+	vector<DeadlockGraphVertex> G(4);
 	G[0].edges.emplace_back(&G[1]);
 	G[0].edges.emplace_back(&G[2]);
 	G[0].edges.emplace_back(&G[3]);
@@ -101,7 +101,7 @@ void TestDirectedStarTree()
 
 void TestDirectedLineTree()
 {
-	vector<GraphVertex> G(4);
+	vector<DeadlockGraphVertex> G(4);
 	G[0].edges.emplace_back(&G[1]);
 	G[1].edges.emplace_back(&G[2]);
 	G[2].edges.emplace_back(&G[3]);
@@ -116,7 +116,7 @@ void TestDirectedLineTree()
 
 void TestDirectedBinaryTree()
 {
-	vector<GraphVertex> G(7);
+	vector<DeadlockGraphVertex> G(7);
 	G[0].edges.emplace_back(&G[1]);
 	G[0].edges.emplace_back(&G[2]);
 	G[1].edges.emplace_back(&G[3]);
@@ -135,7 +135,7 @@ void TestDirectedBinaryTree()
 
 void TestDirectedTwoSeparateCycles()
 {
-	vector<GraphVertex> G(6);
+	vector<DeadlockGraphVertex> G(6);
 	G[0].edges.emplace_back(&G[1]);
 	G[1].edges.emplace_back(&G[2]);
 	G[2].edges.emplace_back(&G[0]);

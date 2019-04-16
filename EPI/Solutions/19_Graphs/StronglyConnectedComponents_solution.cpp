@@ -1,57 +1,59 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
 namespace Solutions
 {
-	struct SCCGraphVertex
-	{
-		int data;
-		bool discovered[2] = { false, false };
-		int finishTime = -1;
-		vector<SCCGraphVertex*> edges;
-		vector<SCCGraphVertex*> edgesTransposed;
-	};
+  struct SCCGraphVertex : GraphVertex
+  {
+    int start2 = -1;
+    vector<Edge> transposedEdges;
+  };
 
-	void SCCDFS1(SCCGraphVertex* v, int& time)
-	{
-		if (v->discovered[0])
-			return;
-		v->discovered[0] = true;
-		for (auto e : v->edges)
-			SCCDFS1(e, time);
-		for (auto e : v->edges)
-			e->edgesTransposed.emplace_back(v);
-		v->finishTime = time++;
-	}
+  void StronglyConnectedComponentsDFS(SCCGraphVertex* v, int& time)
+  {
+    v->start = time++;
+    for (auto e : v->edges)
+    {
+      SCCGraphVertex* edgeVertex = (SCCGraphVertex*)e.dst;
+      if (edgeVertex->start == -1)
+        StronglyConnectedComponentsDFS(edgeVertex, time);
+      edgeVertex->transposedEdges.emplace_back(Edge{ v, e.weight });
+    }
+    v->finish = time++;
+  }
 
-	bool SortEdges(const SCCGraphVertex* a, const SCCGraphVertex* b)
-	{
-		return a->finishTime > b->finishTime;
-	}
+  bool SortEdges(const Edge& a, const Edge& b)
+  {
+    return a.dst->finish > b.dst->finish;
+  }
 
-	void SCCDFS2(SCCGraphVertex* v, int& time, unordered_set<SCCGraphVertex*>& component)
-	{
-		if (v->discovered[1])
-			return;
-		v->discovered[1] = true;
-		sort(v->edgesTransposed.begin(), v->edgesTransposed.end(), SortEdges);
-		for (auto e : v->edgesTransposed)
-			SCCDFS2(e, time, component);
-		component.emplace(v);
-	}
-
-	vector<unordered_set<SCCGraphVertex*>> StronglyConnectedComponents(vector<SCCGraphVertex*> G)
-	{
-		vector<unordered_set<SCCGraphVertex*>> result;
-		int time = 0;
-		for (auto e : G)
-			if (!e->discovered[0])
-				SCCDFS1(e, time);
-		for (auto e : G)
-			if (!e->discovered[1])
-			{
-				result.emplace_back(unordered_set<SCCGraphVertex*>());
-				SCCDFS2(e, time, result.back());
-			}
-		return result;
-	}
+  void StronglyConnectedComponentsDFS2(SCCGraphVertex* v, int& time, unordered_set<SCCGraphVertex*>& result)
+  {
+    v->start2 = time++;
+    result.emplace(v);
+    sort(v->transposedEdges.begin(), v->transposedEdges.end(), SortEdges);
+    for (auto e : v->transposedEdges)
+    {
+      SCCGraphVertex* edgeVertex = (SCCGraphVertex*)e.dst;
+      if (edgeVertex->start2 == -1)
+        StronglyConnectedComponentsDFS2(edgeVertex, time, result);
+    }
+  }
+  vector<unordered_set<SCCGraphVertex*>> StronglyConnectedComponents(vector<shared_ptr<SCCGraphVertex>> G)
+  {
+    vector<unordered_set<SCCGraphVertex*>> result;
+    int time = 0;
+    for (auto v : G)
+      if (v->start == -1)
+        StronglyConnectedComponentsDFS(v.get(), time);
+    for (auto v : G)
+    {
+      if (v->start2 == -1)
+      {
+        result.emplace_back(unordered_set<SCCGraphVertex*>());
+        StronglyConnectedComponentsDFS2(v.get(), time, result.back());
+      }
+    }
+    return result;
+  }
 }

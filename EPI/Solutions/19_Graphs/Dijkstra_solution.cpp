@@ -1,34 +1,19 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
 #define TEST 1
 
 namespace Solutions
 {
-	struct DijkstraGraphVertex;
-
-	struct Edge
-	{
-		DijkstraGraphVertex* dst;
-		int weight;
-	};
-
-	struct DijkstraGraphVertex
-	{
-		int data;
-		vector<Edge> edges;
-		int dist = numeric_limits<int>::max();
-		DijkstraGraphVertex* pred = nullptr;
-	};
-
 	struct DijkstraSet
 	{
-		bool operator () (const DijkstraGraphVertex* a, const DijkstraGraphVertex* b) const
+		bool operator () (const GraphVertex* a, const GraphVertex* b) const
 		{
 			return a->dist < b->dist || (a->dist == b->dist && a < b);
 		}
 	};
 
-	bool Relax(DijkstraGraphVertex* u, DijkstraGraphVertex* v, int weight)
+	bool DijkstraRelax(GraphVertex* u, GraphVertex* v, int weight)
 	{
 		if (u->dist + weight < v->dist)
 		{
@@ -39,10 +24,10 @@ namespace Solutions
 		return false;
 	}
 
-	void Dijkstra(vector<DijkstraGraphVertex*> G, int src)
+	void Dijkstra(vector<GraphVertex*> G, int src)
 	{
 		G[src]->dist = 0;
-		set<DijkstraGraphVertex*, DijkstraSet> candidates;
+		set<GraphVertex*, DijkstraSet> candidates;
 		candidates.emplace(G[0]);
 		while (!candidates.empty())
 		{
@@ -50,7 +35,7 @@ namespace Solutions
 			candidates.erase(candidates.begin());
 			for (auto e : nearest->edges)
 			{
-				if (Relax(nearest, e.dst, e.weight))
+				if (DijkstraRelax(nearest, e.dst, e.weight))
 				{
 					candidates.erase(e.dst);
 					candidates.emplace(e.dst);

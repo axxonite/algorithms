@@ -143,6 +143,7 @@
     <ClInclude Include="binary_tree_with_parent_prototype.h" />
     <ClInclude Include="BSTPrototype.h" />
     <ClInclude Include="doubly_linked_list_prototype.h" />
+    <ClInclude Include="GraphVertex.h" />
     <ClInclude Include="LinkedListPrototype.h" />
     <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h" />
     <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h" />
@@ -294,6 +295,7 @@
     <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPaths.cpp" />
     <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp" />
     <ClCompile Include="Problems\19_Graphs\TopologicalSort.cpp" />
+    <ClCompile Include="Problems\19_Graphs\TransitiveClosure.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.10_copying_postings_list.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.11_longest_valid_parentheses.cpp" />
     <ClCompile Include="Problems\25_HonorRoll\25.12_sliding_window.cpp" />
@@ -525,6 +527,7 @@
     <ClCompile Include="Solutions\19_Graphs\MSTKruskal_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPaths_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\TransitiveClosure_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.10_copying_postings_list_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.11_longest_valid_parentheses_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.12_sliding_window_solution.cpp" />

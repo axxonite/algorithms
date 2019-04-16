@@ -1,24 +1,10 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
 namespace Solutions
 {
-  struct BFGraphVertex;
 
-  struct Edge
-  {
-    BFGraphVertex* dst;
-    int weight;
-  };
-
-  struct BFGraphVertex
-  {
-    int data;
-    vector<Edge> edges;
-    int dist = numeric_limits<int>::max();
-    BFGraphVertex* pred = nullptr;
-  };
-
-  bool Relax(BFGraphVertex* u, BFGraphVertex* v, int weight)
+  bool BellmanFordRelax(GraphVertex* u, GraphVertex* v, int weight)
   {
     if (u->dist + weight < v->dist)
     {
@@ -29,18 +15,18 @@ namespace Solutions
     return false;
   }
 
-  bool BellmanFord(vector<BFGraphVertex*> G, int src)
+  bool BellmanFord(vector<GraphVertex*> G, int src)
   {
     G[src]->dist = 0;
     for (int i = 0; i < G.size(); ++i)
     {
       for (auto v : G)
         for (auto e : v->edges)
-          Relax(v, e.dst, e.weight);
+          BellmanFordRelax(v, e.dst, e.weight);
     }
     for (auto v : G)
       for (auto e : v->edges)
-        if (Relax(v, e.dst, e.weight))
+        if (BellmanFordRelax(v, e.dst, e.weight))
           return false;
     return true;
   }

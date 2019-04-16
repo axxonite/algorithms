@@ -1,24 +1,9 @@
 #include "stdafx.h"
+#include "GraphVertex.h"
 
 #define TEST 0
 
-struct DijkstraGraphVertex;
-
-struct Edge
-{
-	DijkstraGraphVertex* dst;
-	int weight;
-};
-
-struct DijkstraGraphVertex
-{
-	int data;
-	vector<Edge> edges;
-	int dist = numeric_limits<int>::max();
-	DijkstraGraphVertex* pred = nullptr;
-};
-
-void Dijkstra(vector<DijkstraGraphVertex*> G, int src)
+void Dijkstra(vector<GraphVertex*> G, int src)
 {
 }
 
