@@ -291,6 +291,7 @@
     <ClCompile Include="Problems\19_Graphs\DepthFirstSearch.cpp" />
     <ClCompile Include="Problems\19_Graphs\Dijkstra.cpp" />
     <ClCompile Include="Problems\19_Graphs\FloydWarshall.cpp" />
+    <ClCompile Include="Problems\19_Graphs\Johnson.cpp" />
     <ClCompile Include="Problems\19_Graphs\MSTKruskal.cpp" />
     <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPaths.cpp" />
     <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp" />
@@ -524,6 +525,7 @@
     <ClCompile Include="Solutions\19_Graphs\DepthFirstSearch_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\Dijkstra_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\FloydWarshall_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\Johnson_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\MSTKruskal_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPaths_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp" />

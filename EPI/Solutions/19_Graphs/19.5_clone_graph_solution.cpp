@@ -53,6 +53,20 @@ namespace Solutions
 	CloneGraphVertex* CloneGraph2(CloneGraphVertex* G)
 	{
 		unordered_map<CloneGraphVertex*, CloneGraphVertex*> mapping;
-		return CloneGraph(G, mapping);;
+		return CloneGraph(G, mapping);
+	}
+
+	vector<CloneGraphVertex*> CloneGraph(vector<CloneGraphVertex*> G)
+	{
+		vector<CloneGraphVertex*> result;
+		unordered_map<CloneGraphVertex*, CloneGraphVertex*> mapping;
+		for (auto g : G)
+		{
+			if (mapping.find(g) == mapping.end())
+				CloneGraph(g, mapping);
+		}
+
+		for (auto pair : mapping)
+			result.emplace_back(pair.second);
 	}
 }

@@ -1484,6 +1484,12 @@
     <ClCompile Include="Solutions\19_Graphs\TransitiveClosure_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\Johnson.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\Johnson_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
