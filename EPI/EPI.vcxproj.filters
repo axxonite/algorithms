@@ -91,6 +91,15 @@
     <ClInclude Include="GraphVertex.h">
       <Filter>Data Structures</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\19_Graphs\19.5_clone_graph_solution.h">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\19_Graphs\BellmanFord_solution.h">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\19_Graphs\Dijkstra_solution.h">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1460,12 +1469,6 @@
     <ClCompile Include="Solutions\19_Graphs\BellmanFord_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
-    <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPaths.cpp">
-      <Filter>Problems\19. Graphs</Filter>
-    </ClCompile>
-    <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPaths_solution.cpp">
-      <Filter>Solutions\19. Graphs</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\19_Graphs\Dijkstra.cpp">
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
@@ -1488,6 +1491,12 @@
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\19_Graphs\Johnson_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPath.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPath_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
   </ItemGroup>

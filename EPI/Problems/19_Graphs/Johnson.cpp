@@ -1,13 +1,28 @@
 #include "stdafx.h"
 #include "GraphVertex.h"
-#include "..\..\Solutions\19_Graphs\19.5_clone_graph_solution"
+#include "..\..\Solutions\19_Graphs\19.5_clone_graph_solution.h"
+#include "..\..\Solutions\19_Graphs\BellmanFord_solution.h"
 
-#define TEST 1
+#define TEST 0
 
-bool Johnson(vector<GraphVertex*> G, int src)
+bool Johnson(vector<GraphVertex*> G)
 {
-	vector<GraphVertex*> G2 = Solutions::CloneGraph(G);
-
+	auto clone = Solutions::CloneGraph(G);
+	auto s = make_shared<GraphVertex>(GraphVertex());
+	for (auto v : clone)
+		s->edges.emplace_back(Edge{ v, 0 });
+	clone.emplace_back(s.get());
+	if (!Solutions::BellmanFord(clone, clone.size() - 1))
+		return false;
+	for (auto v : clone)
+	{
+		for (auto e : v->edges)
+			e.weight = e.weight + v->dist - e.dst->dist;
+	}
+	//for int i = 0; i < G.size(); ++i)
+	//{
+	//	Solutions::Dijkstra(G, i);
+	//}
 	return true;
 }
 
@@ -40,7 +55,7 @@ void JohnsonTest()
 	v.emplace_back(G['x'].get());
 	v.emplace_back(G['y'].get());
 	v.emplace_back(G['z'].get());
-	assert(BellmanFord(v, 0));
+	assert(Johnson(v));
 	assert(G['s']->dist == 0);
 	assert(G['t']->dist == 2);
 	assert(G['x']->dist == 4);

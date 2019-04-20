@@ -159,6 +159,9 @@
     <ClInclude Include="Shared.h" />
     <ClInclude Include="Solutions\10_BinaryTrees\10.13_reconstruct_preorder_with_null_solution.h" />
     <ClInclude Include="Solutions\18_GreedyAlgorithms\2_sum_solution.h" />
+    <ClInclude Include="Solutions\19_Graphs\19.5_clone_graph_solution.h" />
+    <ClInclude Include="Solutions\19_Graphs\BellmanFord_solution.h" />
+    <ClInclude Include="Solutions\19_Graphs\Dijkstra_solution.h" />
     <ClInclude Include="Solutions\19_Graphs\TopologicalSort_solution.h" />
     <ClInclude Include="Solutions\5_Primitives\5.1_parity_solution.h" />
     <ClInclude Include="Solutions\5_Primitives\5.2_swap_bits_solution.h" />
@@ -293,7 +296,7 @@
     <ClCompile Include="Problems\19_Graphs\FloydWarshall.cpp" />
     <ClCompile Include="Problems\19_Graphs\Johnson.cpp" />
     <ClCompile Include="Problems\19_Graphs\MSTKruskal.cpp" />
-    <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPaths.cpp" />
+    <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPath.cpp" />
     <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp" />
     <ClCompile Include="Problems\19_Graphs\TopologicalSort.cpp" />
     <ClCompile Include="Problems\19_Graphs\TransitiveClosure.cpp" />
@@ -527,7 +530,7 @@
     <ClCompile Include="Solutions\19_Graphs\FloydWarshall_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\Johnson_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\MSTKruskal_solution.cpp" />
-    <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPaths_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPath_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\TransitiveClosure_solution.cpp" />
     <ClCompile Include="Solutions\25_HonorRoll\25.10_copying_postings_list_solution.cpp" />
