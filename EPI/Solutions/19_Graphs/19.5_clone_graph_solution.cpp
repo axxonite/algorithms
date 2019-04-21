@@ -39,7 +39,7 @@ namespace Solutions
 		auto it = mapping.find(G);
 		if (it != mapping.end())
 			return it->second;
-		GraphVertex* clone = new GraphVertex{ G->name };
+		GraphVertex* clone = new GraphVertex{ G->name, G->dist };
 		mapping[G] = clone;
 		for (auto e : G->edges)
 			clone->edges.emplace_back(Edge{ CloneGraph(e.dst, mapping), e.weight });
@@ -62,8 +62,8 @@ namespace Solutions
 				CloneGraph(g, mapping);
 		}
 
-		for (auto pair : mapping)
-			result.emplace_back(pair.second);
+		for (auto g : G)
+			result.emplace_back(mapping[g]);
 		return result;
 	}
 }

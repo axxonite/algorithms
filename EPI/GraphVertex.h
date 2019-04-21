@@ -14,10 +14,10 @@ struct Edge
 struct GraphVertex
 {
   char name;
+  int dist = numeric_limits<int>::max();
   int stage = 0;
   int start = -1;
   int finish = -1;
-  int dist = numeric_limits<int>::max();
   GraphVertex* pred = nullptr;
   vector<Edge> edges;
 

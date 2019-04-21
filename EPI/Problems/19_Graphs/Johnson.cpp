@@ -2,27 +2,12 @@
 #include "GraphVertex.h"
 #include "..\..\Solutions\19_Graphs\19.5_clone_graph_solution.h"
 #include "..\..\Solutions\19_Graphs\BellmanFord_solution.h"
+#include "..\..\Solutions\19_Graphs\Dijkstra_solution.h"
 
 #define TEST 0
 
-bool Johnson(vector<GraphVertex*> G)
+bool Johnson(vector<GraphVertex*> G, vector<vector<int>>& result)
 {
-	auto clone = Solutions::CloneGraph(G);
-	auto s = make_shared<GraphVertex>(GraphVertex());
-	for (auto v : clone)
-		s->edges.emplace_back(Edge{ v, 0 });
-	clone.emplace_back(s.get());
-	if (!Solutions::BellmanFord(clone, clone.size() - 1))
-		return false;
-	for (auto v : clone)
-	{
-		for (auto e : v->edges)
-			e.weight = e.weight + v->dist - e.dst->dist;
-	}
-	//for int i = 0; i < G.size(); ++i)
-	//{
-	//	Solutions::Dijkstra(G, i);
-	//}
 	return true;
 }
 
@@ -32,35 +17,35 @@ void JohnsonTest()
 {
 #if TEST
 	unordered_map<char, shared_ptr<GraphVertex>> G;
-	G['s'] = make_shared<GraphVertex>(GraphVertex{ 's' });
-	G['t'] = make_shared<GraphVertex>(GraphVertex{ 't' });
-	G['x'] = make_shared<GraphVertex>(GraphVertex{ 'x' });
-	G['y'] = make_shared<GraphVertex>(GraphVertex{ 'y' });
-	G['z'] = make_shared<GraphVertex>(GraphVertex{ 'z' });
+	G['1'] = make_shared<GraphVertex>(GraphVertex{ '1' });
+	G['2'] = make_shared<GraphVertex>(GraphVertex{ '2' });
+	G['3'] = make_shared<GraphVertex>(GraphVertex{ '3' });
+	G['4'] = make_shared<GraphVertex>(GraphVertex{ '4' });
+	G['5'] = make_shared<GraphVertex>(GraphVertex{ '5' });
 
-	G['s']->edges.emplace_back(Edge{ G['t'].get(), 6 });
-	G['s']->edges.emplace_back(Edge{ G['y'].get(), 7 });
-	G['t']->edges.emplace_back(Edge{ G['x'].get(), 5 });
-	G['t']->edges.emplace_back(Edge{ G['y'].get(), 8 });
-	G['t']->edges.emplace_back(Edge{ G['z'].get(), -4 });
-	G['x']->edges.emplace_back(Edge{ G['t'].get(), -2 });
-	G['y']->edges.emplace_back(Edge{ G['x'].get(), -3 });
-	G['y']->edges.emplace_back(Edge{ G['z'].get(), 9 });
-	G['z']->edges.emplace_back(Edge{ G['s'].get(), 2 });
-	G['z']->edges.emplace_back(Edge{ G['x'].get(), 7 });
+	G['1']->edges.emplace_back(Edge{ G['2'].get(), 3 });
+	G['1']->edges.emplace_back(Edge{ G['3'].get(), 8 });
+	G['1']->edges.emplace_back(Edge{ G['5'].get(), -4 });
+	G['2']->edges.emplace_back(Edge{ G['4'].get(), 1 });
+	G['2']->edges.emplace_back(Edge{ G['5'].get(), 7 });
+	G['3']->edges.emplace_back(Edge{ G['2'].get(), 4 });
+	G['4']->edges.emplace_back(Edge{ G['3'].get(), -5 });
+	G['4']->edges.emplace_back(Edge{ G['1'].get(), 2 });
+	G['5']->edges.emplace_back(Edge{ G['4'].get(), 6 });
 
 	vector< GraphVertex*> v;
-	v.emplace_back(G['s'].get());
-	v.emplace_back(G['t'].get());
-	v.emplace_back(G['x'].get());
-	v.emplace_back(G['y'].get());
-	v.emplace_back(G['z'].get());
-	assert(Johnson(v));
-	assert(G['s']->dist == 0);
-	assert(G['t']->dist == 2);
-	assert(G['x']->dist == 4);
-	assert(G['y']->dist == 7);
-	assert(G['z']->dist == -2);
+	v.emplace_back(G['1'].get());
+	v.emplace_back(G['2'].get());
+	v.emplace_back(G['3'].get());
+	v.emplace_back(G['4'].get());
+	v.emplace_back(G['5'].get());
+	vector<vector<int>> result(v.size(), vector<int>(v.size(), numeric_limits<int>::max()));
+	assert(Johnson(v, result));
+	assert(result[0][1] == 1);
+	assert(result[1][4] == -1);
+	assert(result[2][4] == 3);
+	assert(result[3][1] == -1);
+	assert(result[4][1] == 5);
 #endif
 }
 

@@ -6,7 +6,7 @@ namespace Solutions
 
   bool BellmanFordRelax(GraphVertex* u, GraphVertex* v, int weight)
   {
-    if (u->dist + weight < v->dist)
+    if (u->dist < numeric_limits<int>::max() && u->dist + weight < v->dist)
     {
       v->dist = u->dist + weight;
       v->pred = u;

@@ -15,7 +15,7 @@ namespace Solutions
 
 	bool DijkstraRelax(GraphVertex* u, GraphVertex* v, int weight)
 	{
-		if (u->dist + weight < v->dist)
+		if (u->dist < numeric_limits<int>::max() && (u->dist + weight) < v->dist)
 		{
 			v->dist = u->dist + weight;
 			v->pred = u;
@@ -28,7 +28,7 @@ namespace Solutions
 	{
 		G[src]->dist = 0;
 		set<GraphVertex*, DijkstraSet> candidates;
-		candidates.emplace(G[0]);
+		candidates.emplace(G[src]);
 		while (!candidates.empty())
 		{
 			auto nearest = *candidates.begin();

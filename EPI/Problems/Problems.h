@@ -214,6 +214,7 @@ void SingleSourceShortestPathTest();
 void DijkstraTest();
 void FloydWarshallTest();
 void TransitiveClosureTest();
+void JohnsonTest();
 
 // Chapter 25: Honor roll
 void FindFirstMissingPositiveTest();
