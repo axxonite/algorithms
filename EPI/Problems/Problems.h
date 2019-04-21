@@ -255,12 +255,12 @@ void MaxSquareSubmatrixTest();
 void HuffmanEncodingTest();
 void CalculateTrappingWaterTest();
 void FindBestProposalsTest();
-
 void CalcContainedWaterTest();
 void ComputeSunShadowingTest();
 void IsContainedTest();
 
 void DisjointSetTest();
+void EuclidGCDTest();
 
 namespace Solutions
 {

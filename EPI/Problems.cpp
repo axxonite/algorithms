@@ -255,10 +255,10 @@ int main()
 	HuffmanEncodingTest();
 	CalculateTrappingWaterTest();
 	FindBestProposalsTest();
-
 	CalcContainedWaterTest();
 	ComputeSunShadowingTest();
 	IsContainedTest();
 
 	DisjointSetTest();
+	EuclidGCDTest();
 }
