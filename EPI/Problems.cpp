@@ -261,4 +261,5 @@ int main()
 
 	DisjointSetTest();
 	EuclidGCDTest();
+	HashTableTest();
 }

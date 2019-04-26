@@ -13,7 +13,7 @@ struct Edge
 
 struct GraphVertex
 {
-  char name;
+  string name;
   int dist = numeric_limits<int>::max();
   int stage = 0;
   int start = -1;
@@ -21,5 +21,5 @@ struct GraphVertex
   GraphVertex* pred = nullptr;
   vector<Edge> edges;
 
-  int Index() const { return name - '1'; };
+  int Index() const { return name.back() - '1'; };
 };

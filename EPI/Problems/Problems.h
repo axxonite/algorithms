@@ -261,6 +261,7 @@ void IsContainedTest();
 
 void DisjointSetTest();
 void EuclidGCDTest();
+void HashTableTest();
 
 namespace Solutions
 {

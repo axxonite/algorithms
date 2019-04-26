@@ -1505,6 +1505,12 @@
     <ClCompile Include="Solutions\Math\EuclidGCD_solution.cpp">
       <Filter>Solutions\Math</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\13_HashTables\HashTable.cpp">
+      <Filter>Problems\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\Data Structures\HashTable_solution.cpp">
+      <Filter>Solutions\Data Structures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

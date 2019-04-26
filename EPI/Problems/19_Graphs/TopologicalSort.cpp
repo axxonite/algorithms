@@ -9,34 +9,33 @@ list<GraphVertex*> TopologicalSort(vector<GraphVertex*>& g)
 	return result;
 }
 
-
 #pragma region Test
 
 void TopoSortTest()
 {
 #if TEST
-	unordered_map<string, shared_ptr< TopoGraphVertex>> v;
-	v["undershorts"] = make_shared<TopoGraphVertex>(TopoGraphVertex{"undershorts"});
-	v["pants"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "pants" });
-	v["belt"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "belt" });
-	v["socks"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "socks" });
-	v["shoes"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "shoes" });
-	v["watch"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "watch" });
-	v["shirt"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "shirt" });
-	v["tie"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "tie" });
-	v["jacket"] = make_shared<TopoGraphVertex>(TopoGraphVertex{ "jacket" });
+	unordered_map<string, shared_ptr<GraphVertex>> v;
+	v["undershorts"] = make_shared<GraphVertex>(GraphVertex{ "undershorts" });
+	v["pants"] = make_shared<GraphVertex>(GraphVertex{ "pants" });
+	v["belt"] = make_shared<GraphVertex>(GraphVertex{ "belt" });
+	v["socks"] = make_shared<GraphVertex>(GraphVertex{ "socks" });
+	v["shoes"] = make_shared<GraphVertex>(GraphVertex{ "shoes" });
+	v["watch"] = make_shared<GraphVertex>(GraphVertex{ "watch" });
+	v["shirt"] = make_shared<GraphVertex>(GraphVertex{ "shirt" });
+	v["tie"] = make_shared<GraphVertex>(GraphVertex{ "tie" });
+	v["jacket"] = make_shared<GraphVertex>(GraphVertex{ "jacket" });
 
-	v["undershorts"]->edges.emplace_back(v["pants"]);
-	v["undershorts"]->edges.emplace_back(v["shoes"]);
-	v["pants"]->edges.emplace_back(v["shoes"]);
-	v["pants"]->edges.emplace_back(v["belt"]);
-	v["belt"]->edges.emplace_back(v["jacket"]);
-	v["shirt"]->edges.emplace_back(v["belt"]);
-	v["shirt"]->edges.emplace_back(v["tie"]);
-	v["tie"]->edges.emplace_back(v["jacket"]);
-	v["socks"]->edges.emplace_back(v["shoes"]);
+	v["undershorts"]->edges.emplace_back(Edge{ v["pants"].get(), 1 });
+	v["undershorts"]->edges.emplace_back(Edge{ v["shoes"].get(), 1 });
+	v["pants"]->edges.emplace_back(Edge{ v["shoes"].get(), 1 });
+	v["pants"]->edges.emplace_back(Edge{ v["belt"].get(), 1 });
+	v["belt"]->edges.emplace_back(Edge{ v["jacket"].get(), 1 });
+	v["shirt"]->edges.emplace_back(Edge{ v["belt"].get(), 1 });
+	v["shirt"]->edges.emplace_back(Edge{ v["tie"].get(), 1 });
+	v["tie"]->edges.emplace_back(Edge{ v["jacket"].get(), 1 });
+	v["socks"]->edges.emplace_back(Edge{ v["shoes"].get(), 1 });
 
-	vector<TopoGraphVertex*> G;
+	vector<GraphVertex*> G;
 	G.emplace_back(v["shirt"].get());
 	G.emplace_back(v["tie"].get());
 	G.emplace_back(v["jacket"].get());

@@ -224,6 +224,7 @@
     <ClCompile Include="Problems\13_HashTables\13.7_smallest_subarray_covering_set.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.8_subseq_cover.cpp" />
     <ClCompile Include="Problems\13_HashTables\13.9_longest_subarray_with_distinct_entries.cpp" />
+    <ClCompile Include="Problems\13_HashTables\HashTable.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.10_completion_search.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.1_intersect_sorted_arrays3.cpp" />
     <ClCompile Include="Problems\14_Sorting\14.2_merge_two_sorted_arrays_in_place.cpp" />
@@ -634,6 +635,7 @@
     <ClCompile Include="Solutions\9_StacksQueues\9.7_binary_tree_level_order_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.8_circular_queue_solution.cpp" />
     <ClCompile Include="Solutions\9_StacksQueues\9.9_queue_from_stacks_solution.cpp" />
+    <ClCompile Include="Solutions\Data Structures\HashTable_solution.cpp" />
     <ClCompile Include="Solutions\Data Structures\MaxHeap_solution.cpp" />
     <ClCompile Include="Solutions\Math\EuclidGCD_solution.cpp" />
     <ClCompile Include="Solutions\Math\GramSchmidtOrthogonalization_solution.cpp" />
