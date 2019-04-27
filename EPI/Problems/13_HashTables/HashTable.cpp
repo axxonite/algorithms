@@ -4,12 +4,14 @@ using namespace std;
 
 #define TEST 0
 
+const unsigned int MaxSlots = 1000;
+
 template<class Key, class Value, typename HashFunc >
 class HashTable
 {
 public:
 
-	HashTable() : hashSlots(MaxSlots)
+	HashTable()
 	{
 	}
 
@@ -24,9 +26,18 @@ public:
 
 	const Value& operator [] (Key key)
 	{
+		return Value();
 	}
 
 private:
+
+	struct KeyValuePair
+	{
+		Key key;
+		Value value;
+	};
+	vector<list<KeyValuePair>> slots;
+	HashFunc hash;
 
 };
 

@@ -4,52 +4,34 @@ using namespace std;
 
 namespace Solutions
 {
+	const unsigned int MaxSlots = 1000;
+
 	template<class Key, class Value, typename HashFunc >
 	class HashTable
 	{
 	public:
 
-		HashTable() : hashSlots(MaxSlots)
+		HashTable() : slots(MaxSlots)
 		{
 		}
 
 		void Insert(const Key& key, const Value& value)
 		{
-			auto& slot = hashSlots[hash(key) % MaxSlots];
-			for (auto it = slot.begin(); it != slot.end(); ++it)
-			{
-				if (it->key == key)
-				{
-					it->value = value;
-					return;
-				}
-			}
-			slot.emplace_back(KeyValuePair{ key, value });
+			if (!Search(key, [&](list<KeyValuePair> & l, list<KeyValuePair> ::iterator & it) { it->value = value; }))
+				slots[hash(key) % MaxSlots].emplace_back(KeyValuePair{ key, value });
 		}
 
 		bool Remove(const Key& key)
 		{
-			auto& slot = hashSlots[hash(key) % MaxSlots];
-			for (auto it = slot.begin(); it != slot.end(); ++it)
-			{
-				if (it->key == key)
-				{
-					slot.erase(it);
-					return true;
-				}
-			}
-			return false;
+			return Search(key, [](list<KeyValuePair> & l, list<KeyValuePair>::iterator & it) { l.erase(it); });
 		}
 
 		const Value& operator [] (Key key)
 		{
-			auto& slot = hashSlots[hash(key) % MaxSlots];
-			for (auto it = slot.begin(); it != slot.end(); ++it)
-			{
-				if (it->key == key)
-					return it->value;
-			}
-			throw invalid_argument("");
+			const Value* value;
+			if (!Search(key, [&](list<KeyValuePair> & l, list<KeyValuePair> ::iterator & it) { value = &it->value; }))
+				throw invalid_argument("");
+			return *value;
 		}
 
 	private:
@@ -59,10 +41,22 @@ namespace Solutions
 			Key key;
 			Value value;
 		};
-
-		const int MaxSlots = 0x1000;
-
-		vector<list<KeyValuePair>> hashSlots;
+		vector<list<KeyValuePair>> slots;
 		HashFunc hash;
+
+		template <typename T>
+		bool Search(const Key& key, T&& func)
+		{
+			int slot = hash(key) % MaxSlots;
+			for (auto it = slots[slot].begin(); it != slots[slot].end(); ++it)
+			{
+				if (it->key == key)
+				{
+					func(slots[slot], it);
+					return true;
+				}
+			}
+			return false;
+		}
 	};
 }
