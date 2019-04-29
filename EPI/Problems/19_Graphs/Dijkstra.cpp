@@ -12,12 +12,12 @@ void Dijkstra(vector<GraphVertex*> G, int src)
 void DijkstraTest()
 {
 #if TEST
-	unordered_map<char, shared_ptr<DijkstraGraphVertex>> G;
-	G['s'] = make_shared<DijkstraGraphVertex>(DijkstraGraphVertex{ 's' });
-	G['t'] = make_shared<DijkstraGraphVertex>(DijkstraGraphVertex{ 't' });
-	G['x'] = make_shared<DijkstraGraphVertex>(DijkstraGraphVertex{ 'x' });
-	G['y'] = make_shared<DijkstraGraphVertex>(DijkstraGraphVertex{ 'y' });
-	G['z'] = make_shared<DijkstraGraphVertex>(DijkstraGraphVertex{ 'z' });
+	unordered_map<char, shared_ptr<GraphVertex>> G;
+	G['s'] = make_shared<GraphVertex>(GraphVertex{ 's' });
+	G['t'] = make_shared<GraphVertex>(GraphVertex{ 't' });
+	G['x'] = make_shared<GraphVertex>(GraphVertex{ 'x' });
+	G['y'] = make_shared<GraphVertex>(GraphVertex{ 'y' });
+	G['z'] = make_shared<GraphVertex>(GraphVertex{ 'z' });
 
 	G['s']->edges.emplace_back(Edge{ G['t'].get(), 10 });
 	G['s']->edges.emplace_back(Edge{ G['y'].get(), 5 });
@@ -30,7 +30,7 @@ void DijkstraTest()
 	G['z']->edges.emplace_back(Edge{ G['s'].get(), 7 });
 	G['z']->edges.emplace_back(Edge{ G['x'].get(), 6 });
 
-	vector<DijkstraGraphVertex*> v;
+	vector<GraphVertex*> v;
 	v.emplace_back(G['s'].get());
 	v.emplace_back(G['t'].get());
 	v.emplace_back(G['x'].get());

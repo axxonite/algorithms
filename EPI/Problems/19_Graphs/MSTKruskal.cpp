@@ -21,10 +21,10 @@ struct KruskalGraphVertex : Solutions::SetElem
 
 struct HashEdge
 {
-	size_t operator () (const shared_ptr<Edge>& edge) const
-	{
-		return hash<int>()(edge->src->data ^ edge->dest->data);
-	}
+  size_t operator () (const shared_ptr<Edge>& edge) const
+  {
+    return hash<size_t>()(reinterpret_cast<size_t>(edge.get()));
+  }
 };
 
 unordered_set<shared_ptr<Edge>, HashEdge> MstKruskal(vector<shared_ptr<KruskalGraphVertex>> g)
@@ -67,18 +67,18 @@ void MstKruskalTest()
 
 	auto goldenResult = unordered_set<shared_ptr<Edge>, HashEdge>();
 	goldenResult.emplace(AddEdge(Edge{ a.get(), b.get(), 4 }));
-	AddEdge(Edge{ a.get(), h.get(), 8 });
-	goldenResult.emplace(AddEdge(Edge{ b.get(), c.get(), 8 }));
-	AddEdge(Edge{ b.get(), h.get(), 11 });
-	goldenResult.emplace(AddEdge(Edge{ c.get(), d.get(), 7 }));
-	goldenResult.emplace(AddEdge(Edge{ c.get(), i.get(), 2 }));
-	goldenResult.emplace(AddEdge(Edge{ c.get(), f.get(), 4 }));
-	goldenResult.emplace(AddEdge(Edge{ d.get(), e.get(), 9 }));
+  goldenResult.emplace(AddEdge(Edge{ c.get(), d.get(), 7 }));
+  goldenResult.emplace(AddEdge(Edge{ c.get(), i.get(), 2 }));
+  goldenResult.emplace(AddEdge(Edge{ c.get(), f.get(), 4 }));
+  goldenResult.emplace(AddEdge(Edge{ d.get(), e.get(), 9 }));
+  goldenResult.emplace(AddEdge(Edge{ g.get(), h.get(), 1 }));
+  goldenResult.emplace(AddEdge(Edge{ f.get(), g.get(), 2 }));
+  goldenResult.emplace(AddEdge(Edge{ a.get(), h.get(), 8 }));
+  AddEdge(Edge{ b.get(), c.get(), 8 });
+  AddEdge(Edge{ b.get(), h.get(), 11 });
 	AddEdge(Edge{ d.get(), f.get(), 14 });
 	AddEdge(Edge{ e.get(), f.get(), 10 });
-	goldenResult.emplace(AddEdge(Edge{ f.get(), g.get(), 2 }));
-	AddEdge(Edge{ g.get(), i.get(), 6 });
-	goldenResult.emplace(AddEdge(Edge{ g.get(), h.get(), 1 }));
+  AddEdge(Edge{ g.get(), i.get(), 6 });
 	AddEdge(Edge{ h.get(), i.get(), 7 });
 
 	auto result = MstKruskal(vector<shared_ptr<KruskalGraphVertex>>({ a, b, c, d, e, f, g, h, i }));
