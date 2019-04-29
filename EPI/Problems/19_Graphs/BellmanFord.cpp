@@ -5,7 +5,6 @@
 
 bool BellmanFord(vector<GraphVertex*> G, int src)
 {
-
 	return true;
 }
 
