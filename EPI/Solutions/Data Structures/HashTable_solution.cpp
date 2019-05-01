@@ -47,14 +47,12 @@ namespace Solutions
 		template <typename T>
 		bool Search(const Key& key, T&& func)
 		{
-			int slot = hash(key) % MaxSlots;
-			for (auto it = slots[slot].begin(); it != slots[slot].end(); ++it)
+			auto& l = slots[hash(key) % MaxSlots];
+			auto it = std::find_if(l.begin(), l.end(), [&](const KeyValuePair& kvp) { return kvp.key == key; });
+			if (it != l.end())
 			{
-				if (it->key == key)
-				{
-					func(slots[slot], it);
-					return true;
-				}
+				func(l, it);
+				return true;
 			}
 			return false;
 		}
