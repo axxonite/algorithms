@@ -31,14 +31,6 @@ public:
 
 private:
 
-	struct KeyValuePair
-	{
-		Key key;
-		Value value;
-	};
-	vector<list<KeyValuePair>> slots;
-	HashFunc hash;
-
 };
 
 #pragma region Test
@@ -74,6 +66,8 @@ void HashTableTest()
 	catch (const invalid_argument&)
 	{
 	}
+	hashTable.Insert("Test2", 22);
+	assert(hashTable["Test2"] == 22);
 #endif
 }
 
