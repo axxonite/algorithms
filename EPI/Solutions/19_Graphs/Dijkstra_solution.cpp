@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "GraphVertex.h"
 
-#define TEST 1
-
 namespace Solutions
 {
 	struct DijkstraSet
