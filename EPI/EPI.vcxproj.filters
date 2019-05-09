@@ -1511,6 +1511,12 @@
     <ClCompile Include="Solutions\Data Structures\HashTable_solution.cpp">
       <Filter>Solutions\Data Structures</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\SortingAlgorithms\SelectionSort.cpp">
+      <Filter>Problems\Sorting Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\SortingAlgorithms\SelectionSort_solution.cpp">
+      <Filter>Solutions\Sorting Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

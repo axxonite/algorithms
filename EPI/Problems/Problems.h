@@ -4,6 +4,7 @@
 
 // Sorting algorithms.
 void InsertionSortTest();
+void SelectionSortTest();
 void BubbleSortTest();
 void QuicksortTest();
 void MergeSortTest();

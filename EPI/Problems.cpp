@@ -4,6 +4,7 @@
 int main()
 {
 	InsertionSortTest();
+	SelectionSortTest();
 	BubbleSortTest();
 	QuicksortTest();
 	MergeSortTest();
