@@ -2,23 +2,24 @@
 
 using namespace std;
 
-#define TEST 0
+// #define TEST
 
 class MaxHeap
 {
 public:
 
-	MaxHeap(vector<int> values)
+	MaxHeap(const vector<int>& values)
 	{
 	}
 
-	int Max() const 
-	{ 
-		return 0; 
+	int Max() const
+	{
+		return 0;
 	}
 
 	void Pop()
 	{
+
 	}
 
 	int ExtractMax()
@@ -44,7 +45,7 @@ private:
 
 void MaxHeapTest()
 {
-#if TEST
+#ifdef TEST
 	MaxHeap h({});
 	h.InsertKey(3);
 	h.InsertKey(2);
