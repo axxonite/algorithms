@@ -1517,6 +1517,10 @@
     <ClCompile Include="Solutions\SortingAlgorithms\SelectionSort_solution.cpp">
       <Filter>Solutions\Sorting Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\19_Graphs\ArticulationVertices.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\ArticulationVertices_solution.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
