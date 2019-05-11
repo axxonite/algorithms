@@ -210,6 +210,7 @@ void DijkstraShortestPathTest();
 void StronglyConnectedComponentsTest();
 void TopoSortTest();
 void MstKruskalTest();
+void MSTPrimTest();
 void BellmanFordTest();
 void SingleSourceShortestPathTest();
 void DijkstraTest();

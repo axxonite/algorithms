@@ -15,7 +15,6 @@ struct Edge
 {
 	GraphVertex* dst;
 	int weight;
-	EdgeClassification classification;
 };
 
 struct GraphVertex
@@ -36,4 +35,9 @@ struct GraphVertex
 	GraphVertex* reachableAncestor;
 
 	int Index() const { return name.back() - '1'; };
+
+	bool operator < ( const GraphVertex& rhs ) const
+	{
+		return name < rhs.name;
+	}
 };

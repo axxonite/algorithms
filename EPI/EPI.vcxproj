@@ -155,6 +155,7 @@
     <ClInclude Include="Problems\8_LinkedLists\8.3_checking_cycle.h" />
     <ClInclude Include="Problems\8_LinkedLists\8.4_overlapping_lists_no_cycle.h" />
     <ClInclude Include="Problems\9_StacksQueues\9.1_stack_with_max.h" />
+    <ClInclude Include="Problems\Data Structures\MSTEdge.h" />
     <ClInclude Include="Problems\Math\VectorN.h" />
     <ClInclude Include="Problems\Problems.h" />
     <ClInclude Include="Shared.h" />
@@ -299,6 +300,7 @@
     <ClCompile Include="Problems\19_Graphs\FloydWarshall.cpp" />
     <ClCompile Include="Problems\19_Graphs\Johnson.cpp" />
     <ClCompile Include="Problems\19_Graphs\MSTKruskal.cpp" />
+    <ClCompile Include="Problems\19_Graphs\Prim.cpp" />
     <ClCompile Include="Problems\19_Graphs\SingleSourceShortestPath.cpp" />
     <ClCompile Include="Problems\19_Graphs\StronglyConnectedComponents.cpp" />
     <ClCompile Include="Problems\19_Graphs\TopologicalSort.cpp" />
@@ -536,6 +538,7 @@
     <ClCompile Include="Solutions\19_Graphs\FloydWarshall_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\Johnson_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\MSTKruskal_solution.cpp" />
+    <ClCompile Include="Solutions\19_Graphs\Prim_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\SingleSourceShortestPath_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\StronglyConnectedComponents_solution.cpp" />
     <ClCompile Include="Solutions\19_Graphs\TransitiveClosure_solution.cpp" />

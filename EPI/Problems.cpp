@@ -210,6 +210,7 @@ int main()
 	StronglyConnectedComponentsTest();
 	TopoSortTest();
 	MstKruskalTest();
+	MSTPrimTest();
 	BellmanFordTest();
 	SingleSourceShortestPathTest();
 	DijkstraTest();

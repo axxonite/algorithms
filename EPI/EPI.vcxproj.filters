@@ -100,6 +100,9 @@
     <ClInclude Include="Solutions\19_Graphs\Dijkstra_solution.h">
       <Filter>Solutions\19. Graphs</Filter>
     </ClInclude>
+    <ClInclude Include="Problems\Data Structures\MSTEdge.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1521,6 +1524,12 @@
       <Filter>Problems\19. Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Solutions\19_Graphs\ArticulationVertices_solution.cpp" />
+    <ClCompile Include="Problems\19_Graphs\Prim.cpp">
+      <Filter>Problems\19. Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Solutions\19_Graphs\Prim_solution.cpp">
+      <Filter>Solutions\19. Graphs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
