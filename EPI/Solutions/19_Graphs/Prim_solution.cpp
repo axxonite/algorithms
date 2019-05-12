@@ -31,13 +31,17 @@ namespace Solutions
 			candidates.emplace(v.get());
 		while (!candidates.empty())
 		{
+			// take the candidate with the lightest edge going to it, and include the lightest edge
+			// going to any of its neighbors.
 			auto best = *candidates.begin();
 			candidates.erase(candidates.begin());
 			for (auto e : best->edges)
 			{
+				// e.dst->dist contains the weight of the lowest weight edge that connects to e.dst.
 				if (candidates.count(e.dst) && e.weight < e.dst->dist)
 				{
 					candidates.erase(e.dst);
+					// the predecessor keeps track of which edge going into the e.dst vertex would be the lowest weight.
 					e.dst->pred = best;
 					e.dst->dist = e.weight;
 					candidates.emplace(e.dst);
