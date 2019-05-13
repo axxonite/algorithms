@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+#define TEST
 
 struct TeamPhotoGraphVertex 
 {
@@ -20,7 +20,7 @@ int FindLargestNumberTeams( vector<TeamPhotoGraphVertex>& g )
 
 void FindLargestNumberTeamsTest()
 {
-#if TEST
+#ifdef TEST
 	vector<TeamPhotoGraphVertex> G( 3 );
 	G[0].edges.emplace_back( &G[2] );
 	G[1].edges.emplace_back( &G[2] );
