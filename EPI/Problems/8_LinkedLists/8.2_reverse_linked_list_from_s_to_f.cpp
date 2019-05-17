@@ -3,11 +3,11 @@
 #include "stdafx.h"
 #include "LinkedListPrototype.h"
 
-#define TEST 0
+// #define TEST
 
 shared_ptr<ListNode<int>> ReverseSublist(shared_ptr<ListNode<int>> l, int start, int end)
 {
-	return nullptr;
+  return nullptr;
 }
 
 #pragma region Test
@@ -41,7 +41,7 @@ void ReverseSublistSimpleTest()
 
 void ReverseSublistTest()
 {
-#if TEST
+#ifdef TEST
 	ReverseSublistSimpleTest();
 	shared_ptr<ListNode<int>> L = make_shared<ListNode<int>>(ListNode<int>{
 		1, make_shared<ListNode<int>>(ListNode<int>{

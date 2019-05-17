@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST
+// #define TEST
 
 struct TeamPhotoGraphVertex 
 {
