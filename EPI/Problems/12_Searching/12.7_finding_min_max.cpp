@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct MinMax 
 {
@@ -11,7 +11,7 @@ struct MinMax
 
 MinMax FindMinMax( const vector<int>& A ) 
 {
-	return { -1, -1 };
+	return { -1, -1};
 }
 
 #pragma region Test
@@ -30,7 +30,7 @@ static void FindMinMaxSimpleTest() {
 
 void FindMinMaxTest()
 {
-#if TEST
+#ifdef TEST
 	FindMinMaxSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 100; ++times ) 
