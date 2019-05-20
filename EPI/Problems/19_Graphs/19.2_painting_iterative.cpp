@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 // the matrix is in [x][y] order.
 void FlipColor( int x, int y, vector<deque<bool>>& a ) 
@@ -13,10 +13,10 @@ void FlipColor( int x, int y, vector<deque<bool>>& a )
 
 void PrintMatrix( const vector<deque<bool>>& A ) 
 {
-	for ( size_t i = 0; i < A.size(); ++i ) 
-	{
-		for ( size_t j = 0; j < A[i].size(); ++j ) 
-			cout << A[i][j] << ' ';
+	for (const auto& i : A)
+  {
+		for (bool j : i)
+      cout << j << ' ';
 		cout << endl;
 	}
 }
@@ -24,11 +24,10 @@ void PrintMatrix( const vector<deque<bool>>& A )
 // this doesn't really test that the colors were flipped.
 void FlipColorTest()
 {
-#if TEST
-	size_t n;
-	default_random_engine gen( ( random_device() )( ) );
+#ifdef TEST
+  default_random_engine gen( ( random_device() )( ) );
 	uniform_int_distribution<size_t> dis( 1, 100 );
-	n = dis( gen );
+	size_t n = dis(gen);
 	vector<deque<bool>> A( n, deque<bool>( n ) );
 	for ( size_t i = 0; i < n; ++i ) 
 	{
