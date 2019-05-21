@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int FindLongestSubarrayLessEqualK(const vector<int>& A, int k)
 {
@@ -48,7 +48,7 @@ void SmallTestFindLongestSubarrayLessEqualK() {
 }
 
 void FindLongestSubarrayLessEqualKTest() {
-#if TEST
+#ifdef TEST
 	SmallTestFindLongestSubarrayLessEqualK();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 2; ++times) {
