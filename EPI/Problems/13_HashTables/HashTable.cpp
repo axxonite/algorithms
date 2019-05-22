@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define TEST 0
+// #define TEST
 
 const unsigned int MaxSlots = 1000;
 
@@ -11,7 +11,7 @@ class HashTable
 {
 public:
 
-	HashTable()
+	HashTable() : slots(MaxSlots)
 	{
 	}
 
@@ -21,12 +21,12 @@ public:
 
 	bool Remove(const Key& key)
 	{
-		return false;
+    return true;
 	}
 
 	const Value& operator [] (Key key)
 	{
-		return Value();
+    return Value();
 	}
 
 private:
@@ -45,7 +45,7 @@ struct HashFunc
 
 void HashTableTest()
 {
-#if TEST
+#ifdef TEST
 	HashTable<string, int, HashFunc> hashTable;
 	hashTable.Insert("Test2", 999);
 	hashTable.Insert("Test", 1);

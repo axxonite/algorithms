@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int SquareRoot(int k)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -27,7 +27,7 @@ static void SquareRootSimpleTest()
 
 void SquareRootTest()
 {
-#if TEST
+#ifdef TEST
 	SquareRootSimpleTest();
 	int x;
 	default_random_engine gen((random_device())());
