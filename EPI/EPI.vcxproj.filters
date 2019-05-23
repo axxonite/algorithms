@@ -1530,6 +1530,9 @@
     <ClCompile Include="Solutions\19_Graphs\Prim_solution.cpp">
       <Filter>Solutions\19. Graphs</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions\Data Structures\SkipList_solution.cpp">
+      <Filter>Solutions\Data Structures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
