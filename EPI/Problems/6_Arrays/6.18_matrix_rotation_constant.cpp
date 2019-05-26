@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 void RotateMatrix(vector<vector<int>>& a)
 {
@@ -45,7 +45,7 @@ void CheckAnswer(vector<vector<int>> A, const vector<vector<int>>& B)
 
 void RotateMatrixTest()
 {
-#if TEST
+#ifdef TEST
 	int n;
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 10; ++times)
