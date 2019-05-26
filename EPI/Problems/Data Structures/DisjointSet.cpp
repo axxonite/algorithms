@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define TEST 0
+// #define TEST
 
 class DisjointSet;
 
@@ -18,8 +18,7 @@ public:
 
 	static shared_ptr<DisjointSet> MakeSet(shared_ptr<SetElem> x)
 	{
-		auto set = make_shared<DisjointSet>();
-		return set;
+		return nullptr;
 	}
 
 	static DisjointSet* FindSet(shared_ptr<SetElem> x)
@@ -40,7 +39,7 @@ private:
 
 void DisjointSetTest()
 {
-#if TEST
+#ifdef TEST
 	auto a = make_shared<SetElem>();
 	auto b = make_shared<SetElem>();
 	auto c = make_shared<SetElem>();

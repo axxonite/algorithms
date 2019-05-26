@@ -36,13 +36,11 @@ namespace Solutions
       auto srcSet = x->set;
       if (srcSet->length > dstSet->length)
         swap(srcSet, dstSet);
-      for (auto cur = srcSet->head; cur; cur = cur->next)
-      {
+	  dstSet->tail->next = srcSet->head;
+	  dstSet->tail = srcSet->tail;
+	  dstSet->length += srcSet->length;
+	  for (auto cur = srcSet->head; cur; cur = cur->next)
         cur->set = dstSet;
-        dstSet->tail->next = cur;
-        dstSet->tail = cur;
-        dstSet->length++;
-      }
       srcSet->head = srcSet->tail = nullptr;
       return dstSet.get();
     }
