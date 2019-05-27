@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 void CountingSort(vector<int>& a, int maxValue)
 {
@@ -10,7 +10,7 @@ void CountingSort(vector<int>& a, int maxValue)
 
 void CountingSortTest()
 {
-#if TEST
+#ifdef TEST
 	vector<int> a;
 	default_random_engine rnd;
 	uniform_int_distribution<int> dis(0, 1000);

@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+//#define TEST
 
 vector<int> Multiply( vector<int> num1, vector<int> num2 )
 {
@@ -37,7 +37,7 @@ string VectorToString( const vector<int>& A )
 
 void MultiplyTest()
 {
-#if TEST
+#ifdef TEST
 	MultiplySimpleTest();
 #endif
 }

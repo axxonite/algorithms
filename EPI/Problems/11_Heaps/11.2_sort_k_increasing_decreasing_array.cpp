@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\Problems.h"
 
-#define TEST 0
+// #define TEST
 
 vector<int> SortKIncreasingDecreasingArray( const vector<int>& a ) 
 {
@@ -30,7 +30,7 @@ void SortKIncreasingDecreasingArraySimpleTest()
 
 void SortKIncreasingDecreasingArrayTest()
 {
-#if TEST
+#ifdef TEST
 	SortKIncreasingDecreasingArraySimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 20; ++times )
