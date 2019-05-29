@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "GraphVertex.h"
 
-#define TEST 0
+// #define TEST
 
 list<GraphVertex*> TopologicalSort(vector<GraphVertex*>& g)
 {
@@ -13,7 +13,7 @@ list<GraphVertex*> TopologicalSort(vector<GraphVertex*>& g)
 
 void TopoSortTest()
 {
-#if TEST
+#ifdef TEST
 	unordered_map<string, shared_ptr<GraphVertex>> v;
 	v["undershorts"] = make_shared<GraphVertex>(GraphVertex{ "undershorts" });
 	v["pants"] = make_shared<GraphVertex>(GraphVertex{ "pants" });

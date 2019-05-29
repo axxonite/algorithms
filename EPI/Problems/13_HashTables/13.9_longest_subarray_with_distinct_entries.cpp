@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int LongestSubarrayWithDistinctEntries(const vector<int>& a)
 {
-	return 0;
+    return 0;
 }
 
 #pragma region Test
@@ -41,7 +41,7 @@ void LongestSubarrayWithDistinctEntriesTestSimpleTest()
 
 void LongestSubarrayWithDistinctEntriesTest()
 {
-#if TEST
+#ifdef TEST
 	LongestSubarrayWithDistinctEntriesTestSimpleTest();
 	default_random_engine gen((random_device())());
 	uniform_int_distribution<size_t> dis(0, 1000);

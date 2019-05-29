@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "GraphVertex.h"
 
-#define TEST 0
+// #define TEST
 
 vector<vector<bool>> TransitiveClosure(vector<GraphVertex*> vertices)
 {
@@ -13,7 +13,7 @@ vector<vector<bool>> TransitiveClosure(vector<GraphVertex*> vertices)
 
 void TransitiveClosureTest()
 {
-#if TEST
+#ifdef TEST
 
   unordered_map<string, shared_ptr<GraphVertex>> G;
   G["1"] = make_shared<GraphVertex>(GraphVertex{ "1" });

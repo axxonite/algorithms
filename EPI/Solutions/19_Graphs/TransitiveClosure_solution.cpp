@@ -20,7 +20,7 @@ namespace Solutions
         if (result[src][mid])
           for (int dst = 0; dst < result.size(); ++dst)
             if (result[mid][dst])
-              result[src][dst] = result[src][dst] || (result[src][mid] && result[mid][dst]);
+              result[src][dst] = result[src][dst] | result[mid][dst];
     return result;
   }
 }

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "GraphVertex.h"
 
-#define TEST 0
+// #define TEST
 
 void Dijkstra(vector<GraphVertex*> G, int src)
 {
@@ -11,7 +11,7 @@ void Dijkstra(vector<GraphVertex*> G, int src)
 
 void DijkstraTest()
 {
-#if TEST
+#ifdef TEST
   unordered_map<string, shared_ptr<GraphVertex>> G;
   G["s"] = make_shared<GraphVertex>(GraphVertex{ "s" });
   G["t"] = make_shared<GraphVertex>(GraphVertex{ "t" });

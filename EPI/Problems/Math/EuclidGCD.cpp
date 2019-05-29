@@ -2,18 +2,18 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int EuclidGCD(int a, int b)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
 
 void EuclidGCDTest()
 {
-#if TEST
+#ifdef TEST
 	assert(EuclidGCD(30, 21) == 3);
 	assert(EuclidGCD(99, 78) == 3);
 #endif
