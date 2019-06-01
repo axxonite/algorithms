@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int MaxSubarraySumInCircular(const vector<int>& A)
 {
@@ -28,7 +28,7 @@ int CheckAns(const vector<int>& A)
 
 void MaxSubarraySumInCircularTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)
 	{

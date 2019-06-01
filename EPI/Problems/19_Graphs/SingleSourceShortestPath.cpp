@@ -2,7 +2,7 @@
 #include "GraphVertex.h"
 #include "Solutions\19_Graphs\TopologicalSort_solution.h"
 
-#define TEST 0
+// #define TEST
 
 void SingleSourceShortestPath(vector<GraphVertex*> G, int src)
 {
@@ -12,7 +12,7 @@ void SingleSourceShortestPath(vector<GraphVertex*> G, int src)
 
 void SingleSourceShortestPathTest()
 {
-#if TEST
+#ifdef TEST
 	unordered_map<string, shared_ptr<GraphVertex>> G;
 	G["r"] = make_shared<GraphVertex>(GraphVertex{ "r" });
 	G["s"] = make_shared<GraphVertex>(GraphVertex{ "s" });
