@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "LinkedListPrototype.h"
 
-#define TEST 0
+// #define TEST
 
 shared_ptr<ListNode<int>> ZippingLinkedList(const shared_ptr<ListNode<int>>& l)
 {
@@ -14,7 +14,7 @@ shared_ptr<ListNode<int>> ZippingLinkedList(const shared_ptr<ListNode<int>>& l)
 
 void ZippingLinkedListTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	shared_ptr<ListNode<int>> head = nullptr;
 	int n;

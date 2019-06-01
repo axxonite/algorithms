@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 bool PairIncludesAncestorAndDescendantOfM(const unique_ptr<BSTNode<int>>& a, const unique_ptr<BSTNode<int>>& b, const unique_ptr<BSTNode<int>>& middle)
 {
@@ -44,7 +44,7 @@ void PairIncludesAncestorAndDescendantOfMSmallTest()
 
 void PairIncludesAncestorAndDescendantOfMTest()
 {
-#if TEST
+#ifdef TEST
 	PairIncludesAncestorAndDescendantOfMSmallTest();
 	//      3
 	//    2   5
