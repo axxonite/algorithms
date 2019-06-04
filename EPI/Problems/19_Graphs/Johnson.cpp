@@ -4,18 +4,18 @@
 #include "..\..\Solutions\19_Graphs\BellmanFord_solution.h"
 #include "..\..\Solutions\19_Graphs\Dijkstra_solution.h"
 
-#define TEST 0
+// #define TEST
 
 bool Johnson(vector<GraphVertex*> G, vector<vector<int>>& result)
 {
-	return true;
+  return true;
 }
 
 #pragma region Test
 
 void JohnsonTest()
 {
-#if TEST
+#ifdef TEST
 	unordered_map<string, shared_ptr<GraphVertex>> G;
 	G["1"] = make_shared<GraphVertex>(GraphVertex{ "1" });
 	G["2"] = make_shared<GraphVertex>(GraphVertex{ "2" });

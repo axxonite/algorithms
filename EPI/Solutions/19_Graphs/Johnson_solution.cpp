@@ -24,7 +24,7 @@ namespace Solutions
 		// Remove any negative weights in the original graphs by offsetting the weights.
 		for (int src = 0; src < G.size(); ++src)
 			for (int dest = 0; dest < G[src]->edges.size(); ++dest)
-				G[src]->edges[dest].weight = G[src]->edges[dest].weight + weightOffsets[src]->dist - weightOffsets[src]->edges[dest].dst->dist;
+				G[src]->edges[dest].weight += weightOffsets[src]->dist - weightOffsets[src]->edges[dest].dst->dist;
 		
 		for (int src = 0; src < G.size(); ++src)
 		{
