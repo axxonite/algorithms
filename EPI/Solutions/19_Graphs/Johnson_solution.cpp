@@ -9,7 +9,7 @@ namespace Solutions
 	bool Johnson(vector<GraphVertex*> G, vector<vector<int>>& result)
 	{
 		// create a graph for the weight offsets.
-		auto weightOffsets = Solutions::CloneGraph(G);
+		auto weightOffsets = CloneGraph(G);
 
 		// add sink vertex so we visit all vertices with BellmanFord.
 		auto s = make_shared<GraphVertex>(GraphVertex());
@@ -17,14 +17,16 @@ namespace Solutions
 			s->edges.emplace_back(Edge{ v, 0 });
 		weightOffsets.emplace_back(s.get());
 
-		// Perform Bellman Ford and check for negative weight cycles.
-		if (!Solutions::BellmanFord(weightOffsets, weightOffsets.size() - 1))
+		// Perform Bellman Ford to compute the weight offsets and check for negative weight cycles.
+		if (!BellmanFord(weightOffsets, weightOffsets.size() - 1))
 			return false;
 
 		// Remove any negative weights in the original graphs by offsetting the weights.
 		for (int src = 0; src < G.size(); ++src)
-			for (int dest = 0; dest < G[src]->edges.size(); ++dest)
-				G[src]->edges[dest].weight = G[src]->edges[dest].weight + weightOffsets[src]->dist - weightOffsets[src]->edges[dest].dst->dist;
+			for (int edgeIndex = 0; edgeIndex < G[src]->edges.size(); ++edgeIndex)
+				// this is the trickiest part.
+				// add the offset from the source vertex, subtract the weight of the destination vertex.
+				G[src]->edges[edgeIndex].weight += weightOffsets[src]->dist - weightOffsets[src]->edges[edgeIndex].dst->dist;
 		
 		for (int src = 0; src < G.size(); ++src)
 		{
@@ -32,10 +34,12 @@ namespace Solutions
 			// Remember to reset the distances on each iteration.
 			for (int j = 0; j < G.size(); ++j)
 				G[j]->dist = numeric_limits<int>::max();
-			Solutions::Dijkstra(G, src);
+			Dijkstra(G, src);
 
 			// Compute result from Dijkstra result and remove the weight offsets.
 			for (int dest = 0; dest < G.size(); ++dest)
+				// Here we do the opposite of what we did prior: subtract the weight of the source vertex
+				// and add back the weight of the destination vertex.
 				result[src][dest] = G[dest]->dist - weightOffsets[src]->dist + weightOffsets[dest]->dist;
 		}
 		return true;
