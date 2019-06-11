@@ -2,17 +2,18 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct CharWithFrequency
 {
 	char c;
 	double freq;
+
 };
 
 unordered_map<char, string> HuffmanEncoding(vector<CharWithFrequency>& symbols )
 {
-	return {};
+  return {};
 }
 
 #pragma region Test
@@ -27,7 +28,7 @@ const double kEnglishFreq[] =
 // There is no test here, it just lists the values.
 void HuffmanEncodingTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	vector<CharWithFrequency> symbols;
 	int sum = 0;

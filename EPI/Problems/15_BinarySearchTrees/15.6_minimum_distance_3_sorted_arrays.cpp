@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int FindClosestElementsInSortedArrays(const vector<vector<int>>& arrays)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test	
@@ -49,7 +49,7 @@ int BruteForceGenAnswer(const vector<vector<int>>& sorted_arrays)
 
 void FindClosestElementsInSortedArraysTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 10; ++times)
 	{

@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 void FloydWarshall(vector<vector<int>>& g)
 {
@@ -10,7 +10,7 @@ void FloydWarshall(vector<vector<int>>& g)
 
 void FloydWarshallTest()
 {
-#if TEST
+#ifdef TEST
   vector<vector<int>> g(6, vector<int>(6, numeric_limits<int>::max()));
   for (int i = 0; i < g.size(); ++i)
     g[i][i] = 0;
