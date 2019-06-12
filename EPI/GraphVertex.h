@@ -36,7 +36,6 @@ struct GraphVertex
 
 	// for articulation vertices.
 	int degree = 0;
-	GraphVertex* reachableAncestor;
 
 	int Index() const { return name.back() - '1'; };
 
