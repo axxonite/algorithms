@@ -8,7 +8,10 @@ struct GraphVertex;
 enum class EdgeClassification
 {
 	Tree,
-	Back
+	Back,
+  Forward,
+  Cross,
+  Unknown
 };
 
 struct Edge
@@ -27,6 +30,7 @@ struct GraphVertex
 	int finish = -1;
 
 	GraphVertex* pred = nullptr;
+  GraphVertex* reachableAncestor = nullptr;
 	vector<Edge> edges;
 	vector<Edge> transposedEdges;
 
