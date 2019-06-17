@@ -2,18 +2,18 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int NonuniformRandomNumberGeneration( const vector<int>& values, const vector<double>& probabilities)
 {
-	return -1;
+  return 0;
 }
 
 #pragma region Test
 
 void NonuniformRandomNumberGenerationTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	size_t n;
 	uniform_int_distribution<size_t> dis( 1, 50 );
