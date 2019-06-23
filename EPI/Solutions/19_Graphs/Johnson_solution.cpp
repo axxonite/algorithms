@@ -25,7 +25,7 @@ namespace Solutions
 		for (int src = 0; src < G.size(); ++src)
 			for (int edgeIndex = 0; edgeIndex < G[src]->edges.size(); ++edgeIndex)
 				// this is the trickiest part.
-				// add the offset from the source vertex, subtract the weight of the destination vertex.
+				// ADD the offset from the source vertex, SUBTRACT the weight of the destination vertex.
 				G[src]->edges[edgeIndex].weight += weightOffsets[src]->dist - weightOffsets[src]->edges[edgeIndex].dst->dist;
 		
 		for (int src = 0; src < G.size(); ++src)

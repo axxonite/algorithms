@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int MinimumTotalWaitingTime(vector<int> t)
 {
@@ -15,7 +15,7 @@ void SmallTestMinWaitingTime() { assert(10 == MinimumTotalWaitingTime({ 5, 1, 2,
 
 void MinimumTotalWaitingTimeTest()
 {
-#if TEST
+#ifdef TEST
 	SmallTestMinWaitingTime();
 	default_random_engine gen((random_device())());
 	int n;

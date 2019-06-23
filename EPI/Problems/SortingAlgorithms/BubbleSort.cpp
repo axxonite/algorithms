@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 void BubbleSort(vector<int>& a)
 {
@@ -10,7 +10,7 @@ void BubbleSort(vector<int>& a)
 
 void BubbleSortTest()
 {
-#if TEST
+#ifdef TEST
 	vector<int> a;
 	default_random_engine rnd;
 	uniform_int_distribution<int> dis(0, 100000);

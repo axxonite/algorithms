@@ -38,8 +38,8 @@ namespace Solutions
 			candidates.erase(candidates.begin());
 			for (auto e : best->edges)
 			{
-        // This is essentially a Dijkstra heuristic.
-        // check that we haven't processed the destination yet, and that the weight of the current edge is lower than the assigned weight of the destination vertex.
+				// This is essentially a Dijkstra heuristic.
+				// check that we haven't processed the destination yet, and that the weight of the current edge is lower than the assigned weight of the destination vertex.
 				// e.dst->dist contains the weight of the lowest weight edge that connects to e.dst.
 				if (candidates.count(e.dst) && e.weight < e.dst->dist)
 				{
