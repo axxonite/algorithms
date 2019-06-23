@@ -26,7 +26,7 @@ namespace Solutions
 			return hash<size_t>()(reinterpret_cast<size_t>(edge.get()));
 		}
 
-		bool operator () (const shared_ptr<Edge>& a, const shared_ptr<Edge>& b)
+		bool operator () (const shared_ptr<Edge>& a, const shared_ptr<Edge>& b) const
 		{
 			return a->weight < b->weight || (a->weight == b->weight && a.get() < b.get());
 		}

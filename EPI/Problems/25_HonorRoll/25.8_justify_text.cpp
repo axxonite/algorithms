@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+//#define TEST
 
 vector<string> JustifyText(const vector<string>& words, size_t l)
 {
@@ -25,7 +25,7 @@ void JustifyTextTestCase(const vector<string>& words, size_t L, const vector<str
 
 void JustifyTextTest()
 {
-#if TEST
+#ifdef TEST
 	vector<string> words = {"Text", "justification", "is", "trickier", "than",
 		"it", "seems!"};
 	vector<string> golden = {"Text          ", "justification ",
