@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 vector<unique_ptr<BinaryTreeNode<int>>> GenerateAllBinaryTrees( int nodeCount )
 {
@@ -27,7 +27,7 @@ void GenerateAllBinaryTreesSmallTest()
 
 void GenerateAllBinaryTreesTest()
 {
-#if TEST
+#ifdef TEST
 	GenerateAllBinaryTreesSmallTest();
 	default_random_engine gen((random_device())());
 	int n;

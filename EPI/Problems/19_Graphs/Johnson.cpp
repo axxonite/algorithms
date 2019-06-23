@@ -8,7 +8,7 @@
 
 bool Johnson(vector<GraphVertex*> G, vector<vector<int>>& result)
 {
-	return true;
+  return true;
 }
 
 #pragma region Test

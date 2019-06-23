@@ -8,7 +8,10 @@ struct GraphVertex;
 enum class EdgeClassification
 {
 	Tree,
-	Back
+	Back,
+  Forward,
+  Cross,
+  Unknown
 };
 
 struct Edge
@@ -27,12 +30,12 @@ struct GraphVertex
 	int finish = -1;
 
 	GraphVertex* pred = nullptr;
+  GraphVertex* reachableAncestor = nullptr;
 	vector<Edge> edges;
 	vector<Edge> transposedEdges;
 
 	// for articulation vertices.
 	int degree = 0;
-	GraphVertex* reachableAncestor;
 
 	int Index() const { return name.back() - '1'; };
 
