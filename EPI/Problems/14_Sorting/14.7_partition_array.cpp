@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 struct Person 
 {
@@ -30,14 +30,13 @@ static void GroupByAgeSimpleTest()
 
 void GroupByAgeTest()
 {
-#if TEST
+#ifdef TEST
 	GroupByAgeSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 10; ++times ) 
 	{
-		int size;
-		uniform_int_distribution<int> dis( 1, 10000 );
-		size = dis( gen );
+    uniform_int_distribution<int> dis( 1, 10000 );
+		int size = dis(gen);
 		int k;
 		uniform_int_distribution<int> dis2( 1, size );
 		k = dis2( gen );

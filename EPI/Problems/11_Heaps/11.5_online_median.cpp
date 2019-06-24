@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<double> globalResult;
 
@@ -44,7 +44,7 @@ void OnlineMedianSmallTest()
 
 void OnlineMedianTest()
 {
-#if TEST
+#ifdef TEST
 	OnlineMedianSmallTest();
 	default_random_engine gen((random_device())());
 	uniform_int_distribution<int> dis(1, 10000);

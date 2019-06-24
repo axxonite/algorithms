@@ -30,21 +30,22 @@ namespace Solutions
     // This is basically Dijkstra.
 		for (const auto& v : g)
 			candidates.emplace(v.get());
-		while (!candidates.empty())
+    // Let A be a subset of a minimum spanning tree for G. A will start with the root vertex.
+    // We build a minimum spanning tree edge by edge. When a vertex has a predecessor, it is considered
+    // to be part of a subset of the minimum spanning tree.
+    while (!candidates.empty())
 		{
-			// take the candidate with the lightest edge going to it, and include the lightest edge
-			// going to any of its neighbors.
-			auto best = *candidates.begin();
+      // add the lightest edge to the minimum spanning tree.
+      auto best = *candidates.begin();
 			candidates.erase(candidates.begin());
 			for (auto e : best->edges)
 			{
-				// This is essentially a Dijkstra heuristic.
-				// check that we haven't processed the destination yet, and that the weight of the current edge is lower than the assigned weight of the destination vertex.
-				// e.dst->dist contains the weight of the lowest weight edge that connects to e.dst.
+				// This is similar to a Dijkstra heuristic.
+				// Check that the destination is not already in A, and that the weight of the current edge is lower than the lowest weight found going to that vertex thus far.
 				if (candidates.count(e.dst) && e.weight < e.dst->dist)
 				{
-					candidates.erase(e.dst);
-					// the predecessor keeps track of which edge going into the e.dst vertex would be the lowest weight.
+          // update the lightest edge going to the destination vertex, and re-sort the set of candidates.
+				  candidates.erase(e.dst);
 					e.dst->pred = best;
 					e.dst->dist = e.weight;
 					candidates.emplace(e.dst);

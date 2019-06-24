@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int CountInversions(vector<int> a)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -32,7 +32,7 @@ int N2Check(const vector<T>& A)
 
 void CountInversionsTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)
 	{

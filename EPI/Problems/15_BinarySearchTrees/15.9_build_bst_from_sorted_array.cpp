@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 unique_ptr<BSTNode<int>> BuildMinHeightBSTFromSortedArray(const vector<int>& a)
 {
-	return nullptr;
+  return nullptr;
 }
 
 #pragma region Test
@@ -35,7 +35,7 @@ static void BBuildMinHeightBSTFromSortedArraySimpleTest()
 
 void BuildMinHeightBSTFromSortedArrayTest()
 {
-#if TEST
+#ifdef TEST
 	BBuildMinHeightBSTFromSortedArraySimpleTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)

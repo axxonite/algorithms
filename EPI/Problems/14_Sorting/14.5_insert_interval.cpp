@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Interval 
 {
@@ -11,7 +11,8 @@ struct Interval
 
 vector<Interval> AddInterval( const vector<Interval>& intervals, Interval newInterval ) 
 {
-	return {};
+  vector<Interval> result;
+	return result;
 }
 
 #pragma region Test
@@ -36,7 +37,7 @@ void AddIntervalSmallTest()
 
 void AddIntervalTest()
 {
-#if TEST
+#ifdef TEST
 	AddIntervalSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 50; ++times )
