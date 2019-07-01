@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 double MaxKPairsProfits(const vector<double>& prices, int k)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -34,7 +34,7 @@ double MaxKPairsProfitsCheckAns(const vector<double>& A, int k)
 
 void MaxKPairsProfitsTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	int n = 30, k = 4;
 	// random tests for n = 30, k = 4 for 100 times/
