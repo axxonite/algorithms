@@ -2,18 +2,18 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int LongestNondecreasingSubsequenceLength(const vector<int>& a)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
 
 void LongestNondecreasingSubsequenceLengthTest()
 {
-#if TEST
+#ifdef TEST
 	vector<int> a = { 0, 8, 4, 12, 2, 10, 6, 14, 1, 9 };
 	assert(LongestNondecreasingSubsequenceLength(a) == 4);
 	vector<int> a2 = { 0, 8, 4, 12, 12, 12, 12, 12, 2, 10, 6, 14, 1, 9 };

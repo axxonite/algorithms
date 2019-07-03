@@ -3,11 +3,11 @@
 #include "stdafx.h"
 #include "shared.h"
 
-#define TEST 0
+// #define TEST
 
 int LevenshteinDistance(const string& A, const string& B)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -42,7 +42,7 @@ int CheckAnswer(string A, string B)
 
 void LevenshteinDistanceTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	string A, B;
 	// Wiki example (http://en.wikipedia.org/wiki/Levenshtein_distance)
