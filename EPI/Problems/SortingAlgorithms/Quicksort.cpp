@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 void Quicksort(vector<int>& v)
 {
@@ -10,7 +10,7 @@ void Quicksort(vector<int>& v)
 
 void QuicksortTest()
 {
-#if TEST
+#ifdef TEST
 	vector<int> a;
 	default_random_engine rnd;
 	uniform_int_distribution<int> dis(0, 100000);

@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<int> KLargestInBinaryHeap(const vector<int>& A, int k)
 {
@@ -14,7 +14,7 @@ vector<int> KLargestInBinaryHeap(const vector<int>& A, int k)
 
 void KLargestInBinaryHeapTest()
 {                           
-#if TEST
+#ifdef TEST
 	vector<int> max_heap = {10, 2, 9, 2, 2, 8, 8, 2, 2, 2, 2, 7, 7, 7, 7};
 	auto result = KLargestInBinaryHeap(max_heap, 3);
 	vector<int> expected_result = {10, 9, 8};
