@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "LinkedListPrototype.h"
 
-#define TEST 0
+// #define TEST
 
 shared_ptr<ListNode<int>> CyclicallyRightShiftList(shared_ptr<ListNode<int>> l, int k)
 {
@@ -27,7 +27,7 @@ void CyclicallyRightShiftListSimpleTest()
 
 void CyclicallyRightShiftListTest()
 {
-#if TEST
+#ifdef TEST
 	CyclicallyRightShiftListSimpleTest();
 	shared_ptr<ListNode<int>> L;
 	L = make_shared<ListNode<int>>(ListNode<int>{

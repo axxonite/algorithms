@@ -23,6 +23,7 @@ struct HashEdge
 	}
 };
 
+// Kruskal is the union set based solution.
 unordered_set<shared_ptr<MSTKruskalEdge>, HashEdge> MstKruskal(vector<shared_ptr<MSTKruskalGraphVertex>> g)
 {
 	unordered_set<shared_ptr<MSTKruskalEdge>, HashEdge> result;

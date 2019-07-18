@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 double Power(double x, int y)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -21,7 +21,7 @@ int Compare(double a, double b)
 
 void PowerTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	double x;
 	int y;

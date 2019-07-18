@@ -3,13 +3,12 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 // if no repeats of a word are found, return numeric_limits<int>::max().
 int FindNearestRepetition( const vector<string>& paragraph ) 
 {
-	return -1;
-}
+  return -1;
 
 #pragma region Test
 
@@ -29,7 +28,7 @@ int FindNearestRepetitionCheckAnswer( const vector<string>& s )
 
 void FindNearestRepetitionTest()
 {
-#if TEST
+#ifdef TEST
 	vector<string> A = { "foo",    "bar",    "widget", "foo", "widget", "widget", "adnan" };
 	assert( FindNearestRepetitionCheckAnswer( A ) == FindNearestRepetition( A ) );
 	A = { "foo", "bar", "widget", "foo", "xyz", "widget", "bar", "adnan" };
