@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "PrimitiveTypes.h"
 #include <algorithm>
+#include <stdexcept>
 
 using namespace std;
 
