@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "shared.h"
 
-#define TEST 0
+// #define TEST
 
 int LevenshteinDistance(const string& A, const string& B)
 {
@@ -32,7 +32,7 @@ int CheckAnswer(string A, string B)
 		{
 			int pre_i_1_j = D[j]; // Stores the value of D[i -1][j].
 			D[j] = A[i - 1] == B[j - 1] ? pre_i_1_j_1
-				: 1 + min({pre_i_1_j_1, D[j - 1], D[j]});
+				: 1 + min({ pre_i_1_j_1, D[j - 1], D[j] });
 			// Previous D[i - 1][j] will become the next D[i - 1][j - 1].
 			pre_i_1_j_1 = pre_i_1_j;
 		}
@@ -42,15 +42,15 @@ int CheckAnswer(string A, string B)
 
 void LevenshteinDistanceTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	string A, B;
 	// Wiki example (http://en.wikipedia.org/wiki/Levenshtein_distance)
-	A = "k" , B = "sitt";
+	A = "k", B = "sitt";
 	assert(4 == LevenshteinDistance(A, B));
-	A = "Saturday" , B = "Sunday";
+	A = "Saturday", B = "Sunday";
 	assert(3 == LevenshteinDistance(A, B));
-	A = "kitten" , B = "sitting";
+	A = "kitten", B = "sitting";
 	assert(3 == LevenshteinDistance(A, B));
 
 	uniform_int_distribution<int> dis(1, 100);
