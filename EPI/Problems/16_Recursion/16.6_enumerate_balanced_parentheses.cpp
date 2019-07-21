@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<string> GenerateBalancedParentheses(int numPairs)
 {
@@ -25,7 +25,7 @@ void GenerateBalancedParenthesesSmallTest()
 
 void GenerateBalancedParenthesesTest()
 {
-#if TEST
+#ifdef TEST
 	GenerateBalancedParenthesesSmallTest();
 #endif
 }

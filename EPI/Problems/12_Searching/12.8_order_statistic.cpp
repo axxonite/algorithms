@@ -2,11 +2,12 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 template <typename Compare>
 int FindKth(int k, Compare comp, vector<int>& a)
 {
+
 	return -1;
 }
 
@@ -235,7 +236,7 @@ static void ComplexRandomTest()
 
 void FindKthTest()
 {
-#if TEST
+#ifdef TEST
 	FindKthSimpleTest();
 	SimpleTestKthLargest();
 	SimpleTestKthSmallest();
