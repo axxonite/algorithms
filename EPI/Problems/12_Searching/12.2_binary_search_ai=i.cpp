@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int SearchEntryEqualToItsIndex( const vector<int>& a ) 
 {
@@ -39,7 +39,7 @@ static void SearchEntryEqualToItsIndexSimpleTest()
 
 void SearchEntryEqualToItsIndexTest()
 {
-#if TEST
+#ifdef TEST
 	SearchEntryEqualToItsIndexSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 50; ++times ) {

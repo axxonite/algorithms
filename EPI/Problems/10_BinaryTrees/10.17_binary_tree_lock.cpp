@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 class BinaryTreeNodeLockable 
 {
@@ -14,12 +14,12 @@ public:
 
 	bool Lock() 
 	{
-		return false;
+		return true;
 	}
 
 	void Unlock() 
 	{
-	}
+  }
 
 	shared_ptr<BinaryTreeNodeLockable>& left() { return left_; }
 	shared_ptr<BinaryTreeNodeLockable>& right() { return right_; }
@@ -33,7 +33,7 @@ private:
 
 void BinaryTreeNodeLockableTest()
 {
-#if TEST
+#ifdef TEST
 	auto root = make_shared<BinaryTreeNodeLockable>( BinaryTreeNodeLockable() );
 	root->left() = make_shared<BinaryTreeNodeLockable>( BinaryTreeNodeLockable() );
 	root->left()->parent() = root;

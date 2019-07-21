@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct TreeNode
 {
@@ -14,7 +14,7 @@ struct TreeNode
 	vector<Edge> edges;
 };
 
-double ComputeDiameter(const unique_ptr<TreeNode>& t) 
+double ComputeDiameter(const unique_ptr<TreeNode>& t)
 {
 	return 0;
 }
@@ -23,16 +23,16 @@ double ComputeDiameter(const unique_ptr<TreeNode>& t)
 
 void ComputeDiameterTest()
 {
-#if TEST
+#ifdef TEST
 	unique_ptr<TreeNode> r = nullptr;
 	assert(0.0 == ComputeDiameter(r));
 	r = make_unique<TreeNode>(TreeNode());
-	r->edges.emplace_back(TreeNode::Edge{make_unique<TreeNode>(TreeNode()), 10});
-	r->edges[0].root->edges.emplace_back(TreeNode::Edge{make_unique<TreeNode>(TreeNode()), 50});
-	r->edges.emplace_back(TreeNode::Edge{make_unique<TreeNode>(TreeNode()), 20});
+	r->edges.emplace_back(TreeNode::Edge{ make_unique<TreeNode>(TreeNode()), 10 });
+	r->edges[0].root->edges.emplace_back(TreeNode::Edge{ make_unique<TreeNode>(TreeNode()), 50 });
+	r->edges.emplace_back(TreeNode::Edge{ make_unique<TreeNode>(TreeNode()), 20 });
 	assert(80 == ComputeDiameter(r));
 	cout << ComputeDiameter(r) << endl;
-	r->edges[0].root->edges.emplace_back(TreeNode::Edge{make_unique<TreeNode>(TreeNode()), 100});
+	r->edges[0].root->edges.emplace_back(TreeNode::Edge{ make_unique<TreeNode>(TreeNode()), 100 });
 	assert(150 == ComputeDiameter(r));
 	cout << ComputeDiameter(r) << endl;
 #endif

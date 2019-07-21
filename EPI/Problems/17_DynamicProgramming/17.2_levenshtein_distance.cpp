@@ -7,8 +7,8 @@
 
 int LevenshteinDistance(const string& A, const string& B)
 {
-	return 0;
-}
+  return 0;
+  }
 
 #pragma region Test
 

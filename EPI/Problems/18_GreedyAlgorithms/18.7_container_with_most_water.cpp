@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int GetMaxTrappedWater(const vector<int>& heights)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -35,7 +35,7 @@ void GetMaxTrappedWaterSmallTest()
 
 void GetMaxTrappedWaterTest()
 {
-#if TEST
+#ifdef TEST
 	GetMaxTrappedWaterSmallTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 10; ++times)
