@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 bool IsWellFormed( const string& s ) 
 {
-	return false;
+  return false;
 }
 
 #pragma region Test
@@ -24,7 +24,7 @@ void IsWellFormedSmallTest()
 
 void IsWellFormedTest()
 {
-#if TEST
+#ifdef TEST
 	IsWellFormedSmallTest();
 #endif
 }
