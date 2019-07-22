@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int GetHeight(int cases, int drops)
 {
@@ -30,7 +30,7 @@ int CheckAnswer(int cases, int drops)
 
 void GetHeightTest()
 {
-#if TEST
+#ifdef TEST
 	assert(GetHeight(1, 10) == 10);
 	assert(GetHeight(2, 1) == 1);
 	assert(GetHeight(2, 2) == 3);

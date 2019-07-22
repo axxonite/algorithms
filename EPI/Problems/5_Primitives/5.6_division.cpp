@@ -2,11 +2,12 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 unsigned Divide(unsigned x, unsigned y)
 {
-	return -1;
+	unsigned result = 0;
+	return result;
 }
 
 #pragma region Test
@@ -24,7 +25,7 @@ void DivisionSimpleTest()
 
 void DivideTest()
 {
-#if TEST
+#ifdef TEST
 	DivisionSimpleTest();
 	default_random_engine gen((random_device())());
 	uniform_int_distribution<size_t> dis(0, numeric_limits<size_t>::max());

@@ -8,7 +8,7 @@
 // if no repeats of a word are found, return numeric_limits<int>::max().
 int FindNearestRepetition(const vector<string>& paragraph)
 {
-  return -1;
+	return -1;
 }
 
 #pragma region Test

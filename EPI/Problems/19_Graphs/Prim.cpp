@@ -15,11 +15,10 @@ struct HashEdge
 
 };
 
-// Prim is the one that resembles Dijkstra.
 unordered_set<MSTPrimEdge, HashEdge> Prim(vector<shared_ptr<GraphVertex>> g, int root)
 {
 	unordered_set<MSTPrimEdge, HashEdge> result;
-  return result;
+	return result;
 }
 
 #pragma region Test
