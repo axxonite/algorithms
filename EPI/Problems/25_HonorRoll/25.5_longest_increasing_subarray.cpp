@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Subarray
 {
@@ -12,7 +12,7 @@ struct Subarray
 Subarray FindLongestIncreasingSubarray(const vector<int>& a)
 {
 	Subarray result = { 0, 0 };
-	return result;
+  return result;
 }
 
 #pragma region Test
@@ -27,7 +27,7 @@ void FindLongestIncreasingSubarraySimpleTest()
 
 void FindLongestIncreasingSubarrayTest()
 {
-#if TEST
+#ifdef TEST
 	FindLongestIncreasingSubarraySimpleTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 20; ++times)

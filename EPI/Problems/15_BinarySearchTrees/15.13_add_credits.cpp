@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 class ClientsCreditsInfo
 {
@@ -18,7 +18,7 @@ public:
 
 	int Lookup(const string& client) const
 	{
-		return 0;
+		return -1;
 	}
 
 	void AddAll(int c)
@@ -27,8 +27,8 @@ public:
 
 	string Max() const
 	{
-		return "";
-	}
+    return "";
+  }
 
 private:
 };
@@ -37,7 +37,7 @@ private:
 
 void AddCreditsTest()
 {
-#if TEST
+#ifdef TEST
 	ClientsCreditsInfo a;
 	assert(a.Max() == "");
 	assert(!a.Remove("foo"));

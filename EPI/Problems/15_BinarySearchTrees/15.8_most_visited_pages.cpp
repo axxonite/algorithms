@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-//#define TEST
+// #define TEST
 
 void ReadFileLine(const string& line)
 {

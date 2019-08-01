@@ -3,11 +3,12 @@
 #include "stdafx.h"
 #include "shared.h"
 
-#define TEST 0
+// #define TEST
 
 vector<string> DecomposeIntoDictionaryWords(const string& s, const unordered_set<string>& dict)
 {
 	vector<string> result;
+
 	return result;
 }
 
@@ -81,7 +82,7 @@ void DecomposeIntoDictionaryWordsSmallCase()
 
 void DecomposeIntoDictionaryWordsTest()
 {
-#if TEST
+#ifdef TEST
 	DecomposeIntoDictionaryWordsSmallCase();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 100; ++times)

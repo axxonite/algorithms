@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<vector<int>> GeneratePascalTriangle(int rows) 
 {
@@ -12,7 +12,7 @@ vector<vector<int>> GeneratePascalTriangle(int rows)
 
 void PascalTriangleTest()
 {
-#if TEST
+#ifdef TEST
 	vector<vector<int>> goldenResult;
 	goldenResult.emplace_back(vector<int>{1});
 	goldenResult.emplace_back(vector<int>{1, 1});

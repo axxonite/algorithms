@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int FindKthInTwoSortedArrays( const vector<int>& a, const vector<int>& b, int k ) 
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -53,7 +53,7 @@ void FindKthInTwoSortedArraysSmallTest() {
 
 void FindKthInTwoSortedArraysTest()
 {
-#if TEST
+#ifdef TEST
 	FindKthInTwoSortedArraysSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	// Random test 10000 times.

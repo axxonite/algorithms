@@ -2,13 +2,14 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct IndexPair
 {
 	int it1, it2;
 };
 
+// return a pair of indices of elements in A that sum up to K. The array is abs-sorted.
 IndexPair FindPairSumK(const vector<int>& a, int k)
 {
 	return { -1, -1 };
@@ -25,7 +26,7 @@ static void SimpleTest()
 
 void FindPairSumKTest()
 {
-#if TEST
+#ifdef TEST
 	SimpleTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 100; ++times)

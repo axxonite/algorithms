@@ -4,10 +4,11 @@
 
 // #define TEST
 
+// this is an implementation of randomized select.
+
 template <typename Compare>
 int FindKth(int k, Compare comp, vector<int>& a)
 {
-
 	return -1;
 }
 
