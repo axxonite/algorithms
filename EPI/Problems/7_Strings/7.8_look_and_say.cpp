@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 string LookAndSay( int n )
 {
@@ -13,7 +13,7 @@ string LookAndSay( int n )
 
 void LookAndSayTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	int n;
 	uniform_int_distribution<int> dis( 1, 50 );

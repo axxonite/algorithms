@@ -51,7 +51,7 @@ namespace Solutions
 		{
 			// Note the special cases for when the line is vertical.
 			slope = a.x != b.x ? GetCanonicalForm( b.y - a.y, b.x - a.x ) : Rational{ 1, 0 };
-			intercept = a.x != b.x ? GetCanonicalForm( b.x * a.y - a.x * b.y, b.x - a.x ) : Rational{ a.x, 1 };
+			intercept = a.x != b.x ? GetCanonicalForm( b.x * a.y - a.x * b.y, b.x - a.x ) : Rational{ 0, a.y };
 		}
 
 		// Equal function for Line.

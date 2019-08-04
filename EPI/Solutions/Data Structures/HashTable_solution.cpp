@@ -48,13 +48,13 @@ namespace Solutions
 		template <typename T>
 		bool Search(const Key& key, T& func)
 		{
-      // find the hash slot for the given key.
+			// find the hash slot for the given key.
 			auto& l = slots[hash(key) % MaxSlots];
-      // find the key within the hash slot.
+			// find the key within the hash slot.
 			auto it = std::find_if(l.begin(), l.end(), [&](const KeyValuePair& kvp) { return kvp.key == key; });
 			if (it != l.end())
 			{
-        // run lambda on that item.
+			// run lambda on that item.
 				func(l, it);
 				return true;
 			}
