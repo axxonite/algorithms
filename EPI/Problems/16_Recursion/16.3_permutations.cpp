@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<vector<int>> Permutations(vector<int> a)
 {
@@ -28,7 +28,7 @@ void PermutationsSmallTest()
 
 void PermutationsTest()
 {
-#if TEST
+#ifdef TEST
 	PermutationsSmallTest();
 	default_random_engine gen((random_device())());
 	int n;
