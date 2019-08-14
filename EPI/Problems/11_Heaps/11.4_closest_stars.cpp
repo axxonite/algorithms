@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Star 
 {
@@ -11,9 +11,10 @@ struct Star
 	double Distance() const { return sqrt( x * x + y * y + z * z ); } // why use a square root here?
 };
 
+// note: the stars should be returned in order of increasing distance.
 vector<Star> FindClosestKStars( int k, istringstream* stars ) 
 {
-	return {};
+   return {};
 }
 
 #pragma region Test
@@ -62,7 +63,7 @@ void FindClosestKStarsSimpleTest() {
 
 void FindClosestKStarsTest()
 {
-#if TEST
+#ifdef TEST
 	FindClosestKStarsSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 20; ++times )
