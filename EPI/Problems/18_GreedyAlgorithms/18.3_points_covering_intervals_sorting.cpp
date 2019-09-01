@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Interval 
 {
@@ -12,7 +12,7 @@ struct Interval
 vector<int> FindMinimumVisits( vector<Interval> intervals ) 
 {
 	vector<int> result;
-	return result;
+  return result;
 }
 
 #pragma region Test
@@ -53,7 +53,7 @@ void FindMinimumVisitsSimpleTest()
 
 void FindMinimumVisitsTest()
 {
-#if TEST
+#ifdef TEST
 	FindMinimumVisitsSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 10; ++times )

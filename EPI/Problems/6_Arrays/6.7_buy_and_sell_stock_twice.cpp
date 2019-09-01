@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 double BuyAndSellStockTwice(const vector<double>& prices)
 {
@@ -28,7 +28,7 @@ double BuyAndSellStockTwiceConstantSpace(const vector<double>& prices)
 
 void BuyAndSellStockTwiceTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times) {
 		int n;

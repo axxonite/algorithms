@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-//#define TEST
+// #define TEST
 
 vector<int> Multiply( vector<int> num1, vector<int> num2 )
 {
