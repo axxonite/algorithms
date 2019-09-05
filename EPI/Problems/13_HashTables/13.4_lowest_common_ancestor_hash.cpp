@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "binary_tree_with_parent_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 BinaryTreeNodeP<int>* LCA2(const unique_ptr<BinaryTreeNodeP<int>>& node0, const unique_ptr<BinaryTreeNodeP<int>>& node1)
 {
@@ -14,7 +14,7 @@ BinaryTreeNodeP<int>* LCA2(const unique_ptr<BinaryTreeNodeP<int>>& node0, const 
 
 void LCA2Test()
 {
-#if TEST
+#ifdef TEST
 	//      3
 	//    2   5
 	//  1    4 6

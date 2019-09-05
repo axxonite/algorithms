@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 int RabinKarp( const string& t, const string& s )
 {
@@ -53,7 +53,7 @@ void RabinKarpSimpleTest() {
 
 void RabinKarpTest()
 {
-#if TEST
+#ifdef TEST
 	RabinKarpSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 1000; ++times ) {

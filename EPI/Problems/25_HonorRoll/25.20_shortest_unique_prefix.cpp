@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 string FindShortestPrefix( const string& s, const unordered_set<string>& d )
 {
@@ -34,7 +34,7 @@ string FindShortestPrefixCheckAns( const string& s, unordered_set<string>& D )
 
 void FindShortestPrefixTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 10; ++times ) 
 	{
