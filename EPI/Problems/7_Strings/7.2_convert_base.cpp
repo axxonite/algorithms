@@ -3,18 +3,18 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 string ConvertBase( const string& num, int b1, int b2 ) 
 {
-	return "";
+  return "";
 }
 
 #pragma region Test
 
 void ConvertBaseTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 1000; ++times ) {
 		uniform_int_distribution<int> len_dis( 1, 9 );

@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 template <typename T>
 struct BinaryTreeNodeNext 
@@ -33,7 +33,7 @@ void ConstructRightSiblingSimpleTest()
 
 void ConstructRightSiblingTest()
 {
-#if TEST
+#ifdef TEST
 	ConstructRightSiblingSimpleTest();
 	//      3
 	//    2   5

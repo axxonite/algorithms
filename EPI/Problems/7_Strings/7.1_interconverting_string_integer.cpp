@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST
+// #define TEST
 
 string IntToString(int x)
 {
