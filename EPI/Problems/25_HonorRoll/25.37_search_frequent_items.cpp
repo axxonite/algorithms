@@ -3,13 +3,13 @@
 #include "stdafx.h"
 #include "shared.h"
 
-#define TEST 0
+// #define TEST
 
 // Finds the candidates which may occur > n / k times.
 vector<string> SearchFrequentItems(int k, istringstream* stream)
 {
 	vector<string> result;
-	return result;
+  return result;
 }
 
 #pragma region Test
@@ -41,7 +41,7 @@ void CheckAns(vector<string>* stream, int k, vector<string>* items) {
 
 void SearchFrequentItemsTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 100; ++times) 
 	{

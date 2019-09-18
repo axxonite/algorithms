@@ -3,18 +3,18 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 int SumRootToLeaf( const unique_ptr<BinaryTreeNode<int>>& tree )
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
 
 void SumRootToLeafTest()
 {
-#if TEST
+#ifdef TEST
 	//      1
 	//    1   0
 	//  0    1 0

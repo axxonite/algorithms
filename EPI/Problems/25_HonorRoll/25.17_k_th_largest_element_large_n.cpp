@@ -2,12 +2,12 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 // k starts at 1.
 int FindKthLargestUnknownLength( istringstream* stream, int k )
 {
-	return -1;
+  return -1;
 }
 
 #pragma region Test
@@ -51,7 +51,7 @@ static void FindKthLargestUnknownLengthSimpleTest()
 
 void FindKthLargestUnknownLengthTest()
 {
-#if TEST
+#ifdef TEST
 	FindKthLargestUnknownLengthSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 1; ++times ) {

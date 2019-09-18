@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 void RookAttack( vector<vector<int>>& a )
 {
@@ -29,7 +29,7 @@ void RookAttackCheckAns(const vector<vector<int>>& A, const vector<vector<int>>&
 
 void RookAttackTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 100; ++times)
 	{
