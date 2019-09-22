@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 class BinarySearchTree
 {
@@ -12,12 +12,12 @@ public:
 
 	bool Insert(int key)
 	{
-		return true;
-	}
+    return true;
+  }
 
 	bool Delete(int key)
 	{
-		return true;
+    return true;
 	}
 
 	int GetRootVal() const { return root->data; }
@@ -30,7 +30,7 @@ private:
 
 void BSTInsertDeleteTest()
 {
-#if TEST
+#ifdef TEST
 	BinarySearchTree BST;
 	assert(BST.Empty() == true);
 	assert(BST.Insert(7) == true);

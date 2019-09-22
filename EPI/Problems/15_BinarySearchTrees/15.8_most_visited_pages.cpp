@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 void ReadFileLine(const string& line)
 {
@@ -18,7 +18,7 @@ vector<string> FindKMostVisited(int k)
 
 void FindKMostVisitedTest()
 {
-#if TEST
+#ifdef TEST
 	ReadFileLine( "g" );
 	ReadFileLine( "a" );
 	ReadFileLine( "t" );

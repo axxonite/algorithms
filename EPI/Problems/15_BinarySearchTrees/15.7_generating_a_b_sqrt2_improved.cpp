@@ -10,13 +10,16 @@ struct ABSqrt2
 
 	bool operator<(const ABSqrt2& that) const { return val < that.val; }
 
+  bool operator == (const ABSqrt2& that) const { return a == that.a && b == that.b;  }
+
 	int a, b;
 	double val;
 };
 
 vector<ABSqrt2> GenerateFirstKABSqrt2(int k)
 {
-	return {};
+  vector<ABSqrt2> result;
+	return result;
 }
 
 // No test.

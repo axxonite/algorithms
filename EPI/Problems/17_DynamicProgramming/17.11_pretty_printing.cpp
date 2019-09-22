@@ -3,11 +3,11 @@
 #include "stdafx.h"
 #include "shared.h"
 
-#define TEST 0
+// #define TEST
 
 int MinimumMessiness(const vector<string>& words, int lineLength)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -20,7 +20,7 @@ void SmallTestMinimumMessiness()
 
 void MinimumMessinessTest()
 {
-#if TEST
+#ifdef TEST
 	SmallTestMinimumMessiness();
 	default_random_engine gen((random_device())());
 	int n, L;

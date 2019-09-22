@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Interval
 {
@@ -19,7 +19,7 @@ vector<int> RangeLookupInBST(const unique_ptr<BSTNode<int>>& tree, const Interva
 
 void RangeLookupInBSTTest()
 {
-#if TEST
+#ifdef TEST
 	//          19
 	//     7          43
 	//   3   11    23   47

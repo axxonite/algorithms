@@ -6,6 +6,7 @@ namespace Solutions
 {
 	const unsigned int MaxSlots = 1000;
 
+  // is there any way to simplify this?
 	template<class Key, class Value, typename HashFunc >
 	class HashTable
 	{
@@ -45,12 +46,15 @@ namespace Solutions
 		HashFunc hash;
 
 		template <typename T>
-		bool Search(const Key& key, T&& func)
+		bool Search(const Key& key, T& func)
 		{
+			// find the hash slot for the given key.
 			auto& l = slots[hash(key) % MaxSlots];
+			// find the key within the hash slot.
 			auto it = std::find_if(l.begin(), l.end(), [&](const KeyValuePair& kvp) { return kvp.key == key; });
 			if (it != l.end())
 			{
+			// run lambda on that item.
 				func(l, it);
 				return true;
 			}

@@ -5,11 +5,11 @@
 #include "Solutions/8_LinkedLists/8.4_overlapping_lists_no_cycle_solution.h"
 #include "Solutions/8_LinkedLists/8.3_checking_cycle_solution.h"
 
-#define TEST 0
+// #define TEST
 
 shared_ptr<ListNode<int>> OverlappingLists(shared_ptr<ListNode<int>> l1, shared_ptr<ListNode<int>> l2)
 {
-	return nullptr;
+  return nullptr;
 }
 
 #pragma region Test
@@ -45,7 +45,7 @@ void OverlappingListsSmallTest()
 
 void OverlappingListsTest()
 {
-#if TEST
+#ifdef TEST
 	OverlappingListsSmallTest();
 	shared_ptr<ListNode<int>> L1, L2;
 	// l1: 1->2->3->null

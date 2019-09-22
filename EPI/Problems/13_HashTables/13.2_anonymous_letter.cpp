@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 bool IsLetterConstructibleFromMagazine( const string& letter, const string& magazine ) 
 {
@@ -29,7 +29,7 @@ void IsLetterConstructibleFromMagazineSimpleTest() {
 
 void IsLetterConstructibleFromMagazineTest()
 {
-#if TEST
+#ifdef TEST
 	IsLetterConstructibleFromMagazineSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	string L, M;

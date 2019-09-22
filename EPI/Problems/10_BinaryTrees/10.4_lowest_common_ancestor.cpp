@@ -7,7 +7,7 @@
 
 BinaryTreeNodeP<int>* LCAParent( const unique_ptr<BinaryTreeNodeP<int>>& n0, const unique_ptr<BinaryTreeNodeP<int>>& n1 )
 {
-	return 0;
+  return nullptr;
 }
 
 #pragma region Test

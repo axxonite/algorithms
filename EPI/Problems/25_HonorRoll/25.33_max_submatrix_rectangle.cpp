@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int MaxRectangleSubmatrix( const vector<deque<bool>>& a ) 
 {
-	return -1;
+  return 0;
 }
 
 #pragma region Test
@@ -46,7 +46,7 @@ int MaxRectangleSubmatrixBruteForce( const vector<deque<bool>> &A ) {
 
 void MaxRectangleSubmatrixTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 5; ++times ) {
 		int n, m;

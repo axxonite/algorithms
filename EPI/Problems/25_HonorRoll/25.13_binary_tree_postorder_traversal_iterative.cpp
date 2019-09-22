@@ -3,11 +3,12 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 vector<int> PostorderTraversal( const unique_ptr<BinaryTreeNode<int>>& tree )
 {
 	vector<int> result;
+  // remember, it's POST-order without recursion that is the difficult problem.
 	return result;
 }
 
@@ -34,7 +35,7 @@ vector<T> GeneratePostorder( const unique_ptr<BinaryTreeNode<T>>& r )
 
 void PostorderTraversalTest()
 {
-#if TEST
+#ifdef TEST
 	//      3
 	//    2   5
 	//  1    4 6

@@ -2,12 +2,12 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<int> CalculateBonus( const vector<int>& productivity )
 {
-	vector<int> result;
-	return result;
+  vector<int> result;
+  return result;
 }
 
 #pragma region Test
@@ -49,7 +49,7 @@ void CalculateBonusSmallTest() {
 
 void CalculateBonusTest()
 {
-#if TEST
+#ifdef TEST
 	CalculateBonusSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 1000; ++times ) {

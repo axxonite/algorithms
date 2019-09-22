@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Event 
 {
@@ -11,7 +11,7 @@ struct Event
 
 int FindMaxSimultaneousEvents( const vector<Event>& a ) 
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -26,7 +26,7 @@ void FindMaxSimultaneousEventsSimpleTest()
 
 void FindMaxSimultaneousEventsTest()
 {
-#if TEST
+#ifdef TEST
 	FindMaxSimultaneousEventsSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	int n;

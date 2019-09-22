@@ -6,7 +6,7 @@ namespace Solutions
 {
 	// Finds the candidates which may occur > n / k times.
 	//
-	// We start with a set of elements (imagine a set of letter tiles in a bad), and lets assume that one element m appears more than n/k times, e.g. m>n/k. 
+	// We start with a set of elements (imagine a set of letter tiles in a bag), and lets assume that one element m appears more than n/k times, e.g. m>n/k. 
 	// We take k DISTINCT elements at random and remove them from the set (which means if we draw the same letter twice from the bag, we will put it back in the bag). 
 	// If m happened to not be in those k elements, then clearly m>(n-k)/k since only the right side was decremented.
 	// Now let's assume m was part of the k elements. Now have m-1>(n-k)/k => k(m-1)>n-k => km-k>n-k => km>n => m>n/k.

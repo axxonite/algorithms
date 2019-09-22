@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<vector<int>> Combinations(int n, int k)
 {
@@ -23,7 +23,7 @@ void SmallTestCombinations()
 
 void CombinationsTest()
 {
-#if TEST
+#ifdef TEST
 	SmallTestCombinations();
 	default_random_engine gen((random_device())());
 	int n, k;

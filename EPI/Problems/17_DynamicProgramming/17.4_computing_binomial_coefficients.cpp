@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int ComputeBinomialCoefficient(int n, int k)
 {
-	return 0;
+  return 0;
 }
 
 #pragma region Test
@@ -70,7 +70,7 @@ int CheckAns(int n, int k)
 
 void ComputeBinomialCoefficientTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)
 	{

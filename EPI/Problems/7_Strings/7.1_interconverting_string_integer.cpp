@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 string IntToString(int x)
 {
@@ -47,7 +47,7 @@ void DirectedTests()
 
 void InterconvertStringIntTest()
 {
-#if TEST
+#ifdef TEST
 	DirectedTests();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 10000; ++times)

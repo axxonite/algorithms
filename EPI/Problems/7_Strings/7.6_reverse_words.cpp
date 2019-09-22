@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "shared.h"
 
-#define TEST 0
+// #define TEST
 
 void ReverseWords(string& s)
 {
@@ -32,7 +32,7 @@ void ReverseWordsSimpleTest()
 
 void ReverseWordsTest()
 {
-#if TEST
+#ifdef TEST
 	ReverseWordsSimpleTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)

@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int gcd(int a, int b)
 {
@@ -56,7 +56,7 @@ int FindLineWithMostPoints( const vector<Point>& p, Line& result )
 
 #pragma region Test
 
-#if TEST
+#ifdef TEST
 
 // n^3 checking
 int FindLineWithMostPointsCheck( const vector<Point>& P ) 
