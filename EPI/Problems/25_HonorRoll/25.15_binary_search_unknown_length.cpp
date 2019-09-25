@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int BinarySearchUnknownLength( const vector<int>& a, int k )
 {
@@ -22,7 +22,7 @@ void BinarySearchUnknownLengthSmallTest() {
 
 void BinarySearchUnknownLengthTest()
 {
-#if TEST
+#ifdef TEST
 	BinarySearchUnknownLengthSmallTest();
 	int n, k;
 	default_random_engine gen( ( random_device() )( ) );

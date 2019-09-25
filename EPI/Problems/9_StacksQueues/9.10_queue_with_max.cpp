@@ -2,24 +2,23 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 class QueueWithMax 
 {
 public:
 	void Enqueue(int x)
 	{
-
-	}
+  }
 
 	int Dequeue() 
 	{
-		return 0;
+		return -1;
 	}
 
 	int Max() const 
 	{
-		return 0;
+    return 0;
 	}
 
 private:
@@ -67,7 +66,7 @@ void SimpleTestQueueWithMax() {
 }
 
 void QueueWithMaxTest() {
-#if TEST
+#ifdef TEST
 	SimpleTestQueueWithMax();
 	QueueWithMax Q;
 	Q.Enqueue(1);
