@@ -2,18 +2,18 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 bool ExpressionSynthesis( const vector<int>& digits, int target ) 
 {
-	return false;
+  return false;
 }
 
 #pragma region Test
 
 void ExpressionSynthesisTest()
 {
-#if TEST
+#ifdef TEST
 	vector<int> A = { 2, 3, 4 };
 	int k = 4;
 	assert( !ExpressionSynthesis( A, k ) );

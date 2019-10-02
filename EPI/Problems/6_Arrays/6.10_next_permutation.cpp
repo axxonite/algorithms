@@ -2,18 +2,18 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<int> NextPermutation(vector<int> perm)
 {
-	return {};
+  return {};
 }
 
 #pragma region Test
 
 void NextPermutationTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)
 	{
