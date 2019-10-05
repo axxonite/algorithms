@@ -9,7 +9,7 @@
 vector<string> SearchFrequentItems(int k, istringstream* stream)
 {
 	vector<string> result;
-  return result;
+	return result;
 }
 
 #pragma region Test

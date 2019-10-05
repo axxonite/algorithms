@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "LinkedListPrototype.h"
 
-#define TEST 0
+// #define TEST
 
 void DeletionFromList( const shared_ptr<ListNode<int>>& node ) 
 {
@@ -13,7 +13,7 @@ void DeletionFromList( const shared_ptr<ListNode<int>>& node )
 
 void DeletionFromListTest()
 {
-#if TEST
+#ifdef TEST
 	shared_ptr<ListNode<int>> L;
 	L = make_shared<ListNode<int>>( ListNode<int>{
 		1, make_shared<ListNode<int>>( ListNode<int>{

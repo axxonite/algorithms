@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int CalculateTrappingWater( const vector<int>& heights )
 {
-	return -1;
+	return 0;
 }
 
 #pragma region Test
@@ -44,7 +44,7 @@ void CalculateTrappingWaterSmallTest() {
 
 void CalculateTrappingWaterTest()
 {
-#if TEST
+#ifdef TEST
 	CalculateTrappingWaterSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 20; ++times ) {

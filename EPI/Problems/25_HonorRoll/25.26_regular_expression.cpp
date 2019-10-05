@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 bool IsMatch(const string& r, const string& s)
 {
@@ -13,7 +13,7 @@ bool IsMatch(const string& r, const string& s)
 
 void IsMatchTest()
 {
-#if TEST
+#ifdef TEST
 	assert(IsMatch(".", "a"));
 	assert(IsMatch("a", "a"));
 	assert(!IsMatch("a", "b"));
