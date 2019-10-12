@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<int> BSTInSortedOrder(const unique_ptr<BSTNode<int>>& t)
 {
-	vector<int> result;	
+	vector<int> result;
 	return result;
 }
 
@@ -26,7 +26,7 @@ void SimpleTestBSTInSortedOrder()
 
 void BSTInSortedOrderTest()
 {
-#if TEST
+#ifdef TEST
 	SimpleTestBSTInSortedOrder();
 	//        43
 	//    23     47

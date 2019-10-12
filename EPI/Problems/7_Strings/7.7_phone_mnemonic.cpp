@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 unordered_map<char, string> mappings = { { '2', "abc" },{ '3', "def" },{ '4', "ghi" },{ '5', "jkl" },{ '6', "mno" },{ '7', "pqrs" },{ '8', "tuv" },{ '9', "wxyz" } };
 
@@ -19,7 +19,7 @@ vector<string> PhoneMnemonic( const string& n )
 
 void PhoneMnemonicTest()
 {
-#if TEST
+#ifdef TEST
 	string num;
 	num = RandIntString( 10 );
 	auto result = PhoneMnemonic( num );
