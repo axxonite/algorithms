@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 bool CanReachEnd( const vector<int>& a ) 
 {
@@ -26,7 +26,7 @@ void CanReachEndSmallTest() {
 
 void CanReachEndTest()
 {
-#if TEST
+#ifdef TEST
 	CanReachEndSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	size_t n;
