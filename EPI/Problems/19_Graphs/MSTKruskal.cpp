@@ -27,7 +27,7 @@ struct HashEdge
 unordered_set<shared_ptr<MSTKruskalEdge>, HashEdge> MstKruskal(vector<shared_ptr<MSTKruskalGraphVertex>> g)
 {
 	unordered_set<shared_ptr<MSTKruskalEdge>, HashEdge> result;
-  return result;
+	return result;
 }
 
 #pragma region Test

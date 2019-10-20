@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "binary_tree_with_parent_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 vector<int> InorderTraversal( const unique_ptr<BinaryTreeNodeP<int>>& tree ) 
 {
@@ -15,7 +15,7 @@ vector<int> InorderTraversal( const unique_ptr<BinaryTreeNodeP<int>>& tree )
 
 void InorderTraversalTest()
 {
-#if TEST
+#ifdef TEST
 	//      3
 	//    2   5
 	//  1    4 6
