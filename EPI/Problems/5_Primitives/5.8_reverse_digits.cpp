@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int ReverseDigits(int x)
 {
-	return -1;
+	return 0;
 }
 
 #pragma region Test
@@ -14,7 +14,7 @@ int ReverseDigits(int x)
 
 void ReverseDigitsTest()
 {
-#if TEST
+#ifdef TEST
 	auto reversed = ReverseDigits(42);
 	assert(reversed == 24);
 	reversed = ReverseDigits(-314);
