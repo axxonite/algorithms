@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 typedef enum
 {
@@ -20,7 +20,7 @@ Ordering Compare(double a, double b)
 
 double SquareRoot(double x)
 {
-	return 0;
+	return -1;
 }
 
 #pragma region Test
@@ -37,7 +37,7 @@ static void SquareRootFloatSimpleTest()
 
 void SquareRootFloatTest()
 {
-#if TEST
+#ifdef TEST
 	SquareRootFloatSimpleTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 100000; ++times)

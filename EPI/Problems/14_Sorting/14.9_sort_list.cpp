@@ -4,7 +4,7 @@
 #include "LinkedListPrototype.h"
 #include "Solutions/8_LinkedLists/8.1_merge_sorted_lists_solution.h"
 
-#define TEST 0
+// #define TEST
 
 shared_ptr<ListNode<int>> StableSortList(shared_ptr<ListNode<int>> l)
 {
@@ -15,7 +15,7 @@ shared_ptr<ListNode<int>> StableSortList(shared_ptr<ListNode<int>> l)
 
 void StableSortListTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 100; ++times)
 	{

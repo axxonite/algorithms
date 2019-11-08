@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 bool IsPalindromeNumber(int x) 
 {
-	return true;
+	return false;
 }
 
 #pragma region Test
@@ -23,7 +23,7 @@ bool CheckAns(int x) {
 
 void IsPalindromeNumberTest() 
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	int x;
 	uniform_int_distribution<int> dis(-99999, 99999);
