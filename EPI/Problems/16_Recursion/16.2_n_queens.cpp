@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 vector<vector<int>> NQueens( int n )
 {
@@ -45,7 +45,7 @@ static void SolveNQueensSimpleTest()
 
 void SolveNQueensTest()
 {
-#if TEST
+#ifdef TEST
 	SolveNQueensSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	int n;

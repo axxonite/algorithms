@@ -2,11 +2,17 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
+void FindKLargestInBST(const unique_ptr<BSTNode<int>>& tree, int k, vector<int>& result)
+{
+}
+
+// strategy: we need to walk the tree in reverse order
 vector<int> FindKLargestInBST(const unique_ptr<BSTNode<int>>& tree, int k)
 {
 	vector<int> result;
+  FindKLargestInBST(tree, k, result);
 	return result;
 }
 
@@ -14,7 +20,7 @@ vector<int> FindKLargestInBST(const unique_ptr<BSTNode<int>>& tree, int k)
 
 void FindKLargestInBSTTest()
 {
-#if TEST
+#ifdef TEST
 	//    3
 	//  2   5
 	// 1   4 6

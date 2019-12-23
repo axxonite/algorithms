@@ -3,8 +3,9 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
-#define TEST 0
+// #define TEST
 
+// preorder traversal, no recursion, no parent references.
 vector<int> PreorderTraversal( const unique_ptr<BinaryTreeNode<int>>& tree )
 {
 	vector<int> result;
@@ -33,7 +34,7 @@ vector<T> GeneratePreorder( const unique_ptr<BinaryTreeNode<T>>& r )
 
 void PreorderTraversalTest()
 {
-#if TEST
+#ifdef TEST
 	//      3
 	//    2   5
 	//  1    4 6

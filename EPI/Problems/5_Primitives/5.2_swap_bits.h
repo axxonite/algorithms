@@ -4,5 +4,5 @@
 
 inline long long SwapBits( long long x, int i, int j ) 
 {
-	return -1;
+  return 0;
 }

@@ -2,12 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int FindElementAppearsOnce( const vector<int> &A )
 {
-	int result = 0;
-	return result;
+	return 0;
 }
 
 #pragma region Test
@@ -47,7 +46,7 @@ void FindElementAppearsOnceTest2() {
 
 void FindElementAppearsOnceTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 20; ++times ) {
 		vector<int> A;

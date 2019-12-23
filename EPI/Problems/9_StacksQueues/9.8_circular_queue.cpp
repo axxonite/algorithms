@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 class Queue
 {
@@ -15,11 +15,11 @@ public:
 
 	void Enqueue(int x)
 	{
-	}
+  }
 
 	int Dequeue()
 	{
-		return 0;
+    return 0;
 	}
 
 	size_t Size() const { return 0; }
@@ -72,7 +72,7 @@ void CircularQueueSimpleTest()
 
 void CircularQueueTest()
 {
-#if TEST
+#ifdef TEST
 	CircularQueueSimpleTest();
 	Queue q(8);
 	q.Enqueue(1);

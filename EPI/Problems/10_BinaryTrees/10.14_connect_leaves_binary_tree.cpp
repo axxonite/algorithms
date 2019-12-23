@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 list<const unique_ptr<BinaryTreeNode<int>>*> CreateListOfLeaves(const unique_ptr<BinaryTreeNode<int>>& t)
 {
@@ -15,7 +15,7 @@ list<const unique_ptr<BinaryTreeNode<int>>*> CreateListOfLeaves(const unique_ptr
 
 void CreateListOfLeavesTest()
 {
-#if TEST
+#ifdef TEST
 	//      3
 	//    2   5
 	//  1    4 6

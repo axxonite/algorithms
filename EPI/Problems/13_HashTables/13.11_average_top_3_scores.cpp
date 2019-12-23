@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 // todo review ifstream vs stringstream
 string FindStudentWithHighestBestOfThreeScores( ifstream* nameScoreData ) 
@@ -37,7 +37,7 @@ void FindStudentWithHighestBestOfThreeScoresSimpleTest()
 
 void FindStudentWithHighestBestOfThreeScoresTest()
 {
-#if TEST
+#ifdef TEST
 	FindStudentWithHighestBestOfThreeScoresSimpleTest();
 	default_random_engine gen( ( random_device() )( ) );
 	uniform_int_distribution<int> dis( 1, 10000 );

@@ -7,5 +7,5 @@
 
 inline shared_ptr<ListNode<int>> OverlappingNoCycleLists(shared_ptr<ListNode<int>> l1, shared_ptr<ListNode<int>> l2)
 {
-	return nullptr;
+  return nullptr;
 }

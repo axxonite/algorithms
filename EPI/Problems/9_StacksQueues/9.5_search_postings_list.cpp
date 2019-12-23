@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 class PostingListNode 
 {
@@ -48,7 +48,7 @@ shared_ptr<PostingListNode> BuildList()
 
 void SetJumpOrderTest()
 {
-#if TEST
+#ifdef TEST
 	auto L = BuildList();
 	shared_ptr<PostingListNode> temp = L;
 	SetJumpOrderRecursive( L );

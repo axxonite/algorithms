@@ -4,7 +4,7 @@
 #include "binary_tree_prototype.h"
 #include "binary_tree_utils.h"
 
-#define TEST 0
+// #define TEST
 
 bool IsBinaryTreeBST(const unique_ptr<BinaryTreeNode<int>>& tree)
 {
@@ -59,7 +59,7 @@ void IsBinaryTreeBSTSimpleTest()
 
 void IsBinaryTreeBSTTest()
 {
-#if TEST
+#ifdef TEST
 	IsBinaryTreeBSTSimpleTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)

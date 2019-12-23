@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 class PostingListNode
 {
@@ -13,7 +13,7 @@ public:
 
 shared_ptr<PostingListNode> CopyPostingsList(const shared_ptr<PostingListNode> L)
 {
-	return nullptr;
+  return nullptr;
 }
 
 #pragma region Test
@@ -38,7 +38,7 @@ void CheckPostingsListEqual(shared_ptr<PostingListNode> a, shared_ptr<PostingLis
 
 void CopyPostingsListTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 20; ++times)
 	{

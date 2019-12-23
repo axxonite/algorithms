@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "..\..\Shared.h"
 
-#define TEST 0
+// #define TEST
 
 string SnakeString( const string& s )
 {
@@ -17,7 +17,7 @@ void SnakeStringSmallTest() { assert( SnakeString( "Hello World!" ) == "e lHloWr
 
 void SnakeStringTest()
 {
-#if TEST
+#ifdef TEST
 	SnakeStringSmallTest();
 	default_random_engine gen( ( random_device() )( ) );
 	string s;

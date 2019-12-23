@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-//#define TEST
+// #define TEST
 
 vector<string> JustifyText(const vector<string>& words, size_t l)
 {

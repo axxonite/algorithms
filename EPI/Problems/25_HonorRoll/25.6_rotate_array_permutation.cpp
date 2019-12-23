@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 // two implementations?
 void RotateArray( int shift, vector<int>& a )
@@ -13,7 +13,7 @@ void RotateArray( int shift, vector<int>& a )
 
 void RotateArrayTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int i = 0; i < 100; ++i )
 	{

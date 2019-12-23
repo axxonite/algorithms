@@ -3,11 +3,11 @@
 #include "stdafx.h"
 #include "..\Problems.h"
 
-#define TEST 0
+// #define TEST
 
 shared_ptr<BSTNodeShared<int>> MergeTwoBSTs( shared_ptr<BSTNodeShared<int>> A, shared_ptr<BSTNodeShared<int>> B )
 {
-	return nullptr;
+  return nullptr;
 }
 
 #pragma region Test
@@ -25,7 +25,7 @@ void PrintBSTInorder( shared_ptr<BSTNodeShared<T>> n, const T& pre ) {
 // Note: there is no actual test here, it just prints out the tree values.
 void MergeTwoBSTsTest()
 {
-#if TEST
+#ifdef TEST
 	//      3
 	//    2   5
 	//  1    4 6

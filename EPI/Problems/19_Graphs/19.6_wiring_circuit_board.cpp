@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+#define TEST
 
 struct GraphVertex
 {
@@ -52,7 +52,7 @@ bool IsTwoColorable(vector<GraphVertex>* G)
 
 void IsAnyPlacementFeasibleTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 90; ++times)
 	{
