@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct CloneGraphVertex 
 {
@@ -12,7 +12,7 @@ struct CloneGraphVertex
 
 CloneGraphVertex* CloneGraph( CloneGraphVertex* G )
 {
-	return nullptr;
+  return nullptr;
 }
 
 #pragma region Test
@@ -53,7 +53,7 @@ void CheckGraph( CloneGraphVertex* node, const vector<CloneGraphVertex>& G )
 
 void CloneGraphTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 100; ++times ) 
 	{
