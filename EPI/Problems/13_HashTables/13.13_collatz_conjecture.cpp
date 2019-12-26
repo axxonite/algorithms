@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 bool TestCollatzConjecture( int n ) 
 {
-	return false;
+	return true;
 }
 
 #pragma region Test
@@ -29,7 +29,7 @@ bool TestCollatzConjectureCheck( int n )
 
 void TestCollatzConjectureTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen( ( random_device() )( ) );
 	for ( int times = 0; times < 5; ++times ) 
 	{

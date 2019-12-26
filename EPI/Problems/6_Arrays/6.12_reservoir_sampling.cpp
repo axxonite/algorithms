@@ -2,8 +2,9 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
+// maintain a uniform random subset of size k of the read packets.
 vector<int> OnlineRandomSample(istringstream* sin, int k)
 {
 	vector<int> runningSample;
@@ -14,7 +15,7 @@ vector<int> OnlineRandomSample(istringstream* sin, int k)
 
 void OnlineRandomSampleTest()
 {
-#if TEST
+#ifdef TEST
 	int n, k;
 	default_random_engine gen((random_device())());
 	uniform_int_distribution<int> n_dis(0, 99999);

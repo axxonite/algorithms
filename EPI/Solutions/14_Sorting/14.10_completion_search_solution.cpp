@@ -23,4 +23,19 @@ namespace Solutions
 		// No solution, since targetPayroll > existing payroll.
 		return -1.0;
 	}
+
+  double FindSalaryCap2(double targetPayroll, vector<double> salaries)
+  {
+    sort(salaries.begin(), salaries.end());
+    double uncappedPayroll = 0.0;
+    for (int i = 0; i < salaries.size(); ++i)
+    {
+      double cappedPay = (targetPayroll - uncappedPayroll) / (salaries.size() - i);
+      if (cappedPay <= salaries[i])
+        return cappedPay;
+      uncappedPayroll += salaries[i];
+    }
+    return -1;
+  }
 }
+

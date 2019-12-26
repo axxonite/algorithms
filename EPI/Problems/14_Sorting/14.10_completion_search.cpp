@@ -2,8 +2,9 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
+// we have a certain budget, we want to cap the salaries to meet out budget.
 double FindSalaryCap(double targetPayroll, vector<double> salaries)
 {
 	return -1;
@@ -26,7 +27,7 @@ void FindSalaryCapSmallTest()
 
 void FindSalaryCapTest()
 {
-#if TEST
+#ifdef TEST
 	FindSalaryCapSmallTest();
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 1000; ++times)

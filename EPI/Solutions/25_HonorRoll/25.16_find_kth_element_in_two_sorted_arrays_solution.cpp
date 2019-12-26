@@ -14,6 +14,7 @@ namespace Solutions
 		return x[index];
 	}
 
+	// k starts at 1.
 	int FindKthInTwoSortedArrays(const vector<int>& a, const vector<int>& b, int k)
 	{
 		// the initial range is 0..a.size(), but:
