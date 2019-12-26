@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "binary_tree_with_parent_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 BinaryTreeNodeP<int>* FindSuccessor( const unique_ptr<BinaryTreeNodeP<int>>& node)
 {
@@ -14,7 +14,7 @@ BinaryTreeNodeP<int>* FindSuccessor( const unique_ptr<BinaryTreeNodeP<int>>& nod
 
 void FindSuccessorTest()
 {
-#if TEST
+#ifdef TEST
 	//      3
 	//    2   5
 	//  1    4  6

@@ -2,11 +2,16 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Jug 
 {
 	int low, high;
+
+	bool operator == (const Jug& jug ) const
+	{
+		return low == jug.low && high == jug.high;
+	}
 };
 
 bool CheckFeasible( const vector<Jug>& jugs, int l, int h ) 
@@ -18,7 +23,7 @@ bool CheckFeasible( const vector<Jug>& jugs, int l, int h )
 
 void CheckFeasibleTest()
 {
-#if TEST
+#ifdef TEST
 	int n;
 	vector<Jug> jugs = { { 230, 240 },{ 290, 310 },{ 500, 515 } };
 	assert( CheckFeasible( jugs, 2100, 2300 ) == true );

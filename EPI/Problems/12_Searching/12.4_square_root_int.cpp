@@ -6,7 +6,7 @@
 
 int SquareRoot(int k)
 {
-  return 0;
+	return 0;
 }
 
 #pragma region Test

@@ -3,18 +3,18 @@
 #include "stdafx.h"
 #include "LinkedListPrototype.h"
 
-#define TEST 0
+// #define TEST
 
 bool IsLinkedListAPalindrome( shared_ptr<ListNode<int>> l ) 
 {
-	return true;
+	return false;
 }
 
 #pragma region Test
 
 void IsLinkedListAPalindromeTest()
 {
-#if TEST
+#ifdef TEST
 	assert( IsLinkedListAPalindrome( nullptr ) == true );
 	assert( IsLinkedListAPalindrome(
 		make_shared<ListNode<int>>( ListNode<int>{1, nullptr} ) ) == true );

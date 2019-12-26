@@ -6,7 +6,7 @@
 
 double Power(double x, int y)
 {
-  return 0;
+	return 0;
 }
 
 #pragma region Test

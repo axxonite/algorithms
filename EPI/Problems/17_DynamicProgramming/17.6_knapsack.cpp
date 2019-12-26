@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct Item
 {
@@ -43,7 +43,7 @@ void OptimumSubjecToCapacitySmallTest()
 
 void OptimumSubjectToCapacityTest()
 {
-#if TEST
+#ifdef TEST
 	OptimumSubjecToCapacitySmallTest();
 	default_random_engine gen((random_device())());
 	vector<int> weight, value;
