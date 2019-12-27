@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "LinkedListPrototype.h"
 
-#define TEST 0
+// #define TEST
 
 shared_ptr<ListNode<int>> ListPivoting( const shared_ptr<ListNode<int>>& L, int k ) 
 {
@@ -42,7 +42,7 @@ void ListPivotingSimpleTest() {
 
 void ListPivotingTest()
 {
-#if TEST
+#ifdef TEST
 	ListPivotingSimpleTest();
 	shared_ptr<ListNode<int>> L;
 	L = make_shared<ListNode<int>>( ListNode<int>{
