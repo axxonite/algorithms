@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST
+// #define TEST
 
 string ShortestEquivalentPath(const string& path)
 {
