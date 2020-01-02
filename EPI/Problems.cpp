@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Problems/Problems.h"
+#include "Modern.h"
 
 int main()
 {
@@ -264,4 +265,6 @@ int main()
 	DisjointSetTest();
 	EuclidGCDTest();
 	HashTableTest();
+
+	TestModern();
 }

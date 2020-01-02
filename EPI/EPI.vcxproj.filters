@@ -103,6 +103,7 @@
     <ClInclude Include="Problems\Data Structures\MSTEdge.h">
       <Filter>Data Structures</Filter>
     </ClInclude>
+    <ClInclude Include="Modern.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -1533,6 +1534,7 @@
     <ClCompile Include="Solutions\Data Structures\SkipList_solution.cpp">
       <Filter>Solutions\Data Structures</Filter>
     </ClCompile>
+    <ClCompile Include="Modern.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">

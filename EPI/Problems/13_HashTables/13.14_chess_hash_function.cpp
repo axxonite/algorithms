@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 enum SquareState
 {
@@ -47,6 +47,8 @@ struct ChessState
 	}
 };
 
+unsigned long long hashCodes[8][8][13];
+
 void InitHashes()
 {
 }
@@ -65,7 +67,7 @@ long long ChessHash( ChessState& state, long long stateHash, int srcY, int srcX,
 
 void ChessHashTest()
 {
-#if TEST
+#ifdef TEST
 	InitHashes();
 	ChessState state;
 	state.Set( 0, 0, BlackRook );

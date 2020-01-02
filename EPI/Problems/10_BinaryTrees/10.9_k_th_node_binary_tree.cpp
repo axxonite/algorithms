@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "binary_tree_prototype.h"
 
-#define TEST 0
+// #define TEST
 
 template <typename T>
 struct BinaryTreeNodeWithSize 
@@ -22,7 +22,7 @@ const BinaryTreeNodeWithSize<int>* FindKthNodeBinaryTree( const unique_ptr<Binar
 
 void FindKthNodeBinaryTreeTest()
 {
-#if TEST
+#ifdef TEST
 	//  size field
 	//      6
 	//    2   3

@@ -146,6 +146,7 @@
     <ClInclude Include="doubly_linked_list_prototype.h" />
     <ClInclude Include="GraphVertex.h" />
     <ClInclude Include="LinkedListPrototype.h" />
+    <ClInclude Include="Modern.h" />
     <ClInclude Include="Problems\10_BinaryTrees\10.13_reconstruct_preorder_with_null.h" />
     <ClInclude Include="Problems\18_GreedyAlgorithms\2_sum.h" />
     <ClInclude Include="Problems\5_Primitives\5.1_parity.h" />
@@ -178,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++Constructs.cpp" />
+    <ClCompile Include="Modern.cpp" />
     <ClCompile Include="Problems.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.10_successor.cpp" />
     <ClCompile Include="Problems\10_BinaryTrees\10.11_inorder_traversal_with_parent.cpp" />
