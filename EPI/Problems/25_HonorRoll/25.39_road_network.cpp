@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 struct HighwaySection 
 {
@@ -30,7 +30,7 @@ void FindBestProposalsSimpleTest() {
 
 void FindBestProposalsTest()
 {
-#if TEST
+#ifdef TEST
 	FindBestProposalsSimpleTest();
 	for ( int times = 0; times < 2; ++times ) {
 		default_random_engine gen( ( random_device() )( ) );

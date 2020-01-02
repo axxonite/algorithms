@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 string ShortestEquivalentPath(const string& path)
 {
@@ -13,7 +13,7 @@ string ShortestEquivalentPath(const string& path)
 
 void ShortestEquivalentPathTest()
 {
-#if TEST
+#ifdef TEST
 	assert( ShortestEquivalentPath( "123/456" ) == string( "123/456" ) );
 	assert( ShortestEquivalentPath( "/123/456" ) == string( "/123/456" ) );
 	assert( ShortestEquivalentPath( "usr/lib/../bin/gcc" ) == string( "usr/bin/gcc" ) );

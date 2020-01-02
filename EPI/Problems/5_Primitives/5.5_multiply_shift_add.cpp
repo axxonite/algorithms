@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 unsigned Add(unsigned a, unsigned b)
 {
@@ -17,7 +17,7 @@ unsigned Multiply(unsigned x, unsigned y)
 #pragma region Test
 void MultiplyShiftAddTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	// Random test, only works if the product is not greater than 2^32 - 1.
 	for (int i = 0; i < 100000; ++i) {
