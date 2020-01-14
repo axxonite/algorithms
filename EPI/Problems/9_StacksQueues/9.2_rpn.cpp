@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int EvalRPN( const string& expr ) 
 {
@@ -13,7 +13,7 @@ int EvalRPN( const string& expr )
 
 void EvalRPNTest()
 {
-#if TEST
+#ifdef TEST
 	assert( 0 == EvalRPN( "2,-10,/" ) );
 	assert( -5 == EvalRPN( "-10,2,/" ) );
 	assert( 5 == EvalRPN( "-10,-2,/" ) );

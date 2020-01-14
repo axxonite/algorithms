@@ -2,11 +2,11 @@
 
 #include "stdafx.h"
 
-#define TEST 0
+// #define TEST
 
 int FindBiggestNMinusOneProduct(const vector<int>& a)
 {
-	return -1;
+	return 0;
 }
 
 #pragma region Test
@@ -30,7 +30,7 @@ int FindBiggestNMinusOneProductCheckAns(const vector<int>& A)
 
 void FindBiggestNMinusOneProductTest()
 {
-#if TEST
+#ifdef TEST
 	default_random_engine gen((random_device())());
 	for (int times = 0; times < 200; ++times)
 	{
