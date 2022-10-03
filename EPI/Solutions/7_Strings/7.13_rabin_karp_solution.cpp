@@ -7,6 +7,7 @@ namespace Solutions
 {
 	int RabinKarp( const string& t, const string& s )
 	{
+		// 1. Pre-conditions:
 		// An empty search string matches all strings.
 		if ( s.empty() )
 			return 0;
@@ -14,6 +15,7 @@ namespace Solutions
 		if ( t.size() < s.size() )
 			return -1;
 
+		// 2. Setup hash for both source and destination. Note the user of powerS to compute the base to a power.
 		const int kBase = 26;
 		// We maximize coverage of the hash by allocating 26 values for each letter position. Thus every string combination up to a certain length (6 letters) gets a unique hash.
 		// powerS is the weight of the first letter we added.
@@ -25,6 +27,7 @@ namespace Solutions
 			hashT = hashT * kBase + t[i];
 		}
 
+		// 3. Compare hashes to find a match and roll the hash window over by substracting and adding.
 		for ( int i = s.size(); i <= t.size(); ++i )
 		{
 			if ( hashS == hashT && strncmp( s.c_str(), t.c_str() + i - s.size(), s.size() ) == 0 )
