@@ -1,7 +1,7 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include "..\..\Shared.h"
+#include "Shared.h"
 
 namespace Solutions
 {
@@ -23,7 +23,7 @@ namespace Solutions
 			for ( auto c : mapping )
 			{
 				partialResult[dstIndex] = c;
-				PhoneMnemonic( n, index + 1, dstIndex + 1, partialResult + c, result );
+				PhoneMnemonic( n, index + 1, dstIndex + 1, partialResult, result );
 			}
 		}
 	}

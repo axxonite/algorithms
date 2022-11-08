@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <vector>
 #include "BinarySearchTrees.h"
 #include "BinaryTrees.h"
 

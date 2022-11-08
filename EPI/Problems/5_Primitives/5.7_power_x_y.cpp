@@ -12,7 +12,7 @@ double Power(double x, int y)
 #pragma region Test
 
 // 0 means equal, -1 means smaller, and 1 means larger.
-int Compare(double a, double b)
+int ComparePower(double a, double b)
 {
 	// Uses normalization for precision problem.
 	double diff = (a - b) / b;
@@ -33,7 +33,7 @@ void PowerTest()
 		y = dis_y(gen);
 		//cout << x << "^" << y << ": " << Power(x, y) << " " << pow(x, y)
 		//	<< endl;
-		assert(!Compare(Power(x, y), std::pow(x, y)));
+		assert(!ComparePower(Power(x, y), std::pow(x, y)));
 	}
 #endif
 }

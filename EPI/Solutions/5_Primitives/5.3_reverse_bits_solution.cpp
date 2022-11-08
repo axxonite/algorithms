@@ -1,5 +1,3 @@
-#pragma once
-
 #include "stdafx.h"
 #include "5.2_swap_bits_solution.h"
 

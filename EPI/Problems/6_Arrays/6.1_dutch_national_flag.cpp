@@ -17,7 +17,7 @@ void DutchFlagPartition(int pivot, vector<Color>& a)
 
 #pragma region Test
 
-vector<Color> RandVector(int len)
+vector<Color> RandVectorDutchFlag(int len)
 {
 	default_random_engine gen((random_device())());
 	vector<Color> ret;
@@ -37,7 +37,7 @@ void DutchFlagPartitionTest()
 	{
 		uniform_int_distribution<int> dis(1, 100);
 		int n = dis(gen);
-		vector<Color> A(RandVector(n));
+		vector<Color> A(RandVectorDutchFlag(n));
 		uniform_int_distribution<int> dis2(0, A.size() - 1);
 		int pivot_index = dis2(gen);
 		Color pivot = A[pivot_index];

@@ -174,7 +174,7 @@ int Divide(unsigned int x, unsigned int y)
 			q >>= 1;
 		}
 		result += q;
-		x -= unsigned int(z);
+		x -= (unsigned int)(z);
 	}
 	return result;
 }

@@ -23,7 +23,7 @@ namespace Solutions
 				// The algebraic equation below is equivalent to taking the index, converting it to the corresponding prime with 2i + 3, squaring it
 				// then converting back to an index with (i-3)/2.
 				// Note that we need to use long for j because p^2 might overflow.
-				for (long long j = long long(i) * long long(i) * 2 + 6 * i + 3; j < size; j += p)
+				for (long long j = (long long)(i) * (long long)(i) * 2 + 6 * i + 3; j < size; j += p)
 					isPrime[j] = false;
 			}
 		}

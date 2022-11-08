@@ -1,5 +1,7 @@
 #pragma once
+
 #include "LinkedListPrototype.h"
+#include "BSTPrototype.h"
 #include "doubly_linked_list_prototype.h"
 
 // Sorting algorithms.
@@ -264,6 +266,8 @@ void IsContainedTest();
 void DisjointSetTest();
 void EuclidGCDTest();
 void HashTableTest();
+
+void RunTests();
 
 namespace Solutions
 {

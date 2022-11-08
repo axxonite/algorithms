@@ -18,19 +18,19 @@ namespace Solutions
 
 		void Insert(const Key& key, const Value& value)
 		{
-			if (!Search(key, [&](list<KeyValuePair> & l, list<KeyValuePair> ::iterator & it) { it->value = value; }))
+			if (!Search(key, [&](list<KeyValuePair> & l, typename list<KeyValuePair> ::iterator & it) { it->value = value; }))
 				slots[hash(key) % MaxSlots].emplace_back(KeyValuePair{ key, value });
 		}
 
 		bool Remove(const Key& key)
 		{
-			return Search(key, [](list<KeyValuePair> & l, list<KeyValuePair>::iterator & it) { l.erase(it); });
+			return Search(key, [](list<KeyValuePair> & l, typename list<KeyValuePair>::iterator & it) { l.erase(it); });
 		}
 
 		const Value& operator [] (Key key)
 		{
 			const Value* value;
-			if (!Search(key, [&](list<KeyValuePair> & l, list<KeyValuePair> ::iterator & it) { value = &it->value; }))
+			if (!Search(key, [&](list<KeyValuePair> & l, typename list<KeyValuePair> ::iterator & it) { value = &it->value; }))
 				throw invalid_argument("");
 			return *value;
 		}

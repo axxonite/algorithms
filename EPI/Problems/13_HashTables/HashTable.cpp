@@ -31,6 +31,8 @@ public:
 
 private:
 
+	std::vector<std::vector<Key> > slots;
+
 };
 
 #pragma region Test

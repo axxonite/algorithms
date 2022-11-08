@@ -10,7 +10,7 @@ namespace Solutions
 		// Start with the highest power available based on the number of bits.
 		int power = 32; // 32 is actualy incorrect here - so value that is 1 << 32 would fit in the unsigned int result.
 		// Note the use of an UNSIGNED 64 bit value for the power. If it's not unsigned we will potentially run into an infinite loop.
-		unsigned long long ypow = unsigned long long(y) << power;
+		unsigned long long ypow = (unsigned long long)(y) << power;
 		while (x >= y)
 		{
 			// Skip powers until we get one that is smaller than x;
@@ -32,7 +32,7 @@ unsigned Divide2(unsigned x, unsigned y)
 {
 	int result = 0;
 	unsigned int power = 31;
-	unsigned long long ypower = unsigned long long(y) << power;
+	unsigned long long ypower = (unsigned long long)(y) << power;
 	while (x >= y)
 	{
 		if (x >= ypower)

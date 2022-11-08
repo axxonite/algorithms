@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "..\..\Solutions\19_Graphs\TopologicalSort_solution.h"
+#include "Solutions/19_Graphs/TopologicalSort_solution.h"
 #include "GraphVertex.h"
 
 namespace Solutions

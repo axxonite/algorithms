@@ -18,7 +18,7 @@ void GrayCodeSmallTest()
 	assert( equal( vec.begin(), vec.end(), expected.begin(), expected.end() ) );
 }
 
-void CheckAns( const vector<int>& A )
+void CheckAnsGrayCode( const vector<int>& A )
 {
 	for ( size_t i = 0; i < A.size(); ++i )
 	{
@@ -46,7 +46,7 @@ void GrayCodeTest()
 	auto vec = GrayCode( n );
 	for ( int a : vec )
 		cout << a << endl;
-	CheckAns( vec );
+	CheckAnsGrayCode( vec );
 #endif
 }
 

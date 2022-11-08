@@ -10,7 +10,7 @@ int MaxSubarraySumInCircular(const vector<int>& A)
 }
 
 #pragma region Test
-int CheckAns(const vector<int>& A)
+int CheckAnsMaxSubarraySumInCircular(const vector<int>& A)
 {
 	int ans = 0;
 	for (int i = 0; i < A.size(); ++i)
@@ -48,7 +48,7 @@ void MaxSubarraySumInCircularTest()
 			}
 			//*/
 		cout << endl << "maximum sum = " << ans << endl;
-		assert(ans == CheckAns(A));
+		assert(ans == CheckAnsMaxSubarraySumInCircular(A));
 	}
 #endif
 }

@@ -208,7 +208,7 @@ int FindLargestNumberTeams(GraphVertex<TeamPhoto>* g)
     while ( !ordering.empty())
     {
         auto u = ordering.top();
-        maxDist = (maxDist, u->value.maxDist);
+        maxDist = max(maxDist, u->value.maxDist);
         for ( auto v : u->edges )
             v->value.maxDist = max(v->value.maxDist, u->value.maxDist + 1);
         ordering.pop();

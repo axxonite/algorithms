@@ -7,7 +7,6 @@
 
 #include "targetver.h"
 #include <stdio.h>
-#include <tchar.h>
 #include <random>
 #include <cassert>
 #include <iostream>
@@ -29,5 +28,10 @@
 #include <numeric>
 #include "BSTPrototype.h"
 #include <bitset>
+#include <list>
 
 using namespace std;
+
+#if WINDOWS
+#include <tchar.h>
+#endif

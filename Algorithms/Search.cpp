@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Search.h"
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -168,11 +169,11 @@ DuplicateAndMissing FindDuplicateAndMissing(const vector<int>& a)
 	// XOR all numbers in the sequencer 0+1+...+n-1 that have bit k set, with all numbers in the array that have that bit set, yields a XOR that can be m or t but not both. To find out if we have m or t, see if the given XOR
 	// is missing from the subsequence, then it is m otherwise it is t. XORing this result with the (m XOR t) result given before, will yield the other value.
 	
-	int xor = 0;
+	int _xor = 0;
 	for ( int i = 1; i < a.size(); i++)
-		xor ^= i ^ a[i];
+		_xor ^= i ^ a[i];
 	// Now xor is m xor t.
-	int bit = xor & (~(xor-1)); // Lowest bit set. Review this....
+	int bit = _xor & (~(_xor-1)); // Lowest bit set. Review this....
 
 	int xor2 = 0;
 	for ( int i = 1; i < a.size(); i++)
@@ -187,9 +188,9 @@ DuplicateAndMissing FindDuplicateAndMissing(const vector<int>& a)
 	for ( int v : a )
 	{
 		if ( v == xor2 )
-			return DuplicateAndMissing { xor2, xor2 ^ xor };
+			return DuplicateAndMissing { xor2, xor2 ^ _xor };
 	}
-	return DuplicateAndMissing{xor2 ^ xor, xor};
+	return DuplicateAndMissing{xor2 ^ _xor, _xor};
 }
 
 void TestFindDuplicateAndMissing()

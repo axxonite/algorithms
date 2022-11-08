@@ -1,5 +1,6 @@
 #include <iostream>
+#include "EPI/Problems/Problems.h"
 
 int main(int, char**) {
-    std::cout << "Hello, world!\n";
+    RunTests();
 }

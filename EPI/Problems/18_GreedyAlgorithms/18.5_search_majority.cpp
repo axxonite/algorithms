@@ -1,7 +1,7 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include "shared.h"
+#include "Shared.h"
 
 #define TEST 0
 

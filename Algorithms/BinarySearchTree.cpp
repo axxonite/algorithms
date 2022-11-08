@@ -1,7 +1,6 @@
 #include "stdafx.h"
+#include <cstdio>
 #include "BinarySearchTree.h"
-
-using namespace std;
 
 // The BST property is: If y is a node in the left subtree of x, then y.key <= x.key. If y is a node in the right subtree of x, then y.key >= x.key.
 template <class T>
@@ -18,7 +17,7 @@ class CBinarySearchTree
 
 		SNode()
 		{
-			left = right = parent = NULL;
+			left = right = parent = nullptr;
 		}
 
 		void Print()

@@ -20,3 +20,8 @@ x64/Release/
 x64/Debug/
 Debug/
 EPI/x64/
+build/
+build/*
+CMakeCache.txt
+CMakeSystem.cmake
+CMakeOutput.log

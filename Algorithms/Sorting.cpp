@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Sorting.h"
 #include "Lists.h"
-#include <algorithm>
 
 using namespace std;
 

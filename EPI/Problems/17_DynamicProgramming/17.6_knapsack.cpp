@@ -16,7 +16,7 @@ int OptimumSubjectToCapacity(const vector<Item>& items, int capacity)
 
 #pragma region Test
 
-vector<int> RandVector(int len)
+vector<int> RandVectorKnapsack(int len)
 {
 	vector<int> ret;
 	default_random_engine gen((random_device())());
@@ -52,7 +52,7 @@ void OptimumSubjectToCapacityTest()
 	n = n_dis(gen);
 	uniform_int_distribution<int> W_dis(1, 1000);
 	W = W_dis(gen);
-	weight = RandVector(n), value = RandVector(n);
+	weight = RandVectorKnapsack(n), value = RandVectorKnapsack(n);
 	cout << "Weight: ";
 	for (int i = 0; i < n; ++i)
 	{

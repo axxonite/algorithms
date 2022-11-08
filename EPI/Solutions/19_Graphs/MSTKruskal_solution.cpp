@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "..\..\Solutions\Data Structures\DisjointSet_solution.h"
+#include "Solutions/Data Structures/DisjointSet_solution.h"
 
 namespace Solutions
 {

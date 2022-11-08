@@ -3,14 +3,14 @@
 template <int n>
 bool GaussJordanElimination()
 {
-	int[n][n] m; // todo fix this
-	int[n][n] inverse; // todo fix this
+	int m[n][n];
+	int inverse[n][n];
 
 	int s[n][n * 2];
 	// a. construct augmented matrix.
 	for (int i = 0; i < n; ++i)
 	{
-		for (int j = j < n; ++j)
+		for (int j = 0; j < n; ++j)
 		{
 			s[i][j] = m[i][j];
 			s[i][j + n] = j == i ? 1 : 0;

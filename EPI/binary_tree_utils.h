@@ -5,7 +5,7 @@
 #include <random>
 #include <vector>
 
-#include "Binary_tree_prototype.h"
+#include "binary_tree_prototype.h"
 
 using namespace std;
 

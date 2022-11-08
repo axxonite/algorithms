@@ -8,10 +8,11 @@
 #include "targetver.h"
 
 #include <stdio.h>
-#include <tchar.h>
 #include <assert.h>
 #include <random>
+#include <algorithm>
+#include <functional>
 
-
-
-// TODO: reference additional headers your program requires here
+#if WINDOWS
+#include <tchar.h>
+#endif

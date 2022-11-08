@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "GraphVertex.h"
-#include "..\..\Solutions\19_Graphs\19.5_clone_graph_solution.h"
-#include "..\..\Solutions\19_Graphs\BellmanFord_solution.h"
-#include "..\..\Solutions\19_Graphs\Dijkstra_solution.h"
+#include "Solutions/19_Graphs/19.5_clone_graph_solution.h"
+#include "Solutions/19_Graphs/BellmanFord_solution.h"
+#include "Solutions/19_Graphs/Dijkstra_solution.h"
 
 // #define TEST
 

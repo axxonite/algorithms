@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "GraphVertex.h"
-#include "Solutions\19_Graphs\TopologicalSort_solution.h"
+#include "Solutions/19_Graphs/TopologicalSort_solution.h"
 
 // #define TEST
 

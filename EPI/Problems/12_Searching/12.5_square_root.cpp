@@ -11,7 +11,7 @@ typedef enum
 	LARGER
 } Ordering;
 
-Ordering Compare(double a, double b)
+Ordering CompareSquareRoot(double a, double b)
 {
 	// Uses normalization for precision problem.
 	double diff = (a - b) / b;
@@ -27,12 +27,12 @@ double SquareRoot(double x)
 
 static void SquareRootFloatSimpleTest()
 {
-	assert(Compare(SquareRoot(1.0), sqrt(1.0) == EQUAL));
-	assert(Compare(SquareRoot(2.0), sqrt(2.0) == EQUAL));
-	assert(Compare(SquareRoot(0.001), sqrt(0.001) == EQUAL));
-	assert(Compare(SquareRoot(0.5), sqrt(0.5) == EQUAL));
-	assert(Compare(SquareRoot(100000000.001), sqrt(100000000.001) == EQUAL));
-	assert(Compare(SquareRoot(1024.0), sqrt(1024.0) == EQUAL));
+	assert(CompareSquareRoot(SquareRoot(1.0), sqrt(1.0) == EQUAL));
+	assert(CompareSquareRoot(SquareRoot(2.0), sqrt(2.0) == EQUAL));
+	assert(CompareSquareRoot(SquareRoot(0.001), sqrt(0.001) == EQUAL));
+	assert(CompareSquareRoot(SquareRoot(0.5), sqrt(0.5) == EQUAL));
+	assert(CompareSquareRoot(SquareRoot(100000000.001), sqrt(100000000.001) == EQUAL));
+	assert(CompareSquareRoot(SquareRoot(1024.0), sqrt(1024.0) == EQUAL));
 }
 
 void SquareRootFloatTest()
@@ -48,7 +48,7 @@ void SquareRootFloatTest()
 		double res[2];
 		//cout << "x is " << x << endl;
 		//cout << (res[0] = SquareRoot(x)) << ' ' << (res[1] = sqrt(x)) << endl;
-		assert(Compare(res[0], res[1]) == EQUAL);
+		assert(CompareSquareRoot(res[0], res[1]) == EQUAL);
 	}
 #endif
 }

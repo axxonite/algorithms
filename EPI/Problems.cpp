@@ -2,7 +2,7 @@
 #include "Problems/Problems.h"
 #include "Modern.h"
 
-int main()
+void RunTests()
 {
 	InsertionSortTest();
 	SelectionSortTest();

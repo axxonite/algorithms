@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Lists.h"
+#include <vector>
 #include <memory>
 
 using namespace std;

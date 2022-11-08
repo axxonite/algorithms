@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <vector>
 #include "Honors.h"
 
 using namespace std;

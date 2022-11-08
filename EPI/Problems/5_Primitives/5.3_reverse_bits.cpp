@@ -1,7 +1,7 @@
 // Copyright (c) 2015 Elements of Programming Interviews. All rights reserved.
 
 #include "stdafx.h"
-#include "..\..\Solutions\5_Primitives\5.2_swap_bits_solution.h"
+#include "Solutions/5_Primitives/5.2_swap_bits_solution.h"
 
 #define TEST 0
 
