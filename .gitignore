@@ -25,3 +25,4 @@ build/*
 CMakeCache.txt
 CMakeSystem.cmake
 CMakeOutput.log
+.DS_Store
