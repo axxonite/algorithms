@@ -2,24 +2,24 @@
 
 #include "stdafx.h"
 
-#define TEST
+// #define TEST
 
-struct GraphVertex
+struct GraphVertexTwoColorable
 {
 	int d = -1;
-	vector<GraphVertex*> edges;
+	vector<GraphVertexTwoColorable*> edges;
 };
 
-bool IsAnyPlacementFeasible(vector<GraphVertex>& g)
+bool IsAnyPlacementFeasible(vector<GraphVertexTwoColorable>& g)
 {
 	return true;
 }
 
 #pragma region Test
 
-bool IsTwoColorableDFS(GraphVertex* s)
+bool IsTwoColorableDFS(GraphVertexTwoColorable* s)
 {
-	for (GraphVertex*& t : s->edges)
+	for (GraphVertexTwoColorable*& t : s->edges)
 	{
 		if (t->d == -1)
 		{
@@ -33,12 +33,12 @@ bool IsTwoColorableDFS(GraphVertex* s)
 	return true;
 }
 
-bool IsTwoColorable(vector<GraphVertex>* G)
+bool IsTwoColorable(vector<GraphVertexTwoColorable>* G)
 {
-	for (GraphVertex& v : *G)
+	for (GraphVertexTwoColorable& v : *G)
 		v.d = -1;
 
-	for (GraphVertex& v : *G)
+	for (GraphVertexTwoColorable& v : *G)
 	{
 		if (v.d == -1)
 		{
@@ -59,7 +59,7 @@ void IsAnyPlacementFeasibleTest()
 		int n;
 		uniform_int_distribution<int> dis(2, 101);
 		n = dis(gen);
-		vector<GraphVertex> G(n);
+		vector<GraphVertexTwoColorable> G(n);
 		uniform_int_distribution<int> dis2(1, n * (n - 1) / 2);
 		int m = dis2(gen);
 		//cout << times << ' ' << n << ' ' << m << endl;

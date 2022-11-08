@@ -18,6 +18,14 @@ struct Edge
 {
 	GraphVertex* dst;
 	int weight;
+
+	Edge() = default;
+
+	Edge(GraphVertex* _dst, int _weight)
+	{
+		dst = _dst;
+		weight = _weight;
+	}
 };
 
 struct GraphVertex
@@ -30,7 +38,7 @@ struct GraphVertex
 	int finish = -1;
 
 	GraphVertex* pred = nullptr;
-  GraphVertex* reachableAncestor = nullptr;
+    GraphVertex* reachableAncestor = nullptr;
 	vector<Edge> edges;
 	vector<Edge> transposedEdges;
 
@@ -38,6 +46,14 @@ struct GraphVertex
 	int degree = 0;
 
 	int Index() const { return name.back() - '1'; };
+
+	GraphVertex() = default;
+
+	GraphVertex(string _name, int _dist = numeric_limits<int>::max())
+	{
+		name = _name;
+		dist = _dist;
+	}
 
 	bool operator < ( const GraphVertex& rhs ) const
 	{
