@@ -248,7 +248,7 @@ vector<int> NextPermutation(vector<int> p)
 	auto j = i + 1;
 	while (j < static_cast<int>(p.size()) && p[j] > p[i])
 		j++;
-	auto result = p;
+	vector<int> result = p;
 	swap(result[i], result[j - 1]);
 	reverse(result.begin() + i + 1, result.end()); // Sort by reversing. tricky.
 	return result;

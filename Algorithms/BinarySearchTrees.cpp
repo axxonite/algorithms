@@ -192,9 +192,12 @@ bool BSTree::Delete(int key)
 		auto child = n->left ? n->left : n->right;
 		if (!prev)
 			root = child;
-		if (n == prev->left.get())
-			prev->left = child;
-		else prev->right = child;
+		else
+		{
+			if (n == prev->left.get())
+				prev->left = child;
+			else prev->right = child;
+		}
 	}
 	else
 	{

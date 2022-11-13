@@ -282,7 +282,7 @@ void TestComputeBinaryTreeExterior()
 	auto t = BuildBinaryTree(4);
 	auto r = ComputeBinaryTreeExterior(t);
 	vector<int> values;
-	for (auto n : r)
+	for (auto& n : r)
 		values.push_back(n->value);
 	assert(values == vector<int>({1, 2, 4, 8, 9, 10, 11, 12, 13, 14, 15, 7, 3}));
 }

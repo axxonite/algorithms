@@ -147,7 +147,8 @@ vector<int> CountingSort(vector<int> values, int maxValue)
 	for (auto i = 1; i < counts.size(); i++)
 		counts[i] = counts[i] + counts[i - 1];
 	// counts now contains the number of elements less than or equal to i for each possible value.
-	for (size_t i = values.size() - 1; i >= 0; i--)
+	// technically there's a bug here and in other places with the same pattern.
+	for (long long i = long long(values.size() - 1); i >= 0; i--)
 	{
 		result[counts[values[i]] - 1] = values[i]; // SUbtract one, because when there is only one occurrence of the lowest value left, it must be inserted at position 0.
 		counts[values[i]]--;
@@ -168,7 +169,7 @@ vector<int> RadixSort(vector<int> values, int maxDigits)
 		for (auto i = 1; i < counts.size(); i++)
 			counts[i] = counts[i] + counts[i - 1];
 		// counts now contains the number of elements less than or equal to i for each possible value.
-		for (size_t i = values.size() - 1; i >= 0; i--)
+		for (long long i = long long(values.size() - 1); i >= 0; i--)
 		{
 			auto digit = (values[i] / divider) % 10;
 			result[counts[digit] - 1] = values[i]; // Subtract one, because when there is only one occurrence of the lowest value left, it must be inserted at position 0.

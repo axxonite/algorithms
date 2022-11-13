@@ -15,7 +15,7 @@ public:
 		mHeap = values;
 		// size / 2 is the last possible node that may have children, since its children are size/2*2 and size/2*2+1.
 		// This start from the last bottom node, then processes all nodes going left and up to rearrange those nodes in the tree.
-		for (size_t i = values.size() / 2; i >= 0; i--)
+		for (long long i = long long(values.size() / 2); i >= 0; i--)
 			HeapifyNode(i);
 	}
 
