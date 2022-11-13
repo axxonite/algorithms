@@ -4,7 +4,7 @@
 
 namespace Solutions
 {
-	bool MatchAllWordsInDict(const string& s, const unordered_map<string, int>& dictWordInstanceCount, int start, int wordCount, int wordSize)
+	bool MatchAllWordsInDict(const string& s, const unordered_map<string, int>& dictWordInstanceCount, int start, size_t wordCount, int wordSize)
 	{
 		unordered_map<string, int> stringWordInstanceCount; // count how many instances of each word appear in the source string.
 		// Try to make as many consequent matches as there are words in the dictionary.
