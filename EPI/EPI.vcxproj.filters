@@ -660,9 +660,6 @@
     <ClCompile Include="Problems\17_DynamicProgramming\17.10_number_steps.cpp">
       <Filter>Problems\17. Dynamic Programming</Filter>
     </ClCompile>
-    <ClCompile Include="Sandbox.cpp">
-      <Filter>Problems</Filter>
-    </ClCompile>
     <ClCompile Include="Problems\SortingAlgorithms\MergeSort.cpp">
       <Filter>Problems\Sorting Algorithms</Filter>
     </ClCompile>
@@ -1535,6 +1532,7 @@
       <Filter>Solutions\Data Structures</Filter>
     </ClCompile>
     <ClCompile Include="Modern.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Solutions">
