@@ -17,8 +17,8 @@ void DutchFlagProblem(vector<int>& a, int i)
 	// This is the quicksort partitioning step.
 	// Enforce loop invariant where array is separated into bottom, middle, unclassified and top parts at the start of each loop. Keep tracking indices to each of the sections in the array and update where they begin
 	// as you go along.
-    int less = 0, equal = 0;
-    int more = a.size() - 1;
+	size_t less = 0, equal = 0;
+    size_t more = a.size() - 1;
     int value = a[i];
     while ( equal < more )
     {
@@ -211,7 +211,7 @@ void PermuteArray(vector<int>& a, vector<int> p)
 			// p[i] says the the value at j needs to go to p[j].
 			swap(a[i], a[p[j]]);
 			auto temp = p[j];
-			p[j] = p[j] - p.size();
+			p[j] = p[j] - int(p.size());
 			j = temp;
 		}
 	}
@@ -238,7 +238,7 @@ vector<int> NextPermutation(vector<int> p)
 	// suffix was originally in decreasing order, we can reverse it to put in increasing order without using a sorting algorithm.
 	// To recap, this whole process effectively finds the rightmost entry that needs to be "incremented", then performs this "increment" by swapping the smallest entry to its right, and then setting all remaining values to the
 	// right to the smallest possible suffix. This is similar to counting, where incrementing one of the digits on the left will reset all the digits on the right to zero.
-	int i = p.size() - 2;
+	size_t i = p.size() - 2;
 	// Find longest decreasing sequence.
 	while (i >= 0 && p[i] > p[i + 1])
 		i--;
@@ -467,10 +467,10 @@ void RotateMatrix(vector<vector<int>>& m)
 	// Since there are always four operations for this, we can use an unrolled loop for this step.
 	// We can similarly process the cell to the right of the corner in a loop, and cells on inner layer of the array in another loop, to process the entire matrix.
 	// Another contrived hack would be to rotate the values on read. The problem specifically states we should rotate the array however, so this is more trivia than an actual solution.
-	int n = m.size();
-	for (int i = 0; i < n / 2; i++)
+	size_t n = m.size();
+	for (size_t i = 0; i < n / 2; i++)
 	{
-		for (int j = 0; j < n - 1; j++)
+		for (size_t j = 0; j < n - 1; j++)
 		{
 			m[i][j] = m[n - j][i];
 			m[n - j][i] = m[n - i][n - j];

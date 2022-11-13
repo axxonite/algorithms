@@ -13,7 +13,7 @@ namespace Solutions
 		for ( int index = 0; index < words.size(); )
 		{
 			int start = index; // start is index of first word on the line.
-			int lineLength = words[index++].size(); // lineLength is number of characters on the line. Start with one word.
+			size_t lineLength = words[index++].size(); // lineLength is number of characters on the line. Start with one word.
 			while ( index < words.size() && ( lineLength + words[index].size() + 1 ) <= l )
 				lineLength += words[index++].size() + 1; // Add the size of the word on the line, plus one blank.
 

@@ -8,9 +8,9 @@ namespace Solutions
 	{
 		// minMessiness[i] is the minimum messiness when placing words[0, i]. A solution for a longer text is built from the optimal solutions for the shorter ones.
 		// Note that we need to initialize the minimum messiness to a suitable max constant.
-		vector<int> minMessiness(words.size(), numeric_limits<int>::max());
+		vector<size_t> minMessiness(words.size(), numeric_limits<int>::max());
 		// The base case has only one word in the text
-		int remainingBlanks = lineLength - words[0].size();
+		size_t remainingBlanks = lineLength - int(words[0].size());
 		minMessiness[0] = remainingBlanks * remainingBlanks;
 		for (int i = 1; i < words.size(); ++i)
 		{

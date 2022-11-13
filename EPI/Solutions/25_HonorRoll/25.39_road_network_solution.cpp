@@ -33,7 +33,7 @@ namespace Solutions
 			shortestPaths[i][i] = 0;
 
 		for ( const HighwaySection& h : H )
-			shortestPaths[h.x][h.y] = shortestPaths[h.y][h.x] = h.distance; // Set distances going both directions.
+			shortestPaths[h.x][h.y] = shortestPaths[h.y][h.x] = int(h.distance); // Set distances going both directions.
 
 		// Fill up all the shortest paths between cities.
     FloydMarshallRoadNetwork( shortestPaths );

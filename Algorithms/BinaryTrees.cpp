@@ -183,12 +183,12 @@ vector<int> InOrderTraversalO1(TreeNodePtr root)
 
 // ----------------------------------------------------------
 // 10.12 RECONSTRUCT A BINARY TREE FROM TRAVERSAL DATA* VERY TRICKY
-TreeNodePtr ReconstructBinaryTreeFromTraversalData(const vector<int>& preorder, int preOrderStart, int preOrderEnd, int inOrderStart, int inOrderEnd, const unordered_map<int, size_t>& nodeToInOrder)
+TreeNodePtr ReconstructBinaryTreeFromTraversalData(const vector<int>& preorder, size_t preOrderStart, size_t preOrderEnd, size_t inOrderStart, size_t inOrderEnd, const unordered_map<int, size_t>& nodeToInOrder)
 {
 	if (preOrderEnd <= preOrderStart || inOrderEnd <= inOrderStart)
 		return nullptr;
-	auto rootInOrderIndex = nodeToInOrder.at(preorder[preOrderStart]); // Note the use of at.
-	int leftC = rootInOrderIndex - preOrderStart; // Note, no + 1. And we don't need the count of right children, necessarily, though it may help in simplifying the code.
+	size_t rootInOrderIndex = nodeToInOrder.at(preorder[preOrderStart]); // Note the use of at.
+	size_t leftC = rootInOrderIndex - preOrderStart; // Note, no + 1. And we don't need the count of right children, necessarily, though it may help in simplifying the code.
 	auto node = make_shared<TreeNode<int>>(TreeNode<int>{preorder[preOrderStart], nullptr, nullptr});
 	node->left = ReconstructBinaryTreeFromTraversalData(preorder, preOrderStart + 1, preOrderStart + 1 + leftC, inOrderStart, rootInOrderIndex, nodeToInOrder);
 	node->right = ReconstructBinaryTreeFromTraversalData(preorder, preOrderStart + 1 + leftC, preOrderEnd, rootInOrderIndex + 1, inOrderEnd, nodeToInOrder);

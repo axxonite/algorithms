@@ -79,7 +79,7 @@ public:
 private:
 
 	vector<int> mHeap;
-	int mSize;
+	size_t mSize;
 
 	static int Parent(int i) { return i / 2; }
 	static int Left(int i) { return i * 2; }
