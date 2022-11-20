@@ -3,55 +3,46 @@
 
 namespace Solutions
 {
-  struct SCCGraphVertex : GraphVertex
-  {
-    int start2 = -1;
-    vector<Edge> transposedEdges;
-  };
+// Kosajaru's algorithm.
 
-  void StronglyConnectedComponentsDFS(SCCGraphVertex* v, int& time)
+  void StronglyConnectedComponentsDFS(GraphVertex* src, vector<GraphVertex*>& DFSByFinishTime)
   {
-    v->start = time++;
-    for (auto e : v->edges)
+    // Build transposed edges and record nodes by reverse order of finish times.
+    src->start = 0;
+    for (auto e : src->edges)
     {
-      SCCGraphVertex* edgeVertex = (SCCGraphVertex*)e.dst;
-      if (edgeVertex->start == -1)
-        StronglyConnectedComponentsDFS(edgeVertex, time);
-      edgeVertex->transposedEdges.emplace_back(Edge{ v, e.weight });
+      if (e.dst->start == -1) 
+        StronglyConnectedComponentsDFS(e.dst, DFSByFinishTime);
+      e.dst->transposedEdges.push_back(Edge{ src, e.weight });
     }
-    v->finish = time++;
+    DFSByFinishTime.push_back(src);
   }
 
-  bool SortEdges(const Edge& a, const Edge& b)
+  void StronglyConnectedComponentsDFS2(GraphVertex* src, unordered_set<GraphVertex*>& result)
   {
-    return a.dst->finish > b.dst->finish;
-  }
-
-  void StronglyConnectedComponentsDFS2(SCCGraphVertex* v, int& time, unordered_set<SCCGraphVertex*>& result)
-  {
-    v->start2 = time++;
-    result.emplace(v);
-    sort(v->transposedEdges.begin(), v->transposedEdges.end(), SortEdges);
-    for (auto e : v->transposedEdges)
+    // Gather strongly connected component vertices.
+    src->start2 = 0;
+    result.insert(src);
+    for (auto e : src->transposedEdges)
     {
-      SCCGraphVertex* edgeVertex = (SCCGraphVertex*)e.dst;
-      if (edgeVertex->start2 == -1)
-        StronglyConnectedComponentsDFS2(edgeVertex, time, result);
+      if (e.dst->start2 == -1)
+        StronglyConnectedComponentsDFS2(e.dst, result);
     }
   }
-  vector<unordered_set<SCCGraphVertex*>> StronglyConnectedComponents(vector<shared_ptr<SCCGraphVertex>> G)
+
+  vector<unordered_set<GraphVertex*>> StronglyConnectedComponents(vector<shared_ptr<GraphVertex>> G)
   {
-    vector<unordered_set<SCCGraphVertex*>> result;
-    int time = 0;
+    vector<unordered_set<GraphVertex*>> result;
+    vector<GraphVertex*> DFSByFinishTime;
     for (auto v : G)
       if (v->start == -1)
-        StronglyConnectedComponentsDFS(v.get(), time);
-    for (auto v : G)
-    {
-      if (v->start2 == -1)
+        StronglyConnectedComponentsDFS(v.get(), DFSByFinishTime);
+
+    for (int i = DFSByFinishTime.size() - 1; i >= 0; --i) {
+      if (DFSByFinishTime[i]->start2 == -1)
       {
-        result.emplace_back(unordered_set<SCCGraphVertex*>());
-        StronglyConnectedComponentsDFS2(v.get(), time, result.back());
+        result.push_back(unordered_set<GraphVertex*>()); // Insert an empty set
+        StronglyConnectedComponentsDFS2(DFSByFinishTime[i], result.back());
       }
     }
     return result;

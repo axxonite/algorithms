@@ -9,9 +9,9 @@ enum class EdgeClassification
 {
 	Tree,
 	Back,
-  Forward,
-  Cross,
-  Unknown
+  	Forward,
+  	Cross,
+  	Unknown
 };
 
 struct Edge

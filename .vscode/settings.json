@@ -4,6 +4,10 @@
         "vector": "cpp",
         "__split_buffer": "cpp",
         "deque": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "chrono": "cpp",
+        "random": "cpp",
+        "algorithm": "cpp",
+        "unordered_set": "cpp"
     }
 }
