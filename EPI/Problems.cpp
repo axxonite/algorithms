@@ -258,9 +258,9 @@ void RunTests()
 	HuffmanEncodingTest();
 	CalculateTrappingWaterTest();
 	FindBestProposalsTest();
-	CalcContainedWaterTest();
-	ComputeSunShadowingTest();
-	IsContainedTest();
+	//CalcContainedWaterTest();
+	//ComputeSunShadowingTest();
+	//IsContainedTest();
 
 	DisjointSetTest();
 	EuclidGCDTest();

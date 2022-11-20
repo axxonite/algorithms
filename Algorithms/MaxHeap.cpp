@@ -15,7 +15,7 @@ public:
 		mHeap = values;
 		// size / 2 is the last possible node that may have children, since its children are size/2*2 and size/2*2+1.
 		// This start from the last bottom node, then processes all nodes going left and up to rearrange those nodes in the tree.
-		for (int i = values.size() / 2; i >= 0; i--)
+		for (long long i = long long(values.size() / 2); i >= 0; i--)
 			HeapifyNode(i);
 	}
 
@@ -56,7 +56,7 @@ public:
 	}
 
 	// O(lg n)
-	void IncreaseKey(int i, int value)
+	void IncreaseKey(size_t i, int value)
 	{
 		assert(value >= mHeap[i]);
 		mHeap[i] = value;
@@ -79,14 +79,14 @@ public:
 private:
 
 	vector<int> mHeap;
-	int mSize;
+	size_t mSize;
 
-	static int Parent(int i) { return i / 2; }
-	static int Left(int i) { return i * 2; }
-	static int Right(int i) { return i * 2 + 1; }
+	static size_t Parent(size_t i) { return i / 2; }
+	static size_t Left(size_t i) { return i * 2; }
+	static size_t Right(size_t i) { return i * 2 + 1; }
 
 	// O(lg n) or O(h)
-	void HeapifyNode(int i)
+	void HeapifyNode(size_t i)
 	{
 		auto l = Left(i);
 		auto r = Right(i);

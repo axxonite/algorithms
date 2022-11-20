@@ -27,7 +27,7 @@ using namespace std;
 
 namespace XorAndSum
 {
-	int Solve(unsigned int a, unsigned int b)
+	unsigned long long Solve(unsigned int a, unsigned int b)
 	{
 		unsigned long long sum = 0;
 		for (int i = 0; i < 32; ++i)
@@ -41,7 +41,6 @@ namespace XorAndSum
 
 	void Run(istream& in, ostream& out)
 	{
-		char x;
 		int a = 0, b = 0;
 		string token;
 		getline(in, token, '\n');

@@ -6,7 +6,7 @@ namespace Solutions
 	{
 		for (size_t i = 0; i < a.size(); ++i)
 		{
-			int min = i;
+			size_t min = i;
 			for (size_t j = i + 1; j < a.size(); ++j)
 				if (a[j] < a[min])
 					min = j;

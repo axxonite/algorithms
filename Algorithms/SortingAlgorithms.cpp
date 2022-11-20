@@ -51,7 +51,7 @@ void InsertionSort(vector<int>& values)
 // --------------------------------------------------
 // Merge sort. Subdivide int two subarrays recursively which will create hierarchy of smaller, sorted subarrays down to size 1, then compare the entries of each sub array to merge them. 
 // O(n log n)
-void Merge(vector<int>& values, int first, int pivot, int last)
+void Merge(vector<int>& values, size_t first, size_t pivot, size_t last)
 {
 	vector<int> left(values.begin() + first, values.begin() + pivot);
 	vector<int> right(values.begin() + pivot, values.begin() + last);
@@ -64,7 +64,7 @@ void Merge(vector<int>& values, int first, int pivot, int last)
 		values[i] = left[l] < right[r] ? left[l++] : right[r++];
 }
 
-void MergeSort(vector<int>& values, int first, int last)
+void MergeSort(vector<int>& values, size_t first, size_t last)
 {
 	if (first < last)
 	{
@@ -83,7 +83,7 @@ void MergeSort(vector<int>& values)
 // --------------------------------------------------
 // Quicksort - pick a key value, classify with respect to the key values as < or >, then run again on each < and > classication.
 // O(n lg n)
-int Partition(vector<int>& values, int first, int last)
+size_t Partition(vector<int>& values, size_t first, size_t last)
 {
 	auto keyValue  = values[last];
 	auto insertionPoint = first - 1;
@@ -100,7 +100,7 @@ int Partition(vector<int>& values, int first, int last)
 	return insertionPoint + 1; // This is where the key value ended up at.
 }
 
-void Quicksort(vector<int>& values, int start, int end)
+void Quicksort(vector<int>& values, size_t start, size_t end)
 {
 	if ( start < end )
 	{
@@ -110,13 +110,13 @@ void Quicksort(vector<int>& values, int start, int end)
 	}
 }
 
-void BalancedQuicksort(vector<int>& values, int start, int end)
+void BalancedQuicksort(vector<int>& values, size_t start, size_t end)
 {
 	if (start < end)
 	{
 		// Swap the last entry with a random pivot so that we may get a balanced distribution regardless of input data.
 		default_random_engine rnd;
-		uniform_int_distribution<int> dis(start, end + 1);
+		uniform_int_distribution<size_t> dis(start, end + 1);
 		auto randomPivot = dis(rnd);
 		swap(values[end], values[randomPivot]);
 		auto pivotIndex = Partition(values, start, end);
@@ -147,7 +147,8 @@ vector<int> CountingSort(vector<int> values, int maxValue)
 	for (auto i = 1; i < counts.size(); i++)
 		counts[i] = counts[i] + counts[i - 1];
 	// counts now contains the number of elements less than or equal to i for each possible value.
-	for (int i = values.size() - 1; i >= 0; i--)
+	// technically there's a bug here and in other places with the same pattern.
+	for (long long i = long long(values.size() - 1); i >= 0; i--)
 	{
 		result[counts[values[i]] - 1] = values[i]; // SUbtract one, because when there is only one occurrence of the lowest value left, it must be inserted at position 0.
 		counts[values[i]]--;
@@ -168,7 +169,7 @@ vector<int> RadixSort(vector<int> values, int maxDigits)
 		for (auto i = 1; i < counts.size(); i++)
 			counts[i] = counts[i] + counts[i - 1];
 		// counts now contains the number of elements less than or equal to i for each possible value.
-		for (int i = values.size() - 1; i >= 0; i--)
+		for (long long i = long long(values.size() - 1); i >= 0; i--)
 		{
 			auto digit = (values[i] / divider) % 10;
 			result[counts[digit] - 1] = values[i]; // Subtract one, because when there is only one occurrence of the lowest value left, it must be inserted at position 0.
@@ -182,7 +183,7 @@ vector<int> RadixSort(vector<int> values, int maxDigits)
 
 // --------------------------------------------------
 // Select the kth smallest value. k starts from zero. O(n ^ 2) worst case, O(n) expected. The run time analysis for this one is complex.
-int SelectOrderStatistic(vector<int> values, int first, int last, int order)
+int SelectOrderStatistic(vector<int> values, size_t first, size_t last, size_t order)
 {
 	if (first == last)
 		return values[first];
@@ -195,7 +196,7 @@ int SelectOrderStatistic(vector<int> values, int first, int last, int order)
 	return SelectOrderStatistic(values, pivot + 1, last, order - k - 1); // - 1 on k since the pivot has +1
 }
 
-int SelectOrderStatistic(vector<int> values, int order)
+int SelectOrderStatistic(vector<int> values, size_t order)
 {
 	return SelectOrderStatistic(values, 0, values.size() - 1, order);
 }

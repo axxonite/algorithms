@@ -19,6 +19,6 @@ struct MulticoreProcessingEasy
 
 void TestProblem()
 {
-	MulticoreProcessingEasy object;
+	//MulticoreProcessingEasy object;
 	//int test = object.longest(2, 1, 0);
 }

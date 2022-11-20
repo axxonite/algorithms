@@ -58,7 +58,7 @@ namespace Solutions
   private:
 
     vector<int> mHeap;
-    int mSize;
+    size_t mSize;
 
     void HeapifyNode(int i)
     {

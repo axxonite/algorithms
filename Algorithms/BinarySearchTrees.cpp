@@ -95,12 +95,12 @@ TreeNodePtr FindLCA(TreeNodePtr tree, TreeNodePtr s, TreeNodePtr b)
 
 // ----------------------------------------------------------
 // 15.5 RECONSTRUCT A BST FROM TRAVERSAL DATA*
-TreeNodePtr ReconstructBST(const vector<int> preorder, int s, int f)
+TreeNodePtr ReconstructBST(const vector<int> preorder, size_t s, size_t f)
 {
 	if ( s > f )
 		return nullptr;
 	// Find first value > root
-	int i = s + 1;
+	size_t i = s + 1;
 	while ( i <= f && preorder[i] < preorder[s])
 		i++;
 	auto n = make_shared<TreeNode<int>>(TreeNode<int>{preorder[s]});
@@ -192,9 +192,12 @@ bool BSTree::Delete(int key)
 		auto child = n->left ? n->left : n->right;
 		if (!prev)
 			root = child;
-		if (n == prev->left.get())
-			prev->left = child;
-		else prev->right = child;
+		else
+		{
+			if (n == prev->left.get())
+				prev->left = child;
+			else prev->right = child;
+		}
 	}
 	else
 	{

@@ -22,7 +22,7 @@ namespace Solutions
 			}
 			// Note the use of 1U to get a 64-bit value.
 			result += 1U << power;
-			x -= ypow;
+			x -= unsigned(ypow);
 		}
 		return result;
 	}
@@ -36,7 +36,7 @@ unsigned Divide2(unsigned x, unsigned y)
 	while (x >= y)
 	{
 		if (x >= ypower)
-			x -= ypower, result |= 1 << power;
+			x -= unsigned(ypower), result |= 1 << power;
 		ypower >>= 1, power--;
 	}
 	return result;

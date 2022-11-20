@@ -4,7 +4,7 @@
 
 namespace Solutions
 {
-	void ApplyPermutation(vector<int>& perm, vector<int>& a)
+	void ApplyPermutation(vector<size_t>& perm, vector<int>& a)
 	{
 		for (int i = 0; i < a.size(); ++i)
 		{
@@ -21,6 +21,6 @@ namespace Solutions
 		}
 
 		// Restore perm.
-		for_each(begin(perm), end(perm), [&perm](int& x) { x += perm.size(); });
+		for_each(begin(perm), end(perm), [&perm](size_t& x) { x += perm.size(); });
 	}
 }

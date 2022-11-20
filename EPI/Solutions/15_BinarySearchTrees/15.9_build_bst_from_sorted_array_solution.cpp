@@ -4,11 +4,11 @@
 
 namespace Solutions
 {
-	unique_ptr<BSTNode<int>> BuildMinHeightBSTFromSortedArray( const vector<int>& a, int start, int end )
+	unique_ptr<BSTNode<int>> BuildMinHeightBSTFromSortedArray( const vector<int>& a, size_t start, size_t end )
 	{
 		if ( start >= end )
 			return nullptr;
-		int mid = ( start + end ) / 2;
+		size_t mid = ( start + end ) / 2;
 		auto tree = make_unique<BSTNode<int>>( BSTNode<int>{a[mid]} );
 		tree->left = BuildMinHeightBSTFromSortedArray( a, start, mid );
 		tree->right = BuildMinHeightBSTFromSortedArray( a, mid + 1, end );

@@ -31,7 +31,7 @@ static void FindKthLargestUnknownLengthSimpleTest()
 {
 	vector<int> A = { 5, 6, 2, 1, 3, 0, 4 };
 	SimpleTestArray( A );
-	A = { 5, -1, 2, 1, 3, 1, 4, 2 << 31 - 1, 5 };
+	A = { 5, -1, 2, 1, 3, 1, 4, numeric_limits<int>::max(), 5};
 	SimpleTestArray( A );
 	default_random_engine gen( ( random_device() )( ) );
 	int N = 1000;

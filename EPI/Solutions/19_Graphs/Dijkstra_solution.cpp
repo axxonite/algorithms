@@ -3,25 +3,32 @@
 
 namespace Solutions
 {
+	// We need this struct to order the vertices.
 	struct DijkstraSet
 	{
+		// Note that everything must be const here to compile.
 		bool operator () (const GraphVertex* a, const GraphVertex* b) const
 		{
 			return a->dist < b->dist || (a->dist == b->dist && a < b);
 		}
 	};
 
-	bool DijkstraRelax(GraphVertex* u, GraphVertex* v, int weight)
+
+	bool DijkstraRelax(GraphVertex* src, GraphVertex* dest, int cost)
 	{
-		if (u->dist < numeric_limits<int>::max() && (u->dist + weight) < v->dist)
+		// Check if the current path's cost is cheaper than the existing path's cost.
+		if (src->dist < numeric_limits<int>::max() && (src->dist + cost) < dest->dist)
 		{
-			v->dist = u->dist + weight;
-			v->pred = u;
+			dest->dist = src->dist + cost;
+			// Remember to keep track of the predecessor.
+			dest->pred = src;
 			return true;
 		}
 		return false;
 	}
 
+	// Dijkstra requires a source. The source's distance is set to zero. Note that all vertices should be set to the maximum possible distance at the onset.
+	// We use a sorted set to keep track of the shortest path vertex.
 	void Dijkstra(vector<GraphVertex*> G, int src)
 	{
 		G[src]->dist = 0;
@@ -29,12 +36,14 @@ namespace Solutions
 		candidates.emplace(G[src]);
 		while (!candidates.empty())
 		{
-			auto nearest = *candidates.begin();
+			auto shortest_path = *candidates.begin();
 			candidates.erase(candidates.begin());
-			for (auto e : nearest->edges)
+			// Go over all edges
+			for (auto e : shortest_path->edges)
 			{
-				if (DijkstraRelax(nearest, e.dst, e.weight))
+				if (DijkstraRelax(shortest_path, e.dst, e.weight))
 				{
+					// Remove and insert the node so it gets sorted again.
 					candidates.erase(e.dst);
 					candidates.emplace(e.dst);
 				}

@@ -6,7 +6,7 @@ namespace Solutions
 {
 	int SquareRoot(int k)
 	{
-		int left = 0, right = k;
+		long long left = 0, right = k;
 		// Candidate interval [left, right] where everything before left has square <= k, and everything after right has square > k.
 		// we are looking for the lowest left that is strictly > k.
 		// Note that we keep going till left is PAST right. If we don't, we will not give the right answer when k is zero.
@@ -19,6 +19,6 @@ namespace Solutions
 			else
 				right = mid - 1; // Mid is > k, so continue search from right - 1.
 		}
-		return left - 1; // Left is > k, so left - 1 wil be <= k.
+		return int(left - 1); // Left is > k, so left - 1 wil be <= k.
 	}
 }
