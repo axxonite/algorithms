@@ -6,14 +6,14 @@ namespace Solutions
 {
 	void Relax(GraphVertex* u, GraphVertex* v, int weight)
 	{
-		if (u->dist + weight < v->dist)
+		if (u->dist < numeric_limits<int>::max() && u->dist + weight < v->dist)
 		{
 			v->dist = u->dist + weight;
 			v->pred = u;
 		}
 	}
 
-	// todo make a shared vertex type for all graphs.
+	// Does this work for graphs that are no DAGs?
 	void SingleSourceShortestPath(vector<GraphVertex*> G, int src)
 	{
 		G[src]->dist = 0;

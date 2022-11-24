@@ -3,7 +3,6 @@
 
 namespace Solutions
 {
-
 	struct KruskalGraphVertex;
 
 	struct Edge
@@ -19,33 +18,32 @@ namespace Solutions
 		vector<shared_ptr<Edge>> edges;
 	};
 
-	struct HashEdge
+	struct EdgeSort
 	{
-		size_t operator () (const shared_ptr<Edge>& edge) const
-		{
-			return hash<size_t>()(reinterpret_cast<size_t>(edge.get()));
-		}
-
 		bool operator () (const shared_ptr<Edge>& a, const shared_ptr<Edge>& b) const
 		{
 			return a->weight < b->weight || (a->weight == b->weight && a.get() < b.get());
 		}
 	};
 
-	unordered_set<shared_ptr<Edge>, HashEdge> MstKruskal(vector<shared_ptr<KruskalGraphVertex>> g)
+	set<shared_ptr<Edge>> MstKruskal(vector<shared_ptr<KruskalGraphVertex>> g)
 	{
-		unordered_set<shared_ptr<Edge>, HashEdge> result;
-		set<shared_ptr<Edge>, HashEdge> sortedEdges;
+		set<shared_ptr<Edge>> result;
+		// Order all edges by weight, add each vertex to its own disjoint set.
+		set<shared_ptr<Edge>, EdgeSort> sortedEdges;
 		for (auto v : g)
 		{
 			Solutions::DisjointSet::MakeSet(v);
 			for (auto e : v->edges)
-				sortedEdges.emplace(e);
+				sortedEdges.insert(e);
 		}
 		for (auto e : sortedEdges)
 		{
+			// Look at vertices at each end of the edges (sorted by weight), merge them into the same set if they're not already merged
+			// If two vertices could be merged through multiple edges, this ensures we are only merging them through the edge with the smallest weight, and we don't merge them merge than once.
 			if (Solutions::DisjointSet::FindSet(e->src) != Solutions::DisjointSet::FindSet(e->dest)) {
-				result.emplace(e);
+				// Add the corresponding edge to the MST.
+				result.insert(e);
 				Solutions::DisjointSet::Union(e->src, e->dest);
 			}
 		}

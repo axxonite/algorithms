@@ -8,8 +8,6 @@ class DisjointSet;
 
 struct SetElem
 {
-	DisjointSet* set = nullptr;
-	shared_ptr<SetElem> next = nullptr;
 };
 
 class DisjointSet

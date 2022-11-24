@@ -15,18 +15,9 @@ struct MSTKruskalGraphVertex : Solutions::SetElem
 	vector<shared_ptr<MSTKruskalEdge>> edges;
 };
 
-struct HashEdge
+unordered_set<shared_ptr<MSTKruskalEdge>> MstKruskal(vector<shared_ptr<MSTKruskalGraphVertex>> g)
 {
-	size_t operator () (const shared_ptr<MSTKruskalEdge>& edge) const
-	{
-		return hash<size_t>()(reinterpret_cast<size_t>(edge.get()));
-	}
-};
-
-// Kruskal is the union set based solution.
-unordered_set<shared_ptr<MSTKruskalEdge>, HashEdge> MstKruskal(vector<shared_ptr<MSTKruskalGraphVertex>> g)
-{
-	unordered_set<shared_ptr<MSTKruskalEdge>, HashEdge> result;
+	unordered_set<shared_ptr<MSTKruskalEdge>> result;
 	return result;
 }
 
@@ -62,7 +53,7 @@ void MstKruskalTest()
 	h->data = 'h';
 	i->data = 'i';
 
-	auto goldenResult = unordered_set<shared_ptr<MSTKruskalEdge>, HashEdge>();
+	auto goldenResult = unordered_set<shared_ptr<MSTKruskalEdge>>();
 	goldenResult.emplace(AddEdge(MSTKruskalEdge{ a.get(), b.get(), 4 }));
 	goldenResult.emplace(AddEdge(MSTKruskalEdge{ c.get(), d.get(), 7 }));
 	goldenResult.emplace(AddEdge(MSTKruskalEdge{ c.get(), i.get(), 2 }));
