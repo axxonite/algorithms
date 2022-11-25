@@ -8,20 +8,20 @@ namespace Solutions
 {
 	bool Johnson(vector<GraphVertex*> G, vector<vector<int>>& result)
 	{
-		// create a graph for the weight offsets.
+		// create a graph clone for the weight offsets.
 		auto weightOffsets = CloneGraph(G);
 
-		// add sink vertex so we visit all vertices with BellmanFord.
+		// add sink vertex so can walk all vertices using BellmanFord.
 		auto s = make_shared<GraphVertex>(GraphVertex());
 		for (auto v : weightOffsets)
 			s->edges.emplace_back(Edge{ v, 0 });
 		weightOffsets.emplace_back(s.get());
 
-		// Perform Bellman Ford to compute the weight offsets and check for negative weight cycles.
+		// Perform Bellman Ford to find the minimum cost path from any vertex to a given vertex 
 		if (!BellmanFord(weightOffsets, weightOffsets.size() - 1))
 			return false;
 
-		// Remove any negative weights in the original graphs by offsetting the weights.
+		// Remove any negative weights in the original graphs by offsetting the weights by the minimum cost path.
 		for (int src = 0; src < G.size(); ++src)
 			for (int edgeIndex = 0; edgeIndex < G[src]->edges.size(); ++edgeIndex)
 				// this is the trickiest part.
